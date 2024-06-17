@@ -70,7 +70,7 @@ We're aiming to deliver a second event that's even bigger and better than our fi
   <body
     class="m-0 p-0 h-full min-h-svh overflow-hidden"
   >
-    <div class="w-full h-full bg-black flex flex-col items-center justify-center">  
+    <div class="w-full h-full bg-neutral-800 flex flex-col items-center justify-center">  
       <main id="swup">
         <slot />
       </main>
@@ -81,6 +81,16 @@ We're aiming to deliver a second event that's even bigger and better than our fi
 <style is:global>
   html {
     @apply m-0 p-0 h-full;
+	--swup-overlay-theme-color: #2D2E82;
+	--swup-overlay-theme-duration: .6s;
+	--swup-overlay-theme-delay: .2s;
+	--swup-overlay-theme-scale: 1.2;
+	--swup-overlay-theme-skew: 0deg;
+  }
+
+  html.is-changing .swup-transition-overlay {
+    opacity: 1;
+    transition: transform var(--swup-overlay-theme-duration) var(--swup-overlay-theme-delay);
   }
 
   .swup-transition-overlay {
@@ -90,7 +100,15 @@ We're aiming to deliver a second event that's even bigger and better than our fi
   }
 
 
+  .swup-transition-overlay[data-direction="to-bottom"] {
+    transform: translate3d(0, calc(-1 * var(--swup-overlay-transform-y-value)), 0) skewY(var(--swup-overlay-skew-value));
+  }
+
+  html.is-animating .swup-transition-overlay[data-direction="to-bottom"] {
+    transform: translate3d(0, 0, 0) skewY(var(--swup-overlay-skew-value));
+  }
+
   html.is-rendering .swup-transition-overlay[data-direction="to-bottom"] {
     transform: translate3d(0, calc(-1 * var(--swup-overlay-transform-y-value)), 0) skewY(var(--swup-overlay-skew-value));
-}
+  }
 </style>
