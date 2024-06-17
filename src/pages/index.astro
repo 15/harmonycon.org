@@ -8,6 +8,9 @@ import img4 from "../assets/2025/ticket.png";
 ---
 
 <Layout title="HarmonyCon 2025">
+  <div id="bg">
+
+  </div>
   <div id="curtains">
     <div id="curtain-1"></div>
     <div id="curtain-2"></div>
@@ -40,20 +43,24 @@ import img4 from "../assets/2025/ticket.png";
     /> 
   </div>
   <div id="buttons" class="absolute -bottom-4 left-0 right-0 mx-auto w-96 flex flex-row gap-x-8 justify-center">
-    <Image
-      alt="Harmony"
-      src={img4}
-      width={300}
-      style="filter: drop-shadow(0 10px 10px #000);"
-      class="w-48"
-    /> 
-    <Image
-      alt="Harmony"
-      src={img4}
-      width={300}
-      style="filter: drop-shadow(0 10px 10px #000);"
-      class="w-48"
-    /> 
+    <a href="/register">
+      <Image
+        alt="Harmony"
+        src={img4}
+        width={300}
+        style="filter: drop-shadow(0 10px 10px #000);"
+        class="w-48"
+      /> 
+    </a>
+    <a href="/main">
+      <Image
+        alt="Harmony"
+        src={img4}
+        width={300}
+        style="filter: drop-shadow(0 10px 10px #000);"
+        class="w-48"
+      /> 
+    </a>
   </div>
 </Layout>
 
@@ -62,21 +69,17 @@ import img4 from "../assets/2025/ticket.png";
     window.swup.hooks.on('page:view', () => {
       const curtain1 = document.getElementById("curtain-1");
       const curtain2 = document.getElementById("curtain-2");
-      const splash = document.getElementById("splash");
       if (curtain1) {
         curtain1.className = "skip";
       }
       if (curtain2) {
         curtain2.className = "skip";
       }
-      if (splash) {
-        splash.className = "skip";
-      }
     })
   });
 </script>
 
-<style>
+<style lang="scss">
 
   :root {
     --elastic: 
@@ -113,6 +116,8 @@ import img4 from "../assets/2025/ticket.png";
     animation-duration: 1.2s;
     animation-delay: 0s;
     animation-direction: alternate;
+    background-image: url('/curtain.jpg');
+    background-size: cover;
   }
 
   #curtain-2 {
@@ -124,22 +129,28 @@ import img4 from "../assets/2025/ticket.png";
     animation-duration: 1.2s;
     animation-delay: 0s;
     animation-direction: alternate;
+    background-image: url('/curtain.jpg');
+    background-size: cover;
   }
 
   #splash {
-    @apply absolute left-0 top-[-250%] right-0 bottom-0 m-auto;
+    @apply absolute left-0 top-0 right-0 bottom-0 m-auto;
     opacity: 1;
+  }
+
+  #tune {
+    top: -200%;
     animation: drop var(--elastic) forwards;
     animation-duration: 2.0s;
     animation-delay: 0.0s;
   }
 
-  #tune {
-    
-  }
-
   #star {
-
+    margin-top: 64px;
+    top: -200%;
+    animation: drop var(--elastic) forwards;
+    animation-duration: 2.0s;
+    animation-delay: 0.2s;
   }
 
   #logo {
@@ -221,10 +232,12 @@ import img4 from "../assets/2025/ticket.png";
   }
   @keyframes drop {
     from {
-      top: -300%;
+      top: -200%;
+      /* transform: translateY(-200vh); */
     }
     to {
-      top: -140%;
+      top: -75%;
+      /* transform: translateY(-75vh); */
     }
   }
   @keyframes fadein {
@@ -242,5 +255,20 @@ import img4 from "../assets/2025/ticket.png";
     to {
       opacity: 0;
     }
+  }
+
+  #bg {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../2959619.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
   }
 	</style>
