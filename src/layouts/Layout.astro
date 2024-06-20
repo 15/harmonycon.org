@@ -2,6 +2,9 @@
 const { title } = Astro.props;
 // import { ViewTransitions } from "astro:transitions";
 import { getImage } from "astro:assets";
+import Exit from "../components/Exit.astro";
+
+const { pathname } = Astro.url;
 ---
 <!doctype html>
 <html lang="en">
@@ -66,6 +69,9 @@ import { getImage } from "astro:assets";
   >
     <div class="w-full h-full bg-neutral-800 flex flex-col items-center justify-center">  
       <main id="swup">
+        { !['/', '/main'].includes(pathname) ? <div class="absolute top-24 left-24 z-50">
+          <Exit />
+        </div> : null}
         <slot />
       </main>
     </div>
@@ -73,6 +79,13 @@ import { getImage } from "astro:assets";
 </html>
 
 <style is:global>
+
+.magic:hover {
+        box-shadow: 0 0 15px 5px pink;
+        background-color: pink;
+        transition-duration: 500ms;
+      }
+
   html {
     @apply m-0 p-0 h-full;
 	--swup-overlay-theme-color: #2D2E82;
