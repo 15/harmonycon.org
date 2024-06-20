@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import img1 from "../assets/2025/flyer.png";
+import img2 from "../assets/2024/registration banner beeg with text.png";
+import img3 from "../assets/2024/harmonycon buhbhuhbuh.png";
+import img4 from "../assets/2024/musician banner.png";
+import img5 from "../assets/2023/vendor hall harmonycon banner final.png";
+import img6 from "../assets/2023/harm o n y s t a a a a a a a a a a a a a.png";
+import img7 from "../assets/2023/mane events banner beeg text.png";
+import img8 from "../assets/2024/vendorbanner.png";
+import img9 from "../assets/2023/coltchella4-poster.png";
+import img10 from "../assets/2024/harmonycon 2024 flyer horz.png";
+import Playbill from "../components/Playbill.astro";
+---
+
+<Layout title="HarmonyCon 2025 | Main">
+	<div id="bg">
+
+  </div>
+	<div class="grid grid-cols-5 gap-x-8 gap-y-8 w-full">
+		<Playbill src={img1} href="/" idx={1} active={true}/>
+		<Playbill src={img2} href="/register" idx={2} active={true}/>
+		<Playbill src={img3} href="/venue" idx={3} active={true}/>
+		<Playbill src={img4} href="/apply"  idx={4} active={true}/>
+		<Playbill src={img5} href="/mascots" idx={5} active={true}/>
+		<Playbill src={img6} href="/coc" idx={6} active={true}/>
+		<Playbill src={img7} href="/gallery" idx={7} active={false}/>
+		<Playbill src={img8} href="/vendor" idx={8} active={false}/>
+		<Playbill src={img9} href="/schedule" idx={9} active={false}/>
+		<Playbill src={img10} href="/credits" idx={10} active={true}/>
+	</div>
+</Layout>
+
+<style>
+	#bg {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../2645751.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+  }
+</style>
