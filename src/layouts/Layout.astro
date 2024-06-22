@@ -69,7 +69,7 @@ const { pathname } = Astro.url;
   >
     <div class="w-full h-full bg-neutral-800 flex flex-col items-center justify-center">  
       <main id="swup">
-        { !['/', '/main'].includes(pathname) ? <div class="absolute top-24 left-24 z-50">
+        { !['/', '/main'].includes(pathname) ? <div class="absolute top-12 left-12 z-50">
           <Exit />
         </div> : null}
         <slot />
@@ -102,7 +102,7 @@ const { pathname } = Astro.url;
 
   .swup-transition-overlay {
     background: linear-gradient(45deg, rgb(0,0,0), rgb(0,0,0), rgb(0,0,0));
-    background-image: url('/curtain.jpg');
+    background-image: url('/curtain_fall.png');
     background-size: contain;
   }
 

@@ -4,7 +4,8 @@ import Layout from "../layouts/Layout.astro";
 import img1 from "../assets/2025/tune1.png";
 import img2 from "../assets/2025/star1.png";
 import img3 from "../assets/2025/HarmonyCon 2025 Logo.png";
-import img4 from "../assets/2025/ticket.png";
+import img4 from "../assets/2025/registration_ticket_v2.png";
+import img5 from "../assets/2025/enter_ticket_v2.png";
 ---
 
 <Layout title="HarmonyCon 2025">
@@ -42,7 +43,7 @@ import img4 from "../assets/2025/ticket.png";
       class="w-full"
     /> 
   </div>
-  <div id="buttons" class="absolute -bottom-4 left-0 right-0 mx-auto w-96 flex flex-row gap-x-8 justify-center">
+  <div id="buttons" class="absolute bottom-24 left-0 right-0 mx-auto w-96 flex flex-row gap-x-8 justify-center">
     <a href="/register" style="filter: drop-shadow(0 2px 2px #000);" class="-rotate-1 hover:-rotate-3 duration-300 hover:scale-[1.1]">
       <Image
         alt="Harmony"
@@ -54,7 +55,7 @@ import img4 from "../assets/2025/ticket.png";
     <a href="/main" style="filter: drop-shadow(0 2px 2px #000);" class="rotate-1 hover:rotate-3 duration-300 hover:scale-[1.1]">
       <Image
         alt="Harmony"
-        src={img4}
+        src={img5}
         width={300}
         class="w-48 magic"
       /> 
@@ -114,7 +115,7 @@ import img4 from "../assets/2025/ticket.png";
     animation-duration: 1.2s;
     animation-delay: 0s;
     animation-direction: alternate;
-    background-image: url('/curtain.jpg');
+    background-image: url('/curtain_full.png');
     background-size: cover;
   }
 
@@ -127,7 +128,7 @@ import img4 from "../assets/2025/ticket.png";
     animation-duration: 1.2s;
     animation-delay: 0s;
     animation-direction: alternate;
-    background-image: url('/curtain.jpg');
+    background-image: url('/curtain_full.png');
     background-size: cover;
   }
 
