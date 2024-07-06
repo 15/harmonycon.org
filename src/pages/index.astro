@@ -18,7 +18,7 @@ import Footer from "../components/Footer.astro";
     <div id="curtain-1"></div>
     <div id="curtain-2"></div>
   </div>
-  <div id="tune" class="opacity-90">
+  <div id="tune" class="opacity-100">
     <Image
       alt="Harmonic Tune"
       src={img1}
@@ -26,7 +26,7 @@ import Footer from "../components/Footer.astro";
       style="filter: drop-shadow(0 10px 10px #000);"
     />
   </div>
-  <div id="star"  class="opacity-90">
+  <div id="star"  class="opacity-100">
     <Image
       alt="Harmony Star"
       src={img2}
@@ -160,7 +160,7 @@ import Footer from "../components/Footer.astro";
       position: absolute;
       left: 0%;
       width: 50%;
-      bottom: 10%;
+      bottom: 5%;
     opacity: 0;
     animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards;
     }
@@ -170,17 +170,30 @@ import Footer from "../components/Footer.astro";
       position: absolute;
       right: 0%;
       width: 50%;
-      bottom: 10%;
+      bottom: 5%;
     opacity: 0;
     animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards;
     }
+
+    #combined {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 30%;
+    opacity: 0;
+    animation:
+      popup 1s ease 1.7s forwards,
+      tease 4s ease 3s infinite forwards;
+  }
     
     @keyframes drop {
       from {
         top: -125%;
       }
       to {
-        top: -44%;
+        top: -54%;
       }
     }
 
@@ -190,7 +203,7 @@ import Footer from "../components/Footer.astro";
         /* transform: translateY(-200vh); */
       }
       to {
-        top: -40%;
+        top: -50%;
         /* transform: translateY(-75vh); */
       }
     }
@@ -252,6 +265,19 @@ import Footer from "../components/Footer.astro";
       opacity: 0;
       animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards, floating2 7s var(--sine) 0.3s infinite forwards;
     }
+
+    #combined {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 18%;
+    opacity: 0;
+    animation:
+      popup 1s ease 1.7s forwards,
+      tease 4s ease 3s infinite forwards;
+  }
 
 
     @keyframes drop {
@@ -353,18 +379,7 @@ import Footer from "../components/Footer.astro";
   }
 
 
-  #combined {
-    position: absolute;
-    
-    left: 0;
-    right: 0;
-    width: 100%;
-    bottom: 18%;
-    opacity: 0;
-    animation:
-      popup 1s ease 1.7s forwards,
-      tease 4s ease 3s infinite forwards;
-  }
+  
 
   #buttons {
     opacity: 0;
