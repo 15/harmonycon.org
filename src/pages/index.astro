@@ -6,6 +6,7 @@ import img2 from "../assets/2025/star1.png";
 import img3 from "../assets/2025/HarmonyCon 2025 Logo.png";
 import img4 from "../assets/2025/registration_ticket_v2.png";
 import img5 from "../assets/2025/enter_ticket_v2.png";
+import img6 from "../assets/2025/isotext1.png";
 ---
 
 <Layout title="HarmonyCon 2025">
@@ -16,50 +17,94 @@ import img5 from "../assets/2025/enter_ticket_v2.png";
     <div id="curtain-1"></div>
     <div id="curtain-2"></div>
   </div>
-	<div id="splash" class="w-288 h-full relative">
-    <div id="tune" class="absolute w-160 left-12 -top-8">
+	<!-- <div id="splash" class="w-full md:w-full h-full relative">
+    <div id="tune" class="absolute">
       <Image
-        alt="Harmony"
+        alt="Harmonic Tune"
         src={img1}
         width={1200}
-      style="filter: drop-shadow(0 10px 10px #000);"
+        style="filter: drop-shadow(0 10px 10px #000);"
       />
     </div>
-    <div id="star" class="absolute w-160 right-12 top-0">
+    <div id="star" class="absolute">
       <Image
-        alt="Harmony"
+        alt="Harmony Star"
         src={img2}
         width={1200}
         style="filter: drop-shadow(0 10px 10px #000);"
       />
     </div>
 	</div>
-  <div id="logo" class="absolute w-192 mx-auto bottom-40 left-0 right-0 z-50">
-    <Image
-      alt="Harmony"
-      src={img3}
-      width={1200}
-      style="filter: drop-shadow(0 10px 10px #000);"
-      class="w-full"
-    /> 
+  <div class="w-full absolute bottom-1/6 z-50 left-0 right-0">
+
+    <div id="logo" class="w-full h-auto md:w-1/2 mx-auto">
+      <Image
+        alt="HarmonyCon 2025 logo"
+        src={img3}
+        width={1200}
+        style="filter: drop-shadow(0 10px 10px #000);"
+        class="w-full"
+      /> 
+    </div>
+    <div id="dates" class="w-full h-auto md:w-1/2 mx-auto">
+      <Image
+        alt="HarmonyCon 2025 dates"
+        src={img6}
+        width={1200}
+        style="filter: drop-shadow(0 10px 10px #000);"
+        class="w-full"
+      /> 
+    </div>
   </div>
-  <div id="buttons" class="absolute bottom-8 left-0 right-0 mx-auto w-120 flex flex-row gap-x-16 justify-center">
+  <div id="buttons" class="absolute bottom-[5%] left-0 right-0 mx-auto w-full h-auto md:w-1/2 flex flex-row gap-x-8 md:gap-x-16 justify-center">
     <a href="/register" style="filter: drop-shadow(0 2px 2px #000);" class="-rotate-1 hover:-rotate-3 duration-300 hover:scale-[1.1]">
       <Image
         alt="Harmony"
         src={img4}
-        width={300}
-        class="w-64 magic p-4 rounded"
+        class="magic p-4 rounded"
       /> 
     </a>
     <a href="/main" style="filter: drop-shadow(0 2px 2px #000);" class="rotate-1 hover:rotate-3 duration-300 hover:scale-[1.1]">
       <Image
         alt="Harmony"
         src={img5}
-        width={300}
-        class="w-64 magic p-4 rounded"
+        class="magic p-4 rounded"
       /> 
     </a>
+  </div> -->
+  <div id="tune">
+    <Image
+      alt="Harmonic Tune"
+      src={img1}
+      width={1200}
+      style="filter: drop-shadow(0 10px 10px #000);"
+    />
+  </div>
+  <div id="star">
+    <Image
+      alt="Harmony Star"
+      src={img2}
+      width={1200}
+      style="filter: drop-shadow(0 10px 10px #000);"
+    />
+  </div>
+  <div id="logo">
+    <Image
+      alt="HarmonyCon 2025 logo"
+      src={img3}
+      width={1200}
+      style="filter: drop-shadow(0 10px 10px #000);"
+      class="w-full"
+    /> 
+  </div>
+  <div id="dates" class="w-full h-auto md:w-1/2 mx-auto">
+    <Image
+      alt="HarmonyCon 2025 dates"
+      src={img6}
+      width={1200}
+      style="filter: drop-shadow(0 10px 10px #000);"
+      class="w-full"
+    /> 
   </div>
 </Layout>
 
@@ -88,6 +133,82 @@ import img5 from "../assets/2025/enter_ticket_v2.png";
        1.0987 57.88%, 1.1146 58.82%, 1.1181 59.83%, 1.1092 60.95%, 1.0057 66.48%,
        0.986 68.14%, 0.9765 69.84%, 0.9769 72.16%, 0.9984 77.61%, 1.0047 80.79%,
        0.9991 91.48%, 1 );
+  }
+
+  @media (max-width: 768px) {
+    #tune {
+      // width: 90%;
+      position: absolute;
+      left: -12%;
+      top: -125%;
+      animation: drop 2s var(--elastic) 0s forwards, swing 6s ease-in-out 0s infinite forwards;
+    }
+
+    #star {
+      // width: 90%;
+      position: absolute;
+      right: -17%;
+      margin-top: 8%;
+      top: -125%;
+      animation: drop 2s var(--elastic) 0.2s forwards, swing2 7s ease-in-out 0.2s infinite forwards;
+    }
+    
+    @keyframes drop {
+      from {
+        top: -125%;
+      }
+      to {
+        top: -40%;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    #tune {
+      position: absolute;
+      width: 40%;
+      top: -200%;
+      left: 15%;
+      animation: drop 2s var(--elastic) 0s forwards, swing 6s ease-in-out 0s infinite forwards;
+    }
+
+    #star {
+      position: absolute;
+      width: 40%;
+      left: 40%;
+      // margin-top: 64px;
+      top: -195%;
+      animation: drop2 2s var(--elastic) 0.2s forwards, swing2 7s ease-in-out 0.2s infinite forwards;
+    }
+
+
+    @keyframes drop {
+      from {
+        top: -200%;
+        /* transform: translateY(-200vh); */
+      }
+      to {
+        top: -89%;
+        /* transform: translateY(-75vh); */
+      }
+    }
+
+    @keyframes drop2 {
+      from {
+        top: -195%;
+        /* transform: translateY(-200vh); */
+      }
+      to {
+        top: -84%;
+        /* transform: translateY(-75vh); */
+      }
+    }
+  }
+
+
+  #splash {
+    @apply absolute left-0 top-0 right-0 bottom-0 m-auto;
+    opacity: 1;
   }
 
   #curtains {
@@ -132,27 +253,12 @@ import img5 from "../assets/2025/enter_ticket_v2.png";
     background-size: cover;
   }
 
-  #splash {
-    @apply absolute left-0 top-0 right-0 bottom-0 m-auto;
-    opacity: 1;
-  }
-
-  #tune {
-    top: -200%;
-    animation: drop 2s var(--elastic) 0s forwards, swing 6s ease-in-out 0s infinite forwards;
-  }
-
-  #star {
-    margin-top: 64px;
-    top: -200%;
-    animation: drop 2s var(--elastic) 0.2s forwards, swing2 7s ease-in-out 0.2s infinite forwards;
-  }
 
   #logo {
     opacity: 0;
     animation:
-            popup 1s ease 1.7s forwards,
-            tease 4s ease 3s infinite forwards;
+      popup 1s ease 1.7s forwards,
+      tease 4s ease 3s infinite forwards;
   }
 
   #buttons {
@@ -160,13 +266,18 @@ import img5 from "../assets/2025/enter_ticket_v2.png";
     animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards;
   }
 
+  #dates {
+    opacity: 0;
+    animation:
+      popup 1s ease 1.7s forwards,
+  }
   
   @keyframes jump {
     0% {
       opacity: 0;
       transform: scale(0) rotate(0deg);
     }
-    40% {
+    50% {
       opacity: 1;
       transform: scale(1.1) rotate(0deg);
     }
@@ -241,16 +352,6 @@ import img5 from "../assets/2025/enter_ticket_v2.png";
       transform: translateX(100%);
     }
   }
-  @keyframes drop {
-    from {
-      top: -200%;
-      /* transform: translateY(-200vh); */
-    }
-    to {
-      top: -75%;
-      /* transform: translateY(-75vh); */
-    }
-  }
   @keyframes fadein {
     from {
       opacity: 0;
@@ -276,7 +377,7 @@ import img5 from "../assets/2025/enter_ticket_v2.png";
     width: 100%;
     height: 100%;
 
-    background-image: url("../2959619.png");
+    background-image: url("../stage3.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
