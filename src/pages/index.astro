@@ -150,21 +150,59 @@ import img6 from "../assets/2025/isotext1.png";
   }
 
   @media (max-width: 768px) {
+    
     #tune {
-      // width: 90%;
       position: absolute;
-      left: -12%;
+      width: 100%;
       top: -125%;
+      left: -15%;
       animation: drop 2s var(--elastic) 0s forwards, swing 6s ease-in-out 0s infinite forwards;
     }
 
     #star {
-      // width: 90%;
       position: absolute;
-      right: -17%;
-      margin-top: 8%;
-      top: -125%;
-      animation: drop 2s var(--elastic) 0.2s forwards, swing2 7s ease-in-out 0.2s infinite forwards;
+      width: 100%;
+      right: -20%;
+      top: -121%;
+      animation: drop2 2s var(--elastic) 0.2s forwards, swing2 7s ease-in-out 0.2s infinite forwards;
+    }
+
+    #logo {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      bottom: 27%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #dates {
+      position: absolute;
+      left: 5%;
+      width: 50%;
+      bottom: 27%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #register {
+      position: absolute;
+      left: 0%;
+      width: 50%;
+      bottom: 10%;
+    opacity: 0;
+    animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards;
+    }
+
+
+    #main {
+      position: absolute;
+      right: 0%;
+      width: 50%;
+      bottom: 10%;
+    opacity: 0;
+    animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards;
     }
     
     @keyframes drop {
@@ -172,7 +210,18 @@ import img6 from "../assets/2025/isotext1.png";
         top: -125%;
       }
       to {
+        top: -44%;
+      }
+    }
+
+    @keyframes drop2 {
+      from {
+        top: -121%;
+        /* transform: translateY(-200vh); */
+      }
+      to {
         top: -40%;
+        /* transform: translateY(-75vh); */
       }
     }
   }
