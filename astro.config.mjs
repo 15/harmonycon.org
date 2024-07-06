@@ -15,7 +15,7 @@ export default defineConfig({
       containers: ["#swup"],
       theme: ["overlay", { direction: "to-bottom" }],
       globalInstance: true,
-      animateHistoryBrowsing: true
+      // animateHistoryBrowsing: true,
     }),
   ],
 });
