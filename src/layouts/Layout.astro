@@ -85,7 +85,7 @@ const { pathname } = Astro.url;
   html {
     @apply m-0 p-0 h-full;
 	--swup-overlay-theme-color: #2D2E82;
-	--swup-overlay-theme-duration: .6s;
+	--swup-overlay-theme-duration: 0.6s;
 	--swup-overlay-theme-delay: .2s;
 	--swup-overlay-theme-scale: 1.2;
 	--swup-overlay-theme-skew: 0deg;
@@ -96,12 +96,22 @@ const { pathname } = Astro.url;
     transition: transform var(--swup-overlay-theme-duration) var(--swup-overlay-theme-delay);
   }
 
-  .swup-transition-overlay {
-    background: linear-gradient(45deg, rgb(0,0,0), rgb(0,0,0), rgb(0,0,0));
-    background-image: url('/curtain_fall.png');
-    background-size: contain;
+  @media (max-width: 768px) {
+    .swup-transition-overlay {
+      background: linear-gradient(45deg, rgb(0,0,0), rgb(0,0,0), rgb(0,0,0));
+      background-image: url('/curtain_fall.png');
+      background-size: cover;
+      background-repeat: no-repeat !important;
+    }
   }
 
+  @media (min-width: 768px) {
+    .swup-transition-overlay {
+      background: linear-gradient(45deg, rgb(0,0,0), rgb(0,0,0), rgb(0,0,0));
+      background-image: url('/curtain_fall.png');
+      background-size: contain;
+    }
+  }
 
   .swup-transition-overlay[data-direction="to-bottom"] {
     transform: translate3d(0, calc(-1 * var(--swup-overlay-transform-y-value)), 0) skewY(var(--swup-overlay-skew-value));
