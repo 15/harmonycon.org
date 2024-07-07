@@ -61,9 +61,9 @@ const { pathname } = Astro.url;
     />
   </head>
   <body
-    class={`m-0 p-0 h-full min-h-svh overflow-x-hidden ${mobileOverflow ? "overflow-y-auto" : "overflow-y-hidden"} ${desktopOverflow ? "md:overflow-y-auto" : "md:overflow-y-hidden"}`}
+    class={`m-0 p-0 min-h-svh overflow-x-hidden ${mobileOverflow ? "overflow-y-auto" : "overflow-y-hidden"} ${desktopOverflow ? "md:overflow-y-auto" : "md:overflow-y-hidden"}`}
   >
-    <div class="w-full h-full bg-neutral-800 flex flex-col items-center justify-center">  
+    <div class=" bg-neutral-800 flex flex-col items-center justify-center">  
       <main id="swup">
         { !['/', '/main', '/main/'].includes(pathname) ? <div class="absolute top-12 left-12 z-50">
           <Exit />
