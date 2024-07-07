@@ -12,63 +12,63 @@ import Footer from "../components/Footer.astro";
 
 <Layout title="HarmonyCon 2025" desktopOverflow={false} mobileOverflow={false}>
   <div id="bg">
+    <div id="curtains">
+      <div id="curtain-1"></div>
+      <div id="curtain-2"></div>
+    </div>
+    <div id="tune" class="opacity-100">
+      <Image
+        alt="Harmonic Tune"
+        src={img1}
+        width={1200}
+        style="filter: drop-shadow(0 10px 10px #000);"
+      />
+    </div>
+    <div id="star"  class="opacity-100">
+      <Image
+        alt="Harmony Star"
+        src={img2}
+        width={1200}
+        style="filter: drop-shadow(0 10px 10px #000);"
+      />
+    </div>
+    <div id="combined">
+  
+      <div id="logo">
+        <Image
+          alt="HarmonyCon 2025 logo"
+          src={img3}
+          width={1200}
+          style="filter: drop-shadow(0 10px 10px #000);"
+          class="w-full"
+        /> 
+      </div>
+      <div id="dates">
+        <Image
+          alt="HarmonyCon 2025 dates"
+          src={img6}
+          width={1200}
+          style="filter: drop-shadow(0 10px 10px #000);"
+          class="w-full"
+        /> 
+      </div>
+    </div>
+    <a id="register" href="/register" style="filter: drop-shadow(0 2px 2px #000);" class="-rotate-1 hover:-rotate-3 duration-300 hover:scale-[1.1]">
+      <Image
+        alt="Harmony"
+        src={img4}
+        class="p-4 rounded hover:scale-[1.1] duration-300"
+      /> 
+    </a>
+    <a id="main" href="/main" style="filter: drop-shadow(0 2px 2px #000);" class="rotate-1 hover:rotate-3 duration-300 hover:scale-[1.1]">
+      <Image
+        alt="Harmony"
+        src={img5}
+        class="p-4 rounded hover:scale-[1.1] duration-300"
+      /> 
+    </a>
   </div>
   <!-- <div id="mask" ></div> -->
-  <div id="curtains">
-    <div id="curtain-1"></div>
-    <div id="curtain-2"></div>
-  </div>
-  <div id="tune" class="opacity-100">
-    <Image
-      alt="Harmonic Tune"
-      src={img1}
-      width={1200}
-      style="filter: drop-shadow(0 10px 10px #000);"
-    />
-  </div>
-  <div id="star"  class="opacity-100">
-    <Image
-      alt="Harmony Star"
-      src={img2}
-      width={1200}
-      style="filter: drop-shadow(0 10px 10px #000);"
-    />
-  </div>
-  <div id="combined">
-
-    <div id="logo">
-      <Image
-        alt="HarmonyCon 2025 logo"
-        src={img3}
-        width={1200}
-        style="filter: drop-shadow(0 10px 10px #000);"
-        class="w-full"
-      /> 
-    </div>
-    <div id="dates">
-      <Image
-        alt="HarmonyCon 2025 dates"
-        src={img6}
-        width={1200}
-        style="filter: drop-shadow(0 10px 10px #000);"
-        class="w-full"
-      /> 
-    </div>
-  </div>
-  <a id="register" href="/register" style="filter: drop-shadow(0 2px 2px #000);" class="-rotate-1 hover:-rotate-3 duration-300 hover:scale-[1.1]">
-    <Image
-      alt="Harmony"
-      src={img4}
-      class="p-4 rounded hover:scale-[1.1] duration-300"
-    /> 
-  </a>
-  <a id="main" href="/main" style="filter: drop-shadow(0 2px 2px #000);" class="rotate-1 hover:rotate-3 duration-300 hover:scale-[1.1]">
-    <Image
-      alt="Harmony"
-      src={img5}
-      class="p-4 rounded hover:scale-[1.1] duration-300"
-    /> 
-  </a>
   
   <!-- <Footer /> -->
 </Layout>

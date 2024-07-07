@@ -15,19 +15,21 @@ import Playbill from "../components/Playbill.astro";
 ---
 
 <Layout title="HarmonyCon 2025 | Main" desktopOverflow="false" mobileOverflow="true">
-	<div id="bg"></div>
-	<div class="grid grid-cols-1 md:grid-cols-5 md:gap-x-8 md:gap-y-8">
-		<Playbill src={img1} href="/" idx={1} active={true}/>
-		<Playbill src={img2} href="/register" idx={2} active={true}/>
-		<Playbill src={img3} href="/venue" idx={3} active={true}/>
-		<Playbill src={img4} href="/apply"  idx={4} active={true}/>
-		<Playbill src={img5} href="/mascots" idx={5} active={true}/>
-		<Playbill src={img6} href="/coc" idx={6} active={true}/>
-		<Playbill src={img7} href="/gallery" idx={7} active={false}/>
-		<Playbill src={img8} href="/vendor" idx={8} active={false}/>
-		<Playbill src={img9} href="/schedule" idx={9} active={false}/>
-		<Playbill src={img10} href="/credits" idx={10} active={true}/>
+	<div id="bg">
+		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 md:gap-x-8 md:gap-y-8 mx-auto">
+			<Playbill src={img1} href="/" idx={1} active={true}/>
+			<Playbill src={img2} href="/register" idx={2} active={true}/>
+			<Playbill src={img3} href="/venue" idx={3} active={true}/>
+			<Playbill src={img4} href="/apply"  idx={4} active={true}/>
+			<Playbill src={img5} href="/mascots" idx={5} active={true}/>
+			<Playbill src={img6} href="/coc" idx={6} active={true}/>
+			<Playbill src={img7} href="/gallery" idx={7} active={false}/>
+			<Playbill src={img8} href="/vendor" idx={8} active={false}/>
+			<Playbill src={img9} href="/schedule" idx={9} active={false}/>
+			<Playbill src={img10} href="/credits" idx={10} active={true}/>
+		</div>
 	</div>
+	
 </Layout>
 
 <style>
@@ -37,11 +39,13 @@ import Playbill from "../components/Playbill.astro";
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+		height: auto;
+		min-height: 100%;
+    /* height: auto; */
 
-    background-image: url("../2645751.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../sidewalk.png");
+    background-repeat: repeat;
+    background-size: contain;
     background-position: center;
     opacity: 1;
   }

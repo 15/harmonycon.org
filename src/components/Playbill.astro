@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 const { src, href, idx, active } = Astro.props;
 ---
 
-<a class={`flex flex-col gap-y-1 lg:gap-y-2 duration-300 ${idx % 2 ? 'rotate-1 hover:rotate-3 ' : '-rotate-1 hover:-rotate-3 '} ${active ? 'grayscale-0 cursor-pointer' : 'grayscale cursor-not-allowed'} hover:scale-[1.05]`} href={active ? href : ''}>
+<a class={`w-full items-center flex flex-col gap-y-1 lg:gap-y-2 duration-300 ${idx % 2 ? 'rotate-1 hover:rotate-3 ' : '-rotate-1 hover:-rotate-3 '} ${active ? 'grayscale-0 cursor-pointer' : 'grayscale cursor-not-allowed'} hover:scale-[1.05]`} href={active ? href : ''}>
   <div
     class="relative w-80 max-w-80 min-w-80  flex flex-col items-center justify-center rounded border-2 border-black"
   >
