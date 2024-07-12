@@ -5,15 +5,15 @@ import img1 from "../assets/2025/flyer.png";
 import Exit from "../components/Exit.astro";
 ---
 
-<Layout title="HarmonyCon 2025 | Register">
+<Layout title="HarmonyCon 2025 | Register"  desktopOverflow="false" mobileOverflow="true">
 	<div id="bg"></div>
 	<!-- <div id="fg"></div> -->
-	<div class="absolute bottom-8 w-240 h-72 bg-neutral-300 opacity-90 left-0 right-0 mx-auto rounded p-8">
-		<div class="italic text-3xl">
+	<div class="absolute bottom-8 w-240 h-1/6 bg-neutral-300 opacity-90 left-0 right-0 mx-auto rounded p-8">
+		<div class="font-semibold text-3xl">
 			Harmonic Tune
 		</div>
-		<div class="text-xl">
-			[insert text about registration here]
+		<div class="text-xl italic">
+			Howdy, pardner~! You enjoying the night?
 		</div>
 	</div>
 </Layout>
@@ -25,9 +25,10 @@ import Exit from "../components/Exit.astro";
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+		height: auto;
+		min-height: 100%;
 
-    background-image: url("/flyer.png");
+    background-image: url("../bar_temp1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
