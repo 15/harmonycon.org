@@ -11,26 +11,31 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="HarmonyCon 2025" desktopOverflow={false} mobileOverflow={false}>
-  <div id="bg">
+  <div id="bg" class="relative">
     <div id="curtains">
       <div id="curtain-1"></div>
       <div id="curtain-2"></div>
     </div>
-    <div id="tune" class="opacity-100">
       <Image
+      id="tune" 
         alt="Harmonic Tune"
         src={img1}
         style="filter: drop-shadow(0 10px 10px #000);"
       />
-    </div>
-    <div id="star"  class="opacity-100">
       <Image
+      id="star"  
         alt="Harmony Star"
         src={img2}
         style="filter: drop-shadow(0 10px 10px #000);"
       />
-    </div>
-    <div id="combined">
+      <Image
+        id="logo"
+        alt="HarmonyCon 2025 logo"
+        src={img3}
+        style="filter: drop-shadow(0 10px 10px #000);"
+        class="z-10"
+      /> 
+    <!-- <div id="combined">
   
       <div id="logo">
         <Image
@@ -40,7 +45,6 @@ import Footer from "../components/Footer.astro";
           style="filter: drop-shadow(0 10px 10px #000);"
           class="w-full"
         /> 
-      </div>
       <div id="dates">
         <Image
           alt="HarmonyCon 2025 dates"
@@ -50,22 +54,25 @@ import Footer from "../components/Footer.astro";
           class="w-full"
         /> 
       </div>
-    </div>
-    <a id="register" href="/register" style="filter: drop-shadow(0 2px 2px #000);" class="-rotate-1 hover:-rotate-3 duration-300 hover:scale-[1.1]">
+    </div> -->
+    <a href="/register">
       <Image
+      style="filter: drop-shadow(0 2px 2px #000);"
+        id="register" 
         alt="Harmony"
         src={img4}
         class="p-4 rounded hover:scale-[1.1] duration-300"
       /> 
     </a>
-    <a id="main" href="/main" style="filter: drop-shadow(0 2px 2px #000);" class="rotate-1 hover:rotate-3 duration-300 hover:scale-[1.1]">
+    <a href="/main">
       <Image
+      id="main" 
+      style="filter: drop-shadow(0 2px 2px #000);" 
         alt="Harmony"
         src={img5}
         class="p-4 rounded hover:scale-[1.1] duration-300"
       /> 
     </a>
-  </div>
   <!-- <div id="mask" ></div> -->
   
   <!-- <Footer /> -->
@@ -159,8 +166,8 @@ import Footer from "../components/Footer.astro";
       left: 0%;
       width: 45%;
       bottom: 5%;
-    opacity: 0;
-    animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards;
+      opacity: 0;
+      animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards;
     }
 
 
@@ -169,23 +176,23 @@ import Footer from "../components/Footer.astro";
       right: 0%;
       width: 45%;
       bottom: 5%;
-    opacity: 0;
-    animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards;
+      opacity: 0;
+      animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards;
     }
 
     #combined {
-    position: absolute;
-    
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 45vw;
-    bottom: 20%;
-    opacity: 0;
-    animation:
-      popup 1s ease 1.7s forwards,
-      tease 4s ease 3s infinite forwards;
-  }
+      position: absolute;
+      
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 45vw;
+      bottom: 20%;
+      opacity: 0;
+      animation:
+        popup 1s ease 1.7s forwards,
+        tease 4s ease 3s infinite forwards;
+    }
     
     @keyframes drop {
       from {
@@ -209,9 +216,15 @@ import Footer from "../components/Footer.astro";
   }
 
   @media (min-width: 768px) {
+    #bg {
+      position: relative;
+    }
     #tune {
       position: absolute;
-      width: 45%;
+      // height: 45%;
+      // width: 45%;
+      height: 170%;
+      width: auto;
       top: -200%;
       left: 15%;
       animation: drop 2s var(--elastic) 0s forwards, swing 6s ease-in-out 0s infinite forwards;
@@ -219,19 +232,20 @@ import Footer from "../components/Footer.astro";
 
     #star {
       position: absolute;
-      width: 45%;
-      left: 40%;
-      // margin-top: 64px;
+      height: 170%;
+      width: auto;
+      right: 15%;
       top: -195%;
       animation: drop2 2s var(--elastic) 0.2s forwards, swing2 7s ease-in-out 0.2s infinite forwards;
     }
 
     #logo {
-      // position: absolute;
+      position: absolute;
       left: 0;
       right: 0;
-      width: 45%;
-      bottom: 0%;
+      height: 35%;
+      width: auto;
+      bottom: 10%;
       margin-left: auto;
       margin-right: auto;
     }
@@ -248,8 +262,9 @@ import Footer from "../components/Footer.astro";
 
     #register {
       position: absolute;
-      left: 37%;
-      width: 11%;
+      left: 35%;
+      width: auto;
+      height: 13%;
       bottom: 2%;
       opacity: 0;
       animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards, floating 6s var(--sine) 0s infinite forwards;
@@ -258,25 +273,26 @@ import Footer from "../components/Footer.astro";
 
     #main {
       position: absolute;
-      right: 37%;
-      width: 11%;
+      right: 35%;
+      width: auto;
+      height: 13%;
       bottom: 2%;
       opacity: 0;
       animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards, floating2 7s var(--sine) 0.3s infinite forwards;
     }
 
     #combined {
-    position: absolute;
-    
-    left: 0;
-    right: 0;
-    width: 100%;
-    bottom: 18%;
-    opacity: 0;
-    animation:
-      popup 1s ease 1.7s forwards,
-      tease 4s ease 3s infinite forwards;
-  }
+      position: absolute;
+      
+      left: 0;
+      right: 0;
+      width: 100%;
+      bottom: 18%;
+      opacity: 0;
+      animation:
+        popup 1s ease 1.7s forwards,
+        tease 4s ease 3s infinite forwards;
+    }
 
 
     @keyframes drop {
@@ -285,7 +301,7 @@ import Footer from "../components/Footer.astro";
         /* transform: translateY(-200vh); */
       }
       to {
-        top: -89%;
+        top: -90%;
         /* transform: translateY(-75vh); */
       }
     }
@@ -296,7 +312,7 @@ import Footer from "../components/Footer.astro";
         /* transform: translateY(-200vh); */
       }
       to {
-        top: -84%;
+        top: -85%;
         /* transform: translateY(-75vh); */
       }
     }
