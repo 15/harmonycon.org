@@ -12,10 +12,12 @@ import Footer from "../components/Footer.astro";
 
 <Layout title="HarmonyCon 2025" desktopOverflow={false} mobileOverflow={false}>
   <div id="bg" class="relative">
+  </div>
     <div id="curtains">
       <div id="curtain-1"></div>
       <div id="curtain-2"></div>
     </div>
+    <div class="mascots">
       <Image
       id="tune" 
         alt="Harmonic Tune"
@@ -28,6 +30,7 @@ import Footer from "../components/Footer.astro";
         src={img2}
         style="filter: drop-shadow(0 10px 10px #000);"
       />
+    </div>
       <Image
         id="logo"
         alt="HarmonyCon 2025 logo"
@@ -55,24 +58,26 @@ import Footer from "../components/Footer.astro";
         /> 
       </div>
     </div> -->
-    <a href="/register">
-      <Image
-      style="filter: drop-shadow(0 2px 2px #000);"
-        id="register" 
-        alt="Harmony"
-        src={img4}
-        class="p-4 rounded hover:scale-[1.1] duration-300"
-      /> 
-    </a>
-    <a href="/main">
-      <Image
-      id="main" 
-      style="filter: drop-shadow(0 2px 2px #000);" 
-        alt="Harmony"
-        src={img5}
-        class="p-4 rounded hover:scale-[1.1] duration-300"
-      /> 
-    </a>
+    <div class="buttons">
+      <a href="/register">
+        <Image
+        style="filter: drop-shadow(0 2px 2px #000);"
+          id="register" 
+          alt="Harmony"
+          src={img4}
+          class="p-4 rounded hover:scale-[1.1] duration-300"
+        /> 
+      </a>
+      <a href="/main">
+        <Image
+        id="main" 
+        style="filter: drop-shadow(0 2px 2px #000);" 
+          alt="Harmony"
+          src={img5}
+          class="p-4 rounded hover:scale-[1.1] duration-300"
+        /> 
+      </a>
+    </div>
   <!-- <div id="mask" ></div> -->
   
   <!-- <Footer /> -->
@@ -219,35 +224,54 @@ import Footer from "../components/Footer.astro";
     #bg {
       position: relative;
     }
+
+    #mascots {
+      position: relative;
+      left: 0;
+      right: 0;
+    }
+
     #tune {
       position: absolute;
-      // height: 45%;
-      // width: 45%;
-      height: 170%;
+      height: 170vh;
       width: auto;
-      top: -200%;
-      left: 15%;
+      top: -200vh;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 12rem;
       animation: drop 2s var(--elastic) 0s forwards, swing 6s ease-in-out 0s infinite forwards;
     }
 
     #star {
       position: absolute;
-      height: 170%;
+      height: 170vh;
       width: auto;
-      right: 15%;
-      top: -195%;
+      left: 0;
+      right: 0;
+      top: -200vh;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 12rem;
+      // top: -195%;
       animation: drop2 2s var(--elastic) 0.2s forwards, swing2 7s ease-in-out 0.2s infinite forwards;
     }
 
     #logo {
       position: absolute;
+      opacity: 0;
       left: 0;
       right: 0;
       height: 35%;
       width: auto;
-      bottom: 10%;
+      bottom: 15%;
       margin-left: auto;
       margin-right: auto;
+      
+      animation:
+        popup 1s ease 1.7s forwards,
+        tease 4s ease 3s infinite forwards;
     }
 
     #dates {
@@ -260,25 +284,39 @@ import Footer from "../components/Footer.astro";
       margin-right: auto;
     }
 
+    #buttons {
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
     #register {
       position: absolute;
-      left: 35%;
+      left: 0;
+      right: 0;
       width: auto;
-      height: 13%;
-      bottom: 2%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 24vh;
+      height: 13vh;
+      bottom: 3%;
       opacity: 0;
-      animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards, floating 6s var(--sine) 0s infinite forwards;
+      animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.0s forwards, floating 6s var(--sine) 0s infinite forwards;
     }
 
 
     #main {
       position: absolute;
-      right: 35%;
+      left: 0;
+      right: 0;
       width: auto;
-      height: 13%;
-      bottom: 2%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24vh;
+      height: 13vh;
+      bottom: 3%;
       opacity: 0;
-      animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards, floating2 7s var(--sine) 0.3s infinite forwards;
+      animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.0s forwards, floating2 7s var(--sine) 0.3s infinite forwards;
     }
 
     #combined {
@@ -297,22 +335,22 @@ import Footer from "../components/Footer.astro";
 
     @keyframes drop {
       from {
-        top: -200%;
+        top: -200vh;
         /* transform: translateY(-200vh); */
       }
       to {
-        top: -90%;
+        top: -90vh;
         /* transform: translateY(-75vh); */
       }
     }
 
     @keyframes drop2 {
       from {
-        top: -195%;
+        top: -195vh;
         /* transform: translateY(-200vh); */
       }
       to {
-        top: -85%;
+        top: -85vh;
         /* transform: translateY(-75vh); */
       }
     }
