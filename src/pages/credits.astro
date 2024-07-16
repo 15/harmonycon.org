@@ -1,11 +1,121 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import img1 from "../assets/2025/flyer.png";
+import img1 from "../assets/2025/15.png";
+import img2 from "../assets/2025/brittney.png";
+import img3 from "../assets/2025/saphy.png";
 ---
 
 <Layout title="HarmonyCon 2025 | Credits">
-	<div class="bg-neutral-800">
-		
+	<div id="bg">
+	</div>
+	<div class="absolute left-[25%] top-[25vh] flex items-center justify-center">
+		<div class="absolute starburst-5 inside z-50">
+			<div style="text-shadow: 1px 1px 2px black;" class="z-[100] text-[#D4AF37] flex flex-col items-center justify-center w-full h-full text-center font-semibold">
+				<div class="uppercase text-3xl leading-tight tracking-tight">
+					15
+				</div>
+				<div>
+					<Image src={img1} alt="Back" width={100} class="bg-transparent w-16 rounded-full border-[#D4AF37] border-4"/>
+				</div>
+				<!-- <div class="text-sm uppercase">
+					Web development
+				</div> -->
+			</div>
+		</div>
+		<div class="absolute starburst-5 outside z-40">
+	
+		</div>
+	</div>
+	<div class="absolute left-[50%] top-[25vh] flex items-center justify-center">
+		<div class="absolute starburst-5 inside z-50">
+			<div style="text-shadow: 1px 1px 2px black;" class="z-[100] text-[#D4AF37] flex flex-col items-center justify-center w-full h-full text-center font-semibold">
+				<div class="uppercase text-2xl leading-tight tracking-tight">
+					Brittney Ackerman
+				</div>
+				<div>
+					<Image src={img2} alt="Back" width={100} class="bg-transparent w-16 rounded-full border-[#D4AF37] border-4"/>
+				</div>
+				<!-- <div class="text-sm uppercase">
+					Head of Art/Design
+				</div> -->
+			</div>
+		</div>
+		<div class="absolute starburst-5 outside z-40">
+	
+		</div>
+	</div>
+
+	<div class="absolute left-[75%] top-[25vh] flex items-center justify-center">
+		<div class="absolute starburst-5 inside z-50">
+			<div style="text-shadow: 1px 1px 2px black;" class="z-[100] text-[#D4AF37] flex flex-col items-center justify-center w-full h-full text-center font-semibold">
+				<div class="uppercase text-2xl leading-tight tracking-tight">
+					SaphyPone
+				</div>
+				<div>
+					<Image src={img3} alt="Back" width={100} class="bg-transparent w-16 rounded-full border-[#D4AF37] border-4"/>
+				</div>
+				<!-- <div class="text-sm uppercase">
+					Art assets
+				</div> -->
+			</div>
+		</div>
+		<div class="absolute starburst-5 outside z-40">
+	
+		</div>
 	</div>
 </Layout>
+
+<style>
+	.inside {
+background: radial-gradient(#a46f71, #a46f71);
+width: 22rem;
+
+
+	}
+
+	.inside:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		opacity: 0.2;
+		background-image: url("/textured-paper.png");
+
+		background-repeat: repeat;
+	background-size: cover;
+	background-position: center;
+	}
+
+	.outside {
+		background-color: #D4AF37;
+		width: 24rem;
+
+	background-image: url("/textured-paper.png");
+	}
+
+#bg {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+	width: 100%;
+		height: auto;
+		min-height: 100%;
+	/* height: auto; */
+
+	background-image: url("../asphalt.avif");
+	background-repeat: repeat;
+	background-size: cover;
+	background-position: center;
+	opacity: 1;
+}
+
+.starburst-5 {
+	text-align: center;
+  aspect-ratio: 1;
+  clip-path: polygon(79.9% 90.08%,49.37% 0%,21.12% 90.82%,97.35% 33.95%,2.26% 35.15%,79.9% 90.08%,49.37% 0%,21.12% 90.82%,97.35% 33.95%,2.26% 35.15%);
+}
+</style>
