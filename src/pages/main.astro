@@ -2,15 +2,13 @@
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import img1 from "../assets/2025/flyer.png";
-import img2 from "../assets/2024/registration banner beeg with text.png";
-import img3 from "../assets/2024/harmonycon buhbhuhbuh.png";
-import img4 from "../assets/2024/musician banner.png";
-import img5 from "../assets/2023/vendor hall harmonycon banner final.png";
-import img6 from "../assets/2023/harm o n y s t a a a a a a a a a a a a a.png";
-import img7 from "../assets/2023/mane events banner beeg text.png";
-import img8 from "../assets/2024/vendorbanner.png";
-import img9 from "../assets/2023/coltchella4-poster.png";
-import img10 from "../assets/2024/harmonycon 2024 flyer horz.png";
+import img2 from "../assets/MF/cards/register.png";
+import img3 from "../assets/MF/cards/venue.png";
+import img4 from "../assets/MF/cards/apply.png";
+import img5 from "../assets/MF/cards/coc.png";
+import img6 from "../assets/MF/cards/mascots.png";
+import img7 from "../assets/MF/cards/scrapbook.png";
+import img8 from "../assets/MF/cards/credits.png";
 import Playbill from "../components/Playbill.astro";
 ---
 
@@ -45,6 +43,22 @@ import Playbill from "../components/Playbill.astro";
 
 	<div class="sm:absolute sm:left-[75%] sm:top-[0%]">
 		<Playbill src={img4} href="/apply" idx={4} active={true}/>
+	</div>
+
+	<div class="sm:absolute sm:left-[0%] sm:top-[40%]">
+		<Playbill src={img5} href="/coc" idx={4} active={true}/>
+	</div>
+
+	<div class="sm:absolute sm:left-[25%] sm:top-[40%]">
+		<Playbill src={img6} href="/mascots" idx={4} active={true}/>
+	</div>
+
+	<div class="sm:absolute sm:left-[50%] sm:top-[40%]">
+		<Playbill src={img7} href="/gallery" idx={4} active={true}/>
+	</div>
+
+	<div class="sm:absolute sm:left-[75%] sm:top-[40%]">
+		<Playbill src={img8} href="/credits" idx={4} active={true}/>
 	</div>
 	
 </Layout>
