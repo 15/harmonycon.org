@@ -91,6 +91,14 @@ const { pathname } = Astro.url;
 	--swup-overlay-theme-skew: 0deg;
   }
 
+
+.swup-transition-overlay {
+
+  --swup-overlay-x-scale: 1;
+  --swup-overlay-y-scale: 1;
+  --swup-overlay-skew-direction: 1;
+}
+
   body {
     @apply m-0 p-0 h-full;
   }
@@ -113,9 +121,16 @@ const { pathname } = Astro.url;
     .swup-transition-overlay {
       background: linear-gradient(45deg, rgb(0,0,0), rgb(0,0,0), rgb(0,0,0));
       background-image: url('/curtain_fall.webp');
-      background-size: contain;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
+
+  .swup-transition-overlay[data-direction="to-top"],
+.swup-transition-overlay[data-direction="to-bottom"] {
+  --swup-overlay-x-scale: 1.0;
+  --swup-overlay-y-scale: 1.2;
+}
 
   .swup-transition-overlay[data-direction="to-bottom"] {
     transform: translate3d(0, calc(-1 * var(--swup-overlay-transform-y-value)), 0) skewY(var(--swup-overlay-skew-value));
