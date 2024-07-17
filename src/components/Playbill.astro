@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-const { src, href, idx, active } = Astro.props;
+const { src, href, idx, active, title="Ponybill"} = Astro.props;
 import ponybill from "../assets/2025/ponybill.png";
 
 const borderType = ['_', 'wood', 'black', 'wood2', 'wood4', 'wood2', 'wood4', 'wood', 'black'][idx];
@@ -17,17 +17,20 @@ const borderType = ['_', 'wood', 'black', 'wood2', 'wood4', 'wood2', 'wood4', 'w
     <div class="text-base text-black">Playbill</div>
   </div> -->
     <!-- <img src="/Playbill_logo.svg" /> -->
-    <Image
+    <!-- <Image
       src={ponybill}
       height="200"
       class="w-full"
       alt=""
-    />
+    /> -->
+    <div class="bg-yellow-200 w-80 h-16 font-serif uppercase flex items-center justify-center text-5xl">
+      { title }
+    </div>
     <Image
       src={src}
       height="400"
       alt=""
-      class="w-full h-88 object-cover object-top"
+      class="w-80 h-88 object-cover object-top"
     />
   </div>
 </a>
