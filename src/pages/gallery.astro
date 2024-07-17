@@ -9,14 +9,52 @@ const optimizedGalleryBackground = await getImage({
   format: "webp",
   width: 2000
 });
+
+
+import img0 from "../assets/2025/bg/bar_temp1.png";
+
+const images = [
+	{ img: img0, artist: "Brittney Ackerman", description: "" }
+];
 ---
 
+<link
+  type="text/css"
+  rel="stylesheet"
+  href="/css/lightgallery-bundle.min.css"
+/>
 <Layout title="HarmonyCon 2025 | Credits">
 	<div id="bg">
 	</div>
 	<div class="flex flex-col h-screen mt-16 gap-y-44">
 		<div class="cursor-default font-serif uppercase text-center font-semibold text-6xl text-black z-10" style="text-shadow: 3px 3px 1px #999;" >
-			Credits
+			Gallery
+		</div>
+		<div
+      id="lightgallery"
+      class="text-center mt-8 mb-8 sm:mt-8 sm:mb-12 block gap-y-8 w-full px-4 sm:px-8 sm:mx-auto"
+    >
+		{
+			images.map(({ img, artist, description }, idx) =>
+			<a
+				class={`inline-block m-2 sm:m-2 xl:m-4 duration-500 ${
+					idx % 2
+						? "rotate-3 hover:rotate-6"
+						: "-rotate-3 hover:-rotate-6"
+				}`}
+				data-src={img.src}
+				data-sub-html={`<h4>Artist: ${artist}</h4>${description}`}
+			>
+				<Image
+					alt={`Art asset #${idx + 1}`}
+					src={img}
+					height={300}
+					style="filter: drop-shadow(0 2px 2px #000);"
+					class="duration-300 h-24 sm:h-32 xl:h-48 w-auto md:w-auto cursor-pointer rounded-lg sm:rounded-lg hover:scale-[1.1] "
+				/>
+			</a>
+			)
+		}
 		</div>
 	</div>
 </Layout>

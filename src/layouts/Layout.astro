@@ -73,17 +73,9 @@ const { pathname } = Astro.url;
     <link rel="icon" href="/logo/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <!-- <ViewTransitions /> -->
-
     <link
       rel="preload"
       href={optimizedCurtains1.src}
-      as="image"
-      fetchpriority="high"
-    />
-    <link
-      rel="preload"
-      href={optimizedCurtains2.src}
       as="image"
       fetchpriority="high"
     />
@@ -93,7 +85,12 @@ const { pathname } = Astro.url;
       as="image"
       fetchpriority="low"
     />
-
+    <link
+      rel="preload"
+      href={optimizedCurtains2.src}
+      as="image"
+      fetchpriority="high"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -196,3 +193,46 @@ const { pathname } = Astro.url;
     transform: translate3d(0, calc(-1 * var(--swup-overlay-transform-y-value)), 0) skewY(var(--swup-overlay-skew-value));
   }
 </style>
+
+<script>
+import lightGallery from "lightgallery";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom"
+let gallery;
+
+document.addEventListener('swup:enable', () => {
+  if (document.getElementById("lightgallery") && !gallery) {
+    gallery = lightGallery(document.getElementById("lightgallery"), {
+      plugins: [lgZoom, lgThumbnail],
+      speed: 500,
+      licenseKey: import.meta.env.PUBLIC_KEY,
+      mobileSettings: {
+        controls: false,
+        showCloseIcon: true,
+        download: true,
+      },
+    });
+  }
+
+  window.swup.hooks.on("content:replace", () => {
+    if (window.location.pathname.includes('gallery')) {
+      gallery = lightGallery(document.getElementById("lightgallery"), {
+        plugins: [lgZoom, lgThumbnail],
+        speed: 500,
+        licenseKey: import.meta.env.PUBLIC_KEY,
+        mobileSettings: {
+          controls: false,
+          showCloseIcon: true,
+          download: true,
+        },
+      });
+    }
+
+    if (window.location.pathname.includes('main')) {
+      if (gallery) {
+        gallery.destroy();
+      }
+    }
+  });
+});
+</script>
