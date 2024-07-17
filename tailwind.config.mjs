@@ -4,7 +4,8 @@ export default {
 	theme: {
     extend: {
       fontFamily: {
-				sans: ['Poppins']
+				sans: ['Poppins'],
+				serif: ['Latin CG Bold']
       },
       fontSize: {
 				'10xl': '10rem',

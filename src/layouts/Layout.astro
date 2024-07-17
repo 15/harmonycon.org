@@ -90,7 +90,13 @@ const { pathname } = Astro.url;
       rel="stylesheet"
     />
 
-
+    <link
+      rel="preload"
+      href="/fonts/Latin CG Bold Regular.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
   </head>
   <body
     class={`m-0 p-0 min-h-svh overflow-x-hidden ${mobileOverflow ? "overflow-y-auto" : "overflow-y-hidden"} ${desktopOverflow ? "md:overflow-y-auto" : "md:overflow-y-hidden"}`}
@@ -107,6 +113,14 @@ const { pathname } = Astro.url;
 </html>
 
 <style is:global define:vars={{ optimizedCurtains1: `url(${optimizedCurtains1.src})`, optimizedCurtains2: `url(${optimizedCurtains2.src})` }}>
+
+  @font-face {
+    font-family: "Latin CG Bold";
+    src: local("/fonts/Latin CG Bold Regular.otf"),
+      url("/fonts/Latin CG Bold Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+  }
 
   .magic:hover {
     /* box-shadow: 0 0 15px 5px #fef9c3; */
