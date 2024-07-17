@@ -1,8 +1,15 @@
 ---
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import img1 from "../assets/2025/flyer.png";
 import Exit from "../components/Exit.astro";
+
+import registerBackground from "../assets/2025/bar_temp2.png";
+const optimizedRegisterBackground = await getImage({
+  src: registerBackground,
+  format: "webp",
+  width: 2000
+});
 ---
 
 <Layout title="HarmonyCon 2025 | Register"  desktopOverflow="false" mobileOverflow="true">
@@ -13,12 +20,12 @@ import Exit from "../components/Exit.astro";
 			Harmonic Tune
 		</div>
 		<div class="text-xl italic">
-			Howdy, pardner!
+			Howdy, pardner! What'll it be?
 		</div>
 	</div>
 </Layout>
 
-<style>
+<style define:vars={{optimizedRegisterBackground: `url(${optimizedRegisterBackground.src})`}}>
 	#bg {
     position: absolute;
     
@@ -28,22 +35,7 @@ import Exit from "../components/Exit.astro";
 		height: auto;
 		min-height: 100%;
 
-    background-image: url("../bar_temp1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
-  }
-
-	#fg {
-    position: absolute;
-    
-    bottom: 0;
-		right: 12.5%;
-    width: 75%;
-    height: 90%;
-
-    background-image: url("../src/assets/2025/flyer.png");
+    background-image: var(--optimizedRegisterBackground);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
