@@ -2,11 +2,14 @@
 import { Image } from "astro:assets";
 const { src, href, idx, active } = Astro.props;
 import ponybill from "../assets/2025/ponybill.png";
+
+const borderType = ['_', 'wood', 'black', 'wood2', 'wood4', 'wood2', 'wood4', 'wood', 'black'][idx];
+// const borderType = ['gold', 'black'][idx % 2];
 ---
 
-<a class={`max-h-120 sm:max-h-72 md:max-h-80 lg:max-h-80 xl:max-h-104 2xl:max-h-120  items-center flex flex-col gap-y-1 lg:gap-y-2 duration-300 ${idx % 2 ? 'rotate-1 hover:rotate-3 ' : '-rotate-1 hover:-rotate-3 '} ${active ? 'grayscale-0 cursor-pointer' : 'grayscale cursor-not-allowed'} hover:scale-[1.05]`} href={active ? href : ''}>
+<a style="filter: drop-shadow(0 2px 2px #000);" class={` ${borderType} p-4 rounded border-[10px] w-96 sm:max-h-72 md:max-h-80 lg:max-h-80 xl:max-h-104 2xl:max-h-120  items-center flex flex-col gap-y-1 lg:gap-y-2 duration-300 ${idx % 2 ? 'rotate-1 hover:rotate-3 ' : '-rotate-1 hover:-rotate-3 '} ${active ? 'grayscale-0 cursor-pointer' : 'grayscale cursor-not-allowed'} hover:scale-[1.05]`} href={active ? href : ''}>
   <div
-    class="relative flex flex-col rounded border-2 border-black"
+    class="relative flex flex-col rounded"
   >
   <!-- <div
     class="flex flex-col leading-snug gap-y-0.5 text-center justify-center mt-2 absolute bg-yellow-200 w-full py-2 bottom-0"
@@ -16,15 +19,88 @@ import ponybill from "../assets/2025/ponybill.png";
     <!-- <img src="/Playbill_logo.svg" /> -->
     <Image
       src={ponybill}
-      width="400"
-      class=""
+      height="200"
+      class="w-full"
       alt=""
     />
     <Image
       src={src}
-      width="400"
+      height="400"
       alt=""
-      class=" object-cover object-top"
+      class="w-full h-88 object-cover object-top"
     />
   </div>
 </a>
+<style>
+  .gold {
+    background: rgba(0, 0, 0, 0.05);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-color: 	#ffbf00;
+    /* border-image: url("/wood.jpg") 30 30 stretch;
+    border: 16px solid url("/wood.jpg") 30 30 stretch; */
+  }
+
+  .black {
+    background: rgba(0, 0, 0, 0.05);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-color: 	#000000;
+    /* border-image: url("/wood.jpg") 30 30 stretch;
+    border: 16px solid url("/wood.jpg") 30 30 stretch; */
+  }
+
+  .wood2 {
+    background: rgba(0, 0, 0, 0.05);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-image: url("/dark_wood.jpg") 30 30 stretch;
+    border: 16px solid url("/dark_wood.jpg") 30 30 stretch;
+  }
+
+  .wood {
+    background: rgba(0, 0, 0, 0.05);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-image: url("/wood.jpg") 30 30 stretch;
+    border: 16px solid url("/wood.jpg") 30 30 stretch;
+  }
+
+  .wood3 {
+    background: rgba(0, 0, 0, 0.05);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-image: url("/light_wood.jpg") 30 30 stretch;
+    border: 16px solid url("/light_wood.jpg") 30 30 stretch;
+  }
+
+  .wood4 {
+    background: rgba(0, 0, 0, 0.05);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-image: url("/lighter_wood.jpg") 30 30 stretch;
+    border: 16px solid url("/lighter_wood.jpg") 30 30 stretch;
+  }
+
+  .wood5 {
+    background: rgba(0, 0, 0, 0.05);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-image: url("/lightest_wood.jpg") 30 30 stretch;
+    border: 16px solid url("/lightest_wood.jpg") 30 30 stretch;
+  }
+</style>

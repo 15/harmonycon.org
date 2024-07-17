@@ -3,6 +3,7 @@ const { title,  desktopOverflow = false, mobileOverflow = true } = Astro.props;
 // import { ViewTransitions } from "astro:transitions";
 import { getImage } from "astro:assets";
 import Exit from "../components/Exit.astro";
+import Footer from "../components/Footer.astro";
 
 import curtains1 from "../assets/2025/curtain_full.png";
 const optimizedCurtains1 = await getImage({
@@ -64,7 +65,7 @@ const { pathname } = Astro.url;
       content="Get ready for an unforgettable experience at HarmonyCon 2024, happening from February 2nd to 4th at our brand-new venue, the Hyatt Regency in Downtown Dallas! This year's convention promises to be a spectacular showcase featuring special guests, a plethora of community personalities, our Scene-themed Anti-Prom event, and two nights of concerts boasting a lineup so impressive that any aficionado of horse music will undoubtedly regret missing out!"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/logo/icon2025.png" />
+    <link rel="icon" href="/logo/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <!-- <ViewTransitions /> -->
@@ -99,14 +100,15 @@ const { pathname } = Astro.url;
     />
   </head>
   <body
-    class={`m-0 p-0 min-h-svh overflow-x-hidden ${mobileOverflow ? "overflow-y-auto" : "overflow-y-hidden"} ${desktopOverflow ? "md:overflow-y-auto" : "md:overflow-y-hidden"}`}
+    class={`m-0 p-0 min-h-svh h-full overflow-x-hidden ${mobileOverflow ? "overflow-y-auto" : "overflow-y-hidden"} ${desktopOverflow ? "md:overflow-y-auto" : "md:overflow-y-hidden"}`}
   >
-    <div class=" bg-neutral-800 flex flex-col items-center justify-center">  
+    <div class=" bg-neutral-800">  
       <main id="swup">
         { !['/', '/main', '/main/'].includes(pathname) ? <div class="absolute top-12 left-12 z-50">
           <Exit />
         </div> : null}
         <slot />
+        <!-- <Footer /> -->
       </main>
     </div>
   </body>
