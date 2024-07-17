@@ -8,7 +8,7 @@ const borderType = ['_', 'wood', 'black', 'wood2', 'wood4', 'wood2', 'wood4', 'w
 // const borderType = ['gold', 'black'][idx % 2];
 ---
 
-<a style="filter: drop-shadow(0 3px 3px #000);" class={` ${borderType} bg-[#fff] p-4 rounded border-[10px] w-full items-center flex flex-col gap-y-1 lg:gap-y-2 duration-300 ${isLeft ? 'rotate-1 hover:rotate-3 ' : '-rotate-1 hover:-rotate-3 '} ${active ? 'grayscale-0 cursor-pointer' : 'grayscale cursor-not-allowed'} hover:scale-[1.05] hover:z-[100] relative`} href={active ? href : ''}>
+<a style="filter: drop-shadow(0 3px 3px #000);" class={` ${borderType} bg-white p-4 rounded border-[10px] w-full items-center flex flex-col gap-y-1 lg:gap-y-2 duration-300 ${isLeft ? 'rotate-0 hover:rotate-3 ' : '-rotate-0 hover:-rotate-3 '} ${active ? 'grayscale-0 cursor-pointer' : 'grayscale cursor-not-allowed'} hover:scale-[1.05] hover:z-[100] relative`} href={active ? href : ''}>
   <div
     style="filter: drop-shadow(0 1px 1px #000);"
     class={`w-80 relative flex flex-col rounded ${active ? 'grayscale-0' : 'grayscale'}`}
@@ -47,30 +47,5 @@ const borderType = ['_', 'wood', 'black', 'wood2', 'wood4', 'wood2', 'wood4', 'w
     border-color: 	#000000;
     /* border-image: url("/wood.jpg") 30 30 stretch;
     border: 16px solid url("/wood.jpg") 30 30 stretch; */
-  }
-
-  .wood2 {
-    border-image: url("/dark_wood.jpg") 30 30 stretch;
-    border: 16px solid url("/dark_wood.jpg") 30 30 stretch;
-  }
-
-  .wood {
-    border-image: url("/wood.jpg") 30 30 stretch;
-    border: 16px solid url("/wood.jpg") 30 30 stretch;
-  }
-
-  .wood3 {
-    border-image: url("/light_wood.jpg") 30 30 stretch;
-    border: 16px solid url("/light_wood.jpg") 30 30 stretch;
-  }
-
-  .wood4 {
-    border-image: url("/lighter_wood.jpg") 30 30 stretch;
-    border: 16px solid url("/lighter_wood.jpg") 30 30 stretch;
-  }
-
-  .wood5 {
-    border-image: url("/lightest_wood.jpg") 30 30 stretch;
-    border: 16px solid url("/lightest_wood.jpg") 30 30 stretch;
   }
 </style>
