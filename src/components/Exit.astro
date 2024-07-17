@@ -2,8 +2,25 @@
 import { Image } from "astro:assets";
 import exit from "../assets/2025/exit.png";
 ---
-  <a href="/main" class="opacity-60 hover:opacity-100 duration-500 flex items-center justify-center">
-    <Image src={exit} alt="Back" width={400} class="border-4 border-green-300  w-48 h-auto rounded-lg"/>
-  </a>
+<a href="/main" class="opacity-60 hover:opacity-100 duration-500 flex items-center justify-center">
+  <Image src={exit} id="exit" alt="Back" width={400} class="border-4 border-green-300  w-48 h-auto rounded-lg"/>
+</a>
 
-   <style></style>
+<style>
+
+#exit {
+      --a: 8deg; /* control the angle of rotation (the smaller, the better) */
+      transform: perspective(400px) rotate3d(var(--r,1,-1),0,calc(var(--i,1)*var(--a)));
+      /* -webkit-mask: 
+        linear-gradient(135deg,#000c 40%,#000,#000c 60%)
+        100% 100%/250% 250%; */
+      transition: .4s;
+      animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.0s forwards, 
+                rotating 4s var(--sine) 0s infinite forwards;
+    }
+
+    #exit:hover {
+      --i: -1;
+      -webkit-mask-position: 0 0;
+    }
+</style>
