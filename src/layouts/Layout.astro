@@ -4,6 +4,22 @@ const { title,  desktopOverflow = false, mobileOverflow = true } = Astro.props;
 import { getImage } from "astro:assets";
 import Exit from "../components/Exit.astro";
 
+import curtains1 from "../assets/2025/curtain_full.png";
+const optimizedCurtains1 = await getImage({
+  src: curtains1,
+  format: "webp",
+  width: 2000
+});
+
+import curtains2 from "../assets/2025/curtain_fall2.png";
+const optimizedCurtains2 = await getImage({
+  src: curtains2,
+  format: "webp",
+  width: 2000
+});
+
+
+
 const { pathname } = Astro.url;
 ---
 <!doctype html>
@@ -53,12 +69,28 @@ const { pathname } = Astro.url;
     <title>{title}</title>
     <!-- <ViewTransitions /> -->
 
+    <link
+      rel="preload"
+      href={optimizedCurtains1.src}
+      as="image"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href={optimizedCurtains2.src}
+      as="image"
+      fetchpriority="high"
+    />
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700"
       rel="stylesheet"
     />
+
+
   </head>
   <body
     class={`m-0 p-0 min-h-svh overflow-x-hidden ${mobileOverflow ? "overflow-y-auto" : "overflow-y-hidden"} ${desktopOverflow ? "md:overflow-y-auto" : "md:overflow-y-hidden"}`}
@@ -74,7 +106,7 @@ const { pathname } = Astro.url;
   </body>
 </html>
 
-<style is:global>
+<style is:global define:vars={{ optimizedCurtains1: `url(${optimizedCurtains1.src})`, optimizedCurtains2: `url(${optimizedCurtains2.src})` }}>
 
   .magic:hover {
     /* box-shadow: 0 0 15px 5px #fef9c3; */
@@ -92,13 +124,6 @@ const { pathname } = Astro.url;
   }
 
 
-.swup-transition-overlay {
-
-  --swup-overlay-x-scale: 1;
-  --swup-overlay-y-scale: 1;
-  --swup-overlay-skew-direction: 1;
-}
-
   body {
     @apply m-0 p-0 h-full;
   }
@@ -111,7 +136,7 @@ const { pathname } = Astro.url;
   @media (max-width: 768px) {
     .swup-transition-overlay {
       background: linear-gradient(45deg, rgb(0,0,0), rgb(0,0,0), rgb(0,0,0));
-      background-image: url('/curtain_fall.webp');
+      background-image: var(--optimizedCurtains2);
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -120,17 +145,17 @@ const { pathname } = Astro.url;
   @media (min-width: 768px) {
     .swup-transition-overlay {
       background: linear-gradient(45deg, rgb(0,0,0), rgb(0,0,0), rgb(0,0,0));
-      background-image: url('/curtain_fall.webp');
+      background-image: var(--optimizedCurtains2);
       background-size: cover;
       background-repeat: no-repeat;
     }
   }
 
   .swup-transition-overlay[data-direction="to-top"],
-.swup-transition-overlay[data-direction="to-bottom"] {
-  --swup-overlay-x-scale: 1.0;
-  --swup-overlay-y-scale: 1.2;
-}
+  .swup-transition-overlay[data-direction="to-bottom"] {
+    --swup-overlay-x-scale: 1.0;
+    --swup-overlay-y-scale: 1.2;
+  }
 
   .swup-transition-overlay[data-direction="to-bottom"] {
     transform: translate3d(0, calc(-1 * var(--swup-overlay-transform-y-value)), 0) skewY(var(--swup-overlay-skew-value));
