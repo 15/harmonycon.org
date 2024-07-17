@@ -5,7 +5,8 @@ export default {
     extend: {
       fontFamily: {
 				sans: ['Poppins'],
-				serif: ['Latin CG Bold']
+				serif: ['Latin CG Bold'],
+				mono: ['Inconsolata']
       },
       fontSize: {
 				'10xl': '10rem',
