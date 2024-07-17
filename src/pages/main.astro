@@ -5,10 +5,10 @@ import img1 from "../assets/2025/flyer.png";
 import img2 from "../assets/2025/nav/register.png";
 import img3 from "../assets/MF/cards/venue.png";
 import img4 from "../assets/2025/nav/apply.png";
-import img5 from "../assets/MF/cards/coc.png";
+import img5 from "../assets/2025/playbill/singin.jpg";
 import img6 from "../assets/MF/cards/mascots.png";
 import img7 from "../assets/MF/cards/scrapbook.png";
-import img8 from "../assets/MF/cards/credits.png";
+import img8 from "../assets/2025/playbill/hamilton.jpg";
 import Playbill from "../components/Playbill.astro";
 
 import mainBackground from "../assets/2025/marble.webp";
@@ -39,19 +39,19 @@ const optimizedMainBackground = await getImage({
 		<Playbill src={img4} href="/apply" idx={4} active={true} title="Apply"/>
 	</div>
 
-	<div class="sm:absolute sm:left-[3%] sm:top-[53%] ">
+	<div class="sm:absolute sm:left-[3%] sm:top-[50%] ">
 		<Playbill src={img5} href="/coc" idx={5} active={true} title="Rules"/>
 	</div>
 
-	<div class="sm:absolute sm:left-[26%] sm:top-[53%] ">
-		<Playbill src={img6} href="/mascots" idx={6} active={false} title="Mascots"/>
+	<div class="sm:absolute sm:left-[26%] sm:top-[50%] ">
+		<Playbill src={img6} href="/mascots" idx={6} active={true} title="Mascots"/>
 	</div>
 
-	<div class="sm:absolute sm:left-[49%] sm:top-[53%] ">
-		<Playbill src={img7} href="/gallery" idx={7} active={false} title="Gallery"/>
+	<div class="sm:absolute sm:left-[49%] sm:top-[50%] ">
+		<Playbill src={img7} href="/gallery" idx={7} active={true} title="Gallery"/>
 	</div>
 
-	<div class="sm:absolute sm:left-[72%] sm:top-[53%] ">
+	<div class="sm:absolute sm:left-[72%] sm:top-[50%] ">
 		<Playbill src={img8} href="/credits" idx={8} active={true} title="Credits"/>
 	</div>
 	

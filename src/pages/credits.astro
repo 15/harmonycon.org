@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import Star from "../components/Star.astro";
 import Layout from "../layouts/Layout.astro";
 import img1 from "../assets/2025/15.png";
@@ -9,13 +9,20 @@ import img4 from "../assets/2025/Jr.png";
 import img5 from "../assets/2025/kahas.png";
 
 import phone from "../assets/2025/HC-LockedPhone2.png";
+
+import creditsBackground from "../assets/2025/bg/terrazzo-transformed.jpg";
+const optimizedCreditsBackground = await getImage({
+  src: creditsBackground,
+  format: "webp",
+  width: 2000
+});
 ---
 
 <Layout title="HarmonyCon 2025 | Credits">
 	<div id="bg">
 	</div>
-	<div class="flex flex-col h-screen items-center justify-center gap-y-48">
-		<div class="cursor-default font-serif uppercase flex justify-center items-center font-semibold text-6xl text-white z-50" style="text-shadow: 3px 3px 1px #D4AF37;" >
+	<div class="flex flex-col h-screen mt-16 gap-y-44">
+		<div class="cursor-default font-serif uppercase text-center font-semibold text-6xl text-white z-10" style="text-shadow: 3px 3px 1px #D4AF37;" >
 			Credits
 		</div>
 		<div class="flex justify-center items-end gap-x-56 mx-auto mt-8">
@@ -29,14 +36,14 @@ import phone from "../assets/2025/HC-LockedPhone2.png";
 		</div>
 	</div>
 	<Image
-      alt="Fair Flyer looking at phone"
+      alt="Harmony Star looking at phone"
       src={phone}
       width={400}
       class="hidden 2xl:block z-0 duration-500 rotate-[10deg] absolute md:right-[3%] md:bottom-[-5%] rounded-lg w-96 h-auto md:w-72"
     />
 </Layout>
 
-<style>
+<style define:vars={{optimizedCreditsBackground: `url(${optimizedCreditsBackground.src})`}}>
 #bg {
 	position: absolute;
 
@@ -47,7 +54,7 @@ import phone from "../assets/2025/HC-LockedPhone2.png";
 		min-height: 100%;
 	/* height: auto; */
 
-	background-image: url("../terrazzo-transformed.jpg");
+	background-image: var(--optimizedCreditsBackground);
 	background-repeat: repeat;
 	background-size: contain;
 	background-position: center;

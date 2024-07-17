@@ -16,10 +16,15 @@ import curtains2 from "../assets/2025/curtain_fall2.png";
 const optimizedCurtains2 = await getImage({
   src: curtains2,
   format: "webp",
-  width: 2000
+  width: 2500
 });
 
-
+import indexBackground from "../assets/2025/bg/stage3.png";
+const optimizedIndexBackground = await getImage({
+  src: indexBackground,
+  format: "webp",
+  width: 2000
+});
 
 const { pathname } = Astro.url;
 ---
@@ -81,6 +86,12 @@ const { pathname } = Astro.url;
       href={optimizedCurtains2.src}
       as="image"
       fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href={optimizedIndexBackground.src}
+      as="image"
+      fetchpriority="low"
     />
 
 
