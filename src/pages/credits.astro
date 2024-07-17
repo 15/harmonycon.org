@@ -7,6 +7,8 @@ import img2 from "../assets/2025/brittney.png";
 import img3 from "../assets/2025/saphy.png";
 import img4 from "../assets/2025/Jr.png";
 import img5 from "../assets/2025/kahas.png";
+
+import phone from "../assets/MF/ornaments/DeskItemsMF24-Phone.png";
 ---
 
 <Layout title="HarmonyCon 2025 | Credits">
@@ -16,16 +18,22 @@ import img5 from "../assets/2025/kahas.png";
 		<div class="cursor-default font-serif uppercase flex justify-center items-center font-semibold text-6xl text-white z-50" style="text-shadow: 3px 3px 1px #D4AF37;" >
 		 Credits
 		</div>
-		<div class="flex justify-center items-end gap-x-64 mx-auto mt-8">
-				<Star name="15" pfp={img1} title="Tech lead, frontend development"/>
-				<Star name="Brittney Ackerman" pfp={img2} title="Art lead, art assets"/>
-				<Star name="SaphyArts" pfp={img3} title="Art assets"/>
+		<div class="flex justify-center items-end gap-x-56 mx-auto mt-8">
+				<Star name="15" url="https://pony.best" pfp={img1} title="Tech lead, frontend development"/>
+				<Star name="Brittney Ackerman" url="https://lbrcloud.carrd.co/" pfp={img2} title="Art lead, art assets"/>
+				<Star name="SaphyArts" url="https://ko-fi.com/saphymoon/commissions" pfp={img3} title="Art assets"/>
 		</div>
 		<div class="flex justify-center items-end gap-x-64 mx-auto">
 				<Star name="JayArr" pfp={img4}  title="Art assets"/>
 				<Star name="Kahas" pfp={img5}  title="Con registration system"/>
 		</div>
 	</div>
+	<Image
+      alt="Fair Flyer looking at phone"
+      src={phone}
+      width={400}
+      class="hidden 2xl:block z-0 duration-500 rotate-[15deg] absolute md:right-[3%] md:bottom-[-5%] rounded-lg w-96 h-auto md:w-72"
+    />
 </Layout>
 
 <style>

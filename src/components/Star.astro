@@ -1,9 +1,9 @@
 ---
-const { name, pfp, title } = Astro.props;
+const { name, pfp, title, url=null } = Astro.props;
 import { Image } from "astro:assets";
 
 ---
-<div class="flex flex-col w-72 gap-y-40 justify-center items-center">
+<a href={url} target="_blank" class="hover:scale-[1.05] duration-300 cursor-pointer flex flex-col w-72 gap-y-40 justify-center items-center">
   <div class="drop-shadow-2xl flex items-center justify-center">
   
     <div class="absolute starburst-5 inside z-50">
@@ -23,7 +23,7 @@ import { Image } from "astro:assets";
   <div style="text-shadow: 2px 2px 1px #D4AF37;"   class="cursor-default whitespace-nowrap text-white text-center text-2xl font-semibold z-50">
     {title}
   </div>
-</div>
+</a>
 
 <style>  
 	.inside {
