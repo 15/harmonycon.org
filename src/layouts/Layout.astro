@@ -116,19 +116,17 @@ const { pathname } = Astro.url;
   <body
     class={`m-0 p-0 min-h-svh h-full overflow-x-hidden ${mobileOverflow ? "overflow-y-auto" : "overflow-y-hidden"} ${desktopOverflow ? "md:overflow-y-auto" : "md:overflow-y-hidden"}`}
   >
-    <div class="bg-neutral-800">
-      <main id="swup">
-        {
-          !["/", "/main", "/main/"].includes(pathname) ? (
-            <div class="absolute top-12 left-12 z-50">
-              <Exit />
-            </div>
-          ) : null
-        }
-        <slot />
-        <!-- <Footer /> -->
-      </main>
-    </div>
+    <main id="swup">
+      {
+        !["/", "/main", "/main/"].includes(pathname) ? (
+          <div class="absolute top-12 left-12 z-50">
+            <Exit />
+          </div>
+        ) : null
+      }
+      <slot />
+      <!-- <Footer /> -->
+    </main>
   </body>
 </html>
 
@@ -139,6 +137,10 @@ const { pathname } = Astro.url;
     optimizedCurtains2: `url(${optimizedCurtains2.src})`,
   }}
 >
+  :root {
+    color-scheme: dark;
+  }
+
   @font-face {
     font-family: "Latin CG Bold";
     src: local("/fonts/Latin CG Bold Regular.otf"),
