@@ -15,57 +15,87 @@ import mainBackground from "../assets/2025/marble.webp";
 const optimizedMainBackground = await getImage({
   src: mainBackground,
   format: "webp",
-  width: 2000
+  width: 2000,
 });
 ---
 
-<Layout title="HarmonyCon 2025 | Main" desktopOverflow="false" mobileOverflow="true">
-	<div id="bg">
-	</div>
-	
-	<div class="sm:absolute sm:left-[7%] sm:top-[1%]">
-		<Playbill src={img1} href="/" idx={1} active={true} />
-	</div>
+<Layout
+  title="HarmonyCon 2025 | Main"
+  desktopOverflow="false"
+  mobileOverflow="true"
+>
+  <div id="bg"></div>
 
-	<div class="sm:absolute sm:left-[30%] sm:top-[1%] ">
-		<Playbill src={img2} href="/register" idx={2} active={true} title="Register"/>
-	</div>
+  <div class="sm:absolute sm:left-[7%] sm:top-[1%]">
+    <Playbill src={img1} href="/" idx={1} active={true} />
+  </div>
 
-	<div class="sm:absolute sm:left-[53%] sm:top-[1%] ">
-		<Playbill src={img3} href="/venue" idx={3} active={true} title="Venue"/>
-	</div>
+  <div class="sm:absolute sm:left-[30%] sm:top-[1%]">
+    <Playbill
+      src={img2}
+      href="/register"
+      idx={2}
+      active={true}
+      title="Register"
+    />
+  </div>
 
-	<div class="sm:absolute sm:left-[76%] sm:top-[1%] ">
-		<Playbill src={img4} href="/apply" idx={4} active={true} title="Apply"/>
-	</div>
+  <div class="sm:absolute sm:left-[53%] sm:top-[1%]">
+    <Playbill src={img3} href="/venue" idx={3} active={true} title="Venue" />
+  </div>
 
-	<div class="sm:absolute sm:left-[3%] sm:top-[50%] ">
-		<Playbill src={img5} href="/coc" idx={5} active={true} title="Rules"/>
-	</div>
+  <div class="sm:absolute sm:left-[76%] sm:top-[1%]">
+    <Playbill src={img4} href="/apply" idx={4} active={true} title="Apply" />
+  </div>
 
-	<div class="sm:absolute sm:left-[26%] sm:top-[50%] ">
-		<Playbill src={img6} href="/mascots" idx={6} active={true} title="Mascots"/>
-	</div>
+  <div class="sm:absolute sm:left-[3%] sm:top-[50%]">
+    <Playbill src={img5} href="/coc" idx={5} active={true} title="Rules" />
+  </div>
 
-	<div class="sm:absolute sm:left-[49%] sm:top-[50%] ">
-		<Playbill src={img7} href="/gallery" idx={7} active={true} title="Gallery"/>
-	</div>
+  <div class="sm:absolute sm:left-[26%] sm:top-[50%]">
+    <Playbill
+      src={img6}
+      href="/mascots"
+      idx={6}
+      active={true}
+      title="Mascots"
+    />
+  </div>
 
-	<div class="sm:absolute sm:left-[72%] sm:top-[50%] ">
-		<Playbill src={img8} href="/credits" idx={8} active={true} title="Credits"/>
-	</div>
-	
+  <div class="sm:absolute sm:left-[49%] sm:top-[50%]">
+    <Playbill
+      src={img7}
+      href="/gallery"
+      idx={7}
+      active={true}
+      title="Gallery"
+    />
+  </div>
+
+  <div class="sm:absolute sm:left-[72%] sm:top-[50%]">
+    <Playbill
+      src={img8}
+      href="/credits"
+      idx={8}
+      active={true}
+      title="Credits"
+    />
+  </div>
 </Layout>
 
-<style define:vars={{optimizedMainBackground: `url(${optimizedMainBackground.src})`}}>
-	#bg {
+<style
+  define:vars={{
+    optimizedMainBackground: `url(${optimizedMainBackground.src})`,
+  }}
+>
+  #bg {
     position: absolute;
-    
+
     top: 0;
     left: 0;
     width: 100%;
-		height: auto;
-		min-height: 100%;
+    height: auto;
+    min-height: 100%;
     /* height: auto; */
 
     background-image: var(--optimizedMainBackground);
@@ -76,6 +106,4 @@ const optimizedMainBackground = await getImage({
   }
 </style>
 
-<script>
-	
-</script>
+<script></script>

@@ -1,62 +1,83 @@
 ---
-const { name, pfp, title, url=null } = Astro.props;
+const { name, pfp, title, url = null } = Astro.props;
 import { Image } from "astro:assets";
-
 ---
-<a href={url} target="_blank" class="hover:scale-[1.05] duration-300 cursor-pointer flex flex-col w-72 gap-y-40 justify-center items-center">
+
+<a
+  href={url}
+  target="_blank"
+  class="hover:scale-[1.05] duration-300 cursor-pointer flex flex-col w-72 gap-y-40 justify-center items-center"
+>
   <div class="drop-shadow-2xl flex items-center justify-center">
-  
     <div class="absolute starburst-5 inside z-50">
-      <div style="text-shadow: 1px 2px 2px black;" class="z-[100] text-[#D4AF37] flex flex-col items-center justify-center w-full h-full text-center font-semibold">
+      <div
+        style="text-shadow: 1px 2px 2px black;"
+        class="z-[100] text-[#D4AF37] flex flex-col items-center justify-center w-full h-full text-center font-semibold"
+      >
         <div class="uppercase text-2xl leading-tight tracking-tight">
           {name}
         </div>
         <div class="drop-shadow-2xl">
-          <Image src={pfp} alt="Profile picture" width={100} class="bg-transparent w-16 rounded-full border-[#D4AF37] border-[3px]"/>
+          <Image
+            src={pfp}
+            alt="Profile picture"
+            width={100}
+            class="bg-transparent w-16 rounded-full border-[#D4AF37] border-[3px]"
+          />
         </div>
       </div>
     </div>
-    <div class="absolute starburst-5 outside z-40">
-    
-    </div>
+    <div class="absolute starburst-5 outside z-40"></div>
   </div>
-  <div style="text-shadow: 2px 2px 1px #D4AF37;"   class="cursor-default whitespace-nowrap text-white text-center text-2xl font-semibold z-50">
+  <div
+    style="text-shadow: 2px 2px 1px #D4AF37;"
+    class="cursor-default whitespace-nowrap text-white text-center text-2xl font-semibold z-50"
+  >
     {title}
   </div>
 </a>
 
-<style>  
-	.inside {
+<style>
+  .inside {
     background: radial-gradient(circle at center, #a46f71, #880808);
     width: 22rem;
-	}
+  }
 
-	.inside:before {
-		content: "";
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		opacity: 0.4;
-		background-image: url("/textured-paper.png");
-		background-repeat: repeat;
+  .inside:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.4;
+    background-image: url("/textured-paper.png");
+    background-repeat: repeat;
     background-size: 48rem;
     background-position: center;
-	}
+  }
 
-	.outside {
-		background-color: #D4AF37;
-		width: 24rem;
-		opacity: 1.0;
-	  background-image: url("/textured-paper.png");
-	}
-
-
+  .outside {
+    background-color: #d4af37;
+    width: 24rem;
+    opacity: 1;
+    background-image: url("/textured-paper.png");
+  }
 
   .starburst-5 {
-	text-align: center;
-  aspect-ratio: 1;
-  clip-path: polygon(79.9% 90.08%,49.37% 0%,21.12% 90.82%,97.35% 33.95%,2.26% 35.15%,79.9% 90.08%,49.37% 0%,21.12% 90.82%,97.35% 33.95%,2.26% 35.15%);
-}
+    text-align: center;
+    aspect-ratio: 1;
+    clip-path: polygon(
+      79.9% 90.08%,
+      49.37% 0%,
+      21.12% 90.82%,
+      97.35% 33.95%,
+      2.26% 35.15%,
+      79.9% 90.08%,
+      49.37% 0%,
+      21.12% 90.82%,
+      97.35% 33.95%,
+      2.26% 35.15%
+    );
+  }
 </style>
