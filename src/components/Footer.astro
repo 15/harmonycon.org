@@ -3,11 +3,14 @@ import { Icon } from "astro-icon/components";
 
 const { pathname } = Astro.url;
 
-const textColor = pathname.includes("main") ? "text-black" : "text-white";
+const textColor =
+  pathname.includes("main") || pathname.includes("gallery")
+    ? "text-yellow-300"
+    : "text-white";
 ---
 
 <footer
-  class={`z-[1000] absolute bottom-0 drop-shadow-[0_0.4vh_0.4vh_rgba(0,0,0,0.8)] text-lg xl:text-base mt-auto cursor-default px-0 sm:px-8 md:px-20 lg:px-32 w-full flex flex-col sm:flex-row justify-center sm:justify-between md:gap-x-0 gap-x-12 gap-y-2 md:justify-between items-center h-24 sm:h-10  ${textColor}`}
+  class={`z-[1000] md:absolute bottom-0 drop-shadow-[0_4px_4px_rgba(0,0,0,0.6)]  mt-auto cursor-default px-0 sm:px-8 md:px-20 lg:px-32 w-full flex flex-col sm:flex-row justify-center sm:justify-between md:gap-x-0 gap-x-12 gap-y-4 md:justify-between items-center h-24 sm:h-10  ${textColor}`}
 >
   <div class="flex items-center justify-center">
     <div
@@ -15,7 +18,8 @@ const textColor = pathname.includes("main") ? "text-black" : "text-white";
     >
       <a
         href="https://harmonycon.org/"
-        class="hover:underline underline-offset-4 flex items-center relative font-medium tracking-wide"
+        style="text-shadow: 2px 2px 1px black;"
+        class="whitespace-nowrap text-2xl md:text-base duration-300 flex items-center relative font-medium tracking-wide"
       >
         © 2025 HarmonyCon LLC
       </a>
@@ -36,7 +40,7 @@ const textColor = pathname.includes("main") ? "text-black" : "text-white";
     <a
       href="https://x.com/HarmonyPonyCon"
       target="_blank"
-      class="text-xl text-[#1DA1F2] hover:scale-[1.1] hover:underline hover:-rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
+      class="md:text-xl text-3xl text-[#1DA1F2] hover:scale-[1.1] hover:underline hover:-rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
     >
       <Icon
         name="mdi:twitter"
@@ -46,7 +50,7 @@ const textColor = pathname.includes("main") ? "text-black" : "text-white";
     <a
       href="https://www.youtube.com/channel/UCp0Av2HVAdsgZn3VSmJYdKg"
       target="_blank"
-      class="text-xl text-[#FF0000] hover:scale-[1.1] hover:underline hover:rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
+      class="md:text-xl text-3xl text-[#FF0000] hover:scale-[1.1] hover:underline hover:rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
     >
       <Icon
         name="mdi:youtube"
@@ -56,7 +60,7 @@ const textColor = pathname.includes("main") ? "text-black" : "text-white";
     <a
       href="https://www.facebook.com/HarmonyConDallas/"
       target="_blank"
-      class="text-xl text-[#4267B2] hover:scale-[1.1] hover:underline hover:-rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
+      class="md:text-xl text-3xl text-[#4267B2] hover:scale-[1.1] hover:underline hover:-rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
     >
       <Icon
         name="mdi:facebook"
@@ -66,7 +70,7 @@ const textColor = pathname.includes("main") ? "text-black" : "text-white";
     <a
       href="https://www.instagram.com/HarmonyPonyCon/"
       target="_blank"
-      class="text-xl text-[#C13584] hover:scale-[1.1] hover:underline hover:rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
+      class="md:text-xl text-3xl text-[#C13584] hover:scale-[1.1] hover:underline hover:rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
     >
       <Icon
         name="mdi:instagram"
@@ -76,7 +80,7 @@ const textColor = pathname.includes("main") ? "text-black" : "text-white";
     <a
       href="https://www.twitch.tv/harmonycon"
       target="_blank"
-      class="text-xl text-[#6441a5] hover:scale-[1.1] hover:underline hover:rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
+      class="md:text-xl text-3xl text-[#6441a5] hover:scale-[1.1] hover:underline hover:rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
     >
       <Icon
         name="mdi:twitch"
@@ -86,7 +90,7 @@ const textColor = pathname.includes("main") ? "text-black" : "text-white";
     <a
       href="https://discord.com/invite/UWSFnwz"
       target="_blank"
-      class="text-xl text-[#7289da] hover:scale-[1.1] hover:underline hover:rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
+      class="md:text-xl text-3xl text-[#7289da] hover:scale-[1.1] hover:underline hover:rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
     >
       <Icon
         name="ic:baseline-discord"
@@ -97,6 +101,25 @@ const textColor = pathname.includes("main") ? "text-black" : "text-white";
 </footer>
 
 <style>
+  :root {
+    --sine: linear(
+      0,
+      0.007 5.35%,
+      0.0282 10.75%,
+      0.0638 16.26%,
+      0.1144 21.96%,
+      0.1833 28.16%,
+      0.2717 34.9%,
+      0.6868 62.19%,
+      0.775 68.54%,
+      0.8457 74.3%,
+      0.9141 81.07%,
+      0.9621 87.52%,
+      0.9905 93.8%,
+      1
+    );
+  }
+
   a {
     @apply font-serif;
   }
