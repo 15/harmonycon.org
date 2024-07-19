@@ -14,7 +14,7 @@
     "@iconify-json/ic": "^1.1.17",
     "@iconify-json/mdi": "^1.1.67",
     "@swup/astro": "^1.4.1",
-    "astro": "^4.10.2",
+    "astro": "^4.12.2",
     "astro-icon": "^1.1.0",
     "lightgallery": "^2.7.2",
     "pagemap": "^1.4.0",
