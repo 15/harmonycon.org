@@ -18,6 +18,7 @@ const optimizedPaper = await getImage({
 
 import tune from "../assets/2025/harmonic_tune_cm2.png";
 import star from "../assets/2025/harmony_star_cm.png";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout
@@ -29,7 +30,7 @@ import star from "../assets/2025/harmony_star_cm.png";
     id="map"
     class="hidden xl:block fixed bottom-[25px] left-[25px] w-[100px] h-full z-50 rounded-none"
   ></canvas>
-  <div id="bg">
+  <div id="bg" class="relative">
     <div
       id="paper"
       style="filter: drop-shadow(0 2px 2px #fff);"
@@ -518,6 +519,8 @@ import star from "../assets/2025/harmony_star_cm.png";
         </div>
       </div>
     </div>
+
+    <Footer />
   </div>
 </Layout>
 

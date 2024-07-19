@@ -114,7 +114,7 @@ const { pathname } = Astro.url;
     />
   </head>
   <body
-    class={`m-0 p-0 min-h-svh h-full overflow-x-hidden ${mobileOverflow ? "overflow-y-auto" : "overflow-y-hidden"} ${desktopOverflow ? "md:overflow-y-auto" : "md:overflow-y-hidden"}`}
+    class={`m-0 p-0 min-h-svh h-auto overflow-x-hidden ${mobileOverflow ? "overflow-y-auto" : "overflow-y-hidden"} ${desktopOverflow ? "md:overflow-y-auto" : "md:overflow-y-hidden"}`}
   >
     <main id="swup">
       {
@@ -125,7 +125,6 @@ const { pathname } = Astro.url;
         ) : null
       }
       <slot />
-      <!-- <Footer /> -->
     </main>
   </body>
 </html>
@@ -149,23 +148,22 @@ const { pathname } = Astro.url;
     font-style: normal;
   }
 
-  .magic:hover {
-    /* box-shadow: 0 0 15px 5px #fef9c3; */
-    /* background-color: #fef9c3; */
-    transition-duration: 500ms;
-  }
-
   html {
-    @apply m-0 p-0 h-full;
+    @apply m-0 p-0;
     --swup-overlay-theme-color: #2d2e82;
     --swup-overlay-theme-duration: 0.6s;
     --swup-overlay-theme-delay: 0.2s;
     --swup-overlay-theme-scale: 1;
     --swup-overlay-theme-skew: 0deg;
+
+    scrollbar-width: thin;
+    scrollbar-color: #771c2a #eaeaea;
+    /* scrollbar-gutter: stable; */
+    /* scrollbar-color: #eaeaea #771c2a; */
   }
 
   body {
-    @apply m-0 p-0 h-full;
+    @apply m-0 p-0;
   }
 
   html.is-changing .swup-transition-overlay {

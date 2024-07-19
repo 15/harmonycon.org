@@ -580,6 +580,8 @@ const images = [
 
 const getBorder = (idx) =>
   ["wood", "wood2", "wood4", "wood5", "black"][idx % 5];
+
+import Footer from "../components/Footer.astro";
 ---
 
 <link
@@ -592,7 +594,7 @@ const getBorder = (idx) =>
   desktopOverflow={true}
   mobileOverflow={false}
 >
-  <div id="bg" class="flex flex-col h-screen pt-16 gap-y-8">
+  <div id="bg" class="relative flex flex-col h-screen pt-16 gap-y-8">
     <div
       class="cursor-default font-serif uppercase text-center font-semibold text-6xl text-black z-10"
       style="text-shadow: 3px 3px 1px #999;"
@@ -643,6 +645,8 @@ const getBorder = (idx) =>
         ))
       }
     </div>
+
+    <Footer />
   </div>
 </Layout>
 
