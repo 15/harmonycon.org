@@ -25,7 +25,10 @@ const optimizedMainBackground = await getImage({
   desktopOverflow="true"
   mobileOverflow="true"
 >
-  <div id="bg" class="md:px-0 px-8 md:absolute flex flex-col gap-y-8 py-8">
+  <div
+    id="bg"
+    class="overflow-x-hidden md:px-0 px-8 md:absolute flex flex-col gap-y-8 py-8"
+  >
     <div class="sm:absolute sm:left-[7%] sm:top-[1%]">
       <Playbill src={img1} href="/" idx={1} active={true} />
     </div>

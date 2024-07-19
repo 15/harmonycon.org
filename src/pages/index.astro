@@ -25,7 +25,7 @@ const optimizedIndexBackground = await getImage({
 ---
 
 <Layout title="HarmonyCon 2025" desktopOverflow={true} mobileOverflow={false}>
-  <div id="bg" class="">
+  <div id="bg" class="overflow-x-hidden">
     <div id="curtains">
       <div id="curtain-1"></div>
       <div id="curtain-2"></div>
@@ -170,28 +170,24 @@ const optimizedIndexBackground = await getImage({
 
     #logo {
       position: absolute;
+      opacity: 0;
       left: 0;
       right: 0;
-      width: 100%;
-      bottom: 27%;
+      width: 100vw;
+      bottom: 27vh;
       margin-left: auto;
       margin-right: auto;
-    }
 
-    #dates {
-      position: absolute;
-      left: 5%;
-      width: 50%;
-      bottom: 27%;
-      margin-left: auto;
-      margin-right: auto;
+      animation:
+        popup 1s ease 1.7s forwards,
+        tease 4s ease 3s infinite forwards;
     }
 
     #register {
       position: absolute;
       left: 6%;
       width: 40%;
-      bottom: 5%;
+      bottom: 15%;
       opacity: 0;
 
       --a: 8deg; /* control the angle of rotation (the smaller, the better) */
@@ -203,6 +199,8 @@ const optimizedIndexBackground = await getImage({
       animation:
         jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2s forwards,
         rotating 4s var(--sine) 0s infinite forwards;
+
+      z-index: 50;
     }
 
     #register:hover {
@@ -214,7 +212,7 @@ const optimizedIndexBackground = await getImage({
       position: absolute;
       right: 6%;
       width: 40%;
-      bottom: 5%;
+      bottom: 15%;
       opacity: 0;
       --a: 8deg; /* control the angle of rotation (the smaller, the better) */
       transform: perspective(400px)
@@ -225,6 +223,8 @@ const optimizedIndexBackground = await getImage({
       animation:
         jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2s forwards,
         rotating 4.5s var(--sine) 2.1s infinite forwards;
+
+      z-index: 50;
     }
 
     #main:hover {
@@ -232,22 +232,8 @@ const optimizedIndexBackground = await getImage({
       -webkit-mask-position: 0 0;
     }
 
-    #combined {
-      position: absolute;
-
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 45vw;
-      bottom: 20%;
-      opacity: 0;
-      animation:
-        popup 1s ease 1.7s forwards,
-        tease 4s ease 3s infinite forwards;
-    }
-
-    footer {
-      position: absolute;
+    #buttons {
+      z-index: 50;
     }
 
     @keyframes drop {
@@ -307,7 +293,6 @@ const optimizedIndexBackground = await getImage({
       margin-left: auto;
       margin-right: auto;
       padding-left: 16rem;
-      // top: -195%;
       animation:
         drop2 2s var(--elastic) 0.2s forwards,
         swing2 7s ease-in-out 0.2s infinite forwards;
@@ -345,7 +330,7 @@ const optimizedIndexBackground = await getImage({
       right: 0;
       width: 100%;
       height: 100%;
-      animation: floating 6s var(--sine) 0s infinite forwards;
+      z-index: 50;
     }
 
     #register {
@@ -369,6 +354,8 @@ const optimizedIndexBackground = await getImage({
       animation:
         jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2s forwards,
         rotating 4s var(--sine) 0s infinite forwards;
+
+      z-index: 50;
     }
 
     #register:hover {
@@ -397,25 +384,14 @@ const optimizedIndexBackground = await getImage({
       animation:
         jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2s forwards,
         rotating 4.5s var(--sine) 2.1s infinite forwards;
+
+      z-index: 50;
     }
 
     #main:hover {
       --i: -1;
       -webkit-mask-position: 0 0;
     }
-
-    #combined {
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 100%;
-      bottom: 18%;
-      opacity: 0;
-      animation:
-        popup 1s ease 1.7s forwards,
-        tease 4s ease 3s infinite forwards;
-    }
-
     @keyframes drop {
       from {
         top: -200vh;
@@ -477,6 +453,7 @@ const optimizedIndexBackground = await getImage({
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 10;
   }
 
   #curtain-1,
