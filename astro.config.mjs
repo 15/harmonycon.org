@@ -21,7 +21,6 @@ export default defineConfig({
         },
       ],
       // cache: false,
-      loadOnIdle: false,
       preload: {
         hover: true,
         visible: true,

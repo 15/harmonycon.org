@@ -258,39 +258,39 @@ const { pathname } = Astro.url;
     window.scrollTo(0, 0);
   }
 
-  document.addEventListener("swup:enable", () => {
-    if (document.getElementById("lightgallery") && !gallery) {
-      gallery = lightGallery(document.getElementById("lightgallery"), {
-        plugins: [lgZoom, lgThumbnail],
-        speed: 500,
-        licenseKey: import.meta.env.PUBLIC_KEY,
-        mobileSettings: {
-          controls: false,
-          showCloseIcon: true,
-          download: true,
-        },
-      });
-    }
+  // document.addEventListener("swup:enable", () => {
+  //   if (document.getElementById("lightgallery") && !gallery) {
+  //     gallery = lightGallery(document.getElementById("lightgallery"), {
+  //       plugins: [lgZoom, lgThumbnail],
+  //       speed: 500,
+  //       licenseKey: import.meta.env.PUBLIC_KEY,
+  //       mobileSettings: {
+  //         controls: false,
+  //         showCloseIcon: true,
+  //         download: true,
+  //       },
+  //     });
+  //   }
 
-    window.swup.hooks.on("content:replace", () => {
-      if (window.location.pathname.includes("gallery")) {
-        gallery = lightGallery(document.getElementById("lightgallery"), {
-          plugins: [lgZoom, lgThumbnail],
-          speed: 500,
-          licenseKey: import.meta.env.PUBLIC_KEY,
-          mobileSettings: {
-            controls: false,
-            showCloseIcon: true,
-            download: true,
-          },
-        });
-      }
+  //   window.swup.hooks.on("content:replace", () => {
+  //     if (window.location.pathname.includes("gallery")) {
+  //       gallery = lightGallery(document.getElementById("lightgallery"), {
+  //         plugins: [lgZoom, lgThumbnail],
+  //         speed: 500,
+  //         licenseKey: import.meta.env.PUBLIC_KEY,
+  //         mobileSettings: {
+  //           controls: false,
+  //           showCloseIcon: true,
+  //           download: true,
+  //         },
+  //       });
+  //     }
 
-      if (window.location.pathname.includes("main")) {
-        if (gallery) {
-          gallery.destroy();
-        }
-      }
-    });
-  });
+  //     if (window.location.pathname.includes("main")) {
+  //       if (gallery) {
+  //         gallery.destroy();
+  //       }
+  //     }
+  //   });
+  // });
 </script>
