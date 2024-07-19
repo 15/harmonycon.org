@@ -8,14 +8,22 @@ import icon from "astro-icon";
 export default defineConfig({
   site: "https://harmonycon.org",
   prefetch: {
-    prefetchAll: true
+    prefetchAll: true,
   },
-  integrations: [tailwind(), swup({
-    containers: ["#swup"],
-    theme: ["overlay", {
-      direction: "to-bottom"
-    }],
-    globalInstance: true
-    // animateHistoryBrowsing: true,
-  }), icon()]
+  integrations: [
+    tailwind(),
+    swup({
+      containers: ["#swup"],
+      theme: [
+        "overlay",
+        {
+          direction: "to-bottom",
+        },
+      ],
+      globalInstance: true,
+      smoothScrolling: false,
+      // animateHistoryBrowsing: true,
+    }),
+    icon(),
+  ],
 });
