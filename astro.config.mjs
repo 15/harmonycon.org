@@ -12,18 +12,23 @@ export default defineConfig({
   },
   integrations: [
     tailwind(),
-    // swup({
-    //   containers: ["#swup"],
-    //   theme: [
-    //     "overlay",
-    //     {
-    //       direction: "to-bottom",
-    //     },
-    //   ],
-    //   globalInstance: true,
-    //   smoothScrolling: false,
-    //   // animateHistoryBrowsing: true,
-    // }),
+    swup({
+      containers: ["#swup"],
+      theme: [
+        "overlay",
+        {
+          direction: "to-bottom",
+        },
+      ],
+      cache: false,
+      preload: {
+        hover: true,
+        visible: true,
+      },
+      globalInstance: true,
+      smoothScrolling: false,
+      // animateHistoryBrowsing: true,
+    }),
     icon(),
   ],
 });
