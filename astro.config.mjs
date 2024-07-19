@@ -20,7 +20,8 @@ export default defineConfig({
           direction: "to-bottom",
         },
       ],
-      cache: false,
+      // cache: false,
+      loadOnIdle: false,
       preload: {
         hover: true,
         visible: true,
