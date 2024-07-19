@@ -30,17 +30,17 @@ import Footer from "../components/Footer.astro";
     id="map"
     class="hidden xl:block fixed bottom-[25px] left-[25px] w-[100px] h-full z-50 rounded-none"
   ></canvas>
-  <div id="bg" class="overflow-x-hidden md:px-0 px-4">
+  <div id="bg" class="overflow-x-hidden md:px-0 px-4 pt-24 md:pt-16">
     <div
       id="paper"
       style="filter: drop-shadow(0 2px 2px #fff);"
-      class="my-12 text-black md:mx-auto mx-auto py-4 xl:py-8 xl:px-48 font-serif relative rounded w-full md:w-11/12 lg:w-11/12 xl:w-288 bg-white"
+      class="mb-0 md:mb-12 text-black md:mx-auto mx-auto py-4 xl:py-8 xl:px-48 font-serif relative rounded w-full md:w-11/12 lg:w-11/12 xl:w-288 bg-white"
     >
       <h1>Rules</h1>
-      <h2>Act I: Code of Conduct</h2>
+      <h2>Act 1: Code of Conduct</h2>
       <h3>Scene I: Prologue</h3>
       <div class="desc">
-        <span class="font-extrabold">
+        <span class="text-base md:text-xl font-extrabold">
           These rules are subject to change at any time.
         </span>
         <h4>HARMONIC TUNE</h4>
@@ -497,25 +497,25 @@ import Footer from "../components/Footer.astro";
         <h5 class="mb-8">What?</h5>
       </div>
 
-      <div class="flex mt-24 mb-8">
-        <div class="w-1/2 px-8">
+      <div class="flex mt-8 md:mt-24 mb-8">
+        <div class="w-1/2 px-2 md:px-8">
           <Image
             alt="Harmonic Tune"
             src={tune}
             width={400}
-            class="h-20 w-auto"
+            class="h-10 md:h-20 w-auto"
           />
 
-          <hr class="border-black border-2" />
+          <hr class="border-black border md:border-2" />
         </div>
-        <div class="w-1/2 px-8">
+        <div class="w-1/2 px-2 md:px-8">
           <Image
             alt="Harmonic Tune"
             src={star}
             width={400}
-            class="h-20 w-auto"
+            class="h-10 md:h-20 w-auto"
           />
-          <hr class="border-black border-2" />
+          <hr class="border-black border md:border-2" />
         </div>
       </div>
     </div>
@@ -533,43 +533,42 @@ import Footer from "../components/Footer.astro";
   ul {
     list-style-position: inside;
     list-style-type: "— ";
-    @apply text-lg leading-snug;
-    margin-left: 3rem;
+    @apply text-base leading-tight md:text-lg md:leading-snug ml-4 md:ml-12;
   }
 
   ul ul {
     list-style-position: inside;
     list-style-type: "— ";
-    margin-left: 3rem;
+    @apply ml-12;
   }
 
   ul ul ul {
     list-style-position: inside;
     list-style-type: "— ";
-    margin-left: 3rem;
+    @apply ml-12;
   }
   .desc {
-    @apply mt-4 leading-tight text-xl font-mono;
+    @apply mt-2 md:mt-4 leading-tight text-xl font-mono;
   }
 
   h1 {
-    @apply text-center text-7xl uppercase;
+    @apply text-center text-7xl md:text-7xl uppercase;
   }
 
   h2 {
-    @apply mt-8 text-center text-3xl uppercase;
+    @apply mt-4 md:mt-8 text-center text-2xl md:text-3xl uppercase;
   }
 
   h3 {
-    @apply mt-4 text-center text-2xl uppercase underline underline-offset-4;
+    @apply mt-2 md:mt-4 text-center text-xl md:text-2xl uppercase underline underline-offset-4;
   }
 
   h4 {
-    @apply my-4 text-2xl text-center;
+    @apply my-2 md:my-4 text-xl md:text-2xl text-center;
   }
 
   h5 {
-    @apply mt-2 px-8;
+    @apply leading-tight md:leading-normal text-base md:text-xl mt-2 px-2 md:px-8;
   }
 
   #bg {
