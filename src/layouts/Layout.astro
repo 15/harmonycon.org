@@ -254,6 +254,10 @@ const { pathname } = Astro.url;
   import lgZoom from "lightgallery/plugins/zoom";
   let gallery;
 
+  if (!window.location.pathname.includes("/main")) {
+    window.scrollTo(0, 0);
+  }
+
   document.addEventListener("swup:enable", () => {
     if (document.getElementById("lightgallery") && !gallery) {
       gallery = lightGallery(document.getElementById("lightgallery"), {
