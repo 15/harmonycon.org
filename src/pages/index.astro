@@ -114,7 +114,6 @@ console.log(optimizedIndexBackground.src);
   const intervalFn = () => {
     mask.style.setProperty("--radius", 120 + 30 * Math.sin(t * 0.003) + "px");
     t += 1;
-    console.log(t);
   };
 
   const startInterval = () => {
@@ -163,7 +162,7 @@ console.log(optimizedIndexBackground.src);
       }
     }
 
-    if (count >= 20) {
+    if (count >= 100) {
       stopInterval();
       document.body.style.backgroundImage = "url('/bar_temp1.webp')";
       document.body.classList.remove("bg-center");
