@@ -20,15 +20,15 @@ const borderType = [
 
 <a
   style="filter: drop-shadow(0 3px 3px #000);"
-  class={` ${borderType} bg-white p-2 md:p-4 rounded border-[8px] md:border-[10px] w-full items-center flex flex-col gap-y-1 lg:gap-y-2 duration-300 ${isLeft ? "rotate-0 hover:rotate-3 " : "-rotate-0 hover:-rotate-3 "} ${active ? "grayscale-0 cursor-pointer" : "grayscale cursor-not-allowed"} hover:scale-[1.05] hover:z-[100] relative`}
+  class={` ${borderType} bg-white p-2 md:p-3 2xl:p-4 rounded border-[8px] md:border-[10px] w-full items-center flex flex-col gap-y-1 lg:gap-y-2 duration-300 ${isLeft ? "rotate-0 hover:rotate-3 " : "-rotate-0 hover:-rotate-3 "} ${active ? "grayscale-0 cursor-pointer" : "grayscale cursor-not-allowed"} hover:scale-[1.05] hover:z-[100] relative`}
   href={active ? href : ""}
 >
   <div
     style="filter: drop-shadow(0 1px 1px #000);"
-    class={`w-80 relative flex flex-col rounded ${active ? "grayscale-0" : "grayscale"}`}
+    class={`w-full xl:w-64 2xl:w-80 relative flex flex-col rounded ${active ? "grayscale-0" : "grayscale"}`}
   >
     <div
-      class="text-black bg-[#fde300] w-full h-16 font-serif uppercase flex items-center justify-center text-5xl"
+      class="text-black bg-[#fde300] pt-0 md:pt-2 2xl:pt-0 w-full h-16 font-serif uppercase flex items-center justify-center text-5xl text-4xl 2xl:text-5xl"
     >
       {title}
     </div>
@@ -36,7 +36,7 @@ const borderType = [
       src={src}
       height="400"
       alt=""
-      class="w-80 h-88 md:h-[35vh] object-cover object-top"
+      class="w-full xl:w-64 2xl:w-80 h-88 xl:h-[32vh] 2xl:h-[35vh] object-cover object-top"
     />
   </div>
 </a>
