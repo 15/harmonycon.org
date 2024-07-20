@@ -92,7 +92,6 @@ console.log(optimizedIndexBackground.src);
 
   const playFlashlight = () => {
     setTimeout(() => {
-      // const flashlight = new Audio("/flashlight.mp3");
       const flashlight = new Howl({
         src: ["/flashlight.mp3"],
         volume: 0.2,
@@ -101,8 +100,6 @@ console.log(optimizedIndexBackground.src);
     }, 100);
   };
 
-  // const magic = new Audio("/magictrimmed.wav");
-  // const magicstart = new Audio("/magicstart.mp3");
   const magic = new Howl({
     src: ["/magicnormalized.mp3"],
     volume: 0.03,
@@ -112,6 +109,29 @@ console.log(optimizedIndexBackground.src);
     src: ["/magicstart.mp3"],
     volume: 0.03,
   });
+
+  let t = 0;
+  const intervalFn = () => {
+    mask.style.setProperty("--radius", 120 + 30 * Math.sin(t * 0.003) + "px");
+    t += 1;
+    console.log(t);
+  };
+
+  const startInterval = () => {
+    if (interval === null) {
+      interval = setInterval(intervalFn, 10);
+    }
+  };
+
+  const stopInterval = () => {
+    if (interval !== null) {
+      clearInterval(interval);
+      interval = null;
+    }
+  };
+
+  let interval = setInterval(intervalFn, 10);
+
   document.addEventListener("click", () => {
     const footer = document.getElementById("footer");
 
@@ -128,23 +148,23 @@ console.log(optimizedIndexBackground.src);
 
     if (!clickedBoop) {
       if (!light) {
+        startInterval();
         magicstart.play();
         magic.play();
-
         document.getElementById("mask").classList.add("mask2");
         light = true;
       } else {
+        stopInterval();
+        magicstart.stop();
+        magic.stop();
         playFlashlight();
         document.getElementById("mask").classList.remove("mask2");
         light = false;
-        magicstart.pause();
-        magicstart.currentTime = 0;
-        magic.pause();
-        magic.currentTime = 0;
       }
     }
 
-    if (count >= 100) {
+    if (count >= 20) {
+      stopInterval();
       document.body.style.backgroundImage = "url('/bar_temp1.webp')";
       document.body.classList.remove("bg-center");
       document.body.classList.add("bg-[20%_center]");
