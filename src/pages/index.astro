@@ -62,6 +62,8 @@ console.log(optimizedIndexBackground.src);
 </Layout>
 
 <script>
+  import { Howl, Howler } from "howler";
+
   const mask = document.getElementById("mask");
   const start = new Date().getTime();
 
@@ -90,12 +92,26 @@ console.log(optimizedIndexBackground.src);
 
   const playFlashlight = () => {
     setTimeout(() => {
-      const magic = new Audio("/flashlight.mp3");
-      magic.volume = 0.2;
-      magic.play();
+      // const flashlight = new Audio("/flashlight.mp3");
+      const flashlight = new Howl({
+        src: ["/flashlight.mp3"],
+        volume: 0.2,
+      });
+      flashlight.play();
     }, 100);
   };
 
+  // const magic = new Audio("/magictrimmed.wav");
+  // const magicstart = new Audio("/magicstart.mp3");
+  const magic = new Howl({
+    src: ["/magicnormalized.mp3"],
+    volume: 0.03,
+    loop: true,
+  });
+  const magicstart = new Howl({
+    src: ["/magicstart.mp3"],
+    volume: 0.03,
+  });
   document.addEventListener("click", () => {
     const footer = document.getElementById("footer");
 
@@ -112,13 +128,19 @@ console.log(optimizedIndexBackground.src);
 
     if (!clickedBoop) {
       if (!light) {
-        playFlashlight();
+        magicstart.play();
+        magic.play();
+
         document.getElementById("mask").classList.add("mask2");
         light = true;
       } else {
         playFlashlight();
         document.getElementById("mask").classList.remove("mask2");
         light = false;
+        magicstart.pause();
+        magicstart.currentTime = 0;
+        magic.pause();
+        magic.currentTime = 0;
       }
     }
 
@@ -144,6 +166,8 @@ console.log(optimizedIndexBackground.src);
     }
 
     if (clickedBoop) {
+      magic.pause();
+      magic.currentTime = 0;
       document.getElementById("boopcount").classList.add("fade-immediate");
       document.body.style.backgroundImage = "url('/bar_temp2.webp')";
       mask.classList.remove("mask");
@@ -254,7 +278,7 @@ console.log(optimizedIndexBackground.src);
 
     --mouse-x: 50%;
     --mouse-y: 50%;
-    --radius: 150px;
+    --radius: 120px;
   }
 
   .mask {
