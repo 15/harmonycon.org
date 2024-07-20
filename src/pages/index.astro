@@ -126,7 +126,10 @@ console.log(optimizedIndexBackground.src);
       document.body.style.backgroundImage = "url('/bar_temp1.webp')";
       document.body.classList.remove("bg-center");
       document.body.classList.add("bg-[20%_center]");
-      mask.style.setProperty("--radius", "100vh");
+      mask.style.setProperty(
+        "--radius",
+        window.innerWidth > 768 ? "100vh" : "25vh"
+      );
       document.getElementById("snoot").style.display = "block";
 
       if (!addedBoop) {
