@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 <a
   href={url}
   target="_blank"
-  class="hover:scale-[1.05] duration-300 cursor-pointer flex flex-col w-72 gap-y-36 md:gap-y-40 justify-center items-center"
+  class="hover:scale-[1.05] duration-300 cursor-pointer flex flex-col w-72 gap-y-32 md:gap-y-32 2xl:gap-y-40 justify-center items-center"
 >
   <div class="drop-shadow-2xl flex items-center justify-center">
     <div class="absolute starburst-5 inside z-50">
@@ -14,7 +14,7 @@ import { Image } from "astro:assets";
         style="text-shadow: 1px 2px 2px black;"
         class="z-[100] text-[#D4AF37] flex flex-col items-center justify-center w-full h-full text-center font-semibold"
       >
-        <div class="uppercase text-xl md:text-2xl leading-tight tracking-tight">
+        <div class="uppercase text-xl md:text-xl 2xl:text-2xl leading-tight tracking-tight">
           {name}
         </div>
         <div class="drop-shadow-2xl">
@@ -31,7 +31,7 @@ import { Image } from "astro:assets";
   </div>
   <div
     style="text-shadow: 2px 2px 1px #D4AF37;"
-    class="cursor-default whitespace-nowrap text-white text-center text-xl md:text-2xl font-semibold z-50"
+    class="cursor-default whitespace-nowrap text-white text-center text-xl text-xl 2xl:text-2xl font-semibold z-50"
   >
     {title}
   </div>
@@ -40,7 +40,7 @@ import { Image } from "astro:assets";
 <style>
   .inside {
     background: radial-gradient(circle at center, #a46f71, #880808);
-    @apply w-72 md:w-88;
+    @apply w-72 md:w-72 2xl:w-88;
   }
 
   .inside:before {
@@ -59,7 +59,7 @@ import { Image } from "astro:assets";
 
   .outside {
     background-color: #d4af37;
-    @apply w-80 md:w-96;
+    @apply w-80 md:w-80 2xl:w-96;
     opacity: 1;
     background-image: url("/textured-paper.png");
   }
