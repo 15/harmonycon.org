@@ -35,6 +35,17 @@ console.log(optimizedIndexBackground.src);
   >
     1
   </div>
+  <div
+    id="dialogue"
+    class="text-black absolute bottom-28 md:bottom-8 md:w-240 bg-neutral-300 opacity-0 left-0 right-0 md:mx-auto mx-4 rounded p-6 md:p-8"
+  >
+    <div class="font-semibold text-3xl md:text-3xl">Harmonic Tune</div>
+    <div class="text-xl md:text-xl italic" id="text">
+      Howdy! We're closed right now. Please come back later!
+    </div>
+  </div>
+  <div id="snoot" class="hidden absolute w-40 h-40 left-[30%] bottom-[45%]">
+  </div>
   <Footer />
 </Layout>
 
@@ -50,6 +61,9 @@ console.log(optimizedIndexBackground.src);
 
   let light = false;
   let count = 0;
+  let addedBoop = false;
+  let clickedBoop = false;
+  let boops = 0;
 
   const playFlashlight = () => {
     setTimeout(() => {
@@ -73,23 +87,50 @@ console.log(optimizedIndexBackground.src);
       document.getElementById("count").classList.add("fade-immediate");
     }
 
-    if (count >= 100) {
-      document.body.style.backgroundImage = "url('/bar_temp1.webp')";
+    if (!clickedBoop) {
+      if (!light) {
+        playFlashlight();
+        document.getElementById("mask").classList.add("mask2");
+        light = true;
+      } else {
+        playFlashlight();
+        document.getElementById("mask").classList.remove("mask2");
+        light = false;
+      }
     }
 
-    if (!light) {
-      playFlashlight();
-      document.getElementById("mask").classList.add("mask2");
-      light = true;
-      count++;
-      document.getElementById("count").innerHTML = count;
-    } else {
-      playFlashlight();
-      document.getElementById("mask").classList.remove("mask2");
-      light = false;
-      count++;
-      document.getElementById("count").innerHTML = count;
+    if (count >= 100) {
+      document.body.style.backgroundImage = "url('/bar_temp1.webp')";
+      mask.style.setProperty("--radius", "100vh");
+      document.getElementById("snoot").style.display = "block";
+
+      if (!addedBoop) {
+        addedBoop = true;
+        document.getElementById("snoot").addEventListener("click", () => {
+          clickedBoop = true;
+
+          document.getElementById("snoot").style.display = "none";
+          boops++;
+        });
+      }
     }
+
+    if (clickedBoop) {
+      document.body.style.backgroundImage = "url('/bar_temp2.webp')";
+      mask.classList.remove("mask");
+      document.getElementById("dialogue").style.opacity = "80%";
+      document.body.style.cursor = "default";
+
+      document.getElementById("count").classList.remove("fade-immediate");
+    }
+
+    if (boops > 100) {
+      document.getElementById("text").innerHTML =
+        "Wow, you're an impatient fellow, aren't ya? Sorry, pardner — I appreciate the enthusiasm, but the shop's closed!";
+    }
+
+    count++;
+    document.getElementById("count").innerHTML = count;
   });
 </script>
 
@@ -127,7 +168,7 @@ console.log(optimizedIndexBackground.src);
     height: 100vh;
     /* background-image: url(https://since1979.dev/wp-content/uploads/2022/01/todd-quackenbush-x5SRhkFajrA-unsplash.jpg); */
     /* background-image: var(--optimizedIndexBackground); */
-    background-image: url("/teaser.webp");
+    background-image: url("/teaserfull.webp");
     background-position: center center;
     background-size: cover;
 
