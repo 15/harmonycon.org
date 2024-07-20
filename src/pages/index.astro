@@ -27,13 +27,13 @@ console.log(optimizedIndexBackground.src);
 ---
 
 <Layout title="HarmonyCon 2025">
-  <div id="curtains" class="z-50">
+  <div id="curtains" class="z-40">
     <div id="curtain-1"></div>
     <div id="curtain-2"></div>
   </div>
   <div id="mask" class="mask"></div>
   <div
-    class="absolute bottom-16 right-16 text-3xl font-serif opacity-0 text-white"
+    class="absolute bottom-24 left-1/2 transform -translate-x-1/2 md:left-auto md:translate-x-0 md:bottom-16 md:right-16 text-3xl font-serif opacity-0 text-white"
     id="count"
   >
     1
@@ -47,7 +47,10 @@ console.log(optimizedIndexBackground.src);
       Howdy! We're closed right now. Please come back later!
     </div>
   </div>
-  <div id="snoot" class="hidden absolute w-40 h-40 left-[30%] bottom-[45%]">
+  <div
+    id="snoot"
+    class="z-50 hidden absolute w-40 h-40 left-[30%] bottom-[45%]"
+  >
   </div>
   <Footer />
 </Layout>
