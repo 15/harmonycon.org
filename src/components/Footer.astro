@@ -20,13 +20,24 @@ const isRegisterPage = pathname.includes("register");
     <div
       class="flex items-center justify-center gap-x-4 sm:gap-x-4 md:gap-x-4 lg:gap-x-4 xl:gap-x-8"
     >
-      <a
-        href="https://harmonycon.org/"
-        style="text-shadow: 2px 2px 1px black;"
-        class="whitespace-nowrap text-lg md:text-base duration-300 flex items-center relative font-medium tracking-wide"
-      >
-        © 2025 HarmonyCon LLC
-      </a>
+      <div class="flex gap-x-2 font-serif">
+        <a
+          href="https://harmonycon.org/"
+          style="text-shadow: 2px 2px 1px black;"
+          class="hover:underline underline-offset-4 whitespace-nowrap text-lg md:text-base duration-300 flex items-center relative font-medium tracking-wide"
+        >
+          © 2025 HarmonyCon LLC
+        </a>
+        <span> / </span>
+        <a
+          href="https://pony.best/"
+          target="_blank"
+          style="text-shadow: 2px 2px 1px black;"
+          class="hover:underline underline-offset-4 whitespace-nowrap text-lg md:text-base duration-300 flex items-center relative font-medium tracking-wide"
+        >
+          pony.best
+        </a>
+      </div>
       <!-- <div class="border border-r-1 rounded-lg h-6"></div>
       <a
         href="/coc"
@@ -148,11 +159,6 @@ const isRegisterPage = pathname.includes("register");
     }
   }
 
-  .fade {
-    opacity: 0;
-    animation: fadeIn 2s cubic-bezier(0.77, 0.01, 0.25, 1) 1.5s forwards;
-  }
-
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -163,6 +169,11 @@ const isRegisterPage = pathname.includes("register");
     100% {
       opacity: 1;
     }
+  }
+
+  .fade {
+    opacity: 0;
+    animation: fadeIn 2s cubic-bezier(0.77, 0.01, 0.25, 1) 1.5s forwards;
   }
 </style>
 

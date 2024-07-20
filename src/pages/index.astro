@@ -1,12 +1,7 @@
 ---
 import { Image, getImage } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
-import img1 from "../assets/2025/tune1.png";
-import img2 from "../assets/2025/star1.png";
-import img3 from "../assets/2025/logowithdates.png";
-import img4 from "../assets/2025/registration_ticket_v2.png";
-import img5 from "../assets/2025/enter_ticket_v2.png";
-import img6 from "../assets/2025/isotext1.png";
 import Footer from "../components/Footer.astro";
 
 import curtains1 from "../assets/2025/curtain_full.png";
@@ -22,8 +17,6 @@ const optimizedIndexBackground = await getImage({
   format: "webp",
   width: 2000,
 });
-
-console.log(optimizedIndexBackground.src);
 ---
 
 <Layout title="HarmonyCon 2025">
@@ -32,6 +25,13 @@ console.log(optimizedIndexBackground.src);
     <div id="curtain-2"></div>
   </div>
   <div id="mask" class="mask"></div>
+  <div
+    class="opacity-0 z-[100] absolute top-4 left-1/2 transform -translate-x-1/2 md:left-auto md:translate-x-0 md:top-4 md:right-4 text-3xl cursor-pointer p-2 hover:bg-neutral-200 duration-500 rounded hover:text-black"
+    id="sound"
+  >
+    <Icon name="charm:sound-up" id="sound-on" class="block" />
+    <Icon name="charm:sound-mute" id="sound-off" class="hidden" />
+  </div>
   <div
     class="absolute bottom-24 left-1/2 transform -translate-x-1/2 md:left-auto md:translate-x-0 md:bottom-16 md:right-16 text-3xl md:text-3xl font-serif opacity-0 text-white"
     id="count"
@@ -89,13 +89,15 @@ console.log(optimizedIndexBackground.src);
   let addedBoop = false;
   let clickedBoop = false;
   let boops = 0;
+  let muted = false;
+
+  const flashlight = new Howl({
+    src: ["/flashlight.mp3"],
+    volume: 0.2,
+  });
 
   const playFlashlight = () => {
     setTimeout(() => {
-      const flashlight = new Howl({
-        src: ["/flashlight.mp3"],
-        volume: 0.2,
-      });
       flashlight.play();
     }, 100);
   };
@@ -112,7 +114,7 @@ console.log(optimizedIndexBackground.src);
 
   let t = 0;
   const intervalFn = () => {
-    mask.style.setProperty("--radius", 120 + 30 * Math.sin(t * 0.003) + "px");
+    mask.style.setProperty("--radius", 120 + 30 * Math.sin(t * 0.006) + "px");
     t += 1;
   };
 
@@ -131,6 +133,28 @@ console.log(optimizedIndexBackground.src);
 
   let interval = setInterval(intervalFn, 10);
 
+  document.getElementById("sound").addEventListener("click", () => {
+    if (muted) {
+      magic.volume(0.03);
+      magicstart.volume(0.03);
+      flashlight.volume(0.2);
+      muted = false;
+      document.getElementById("sound-on").classList.remove("hidden");
+      document.getElementById("sound-off").classList.remove("block");
+      document.getElementById("sound-on").classList.add("block");
+      document.getElementById("sound-off").classList.add("hidden");
+    } else {
+      magic.volume(0);
+      magicstart.volume(0);
+      flashlight.volume(0);
+      muted = true;
+      document.getElementById("sound-on").classList.remove("block");
+      document.getElementById("sound-off").classList.remove("hidden");
+      document.getElementById("sound-on").classList.add("hidden");
+      document.getElementById("sound-off").classList.add("block");
+    }
+  });
+
   document.addEventListener("click", () => {
     const footer = document.getElementById("footer");
 
@@ -138,6 +162,13 @@ console.log(optimizedIndexBackground.src);
       footer.classList.add("fade");
     } else {
       footer.style.opacity = 0;
+    }
+
+    const sound = document.getElementById("sound");
+    if (!sound.classList.contains("fade")) {
+      sound.classList.add("fade");
+    } else {
+      sound.style.opacity = 0;
     }
 
     if (count >= 10) {
@@ -395,5 +426,10 @@ console.log(optimizedIndexBackground.src);
     100% {
       transform: translateX(100%);
     }
+  }
+
+  .fade {
+    opacity: 0;
+    animation: fadeIn 2s cubic-bezier(0.77, 0.01, 0.25, 1) 1.5s forwards;
   }
 </style>
