@@ -49,7 +49,7 @@ console.log(optimizedIndexBackground.src);
   </div>
   <div
     id="snoot"
-    class="z-50 hidden absolute w-40 h-40 left-[30%] bottom-[45%]"
+    class="z-50 hidden absolute w-24 h-16 md:w-40 md:h-40 left-[60%] bottom-[47%] md:left-[30%] md:bottom-[45%]"
   >
   </div>
   <Footer />
@@ -116,8 +116,10 @@ console.log(optimizedIndexBackground.src);
       }
     }
 
-    if (count >= 100) {
+    if (count >= 10) {
       document.body.style.backgroundImage = "url('/bar_temp1.webp')";
+      document.body.classList.remove("bg-center");
+      document.body.classList.add("bg-[20%_center]");
       mask.style.setProperty("--radius", "100vh");
       document.getElementById("snoot").style.display = "block";
 
@@ -179,34 +181,6 @@ console.log(optimizedIndexBackground.src);
     --mouse-x: 50%;
     --mouse-y: 50%;
     --radius: 150px;
-  }
-
-  @media (max-width: 768px) {
-    body {
-      margin: 0;
-      height: 100vh;
-      /* background-image: url(https://since1979.dev/wp-content/uploads/2022/01/todd-quackenbush-x5SRhkFajrA-unsplash.jpg); */
-      /* background-image: var(--optimizedIndexBackground); */
-      background-image: url("/harmonyteasermobile.webp");
-      background-position: center center;
-      background-size: cover;
-
-      cursor: none;
-    }
-  }
-
-  @media (min-width: 768px) {
-    body {
-      margin: 0;
-      height: 100vh;
-      /* background-image: url(https://since1979.dev/wp-content/uploads/2022/01/todd-quackenbush-x5SRhkFajrA-unsplash.jpg); */
-      /* background-image: var(--optimizedIndexBackground); */
-      background-image: url("/teaserfull2.webp");
-      background-position: center center;
-      background-size: cover;
-
-      cursor: none;
-    }
   }
 
   .mask {

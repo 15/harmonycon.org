@@ -121,7 +121,9 @@ const { pathname } = Astro.url;
       crossorigin
     />
   </head>
-  <body class="overflow-hidden">
+  <body
+    class="overflow-hidden m-0 h-screen bg-cover bg-center md:bg-cover md:bg-center cursor-none bg-[url('/harmonyteasermobile.webp')] md:bg-[url('/teaserfull2.webp')]"
+  >
     <slot />
   </body>
 </html>
