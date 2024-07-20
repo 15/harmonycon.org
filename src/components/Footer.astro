@@ -13,7 +13,8 @@ const isRegisterPage = pathname.includes("register");
 ---
 
 <footer
-  class={`z-0 ${isMainPage ? "absolute fade" : isRegisterPage ? "absolute" : "relative"} md:absolute bottom-0 drop-shadow-[0_4px_4px_rgba(0,0,0,0.6)]  mt-auto cursor-default px-0 sm:px-8 md:px-20 lg:px-32 w-full flex flex-col sm:flex-row justify-center sm:justify-between md:gap-x-0 gap-x-12 gap-y-2 md:justify-between items-center h-24 sm:h-10  ${textColor}`}
+  id="footer"
+  class={`z-0 opacity-0 absolute md:absolute bottom-0 drop-shadow-[0_4px_4px_rgba(0,0,0,0.6)]  mt-auto cursor-default px-0 sm:px-8 md:px-20 lg:px-32 w-full flex flex-col sm:flex-row justify-center sm:justify-between md:gap-x-0 gap-x-12 gap-y-2 md:justify-between items-center h-24 sm:h-10  ${textColor}`}
 >
   <div class="flex items-center justify-center">
     <div
@@ -149,7 +150,7 @@ const isRegisterPage = pathname.includes("register");
 
   .fade {
     opacity: 0;
-    animation: fadeIn 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.8s forwards;
+    animation: fadeIn 2s cubic-bezier(0.77, 0.01, 0.25, 1) 1.5s forwards;
   }
 
   @keyframes fadeIn {
@@ -164,3 +165,5 @@ const isRegisterPage = pathname.includes("register");
     }
   }
 </style>
+
+<script></script>

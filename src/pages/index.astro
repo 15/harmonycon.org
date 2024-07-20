@@ -16,81 +16,80 @@ const optimizedCurtains1 = await getImage({
   width: 2000,
 });
 
-import indexBackground from "../assets/2025/bg/stage3.png";
+import indexBackground from "../assets/2025/teaser.png";
 const optimizedIndexBackground = await getImage({
   src: indexBackground,
   format: "webp",
   width: 2000,
 });
+
+console.log(optimizedIndexBackground.src);
 ---
 
-<Layout title="HarmonyCon 2025" desktopOverflow={true} mobileOverflow={false}>
-  <div id="bg" class="overflow-x-hidden">
-    <div id="curtains">
-      <div id="curtain-1"></div>
-      <div id="curtain-2"></div>
-    </div>
-    <div class="mascots">
-      <Image
-        id="tune"
-        alt="Harmonic Tune"
-        src={img1}
-        width={600}
-        style="filter: drop-shadow(0 10px 10px #000);"
-      />
-      <Image
-        id="star"
-        alt="Harmony Star"
-        src={img2}
-        width={600}
-        style="filter: drop-shadow(0 10px 10px #000);"
-      />
-    </div>
-    <Image
-      id="logo"
-      alt="HarmonyCon 2025 logo"
-      src={img3}
-      width={1000}
-      style="filter: drop-shadow(0 10px 10px #000);"
-      class="z-10"
-    />
-    <div id="buttons">
-      <a href="/register">
-        <Image
-          id="register"
-          style="filter: drop-shadow(0 2px 2px #000);"
-          alt="Register!"
-          src={img4}
-          width={200}
-        />
-      </a>
-      <a href="/main">
-        <Image
-          id="main"
-          style="filter: drop-shadow(0 2px 2px #000);"
-          alt="Enter!"
-          src={img5}
-          width={200}
-        />
-      </a>
-    </div>
+<Layout title="HarmonyCon 2025">
+  <!-- <audio id="magic" src="/flashlight.mp3" preload="auto"></audio> -->
+  <div id="mask" class="mask"></div>
+  <div
+    class="absolute bottom-16 right-16 text-3xl font-serif opacity-0 text-white"
+    id="count"
+  >
+    1
   </div>
-
   <Footer />
 </Layout>
 
 <script>
-  document.addEventListener("swup:enable", () => {
-    window.swup.hooks.on("page:view", () => {
-      const curtain1 = document.getElementById("curtain-1");
-      const curtain2 = document.getElementById("curtain-2");
-      if (curtain1) {
-        curtain1.className = "skip";
-      }
-      if (curtain2) {
-        curtain2.className = "skip";
-      }
-    });
+  const mask = document.getElementById("mask");
+  const start = new Date().getTime();
+  document.addEventListener("pointermove", (pos) => {
+    let x = parseInt((pos.clientX / window.innerWidth) * 100);
+    let y = parseInt((pos.clientY / window.innerHeight) * 100);
+    mask.style.setProperty("--mouse-x", x + "%");
+    mask.style.setProperty("--mouse-y", y + "%");
+  });
+
+  let light = false;
+  let count = 0;
+
+  const playFlashlight = () => {
+    setTimeout(() => {
+      const magic = new Audio("/flashlight.mp3");
+      magic.volume = 0.2;
+      magic.play();
+    }, 100);
+  };
+
+  document.addEventListener("click", () => {
+    const footer = document.getElementById("footer");
+
+    if (!footer.classList.contains("fade")) {
+      footer.classList.add("fade");
+    } else {
+      footer.style.opacity = 0;
+    }
+
+    if (count >= 10) {
+      // window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+      document.getElementById("count").classList.add("fade-immediate");
+    }
+
+    if (count >= 100) {
+      document.body.style.backgroundImage = "url('/bar_temp1.webp')";
+    }
+
+    if (!light) {
+      playFlashlight();
+      document.getElementById("mask").classList.add("mask2");
+      light = true;
+      count++;
+      document.getElementById("count").innerHTML = count;
+    } else {
+      playFlashlight();
+      document.getElementById("mask").classList.remove("mask2");
+      light = false;
+      count++;
+      document.getElementById("count").innerHTML = count;
+    }
   });
 </script>
 
@@ -102,35 +101,6 @@ const optimizedIndexBackground = await getImage({
   }}
 >
   :root {
-    --elastic: linear(
-      0,
-      0.0009 8.51%,
-      -0.0047 19.22%,
-      0.0016 22.39%,
-      0.023 27.81%,
-      0.0237 30.08%,
-      0.0144 31.81%,
-      -0.0051 33.48%,
-      -0.1116 39.25%,
-      -0.1181 40.59%,
-      -0.1058 41.79%,
-      -0.0455,
-      0.0701 45.34%,
-      0.9702 55.19%,
-      1.0696 56.97%,
-      1.0987 57.88%,
-      1.1146 58.82%,
-      1.1181 59.83%,
-      1.1092 60.95%,
-      1.0057 66.48%,
-      0.986 68.14%,
-      0.9765 69.84%,
-      0.9769 72.16%,
-      0.9984 77.61%,
-      1.0047 80.79%,
-      0.9991 91.48%,
-      1
-    );
     --sine: linear(
       0,
       0.007 5.35%,
@@ -150,518 +120,52 @@ const optimizedIndexBackground = await getImage({
 
     --mouse-x: 50%;
     --mouse-y: 50%;
+    --radius: 150px;
   }
-
-  @media (max-width: 768px) {
-    #tune {
-      position: absolute;
-      width: 100%;
-      top: -126%;
-      left: -15%;
-      animation:
-        drop 2s var(--elastic) 0s forwards,
-        swing 6s ease-in-out 0s infinite forwards;
-    }
-
-    #star {
-      position: absolute;
-      width: 100%;
-      right: -20%;
-      top: -122%;
-      animation:
-        drop2 2s var(--elastic) 0.2s forwards,
-        swing2 7s ease-in-out 0.2s infinite forwards;
-    }
-
-    #logo {
-      position: absolute;
-      opacity: 0;
-      left: 0;
-      right: 0;
-      width: 100vw;
-      bottom: 31vh;
-      margin-left: auto;
-      margin-right: auto;
-
-      animation:
-        popup 1s ease 1.7s forwards,
-        tease 4s ease 3s infinite forwards;
-    }
-
-    #register {
-      position: absolute;
-      left: 10%;
-      width: 35%;
-      bottom: 16%;
-      opacity: 0;
-
-      --a: 8deg; /* control the angle of rotation (the smaller, the better) */
-      transform: perspective(400px)
-        rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
-      -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100%
-        100%/250% 250%;
-      transition: 0.4s;
-      animation:
-        jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2s forwards,
-        rotating 4s var(--sine) 0s infinite forwards;
-
-      z-index: 50;
-    }
-
-    #register:hover {
-      --i: -1;
-      -webkit-mask-position: 0 0;
-    }
-
-    #main {
-      position: absolute;
-      right: 10%;
-      width: 35%;
-      bottom: 16%;
-      opacity: 0;
-      --a: 8deg; /* control the angle of rotation (the smaller, the better) */
-      transform: perspective(400px)
-        rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
-      -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100%
-        100%/250% 250%;
-      transition: 0.4s;
-      animation:
-        jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2s forwards,
-        rotating 4.5s var(--sine) 2.1s infinite forwards;
-
-      z-index: 50;
-    }
-
-    #main:hover {
-      --i: -1;
-      -webkit-mask-position: 0 0;
-    }
-
-    #buttons {
-      z-index: 50;
-    }
-
-    @keyframes drop {
-      from {
-        top: -128%;
-      }
-      to {
-        top: -60%;
-      }
-    }
-
-    @keyframes drop2 {
-      from {
-        top: -124%;
-        /* transform: translateY(-200vh); */
-      }
-      to {
-        top: -56%;
-        /* transform: translateY(-75vh); */
-      }
-    }
-  }
-
-  @media (min-width: 768px) {
-    #bg {
-      /* position: relative; */
-    }
-
-    #mascots {
-      position: relative;
-      left: 0;
-      right: 0;
-    }
-
-    #tune {
-      position: absolute;
-      height: 170vh;
-      width: auto;
-      top: -200vh;
-      left: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      padding-right: 16rem;
-      animation:
-        drop 2s var(--elastic) 0s forwards,
-        swing 6s ease-in-out 0s infinite forwards;
-    }
-
-    #star {
-      position: absolute;
-      height: 170vh;
-      width: auto;
-      left: 0;
-      right: 0;
-      top: -200vh;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 16rem;
-      animation:
-        drop2 2s var(--elastic) 0.2s forwards,
-        swing2 7s ease-in-out 0.2s infinite forwards;
-    }
-
-    #logo {
-      position: absolute;
-      opacity: 0;
-      left: 0;
-      right: 0;
-      height: 50%;
-      width: auto;
-      bottom: 14%;
-      margin-left: auto;
-      margin-right: auto;
-
-      animation:
-        popup 1s ease 1.7s forwards,
-        tease 4s ease 3s infinite forwards;
-    }
-
-    #dates {
-      position: absolute;
-      left: 0%;
-      right: 20%;
-      width: 25%;
-      bottom: 0%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    #buttons {
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 50;
-    }
-
-    #register {
-      position: absolute;
-      left: 0;
-      rotate: -2deg;
-      width: auto;
-      margin-left: auto;
-      margin-right: auto;
-      /* padding-right: 24vh; */
-      right: 28vh;
-      height: 11vh;
-      bottom: 4vh;
-      opacity: 0;
-      --a: 8deg; /* control the angle of rotation (the smaller, the better) */
-      transform: perspective(400px)
-        rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
-      -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100%
-        100%/250% 250%;
-      transition: 0.4s;
-      animation:
-        jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2s forwards,
-        rotating 4s var(--sine) 0s infinite forwards;
-
-      z-index: 50;
-    }
-
-    #register:hover {
-      --i: -1;
-      -webkit-mask-position: 0 0;
-    }
-
-    #main {
-      position: absolute;
-      right: 0;
-      rotate: 2deg;
-      width: auto;
-      margin-left: auto;
-      margin-right: auto;
-      /* padding-left: 24vh; */
-      left: 28vh;
-      height: 11vh;
-      bottom: 4vh;
-      opacity: 0;
-      --a: 8deg; /* control the angle of rotation (the smaller, the better) */
-      transform: perspective(400px)
-        rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
-      -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100%
-        100%/250% 250%;
-      transition: 0.4s;
-      animation:
-        jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2s forwards,
-        rotating 4.5s var(--sine) 2.1s infinite forwards;
-
-      z-index: 50;
-    }
-
-    #main:hover {
-      --i: -1;
-      -webkit-mask-position: 0 0;
-    }
-    @keyframes drop {
-      from {
-        top: -200vh;
-        /* transform: translateY(-200vh); */
-      }
-      to {
-        top: -90vh;
-        /* transform: translateY(-75vh); */
-      }
-    }
-
-    @keyframes drop2 {
-      from {
-        top: -195vh;
-        /* transform: translateY(-200vh); */
-      }
-      to {
-        top: -85vh;
-        /* transform: translateY(-75vh); */
-      }
-    }
-  }
-
   body {
-    // cursor: none;
+    margin: 0;
+    height: 100vh;
+    /* background-image: url(https://since1979.dev/wp-content/uploads/2022/01/todd-quackenbush-x5SRhkFajrA-unsplash.jpg); */
+    /* background-image: var(--optimizedIndexBackground); */
+    background-image: url("/teaser.webp");
+    background-position: center center;
+    background-size: cover;
+
+    cursor: none;
   }
 
-  #mask {
+  .mask {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: hsla(0, 0%, 0%, 1);
+  }
+  .mask2 {
     mask: radial-gradient(
       circle at var(--mouse-x) var(--mouse-y),
-      transparent 150px,
-      white 200px
+      transparent 20px,
+      black var(--radius)
     );
     -webkit-mask: radial-gradient(
       circle at var(--mouse-x) var(--mouse-y),
-      transparent 100px,
-      white 160px
+      transparent 20px,
+      black var(--radius)
     );
   }
 
-  #curtains {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  #curtain-1,
-  #curtain-2 {
-    content: "";
-    display: block;
-    width: 50%;
-    height: 100%;
-    background-color: #000;
-  }
-
-  #curtain-1 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translateX(-100%);
-    animation-name: slide-left;
-    animation-duration: 1.2s;
-    animation-delay: 0s;
-    animation-direction: alternate;
-    background-image: var(--optimizedCurtains1);
-    background-size: cover;
-  }
-
-  #curtain-2 {
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translateX(100%);
-    animation-name: slide-right;
-    animation-duration: 1.2s;
-    animation-delay: 0s;
-    animation-direction: alternate;
-    background-image: var(--optimizedCurtains1);
-    background-size: cover;
-  }
-
-  #buttons {
+  .fade-immediate {
     opacity: 0;
-    animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards;
+    animation: fadeIn 2s cubic-bezier(0.77, 0.01, 0.25, 1) 0s forwards;
   }
 
-  @keyframes floating3 {
-    0% {
-      transform: translate(0, 0);
-    }
-    50% {
-      transform: translate(0, 4px);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
-  }
-
-  @keyframes rotating {
-    0% {
-      rotate: -2deg;
-      scale: 1;
-    }
-    50% {
-      rotate: 2deg;
-      scale: 1.03;
-    }
-    100% {
-      rotate: -2deg;
-      scale: 1;
-    }
-  }
-
-  @keyframes jump {
+  @keyframes fadeIn {
     0% {
       opacity: 0;
-      // transform: scale(0);
     }
     50% {
       opacity: 1;
-      // transform: scale(1.1);
     }
     100% {
       opacity: 1;
-      // transform: scale(1);
     }
-  }
-
-  @keyframes popup {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    60% {
-      opacity: 1;
-      transform: translateY(-20px);
-    }
-    80% {
-      transform: translateY(10px);
-    }
-    90% {
-      transform: translateY(-5px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-
-  @keyframes tease {
-    0%,
-    70% {
-      transform: translateY(0px);
-    }
-    85% {
-      transform: rotate(2.5deg) scale(1);
-    }
-    90% {
-      transform: rotate(-1.5deg) scale(1);
-    }
-    92.5% {
-      transform: rotate(1deg) scale(1);
-    }
-    95% {
-      transform: rotate(-1deg) scale(1);
-    }
-    100% {
-      transform: rotate(0);
-    }
-  }
-
-  @keyframes swing {
-    0% {
-      transform: rotate(0);
-    }
-    25% {
-      transform: rotate(0.7deg) scale(1);
-    }
-    50% {
-      transform: rotate(-0.7deg) scale(1);
-    }
-    75% {
-      transform: rotate(0.7deg) scale(1);
-    }
-    100% {
-      transform: rotate(0);
-    }
-  }
-
-  @keyframes swing2 {
-    0% {
-      transform: rotate(0);
-    }
-    25% {
-      transform: rotate(-1deg) scale(1);
-    }
-    50% {
-      transform: rotate(1deg) scale(1);
-    }
-    75% {
-      transform: rotate(-1deg) scale(1);
-    }
-    100% {
-      transform: rotate(0);
-    }
-  }
-
-  .skip {
-    animation-duration: 0s !important;
-    animation-delay: 0s !important;
-  }
-
-  @keyframes slide-left {
-    0%,
-    40% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  @keyframes slide-right {
-    0%,
-    40% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes fadeout {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-
-  #bg {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background-image: var(--optimizedIndexBackground);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
   }
 </style>
