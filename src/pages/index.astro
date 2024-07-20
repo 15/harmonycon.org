@@ -42,8 +42,8 @@ console.log(optimizedIndexBackground.src);
     id="dialogue"
     class="text-black absolute bottom-28 md:bottom-8 md:w-240 bg-neutral-300 opacity-0 left-0 right-0 md:mx-auto mx-4 rounded p-6 md:p-8"
   >
-    <div class="font-semibold text-3xl md:text-3xl">Harmonic Tune</div>
-    <div class="text-xl md:text-xl italic" id="text">
+    <div class="font-semibold text-2xl md:text-3xl">Harmonic Tune</div>
+    <div class="text-lg md:text-xl italic leading-tight" id="text">
       Howdy! We're closed right now. Please come back later!
     </div>
   </div>
@@ -116,7 +116,7 @@ console.log(optimizedIndexBackground.src);
       }
     }
 
-    if (count >= 10) {
+    if (count >= 100) {
       document.body.style.backgroundImage = "url('/bar_temp1.webp')";
       document.body.classList.remove("bg-center");
       document.body.classList.add("bg-[20%_center]");
@@ -143,10 +143,107 @@ console.log(optimizedIndexBackground.src);
       document.getElementById("count").classList.remove("fade-immediate");
     }
 
-    if (boops > 5) {
-      document.getElementById("text").innerHTML =
-        "Wow, you're an impatient fellow, aren't ya? Sorry, pardner — I appreciate the enthusiasm, but the shop's closed!";
-    }
+    // if (boops >= 5 && boops < 10) {
+    //   document.body.style.backgroundImage = "url('/bar_temp1.webp')";
+    //   document.getElementById("text").innerHTML =
+    //     "Wow, you're an impatient fellow, aren't ya? Sorry, pardner — I appreciate the enthusiasm, but the shop's closed!";
+    // } else if (boops >= 10 && boops < 20) {
+    //   document.body.style.backgroundImage = "url('/bar_temp2.webp')";
+    //   document.getElementById("text").innerHTML =
+    //     "Now hold on there, buckaroo! We ain't open yet. Try back in a bit, would ya?";
+    // } else if (boops >= 20 && boops < 30) {
+    //   document.body.style.backgroundImage = "url('/bar_temp1.webp')";
+    //   document.getElementById("text").innerHTML =
+    //     "Persistent, aren't ya? Much obliged, but the shop's still closed. Patience is a virtue, friend.";
+    // } else if (boops >= 30 && boops < 40) {
+    //   document.body.style.backgroundImage = "url('/bar_temp2.webp')";
+    //   document.getElementById("text").innerHTML =
+    //     "You're really keen, huh? But I'm afraid the doors are still shut tight. Come back later!";
+    // } else if (boops >= 40 && boops < 50) {
+    //   document.body.style.backgroundImage = "url('/bar_temp1.webp')";
+    //   document.getElementById("text").innerHTML =
+    //     "Well, ain't you a determined one! I reckon the shop's still closed though. Maybe take a walk and check back soon.";
+    // } else if (boops >= 50 && boops < 60) {
+    //   document.body.style.backgroundImage = "url('/bar_temp2.webp')";
+    //   document.getElementById("text").innerHTML =
+    //     "Landsakes! You're as stubborn as a mule. Still closed, partner. Come back when the rooster crows!";
+    // } else if (boops >= 60 && boops < 70) {
+    //   document.body.style.backgroundImage = "url('/bar_temp1.webp')";
+    //   document.getElementById("text").innerHTML =
+    //     "Gotta hand it to ya, your determination sure is admirable! But no can do, we're still closed. Maybe take a coffee break?";
+    // } else if (boops >= 70 && boops < 80) {
+    //   document.body.style.backgroundImage = "url('/bar_temp2.webp')";
+    //   document.getElementById("text").innerHTML =
+    //     "Goodness gracious! I appreciate your tenacity, but we're closed tighter than a drum. Patience!";
+    // } else if (boops >= 80 && boops < 90) {
+    //   document.body.style.backgroundImage = "url('/bar_temp1.webp')";
+    //   document.getElementById("text").innerHTML =
+    //     "Alright, alright, you've worn me down! I admire your persistence. Tell you what, come back when we open, and I'll have a little something extra for ya as a reward for your patience and determination. See you then, pardner!";
+    // }
+
+    const messages = [
+      {
+        range: [5, 10],
+        image: "/bar_temp1.webp",
+        text: "Wow, you're an impatient fellow, aren't ya? Sorry, pardner — I appreciate the enthusiasm, but the shop's closed!",
+      },
+      {
+        range: [10, 20],
+        image: "/bar_temp2.webp",
+        text: "Now hold on there, buckaroo! We ain't open yet. Try back in a bit, would ya?",
+      },
+      {
+        range: [20, 50],
+        image: "/bar_temp1.webp",
+        text: "Persistent, aren't ya? Much obliged, but the shop's still closed. Patience is a virtue, friend.",
+      },
+      {
+        range: [50, 100],
+        image: "/bar_temp2.webp",
+        text: "You're really keen, huh? But I'm afraid the doors are still shut tight. Come back later!",
+      },
+      {
+        range: [100, 200],
+        image: "/bar_temp1.webp",
+        text: "Well, ain't you a determined one! I reckon the shop's still closed though. Maybe take a walk and check back soon.",
+      },
+      {
+        range: [200, 300],
+        image: "/bar_temp2.webp",
+        text: "Landsakes! You're as stubborn as a mule. Still closed, pardner. Come back when the rooster crows!",
+      },
+      {
+        range: [300, 400],
+        image: "/bar_temp1.webp",
+        text: "Gotta hand it to ya, your determination sure is admirable! But no can do, we're still closed. Maybe take a coffee break?",
+      },
+      {
+        range: [400, 500],
+        image: "/bar_temp2.webp",
+        text: "Goodness gracious! I appreciate your tenacity, but we're closed tighter than a drum. Patience!",
+      },
+      {
+        range: [500, 1000],
+        image: "/bar_temp1.webp",
+        text: "You've got the spirit! But no luck this time either. The shop's closed. Try once more a bit later!",
+      },
+      {
+        range: [1000, 99999999],
+        image: "/bar_temp1.webp",
+        text: "Alright, alright, you've worn me down! I admire your persistence. Tell you what, come back when we open, and I'll have a little something extra for ya as a reward for your patience and determination. See you then, pardner!",
+      },
+    ];
+
+    const updateMessage = (boops) => {
+      for (const message of messages) {
+        if (boops >= message.range[0] && boops < message.range[1]) {
+          document.body.style.backgroundImage = `url('${message.image}')`;
+          document.getElementById("text").innerHTML = message.text;
+          break;
+        }
+      }
+    };
+    updateMessage(boops);
 
     count++;
     document.getElementById("count").innerHTML = count;
