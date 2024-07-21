@@ -67,7 +67,7 @@ const lights = new Howl({
 
 const transition = new Howl({
   src: ["/audio/mus_cymbal.ogg"],
-  volume: 0.3,
+  volume: 0.2,
 });
 
 const text = new Howl({
@@ -75,13 +75,28 @@ const text = new Howl({
   volume: 0.1,
 });
 
+const click = new Howl({
+  src: ["/audio/click.mp3"],
+  volume: 0.1,
+});
+
+const click2 = new Howl({
+  src: ["/audio/click2.mp3"],
+  volume: 0.1,
+});
+
 const mute = () => {
+  flashlight.volume(0);
   magic.volume(0);
   magicstart.volume(0);
-  flashlight.volume(0);
-  torch.volume(0);
-  transition.volume(0);
   boop.volume(0);
+  torch.volume(0);
+  lights.volume(0);
+  transition.volume(0);
+  text.volume(0);
+  click.volume(0);
+  click2.volume(0);
+
   muted = true;
   document.getElementById("sound-on").classList.remove("block");
   document.getElementById("sound-off").classList.remove("hidden");
@@ -90,12 +105,17 @@ const mute = () => {
 };
 
 const unmute = () => {
+  click2.volume(0.1);
+  click2.play();
+  flashlight.volume(0.2);
   magic.volume(0.03);
   magicstart.volume(0.03);
-  flashlight.volume(0.2);
+  boop.volume(0.01);
   torch.volume(0.1);
-  transition.volume(1.0);
-  boop.volume(0.07);
+  lights.volume(0.1);
+  transition.volume(0.2);
+  text.volume(0.1);
+  click.volume(0.1);
   muted = false;
   document.getElementById("sound-on").classList.remove("hidden");
   document.getElementById("sound-off").classList.remove("block");
@@ -258,7 +278,7 @@ document.addEventListener("click", () => {
     {
       range: [1000, 5000],
       image: "/bar_temp1.webp",
-      text: "You've got the spirit! But no luck this time either. The shop's closed. Try once more a bit later!",
+      text: "You've got the spirit! But no luck this time either. The shop's closed. Try once more much later!",
     },
     {
       range: [5000, 9999999],
@@ -312,6 +332,9 @@ const konamiPattern = [
 let currentKonami = 0;
 
 const konamiHandler = async (e) => {
+  if (endingUnlocked) {
+    click.play();
+  }
   console.log(e.key.toUpperCase, konamiPattern[currentKonami]);
   if (
     konamiPattern.indexOf(e.key.toUpperCase()) < 0 ||
