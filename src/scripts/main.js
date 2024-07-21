@@ -89,6 +89,16 @@ const click2 = new Howl({
   volume: 0.1,
 });
 
+const nice = new Howl({
+  src: ["/audio/nice.mp3"],
+  volume: 0.3,
+});
+
+const smoke = new Howl({
+  src: ["/audio/420.mp3"],
+  volume: 0.1,
+});
+
 const mute = () => {
   flashlight.volume(0);
   magic.volume(0);
@@ -100,6 +110,8 @@ const mute = () => {
   text.volume(0);
   click.volume(0);
   click2.volume(0);
+  nice.volume(0);
+  smoke.volume(0);
 
   muted = true;
   document.getElementById("sound-on").classList.remove("block");
@@ -120,6 +132,8 @@ const unmute = () => {
   transition.volume(0.2);
   text.volume(0.1);
   click.volume(0.1);
+  nice.volume(0.3);
+  smoke.volume(0.1);
   muted = false;
   document.getElementById("sound-on").classList.remove("hidden");
   document.getElementById("sound-off").classList.remove("block");
@@ -229,7 +243,7 @@ document.addEventListener("click", () => {
           lights.play();
           text.play();
         }
-        boops += 1;
+        boops += 100;
       });
     }
   }
@@ -318,7 +332,7 @@ document.addEventListener("click", () => {
   };
   updateMessage(boops);
 
-  count += 1;
+  count += 100;
   document.getElementById("count").innerHTML = count;
   document.getElementById("boopcount").innerHTML = boops;
 
@@ -340,13 +354,17 @@ const konamiPattern = [
   "A",
 ];
 
+const nicePattern = ["6", "9"];
+const blazePattern = ["4", "2", "0"];
+
 let currentKonami = 0;
+let currentNice = 0;
+let currentBlaze = 0;
 
 const konamiHandler = async (e) => {
   if (endingUnlocked) {
     click.play();
   }
-  console.log(e.key.toUpperCase, konamiPattern[currentKonami]);
   if (
     konamiPattern.indexOf(e.key.toUpperCase()) < 0 ||
     e.key.toUpperCase() !== konamiPattern[currentKonami].toUpperCase()
@@ -357,8 +375,6 @@ const konamiHandler = async (e) => {
   currentKonami += 1;
   if (konamiPattern.length === currentKonami) {
     currentKonami = 0;
-    // do something with Konami code here.
-
     if (endingUnlocked) {
       transition.play();
 
@@ -370,4 +386,44 @@ const konamiHandler = async (e) => {
     }
   }
 };
-document.addEventListener("keydown", konamiHandler);
+
+const niceHandler = async (e) => {
+  if (
+    nicePattern.indexOf(e.key.toUpperCase()) < 0 ||
+    e.key.toUpperCase() !== nicePattern[currentNice].toUpperCase()
+  ) {
+    currentNice = 0;
+    return;
+  }
+  currentNice += 1;
+  if (nicePattern.length === currentNice) {
+    currentNice = 0;
+    nice.play();
+    document.getElementById("text").innerHTML = "<span>Nice.</span>";
+  }
+};
+
+const blazeHandler = async (e) => {
+  if (
+    blazePattern.indexOf(e.key.toUpperCase()) < 0 ||
+    e.key.toUpperCase() !== blazePattern[currentBlaze].toUpperCase()
+  ) {
+    currentBlaze = 0;
+    return;
+  }
+  currentBlaze += 1;
+  if (blazePattern.length === currentBlaze) {
+    currentBlaze = 0;
+
+    document.body.style.backgroundImage = "url('/bar_420.webp')";
+    smoke.play();
+    document.getElementById("text").innerHTML =
+      "<span>Sure is <span class='font-semibold'>blazing</span> hot down South this time of year!</span>";
+  }
+};
+
+document.addEventListener("keydown", (e) => {
+  konamiHandler(e);
+  niceHandler(e);
+  blazeHandler(e);
+});
