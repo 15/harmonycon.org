@@ -2,8 +2,9 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import swup from "@swup/astro";
 import icon from "astro-icon";
-
 import compress from "astro-compress";
+
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
@@ -29,5 +30,5 @@ export default defineConfig({
   //   smoothScrolling: false,
   //   // animateHistoryBrowsing: true,
   // }),
-  icon(), compress()]
+  icon(), compress(), partytown()]
 });
