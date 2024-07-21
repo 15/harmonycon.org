@@ -229,7 +229,7 @@ document.addEventListener("click", () => {
           lights.play();
           text.play();
         }
-        boops += 100;
+        boops += 1;
       });
     }
   }
@@ -318,7 +318,7 @@ document.addEventListener("click", () => {
   };
   updateMessage(boops);
 
-  count += 100;
+  count += 1;
   document.getElementById("count").innerHTML = count;
   document.getElementById("boopcount").innerHTML = boops;
 
