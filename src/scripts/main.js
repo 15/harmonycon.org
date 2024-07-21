@@ -21,6 +21,7 @@ document.addEventListener("touchmove", (event) => {
 });
 
 let light = false;
+let light2 = false;
 let count = 0;
 let addedBoop = false;
 let clickedBoop = false;
@@ -49,8 +50,18 @@ const magicstart = new Howl({
   volume: 0.03,
 });
 
+const boop = new Howl({
+  src: ["/audio/boop.wav"],
+  volume: 0.01,
+});
+
 const torch = new Howl({
-  src: ["/audio/torch.mp3"],
+  src: ["/audio/switchtrimmed.mp3"],
+  volume: 0.1,
+});
+
+const lights = new Howl({
+  src: ["/audio/switchtrimmed.mp3"],
   volume: 0.1,
 });
 
@@ -59,12 +70,18 @@ const transition = new Howl({
   volume: 0.3,
 });
 
+const text = new Howl({
+  src: ["/audio/snd_select.wav"],
+  volume: 0.1,
+});
+
 const mute = () => {
   magic.volume(0);
   magicstart.volume(0);
   flashlight.volume(0);
   torch.volume(0);
   transition.volume(0);
+  boop.volume(0);
   muted = true;
   document.getElementById("sound-on").classList.remove("block");
   document.getElementById("sound-off").classList.remove("hidden");
@@ -78,6 +95,7 @@ const unmute = () => {
   flashlight.volume(0.2);
   torch.volume(0.1);
   transition.volume(1.0);
+  boop.volume(0.07);
   muted = false;
   document.getElementById("sound-on").classList.remove("hidden");
   document.getElementById("sound-off").classList.remove("block");
@@ -152,7 +170,12 @@ document.addEventListener("click", () => {
 
   if (count >= 100) {
     stopInterval();
-    torch.play();
+    if (light2) {
+      torch.play();
+      light2 = false;
+    } else {
+      light2 = true;
+    }
     magic.volume(0);
     magicstart.volume(0);
     document.body.style.backgroundImage = "url('/bar_temp1.webp')";
@@ -168,8 +191,13 @@ document.addEventListener("click", () => {
       addedBoop = true;
       document.getElementById("snoot").addEventListener("click", () => {
         clickedBoop = true;
+        boop.play();
 
         document.getElementById("snoot").style.display = "none";
+        if (boops === 0) {
+          lights.play();
+          text.play();
+        }
         boops += 1;
       });
     }
@@ -177,8 +205,7 @@ document.addEventListener("click", () => {
 
   if (clickedBoop) {
     torch.volume(0);
-    magic.pause();
-    magic.currentTime = 0;
+    magic.stop();
     document.getElementById("boopcount").classList.add("fade-immediate");
     document.body.style.backgroundImage = "url('/bar_temp2.webp')";
     mask.classList.remove("mask");
@@ -249,6 +276,9 @@ document.addEventListener("click", () => {
   const updateMessage = (boops) => {
     for (const message of messages) {
       if (boops >= message.range[0] && boops < message.range[1]) {
+        if (document.getElementById("text").innerHTML !== message.text) {
+          text.play();
+        }
         document.body.style.backgroundImage = `url('${message.image}')`;
         document.getElementById("text").innerHTML = message.text;
         break;
