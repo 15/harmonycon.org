@@ -299,7 +299,9 @@ const konamiHandler = async (e) => {
       document.body.classList.add("fade-to-white");
       endingUnlocked = false;
       setTimeout(() => {
-        window.location.replace(atob("aHR0cHM6Ly9kaXNjb3JkLmdnL2RtRTNtbjlx"));
+        window.location.replace(
+          atob("aHR0cHM6Ly9kaXNjb3JkLmNvbS9pbnZpdGUvWmRhbVN4bVo="),
+        );
       }, 5000);
     }
   }
