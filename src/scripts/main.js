@@ -322,7 +322,7 @@ document.addEventListener("click", () => {
   document.getElementById("count").innerHTML = count;
   document.getElementById("boopcount").innerHTML = boops;
 
-  if (boops >= 1000) {
+  if (boops >= 5000) {
     endingUnlocked = true;
   }
 });
