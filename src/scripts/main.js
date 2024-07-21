@@ -189,12 +189,12 @@ document.addEventListener("click", () => {
 
   const messages = [
     {
-      range: [5, 10],
+      range: [10, 20],
       image: "/bar_temp1.webp",
       text: "Wow, you're an impatient fellow, aren't ya? Sorry, pardner — I appreciate the enthusiasm, but the shop's closed!",
     },
     {
-      range: [10, 50],
+      range: [20, 50],
       image: "/bar_temp2.webp",
       text: "Now hold on there, buckaroo! We ain't open yet. Try back in a bit, would ya?",
     },
