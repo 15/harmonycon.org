@@ -56,7 +56,7 @@ const torch = new Howl({
 
 const transition = new Howl({
   src: ["/audio/mus_cymbal.ogg"],
-  volume: 1.0,
+  volume: 0.3,
 });
 
 const mute = () => {
@@ -170,7 +170,7 @@ document.addEventListener("click", () => {
         clickedBoop = true;
 
         document.getElementById("snoot").style.display = "none";
-        boops += 1;
+        boops += 100;
       });
     }
   }
@@ -194,47 +194,47 @@ document.addEventListener("click", () => {
       text: "Wow, you're an impatient fellow, aren't ya? Sorry, pardner — I appreciate the enthusiasm, but the shop's closed!",
     },
     {
-      range: [10, 20],
+      range: [10, 50],
       image: "/bar_temp2.webp",
       text: "Now hold on there, buckaroo! We ain't open yet. Try back in a bit, would ya?",
     },
     {
-      range: [20, 50],
+      range: [50, 100],
       image: "/bar_temp1.webp",
       text: "Persistent, ain't ya? Much obliged, but the shop's still closed. Patience is a virtue, friend.",
     },
     {
-      range: [50, 100],
+      range: [100, 200],
       image: "/bar_temp2.webp",
       text: "You're really keen, huh? But I'm afraid the doors are still shut tight. Come back later!",
     },
     {
-      range: [100, 200],
+      range: [200, 300],
       image: "/bar_temp1.webp",
       text: "Well, ain't you a determined one! Though I reckon we're still closed — maybe take a walk and check back soon.",
     },
     {
-      range: [200, 300],
+      range: [300, 400],
       image: "/bar_temp2.webp",
       text: "Landsakes! You're as stubborn as a mule. Still closed, pardner. Come back when the rooster crows!",
     },
     {
-      range: [300, 400],
+      range: [400, 500],
       image: "/bar_temp1.webp",
       text: "Gotta hand it to ya, your determination sure is admirable! But no can do, we're still closed. Maybe take a coffee break?",
     },
     {
-      range: [400, 500],
+      range: [500, 1000],
       image: "/bar_temp2.webp",
       text: "Goodness gracious! I appreciate your tenacity, but we're closed tighter than a drum. Patience!",
     },
     {
-      range: [500, 1000],
+      range: [1000, 5000],
       image: "/bar_temp1.webp",
       text: "You've got the spirit! But no luck this time either. The shop's closed. Try once more a bit later!",
     },
     {
-      range: [1000, 9999],
+      range: [5000, 9999999],
       image: "/bar_temp2.webp",
       // text: "Alright, alright, you've worn me down! I admire your persistence. Tell you what, if you can find the last secret, I'll have a little something extra for ya as a reward for your patience and determination. Just message one of the mods on the <a class='hover:underline underline-offset-4 text-[#7289da]' href='https://discord.com/invite/UWSFnwz' target='blank'>HarmonyCon Discord</a> once you've found it to claim your prize. See you soon, pardner!",
       text: "Alright, alright, you've worn me down! I admire your persistence. Tell you what, if you can find the last secret, I'll have a little something extra for ya as a reward for your patience and determination. See you soon, pardner!",
@@ -257,7 +257,7 @@ document.addEventListener("click", () => {
   };
   updateMessage(boops);
 
-  count += 1;
+  count += 100;
   document.getElementById("count").innerHTML = count;
   document.getElementById("boopcount").innerHTML = boops;
 
