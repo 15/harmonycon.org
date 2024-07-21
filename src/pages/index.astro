@@ -46,7 +46,7 @@ const optimizedIndexBackground = await getImage({
   </div>
   <div
     id="dialogue"
-    class="z-[60] text-black absolute bottom-36 md:bottom-8 md:w-240 bg-neutral-300 opacity-0 left-0 right-0 md:mx-auto mx-2 rounded px-6 py-6 md:px-8 md:py-8"
+    class="z-[60] text-black absolute bottom-36 md:bottom-12 md:w-240 bg-neutral-300 opacity-0 left-0 right-0 md:mx-auto mx-2 rounded px-6 py-6 md:px-8 md:py-8"
   >
     <div class="font-semibold text-2xl md:text-3xl">Harmonic Tune</div>
     <div class="text-base md:text-xl italic leading-tight" id="text">
@@ -90,9 +90,10 @@ const optimizedIndexBackground = await getImage({
   let clickedBoop = false;
   let boops = 0;
   let muted = false;
+  let endingUnlocked = false;
 
   const flashlight = new Howl({
-    src: ["/flashlight.mp3"],
+    src: ["/audio/flashlight.mp3"],
     volume: 0.2,
   });
 
@@ -103,14 +104,50 @@ const optimizedIndexBackground = await getImage({
   };
 
   const magic = new Howl({
-    src: ["/magicnormalized.mp3"],
+    src: ["/audio/magicnormalized.mp3"],
     volume: 0.03,
     loop: true,
   });
   const magicstart = new Howl({
-    src: ["/magicstart.mp3"],
+    src: ["/audio/magicstart.mp3"],
     volume: 0.03,
   });
+
+  const torch = new Howl({
+    src: ["/audio/torch.mp3"],
+    volume: 0.1,
+  });
+
+  const transition = new Howl({
+    src: ["/audio/mus_cymbal.ogg"],
+    volume: 1.0,
+  });
+
+  const mute = () => {
+    magic.volume(0);
+    magicstart.volume(0);
+    flashlight.volume(0);
+    torch.volume(0);
+    transition.volume(0);
+    muted = true;
+    document.getElementById("sound-on").classList.remove("block");
+    document.getElementById("sound-off").classList.remove("hidden");
+    document.getElementById("sound-on").classList.add("hidden");
+    document.getElementById("sound-off").classList.add("block");
+  };
+
+  const unmute = () => {
+    magic.volume(0.03);
+    magicstart.volume(0.03);
+    flashlight.volume(0.2);
+    torch.volume(0.1);
+    transition.volume(1.0);
+    muted = false;
+    document.getElementById("sound-on").classList.remove("hidden");
+    document.getElementById("sound-off").classList.remove("block");
+    document.getElementById("sound-on").classList.add("block");
+    document.getElementById("sound-off").classList.add("hidden");
+  };
 
   let t = 0;
   const intervalFn = () => {
@@ -134,25 +171,7 @@ const optimizedIndexBackground = await getImage({
   let interval = setInterval(intervalFn, 10);
 
   document.getElementById("sound").addEventListener("click", () => {
-    if (muted) {
-      magic.volume(0.03);
-      magicstart.volume(0.03);
-      flashlight.volume(0.2);
-      muted = false;
-      document.getElementById("sound-on").classList.remove("hidden");
-      document.getElementById("sound-off").classList.remove("block");
-      document.getElementById("sound-on").classList.add("block");
-      document.getElementById("sound-off").classList.add("hidden");
-    } else {
-      magic.volume(0);
-      magicstart.volume(0);
-      flashlight.volume(0);
-      muted = true;
-      document.getElementById("sound-on").classList.remove("block");
-      document.getElementById("sound-off").classList.remove("hidden");
-      document.getElementById("sound-on").classList.add("hidden");
-      document.getElementById("sound-off").classList.add("block");
-    }
+    muted ? unmute() : mute();
   });
 
   document.addEventListener("click", () => {
@@ -187,14 +206,19 @@ const optimizedIndexBackground = await getImage({
         stopInterval();
         magicstart.stop();
         magic.stop();
-        playFlashlight();
+        if (count < 20) {
+          playFlashlight();
+        }
         document.getElementById("mask").classList.remove("mask2");
         light = false;
       }
     }
 
-    if (count >= 100) {
+    if (count >= 20) {
       stopInterval();
+      torch.play();
+      magic.volume(0);
+      magicstart.volume(0);
       document.body.style.backgroundImage = "url('/bar_temp1.webp')";
       document.body.classList.remove("bg-center");
       document.body.classList.add("bg-[20%_center]");
@@ -210,12 +234,13 @@ const optimizedIndexBackground = await getImage({
           clickedBoop = true;
 
           document.getElementById("snoot").style.display = "none";
-          boops += 1;
+          boops += 100;
         });
       }
     }
 
     if (clickedBoop) {
+      torch.volume(0);
       magic.pause();
       magic.currentTime = 0;
       document.getElementById("boopcount").classList.add("fade-immediate");
@@ -274,14 +299,15 @@ const optimizedIndexBackground = await getImage({
       },
       {
         range: [1000, 9999],
-        image: "/bar_temp1.webp",
-        text: "Alright, alright, you've worn me down! I admire your persistence. Tell you what, come back when we open, and I'll have a little something extra for ya as a reward for your patience and determination. Just message one of the mods on the HarmonyCon Discord a screenshot of this page to claim your prize. See you at the con, pardner!",
+        image: "/bar_temp2.webp",
+        // text: "Alright, alright, you've worn me down! I admire your persistence. Tell you what, if you can find the last secret, I'll have a little something extra for ya as a reward for your patience and determination. Just message one of the mods on the <a class='hover:underline underline-offset-4 text-[#7289da]' href='https://discord.com/invite/UWSFnwz' target='blank'>HarmonyCon Discord</a> once you've found it to claim your prize. See you soon, pardner!",
+        text: "Alright, alright, you've worn me down! I admire your persistence. Tell you what, if you can find the last secret, I'll have a little something extra for ya as a reward for your patience and determination. See you soon, pardner!",
       },
-      {
-        range: [10000, 999999999],
-        image: "/bar_temp1.webp",
-        text: "You're still here? It's over! Go home. Go!",
-      },
+      // {
+      //   range: [10000, 999999999],
+      //   image: "/bar_temp1.webp",
+      //   text: "You're still here? It's over! Go home. Go!",
+      // },
     ];
 
     const updateMessage = (boops) => {
@@ -295,10 +321,54 @@ const optimizedIndexBackground = await getImage({
     };
     updateMessage(boops);
 
-    count += 1;
+    count += 100;
     document.getElementById("count").innerHTML = count;
     document.getElementById("boopcount").innerHTML = boops;
+
+    if (boops >= 1000) {
+      endingUnlocked = true;
+    }
   });
+
+  const konamiPattern = [
+    "ArrowUp",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight",
+    "ArrowLeft",
+    "ArrowRight",
+    "b",
+    "a",
+  ];
+  let currentKonami = 0;
+
+  const konamiHandler = async (e) => {
+    if (
+      konamiPattern.indexOf(e.key) < 0 ||
+      e.key !== konamiPattern[currentKonami]
+    ) {
+      currentKonami = 0;
+      return;
+    }
+    currentKonami += 1;
+    if (konamiPattern.length === currentKonami) {
+      currentKonami = 0;
+      // do something with Konami code here.
+
+      if (endingUnlocked) {
+        transition.play();
+
+        document.body.classList.add("fade-to-white");
+        endingUnlocked = false;
+        setTimeout(() => {
+          window.location.href = "https://discord.gg/dmE3mn9q";
+        }, 5000);
+      }
+    }
+  };
+  document.addEventListener("keydown", konamiHandler);
 </script>
 
 <style
@@ -431,5 +501,26 @@ const optimizedIndexBackground = await getImage({
   .fade {
     opacity: 0;
     animation: fadeIn 2s cubic-bezier(0.77, 0.01, 0.25, 1) 1.5s forwards;
+  }
+  body.fade-to-white::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    z-index: 9999; /* Make sure it's on top of everything else */
+    animation: fadeToWhite 5s forwards;
+  }
+
+  @keyframes fadeToWhite {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 </style>
