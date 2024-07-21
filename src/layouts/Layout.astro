@@ -26,41 +26,6 @@ const optimizedIndexBackground = await getImage({
   width: 2000,
 });
 
-import wood1 from "../assets/2025/borders/wood.jpg";
-const optimizedWood1 = await getImage({
-  src: wood1,
-  format: "webp",
-  width: 500,
-});
-
-import wood2 from "../assets/2025/borders/dark_wood.jpg";
-const optimizedWood2 = await getImage({
-  src: wood2,
-  format: "webp",
-  width: 500,
-});
-
-import wood3 from "../assets/2025/borders/light_wood.jpg";
-const optimizedWood3 = await getImage({
-  src: wood3,
-  format: "webp",
-  width: 500,
-});
-
-import wood4 from "../assets/2025/borders/lighter_wood.jpg";
-const optimizedWood4 = await getImage({
-  src: wood4,
-  format: "webp",
-  width: 500,
-});
-
-import wood5 from "../assets/2025/borders/lightest_wood.jpg";
-const optimizedWood5 = await getImage({
-  src: wood5,
-  format: "webp",
-  width: 500,
-});
-
 const { pathname } = Astro.url;
 ---
 
@@ -112,6 +77,9 @@ const { pathname } = Astro.url;
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700"
       rel="stylesheet"
     />
+
+    <link rel="preload" as="image" href="/bar_temp1.webp" />
+    <link rel="preload" as="image" href="/bar_temp2.webp" />
 
     <link
       rel="preload"
