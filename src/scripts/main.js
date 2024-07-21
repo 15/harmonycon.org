@@ -160,7 +160,7 @@ document.addEventListener("click", () => {
       stopInterval();
       magicstart.stop();
       magic.stop();
-      if (count < 20) {
+      if (count < 100) {
         playFlashlight();
       }
       document.getElementById("mask").classList.remove("mask2");
@@ -170,11 +170,11 @@ document.addEventListener("click", () => {
 
   if (count >= 100) {
     stopInterval();
-    if (light2) {
+    if (!light2) {
       torch.play();
-      light2 = false;
-    } else {
       light2 = true;
+    } else {
+      light2 = false;
     }
     magic.volume(0);
     magicstart.volume(0);
