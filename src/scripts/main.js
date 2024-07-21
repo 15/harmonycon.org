@@ -170,7 +170,7 @@ document.addEventListener("click", () => {
         clickedBoop = true;
 
         document.getElementById("snoot").style.display = "none";
-        boops += 100;
+        boops += 1;
       });
     }
   }
@@ -257,7 +257,7 @@ document.addEventListener("click", () => {
   };
   updateMessage(boops);
 
-  count += 100;
+  count += 1;
   document.getElementById("count").innerHTML = count;
   document.getElementById("boopcount").innerHTML = boops;
 
@@ -267,23 +267,25 @@ document.addEventListener("click", () => {
 });
 
 const konamiPattern = [
-  "ArrowUp",
-  "ArrowUp",
-  "ArrowDown",
-  "ArrowDown",
-  "ArrowLeft",
-  "ArrowRight",
-  "ArrowLeft",
-  "ArrowRight",
-  "b",
-  "a",
+  "ARROWUP",
+  "ARROWUP",
+  "ARROWDOWN",
+  "ARROWDOWN",
+  "ARROWLEFT",
+  "ARROWRIGHT",
+  "ARROWLEFT",
+  "ARROWRIGHT",
+  "B",
+  "A",
 ];
+
 let currentKonami = 0;
 
 const konamiHandler = async (e) => {
+  console.log(e.key.toUpperCase, konamiPattern[currentKonami]);
   if (
-    konamiPattern.indexOf(e.key) < 0 ||
-    e.key !== konamiPattern[currentKonami]
+    konamiPattern.indexOf(e.key.toUpperCase()) < 0 ||
+    e.key.toUpperCase() !== konamiPattern[currentKonami].toUpperCase()
   ) {
     currentKonami = 0;
     return;
