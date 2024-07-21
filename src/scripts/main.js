@@ -56,7 +56,7 @@ const magicstart = new Howl({
 
 const boop = new Howl({
   src: ["/audio/boop.wav"],
-  volume: 0.01,
+  volume: 0.02,
 });
 
 const torch = new Howl({
@@ -114,7 +114,7 @@ const unmute = () => {
   flashlight.volume(0.2);
   magic.volume(0.03);
   magicstart.volume(0.03);
-  boop.volume(0.01);
+  boop.volume(0.02);
   torch.volume(0.1);
   lights.volume(0.1);
   transition.volume(0.2);
