@@ -1,5 +1,9 @@
 import { Howl, Howler } from "howler";
 
+import tippy from "tippy.js";
+import "tippy.js/dist/tippy.css";
+import "tippy.js/animations/shift-away-extreme.css";
+
 const mask = document.getElementById("mask");
 const start = new Date().getTime();
 
@@ -141,6 +145,13 @@ const stopInterval = () => {
     interval = null;
   }
 };
+
+tippy(document.getElementById("sound"), {
+  content: `<span class='text-xs'>For best user experience, please keep the audio on!</span>`,
+  placement: window.innerWidth > 768 ? "left" : "bottom",
+  allowHTML: true,
+  animation: "shift-away-extreme",
+});
 
 let interval = setInterval(intervalFn, 10);
 
