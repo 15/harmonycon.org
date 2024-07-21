@@ -87,7 +87,7 @@ const unmute = () => {
 
 let t = 0;
 const intervalFn = () => {
-  mask.style.setProperty("--radius", 120 + 30 * Math.sin(t * 0.006) + "px");
+  mask.style.setProperty("--radius", 120 + 30 * Math.sin(t * 0.008) + "px");
   t += 1;
 };
 
