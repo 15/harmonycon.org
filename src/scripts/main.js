@@ -32,6 +32,7 @@ let clickedBoop = false;
 let boops = 0;
 let muted = false;
 let endingUnlocked = false;
+let musicPlaying = false;
 
 const flashlight = new Howl({
   src: ["/audio/flashlight.mp3"],
@@ -99,6 +100,12 @@ const smoke = new Howl({
   volume: 0.1,
 });
 
+// const oklahoma = new Howl({
+//   src: ["/audio/songsmuffled.mp3"],
+//   volume: 0.01,
+//   loop: true,
+// });
+
 const mute = () => {
   flashlight.volume(0);
   magic.volume(0);
@@ -112,6 +119,7 @@ const mute = () => {
   click2.volume(0);
   nice.volume(0);
   smoke.volume(0);
+  // oklahoma.volume(0);
 
   muted = true;
   document.getElementById("sound-on").classList.remove("block");
@@ -134,6 +142,7 @@ const unmute = () => {
   click.volume(0.1);
   nice.volume(0.3);
   smoke.volume(0.1);
+  // oklahoma.volume(0.01);
   muted = false;
   document.getElementById("sound-on").classList.remove("hidden");
   document.getElementById("sound-off").classList.remove("block");
@@ -221,6 +230,15 @@ document.addEventListener("click", () => {
     } else {
       light2 = false;
     }
+
+    // if (!musicPlaying) {
+    //   setTimeout(() => {
+    //     oklahoma.volume(0.01);
+    //     oklahoma.play();
+    //   }, 1000);
+    //   musicPlaying = true;
+    // }
+
     magic.volume(0);
     magicstart.volume(0);
     document.body.style.backgroundImage = "url('/bar_temp1.webp')";
@@ -332,7 +350,7 @@ document.addEventListener("click", () => {
   };
   updateMessage(boops);
 
-  count += 1;
+  count += 10;
   document.getElementById("count").innerHTML = count;
   document.getElementById("boopcount").innerHTML = boops;
 
