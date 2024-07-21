@@ -396,10 +396,12 @@ const niceHandler = async (e) => {
     return;
   }
   currentNice += 1;
-  if (nicePattern.length === currentNice && clickedBoop) {
+  if (nicePattern.length === currentNice) {
     currentNice = 0;
-    nice.play();
-    document.getElementById("text").innerHTML = "<span>Nice.</span>";
+    if (clickedBoop) {
+      nice.play();
+      document.getElementById("text").innerHTML = "<span>Nice.</span>";
+    }
   }
 };
 
@@ -412,13 +414,15 @@ const blazeHandler = async (e) => {
     return;
   }
   currentBlaze += 1;
-  if (blazePattern.length === currentBlaze && clickedBoop) {
+  if (blazePattern.length === currentBlaze) {
     currentBlaze = 0;
 
-    document.body.style.backgroundImage = "url('/bar_420.webp')";
-    smoke.play();
-    document.getElementById("text").innerHTML =
-      "<span>Sure is <span class='font-semibold'>blazing</span> hot down South this time of year!</span>";
+    if (clickedBoop) {
+      document.body.style.backgroundImage = "url('/bar_420.webp')";
+      smoke.play();
+      document.getElementById("text").innerHTML =
+        "<span>Sure is <span class='font-semibold'>blazing</span> hot down South this time of year!</span>";
+    }
   }
 };
 
