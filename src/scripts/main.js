@@ -396,7 +396,7 @@ const niceHandler = async (e) => {
     return;
   }
   currentNice += 1;
-  if (nicePattern.length === currentNice) {
+  if (nicePattern.length === currentNice && clickedBoop) {
     currentNice = 0;
     nice.play();
     document.getElementById("text").innerHTML = "<span>Nice.</span>";
@@ -412,7 +412,7 @@ const blazeHandler = async (e) => {
     return;
   }
   currentBlaze += 1;
-  if (blazePattern.length === currentBlaze) {
+  if (blazePattern.length === currentBlaze && clickedBoop) {
     currentBlaze = 0;
 
     document.body.style.backgroundImage = "url('/bar_420.webp')";
