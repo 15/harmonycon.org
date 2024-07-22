@@ -161,7 +161,7 @@ const stopInterval = () => {
 };
 
 tippy(document.getElementById("sound"), {
-  content: `<span class='text-xs'>For best user experience, please keep the audio on!</span>`,
+  content: `For best user experience, please keep the audio on!`,
   placement: window.innerWidth > 768 ? "left" : "bottom",
   allowHTML: true,
   animation: "shift-away-extreme",
