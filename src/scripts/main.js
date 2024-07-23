@@ -223,7 +223,7 @@ document.addEventListener("click", () => {
     }
     magic.volume(0);
     magicstart.volume(0);
-    document.body.style.backgroundImage = "url('/bar_temp1.webp')";
+    document.body.style.backgroundImage = "url('/bar_final_.webp')";
     document.body.classList.remove("bg-center");
     document.body.classList.add("bg-[20%_center]");
     mask.style.setProperty(
@@ -252,7 +252,7 @@ document.addEventListener("click", () => {
     torch.volume(0);
     magic.stop();
     document.getElementById("boopcount").classList.add("fade-immediate");
-    document.body.style.backgroundImage = "url('/bar_temp2.webp')";
+    document.body.style.backgroundImage = "url('/bar_final_2.webp')";
     mask.classList.remove("mask");
     document.getElementById("dialogue").style.opacity = "80%";
     document.body.style.cursor = "default";
@@ -262,58 +262,58 @@ document.addEventListener("click", () => {
   const messages = [
     {
       range: [10, 20],
-      image: "/bar_temp1.webp",
+      image: "/bar_final_.webp",
       text: "Wow, you're an impatient fellow, aren't ya? Sorry, pardner — I appreciate the enthusiasm, but the shop's closed!",
     },
     {
       range: [20, 50],
-      image: "/bar_temp2.webp",
+      image: "/bar_final_2.webp",
       text: "Now hold on there, buckaroo! We ain't open yet. Try back in a bit, would ya?",
     },
     {
       range: [50, 100],
-      image: "/bar_temp1.webp",
+      image: "/bar_final_.webp",
       text: "Persistent, ain't ya? Much obliged, but the shop's still closed. Patience is a virtue, friend.",
     },
     {
       range: [100, 200],
-      image: "/bar_temp2.webp",
+      image: "/bar_final_2.webp",
       text: "You're really keen, huh? But I'm afraid the doors are still shut tight. Come back later!",
     },
     {
       range: [200, 300],
-      image: "/bar_temp1.webp",
+      image: "/bar_final_.webp",
       text: "Well, ain't you a determined one! Though I reckon we're still closed — maybe take a walk and check back soon.",
     },
     {
       range: [300, 400],
-      image: "/bar_temp2.webp",
+      image: "/bar_final_2.webp",
       text: "Landsakes! You're as stubborn as a mule. Still closed, pardner. Come back when the rooster crows!",
     },
     {
       range: [400, 500],
-      image: "/bar_temp1.webp",
+      image: "/bar_final_.webp",
       text: "Gotta hand it to ya, your determination sure is admirable! But no can do, we're still closed. Maybe take a coffee break?",
     },
     {
       range: [500, 1000],
-      image: "/bar_temp2.webp",
+      image: "/bar_final_2.webp",
       text: "Goodness gracious! I appreciate your tenacity, but we're closed tighter than a drum. Patience!",
     },
     {
       range: [1000, 5000],
-      image: "/bar_temp1.webp",
+      image: "/bar_final_.webp",
       text: "You've got the spirit! But no luck this time either. The shop's closed. Try once more much later!",
     },
     {
       range: [5000, 9999999],
-      image: "/bar_temp2.webp",
+      image: "/bar_final_2.webp",
       // text: "Alright, alright, you've worn me down! I admire your persistence. Tell you what, if you can find the last secret, I'll have a little something extra for ya as a reward for your patience and determination. Just message one of the mods on the <a class='hover:underline underline-offset-4 text-[#7289da]' href='https://discord.com/invite/UWSFnwz' target='blank'>HarmonyCon Discord</a> once you've found it to claim your prize. See you soon, pardner!",
       text: "Alright, alright, you've worn me down! I admire your persistence. Tell you what, if you can find the last secret, I'll have a little something extra for ya as a reward for your patience and determination. See you soon, pardner!",
     },
     // {
     //   range: [10000, 999999999],
-    //   image: "/bar_temp1.webp",
+    //   image: "/bar_final_.webp",
     //   text: "You're still here? It's over! Go home. Go!",
     // },
   ];
