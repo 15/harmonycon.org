@@ -2,13 +2,14 @@
 import { Image, getImage } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import img1 from "../assets/2025/flyer.png";
-import img2 from "../assets/2025/nav/register.png";
-import img3 from "../assets/MF/cards/venue.png";
-import img4 from "../assets/2025/nav/apply.png";
-import img5 from "../assets/2025/playbill/singin.jpg";
+import img2 from "../assets/2025/playbill/temp.png";
+import img3 from "../assets/2025/playbill/producersnotext.png";
+import img4 from "../assets/2025/playbill/the_Stallion_of_the_Opera_Final_No_Text.png";
+import img5 from "../assets/2025/playbill/HarmonyCon-CodeOfConduct2.png";
 import img6 from "../assets/MF/cards/mascots.png";
-import img7 from "../assets/MF/cards/scrapbook.png";
-import img8 from "../assets/2025/playbill/hamilton.jpg";
+import img7 from "../assets/2025/playbill/winged.png";
+import img8 from "../assets/2025/playbill/Clawstin.png";
+import img9 from "../assets/2025/flyer.png";
 import Playbill from "../components/Playbill.astro";
 import Footer from "../components/Footer.astro";
 
@@ -25,7 +26,7 @@ const optimizedMainBackground = await getImage({
   desktopOverflow="true"
   mobileOverflow="true"
 >
-  <div
+  <!-- <div
     id="bg"
     class="overflow-x-hidden md:px-0 px-8 md:absolute flex flex-col gap-y-8 pt-8 pb-4 md:pb-8"
   >
@@ -83,6 +84,94 @@ const optimizedMainBackground = await getImage({
         active={true}
         title="Credits"
       />
+    </div>
+    <Footer />
+  </div> -->
+  <div
+    id="bg"
+    class="overflow-x-hidden md:px-0 px-8 md:absolute flex flex-col gap-y-8 pt-4 pb-4 md:pb-8"
+  >
+    <div
+      class="flex sm:block flex-col mx-auto my-0 max-w-full sm:max-w-full md:max-w-176 lg:max-w-224 xl:max-w-288 2xl:max-w-352 relative w-full h-full sm:h-224 md:h-224 lg:h-224 xl:h-224 2xl:h-224"
+    >
+      <!-- <div>
+      <Playbill src={img1} href="/" idx={1} active={true} />
+    </div> -->
+
+      <div class="sm:absolute sm:left-[27%] sm:top-[1%]">
+        <a
+          style="filter: drop-shadow(0 3px 3px #000);"
+          class={`wood bg-white p-2 md:p-3 2xl:p-4 rounded border-[8px] md:border-[10px] w-full items-center flex flex-col gap-y-1 lg:gap-y-2 duration-300 hover:scale-[1.05] hover:z-10 relative`}
+          href="/"
+        >
+          <Image src={img9} alt="Main" width={550} class="w-full" />
+        </a>
+      </div>
+      <div class="sm:absolute
+            sm:left-[0%]
+            sm:top-[0%]">
+        <Playbill
+          src={img2}
+          href="/register"
+          idx={2}
+          active={true}
+          title="Register"
+        />
+      </div>
+
+      <div class="sm:absolute sm:left-[75%] sm:top-[0%]">
+        <Playbill
+          src={img3}
+          href="/venue"
+          idx={3}
+          active={true}
+          title="Venue"
+        />
+      </div>
+
+      <div class="sm:absolute sm:left-[0%] sm:top-[51%]">
+        <Playbill
+          src={img4}
+          href="/apply"
+          idx={4}
+          active={true}
+          title="Apply"
+        />
+      </div>
+
+      <div class="sm:absolute sm:left-[25%] sm:top-[51%]">
+        <Playbill src={img5} href="/coc" idx={5} active={true} title="Rules" />
+      </div>
+
+      <!-- <div>
+      <Playbill
+        src={img6}
+        href="/mascots"
+        idx={6}
+        active={false}
+        title="Mascots"
+      />
+    </div> -->
+
+      <div class="sm:absolute sm:left-[50%] sm:top-[51%]">
+        <Playbill
+          src={img7}
+          href="/gallery"
+          idx={7}
+          active={true}
+          title="Gallery"
+        />
+      </div>
+
+      <div class="sm:absolute sm:left-[75%] sm:top-[51%]">
+        <Playbill
+          src={img8}
+          href="/credits"
+          idx={8}
+          active={true}
+          title="Credits"
+        />
+      </div>
     </div>
     <Footer />
   </div>

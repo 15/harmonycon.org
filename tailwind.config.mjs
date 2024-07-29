@@ -9,12 +9,13 @@ export default {
         mono: ["Inconsolata"],
       },
       fontSize: {
+        "4.5xl": ["2.625rem", 1],
         "10xl": "10rem",
         "11xl": "11rem",
         "12xl": "12rem",
         "13xl": "13rem",
         "14xl": "14rem",
-        "2xs": ["0.7rem", "15px"],
+        "2xs": ["0.625rem", "0.75rem"],
       },
       screens: {
         // 'sm': '640px',

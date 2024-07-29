@@ -13,26 +13,38 @@ const isRegisterPage = pathname.includes("register");
 ---
 
 <footer
-  class={`z-0 ${isMainPage ? "absolute fade" : isRegisterPage ? "absolute" : "relative"} md:absolute bottom-0 drop-shadow-[0_4px_4px_rgba(0,0,0,0.6)]  mt-auto cursor-default px-0 sm:px-8 md:px-20 lg:px-32 w-full flex flex-col sm:flex-row justify-center sm:justify-between md:gap-x-0 gap-x-12 gap-y-2 md:justify-between items-center h-24 sm:h-10  ${textColor}`}
+  class={`z-[1000] ${isMainPage ? "absolute fade" : isRegisterPage ? "absolute" : "relative"} md:absolute bottom-0 drop-shadow-[0_4px_4px_rgba(0,0,0,0.6)]  mt-auto cursor-default px-0 sm:px-8 md:px-20 lg:px-32 w-full flex flex-col sm:flex-row justify-center sm:justify-between md:gap-x-0 gap-x-12 gap-y-2 md:justify-between items-center h-24 sm:h-10  ${textColor}`}
 >
   <div class="flex items-center justify-center">
     <div
       class="flex items-center justify-center gap-x-4 sm:gap-x-4 md:gap-x-4 lg:gap-x-4 xl:gap-x-8"
     >
-      <a
-        href="https://harmonycon.org/"
-        style="text-shadow: 2px 2px 1px black;"
-        class="whitespace-nowrap text-lg md:text-base duration-300 flex items-center relative font-medium tracking-wide"
-      >
-        © 2025 HarmonyCon LLC
-      </a>
+      <div class="flex gap-x-2 font-serif">
+        <a
+          href="https://harmonycon.org/"
+          target="_blank"
+          style="text-shadow: 2px 2px 1px black;"
+          class="hover:underline underline-offset-4 whitespace-nowrap text-lg md:text-base duration-300 flex items-center relative font-medium tracking-wide"
+        >
+          © 2025 HarmonyCon LLC
+        </a>
+        <span> / </span>
+        <a
+          href="https://pony.best/"
+          target="_blank"
+          style="text-shadow: 2px 2px 1px black;"
+          class="hover:underline underline-offset-4 whitespace-nowrap text-lg md:text-base duration-300 flex items-center relative font-medium tracking-wide"
+        >
+          pony.best
+        </a>
+      </div>
       <!-- <div class="border border-r-1 rounded-lg h-6"></div>
-      <a
-        href="/coc"
-        class="hover:underline underline-offset-4 flex items-center relative font-medium tracking-wide"
-      >
-        Code of Conduct
-      </a> -->
+    <a
+      href="/coc"
+      class="hover:underline underline-offset-4 flex items-center relative font-medium tracking-wide"
+    >
+      Code of Conduct
+    </a> -->
     </div>
   </div>
   <div
