@@ -89,7 +89,7 @@ const optimizedMainBackground = await getImage({
   </div> -->
   <div
     id="bg"
-    class="overflow-x-hidden md:px-0 px-8 md:absolute flex flex-col pt-4 pb-4 md:pb-8"
+    class="overflow-x-hidden md:px-0 px-4 md:absolute flex flex-col pt-4 pb-4 md:pb-8"
   >
     <div
       class="flex sm:block flex-col gap-y-8 mx-auto my-0 max-w-full sm:max-w-full md:max-w-176 lg:max-w-288 xl:max-w-288 2xl:max-w-352 relative w-full h-full sm:h-224 md:h-224 lg:h-224 xl:h-224 2xl:h-224"
@@ -98,7 +98,7 @@ const optimizedMainBackground = await getImage({
       <Playbill src={img1} href="/" idx={1} active={true} />
     </div> -->
 
-      <div class="sm:absolute sm:left-[25.7%] sm:top-[0%]">
+      <div class="px-0 sm:px-0 sm:absolute sm:left-[25.7%] sm:top-[0%]">
         <a
           style="filter: drop-shadow(0 3px 3px #000);"
           class={`wood bg-white p-2 md:p-3 2xl:p-4 rounded border-[8px] md:border-[10px] w-full items-center flex flex-col gap-y-1 lg:gap-y-2 duration-300 hover:scale-[1.1] hover:z-10 relative`}
@@ -112,9 +112,11 @@ const optimizedMainBackground = await getImage({
           />
         </a>
       </div>
-      <div class="sm:absolute
+      <div
+        class="px-8 sm:px-0 sm:absolute
             sm:left-[0%]
-            sm:top-[0%]">
+            sm:top-[0%]"
+      >
         <Playbill
           src={img2}
           href="/register"
@@ -124,7 +126,7 @@ const optimizedMainBackground = await getImage({
         />
       </div>
 
-      <div class="sm:absolute sm:left-[75%] sm:top-[0%]">
+      <div class="px-8 sm:px-0 sm:absolute sm:left-[75%] sm:top-[0%]">
         <Playbill
           src={img3}
           href="/venue"
@@ -134,7 +136,7 @@ const optimizedMainBackground = await getImage({
         />
       </div>
 
-      <div class="sm:absolute sm:left-[0%] sm:top-[51%]">
+      <div class="px-8 sm:px-0 sm:absolute sm:left-[0%] sm:top-[51%]">
         <Playbill
           src={img4}
           href="/apply"
@@ -144,7 +146,7 @@ const optimizedMainBackground = await getImage({
         />
       </div>
 
-      <div class="sm:absolute sm:left-[25%] sm:top-[51%]">
+      <div class="px-8 sm:px-0 sm:absolute sm:left-[25%] sm:top-[51%]">
         <Playbill src={img5} href="/coc" idx={5} active={true} title="Rules" />
       </div>
 
@@ -158,7 +160,7 @@ const optimizedMainBackground = await getImage({
       />
     </div> -->
 
-      <div class="sm:absolute sm:left-[50%] sm:top-[51%]">
+      <div class="px-8 sm:px-0 sm:absolute sm:left-[50%] sm:top-[51%]">
         <Playbill
           src={img7}
           href="/gallery"
@@ -168,7 +170,7 @@ const optimizedMainBackground = await getImage({
         />
       </div>
 
-      <div class="sm:absolute sm:left-[75%] sm:top-[51%]">
+      <div class="px-8 sm:px-0 sm:absolute sm:left-[75%] sm:top-[51%]">
         <Playbill
           src={img8}
           href="/credits"
