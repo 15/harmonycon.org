@@ -19,6 +19,9 @@ const optimizedPaper = await getImage({
 import tune from "../assets/2025/harmonic_tune_cm2.png";
 import star from "../assets/2025/harmony_star_cm.png";
 import Footer from "../components/Footer.astro";
+
+import starsign from "../assets/2025/starsign.png";
+import tunesign from "../assets/2025/tunesign.png";
 ---
 
 <Layout
@@ -618,22 +621,37 @@ import Footer from "../components/Footer.astro";
 
       <div class="flex mt-8 md:mt-24 mb-8">
         <div class="w-1/2 px-2 md:px-8">
-          <Image
-            alt="Harmonic Tune"
-            src={tune}
-            width={400}
-            class="h-10 md:h-20 w-auto"
-          />
-
+          <div class="flex flex-row justify-between">
+            <Image
+              alt="Harmonic Tune"
+              src={tune}
+              width={400}
+              class="h-10 md:h-20 w-auto"
+            />
+            <Image
+              alt="Matinée signature"
+              src={tunesign}
+              width={400}
+              class="h-10 md:h-20 w-auto"
+            />
+          </div>
           <hr class="border-black border md:border-2" />
         </div>
         <div class="w-1/2 px-2 md:px-8">
-          <Image
-            alt="Harmonic Tune"
-            src={star}
-            width={400}
-            class="h-10 md:h-20 w-auto"
-          />
+          <div class="flex flex-row justify-between">
+            <Image
+              alt="Harmonic Tune"
+              src={star}
+              width={400}
+              class="h-10 md:h-20 w-auto"
+            />
+            <Image
+              alt="Matinée signature"
+              src={starsign}
+              width={400}
+              class="h-10 md:h-20 w-auto"
+            />
+          </div>
           <hr class="border-black border md:border-2" />
         </div>
       </div>
