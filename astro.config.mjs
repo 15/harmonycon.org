@@ -7,26 +7,28 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: "https://harmonycon.org",
-  prefetch: true,
+  prefetch: {
+    prefetchAll: true,
+  },
   integrations: [
     tailwind(),
-    swup({
-      containers: ["#swup"],
-      theme: [
-        "overlay",
-        {
-          direction: "to-bottom",
-        },
-      ],
-      // cache: false,
-      preload: {
-        hover: true,
-        visible: true,
-      },
-      globalInstance: true,
-      smoothScrolling: false,
-      // animateHistoryBrowsing: true,
-    }),
+    // swup({
+    //   containers: ["#swup"],
+    //   theme: [
+    //     "overlay",
+    //     {
+    //       direction: "to-bottom",
+    //     },
+    //   ],
+    //   // cache: false,
+    //   preload: {
+    //     hover: true,
+    //     visible: true,
+    //   },
+    //   globalInstance: true,
+    //   smoothScrolling: false,
+    //   // animateHistoryBrowsing: true,
+    // }),
     icon(),
   ],
 });
