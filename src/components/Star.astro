@@ -2,12 +2,12 @@
 const { name, pfp, title, url = null } = Astro.props;
 import { Image, getImage } from "astro:assets";
 
-// import paper from "../assets/2025/textured-paper.png";
-// const optimizedPaper = await getImage({
-//   src: paper,
-//   format: "avif",
-//   width: 300,
-// });
+import paper from "../assets/2025/textured-paper.png";
+const optimizedPaper = await getImage({
+  src: paper,
+  format: "avif",
+  width: 300,
+});
 ---
 
 <a
@@ -47,7 +47,11 @@ import { Image, getImage } from "astro:assets";
   </div>
 </a>
 
-<style>
+<style
+  define:vars={{
+    optimizedPaper: `url(${optimizedPaper.src})`,
+  }}
+>
   .inside {
     background: radial-gradient(circle at center, #a46f71, #880808);
     @apply w-72 md:w-72 2xl:w-80;
@@ -61,7 +65,7 @@ import { Image, getImage } from "astro:assets";
     right: 0;
     left: 0;
     opacity: 0.4;
-    /* background-image: var(--optimizedPaper); */
+    background-image: var(--optimizedPaper);
     background-repeat: repeat;
     background-size: 48rem;
     background-position: center;
@@ -71,7 +75,7 @@ import { Image, getImage } from "astro:assets";
     background-color: #d4af37;
     @apply w-80 md:w-80 2xl:w-88;
     opacity: 1;
-    /* background-image: var(--optimizedPaper); */
+    background-image: var(--optimizedPaper);
   }
 
   .starburst-5 {
