@@ -26,6 +26,13 @@ const optimizedIndexBackground = await getImage({
   width: 2000,
 });
 
+import creditsBackground from "../assets/2025/bg/terrazzo-transformed.jpg";
+const optimizedCreditsBackground = await getImage({
+  src: creditsBackground,
+  format: "webp",
+  width: 2000,
+});
+
 import wood1 from "../assets/2025/borders/wood.jpg";
 const optimizedWood1 = await getImage({
   src: wood1,
@@ -126,6 +133,12 @@ const { pathname } = Astro.url;
       href={optimizedCurtains2.src}
       as="image"
       fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href={optimizedCreditsBackground.src}
+      as="image"
+      fetchpriority="low"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
