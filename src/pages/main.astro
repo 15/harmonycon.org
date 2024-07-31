@@ -13,7 +13,7 @@ import img9 from "../assets/2025/flyer.png";
 import Playbill from "../components/Playbill.astro";
 import Footer from "../components/Footer.astro";
 
-import mainBackground from "../assets/2025/marble.webp";
+import mainBackground from "../assets/2025/bg/bg2.jpg";
 const optimizedMainBackground = await getImage({
   src: mainBackground,
   format: "avif",
@@ -87,9 +87,18 @@ const optimizedMainBackground = await getImage({
   import { gsap } from "gsap";
   import { Observer } from "gsap/Observer";
   gsap.registerPlugin(Observer);
+  document.addEventListener("swup:enable", () => {
+    window.swup.hooks.on("content:replace", () => {
+      if (
+        window.innerWidth >= 768 &&
+        window.location.pathname.includes("main")
+      ) {
+        initLoop();
+      }
+    });
+  });
 
-  if (window.innerWidth >= 768) {
-    // create an infinite loop
+  const initLoop = () => {
     let loop = horizontalLoop(".playbills li", { repeat: -1, speed: 0.3 });
     // create a tween that'll always decelerate the timeScale of the timeline back to 0 over the course of 0.5 seconds (or whatever)
     let slow = gsap.to(loop, { timeScale: 0, duration: 0.5 });
@@ -110,6 +119,10 @@ const optimizedMainBackground = await getImage({
         slow.invalidate().restart(); // now decelerate
       },
     });
+  };
+
+  if (window.innerWidth >= 768) {
+    initLoop();
   }
 
   /*
@@ -248,7 +261,7 @@ Features:
 
     background-image: var(--optimizedMainBackground);
     background-repeat: repeat;
-    background-size: cover;
+    background-size: 20%;
     background-position: center;
     opacity: 1;
   }
