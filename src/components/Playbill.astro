@@ -20,15 +20,15 @@ const borderType = [
 
 <a
   style="filter: drop-shadow(0 3px 3px #000);"
-  class={`playbill border-black bg-white rounded-sm p-1 border-[20px] sm:border-[20px] md:border-[20] lg:border-[20px] xl:border-[24px] w-full items-center flex flex-col gap-y-1 lg:gap-y-2 duration-300 ${active ? "grayscale-0 cursor-pointer" : "grayscale cursor-not-allowed"}  hover:z-10 relative`}
+  class={`playbill border-black bg-white rounded-sm p-1 border-[20px] sm:border-[16px] md:border-[20px] lg:border-[20px] xl:border-[24px] w-full items-center flex flex-col gap-y-1 lg:gap-y-2 duration-300 ${active ? "grayscale-0 cursor-pointer" : "grayscale cursor-not-allowed"}  hover:z-10 relative`}
   href={active ? href : ""}
 >
   <div
     style="filter: drop-shadow(0 1px 1px #000);"
-    class={`  w-full md:w-40 lg:w-56 xl:w-80 relative flex flex-col rounded ${active ? "grayscale-0" : "grayscale"}`}
+    class={`  w-full sm:w-56 md:w-64 lg:w-72 xl:w-80 relative flex flex-col rounded ${active ? "grayscale-0" : "grayscale"}`}
   >
     <div
-      class="text-black bg-[#fde300] pt-0 md:pt-2 2xl:pt-0 w-full h-20 sm:h-20 md:h-20 lg:h-24 font-serif uppercase flex items-center justify-center text-4.5xl sm:text-4.5xl md:text-3xl lg:text-4xl 2xl:text-4.5xl"
+      class="text-black bg-[#fde300] pt-0 md:pt-2 2xl:pt-0 w-full h-20 sm:h-20 md:h-20 lg:h-24 font-serif uppercase flex items-center justify-center text-4.5xl sm:text-4xl md:text-4xl lg:text-4.5xl 2xl:text-4.5xl"
     >
       {title}
     </div>
@@ -37,7 +37,7 @@ const borderType = [
       width="300"
       alt=""
       format="avif"
-      class="w-full md:w-40 lg:w-56 xl:w-80 aspect-[4/5] object-cover object-center"
+      class="w-full sm:w-56 md:w-64 lg:w-72 xl:w-80 aspect-[4/5] object-cover object-center"
     />
     <div
       class="bg-[#fde300] absolute w-24 border border-black text-center bottom-4 left-0 right-0 mx-auto uppercase font-serif text-black text-2xs"
