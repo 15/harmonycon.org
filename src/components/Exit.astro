@@ -1,11 +1,14 @@
 ---
 import { Image } from "astro:assets";
 import exit from "../assets/2025/exit.png";
+
+const { pathname } = Astro.url;
+const href = ["/main", "/main/"].includes(pathname) ? "/" : "/main/";
 ---
 
 <div class="fixed md:absolute top-2 left-2 md:top-12 md:left-12 z-50">
   <a
-    href="/main"
+    href={href}
     class="opacity-60 hover:opacity-100 duration-500 flex items-center justify-center"
   >
     <Image

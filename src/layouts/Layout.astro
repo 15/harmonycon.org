@@ -163,7 +163,7 @@ const { pathname } = Astro.url;
     class={`m-0 p-0 min-h-svh h-auto overflow-x-hidden ${mobileOverflow ? "overflow-y-auto" : "overflow-y-hidden"} ${desktopOverflow ? "md:overflow-y-auto" : "md:overflow-y-hidden"}`}
   >
     <main id="swup">
-      {!["/", "/main", "/main/"].includes(pathname) ? <Exit /> : null}
+      {!["/"].includes(pathname) ? <Exit /> : null}
       <slot />
     </main>
   </body>
