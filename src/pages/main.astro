@@ -13,7 +13,7 @@ import img9 from "../assets/2025/flyer.png";
 import Playbill from "../components/Playbill.astro";
 import Footer from "../components/Footer.astro";
 
-import mainBackground from "../assets/2025/bg/bg2.jpg";
+import mainBackground from "../assets/2025/bg/bricks.jpg";
 const optimizedMainBackground = await getImage({
   src: mainBackground,
   format: "avif",
@@ -98,7 +98,43 @@ const optimizedMainBackground = await getImage({
     });
   });
 
+  let deltaXTotal = 0;
+  let isUpdatingBackground = false;
+
+  const throttle = (func, limit) => {
+    let inThrottle = false;
+    return function (...args) {
+      if (!inThrottle) {
+        func.apply(this, args);
+        inThrottle = true;
+        setTimeout(() => {
+          inThrottle = false;
+        }, limit);
+      }
+    };
+  };
+
+  const updateBackgroundPosition = (delta) => {
+    deltaXTotal += delta;
+    gsap.to("#bg", {
+      backgroundPositionX: `${deltaXTotal * -5.07}px`,
+      duration: 0.5,
+      ease: "power2.out",
+      onComplete: () => {
+        isUpdatingBackground = false; // Reset the flag when the animation completes
+      },
+    });
+  };
+
+  const throttledUpdateBackgroundPosition = throttle(
+    updateBackgroundPosition,
+    125
+  );
+
   const initLoop = () => {
+    document.getElementById("bg").style.backgroundPositionX = "0px";
+    document.getElementById("bg").style.backgroundPositionY = "0px";
+    deltaXTotal = 0;
     let loop = horizontalLoop(".playbills li", { repeat: -1, speed: 0.3 });
     // create a tween that'll always decelerate the timeScale of the timeline back to 0 over the course of 0.5 seconds (or whatever)
     let slow = gsap.to(loop, { timeScale: 0, duration: 0.5 });
@@ -111,11 +147,13 @@ const optimizedMainBackground = await getImage({
       type: "pointer,touch,wheel",
       wheelSpeed: -1,
       onChange: (self) => {
-        loop.timeScale(
+        const delta =
           Math.abs(self.deltaX) > Math.abs(self.deltaY)
             ? -self.deltaX
-            : -self.deltaY
-        ); // whichever direction is bigger
+            : -self.deltaY;
+        loop.timeScale(delta);
+
+        throttledUpdateBackgroundPosition(delta);
         slow.invalidate().restart(); // now decelerate
       },
     });
@@ -261,8 +299,8 @@ Features:
 
     background-image: var(--optimizedMainBackground);
     background-repeat: repeat;
-    background-size: 20%;
-    background-position: center;
+    background-size: 40%;
+    background-position: 0px 0px;
     opacity: 1;
   }
 
