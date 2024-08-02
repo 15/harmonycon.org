@@ -131,6 +131,12 @@ const optimizedMainBackground = await getImage({
     125
   );
 
+  window.addEventListener("wheel", (e) => {
+    console.log(e.deltaY);
+    e.preventDefault();
+    throttledUpdateBackgroundPosition(e.deltaY);
+  });
+
   const initLoop = () => {
     document.getElementById("bg").style.backgroundPositionX = "0px";
     document.getElementById("bg").style.backgroundPositionY = "0px";
@@ -153,7 +159,6 @@ const optimizedMainBackground = await getImage({
             : -self.deltaY;
         loop.timeScale(delta);
 
-        throttledUpdateBackgroundPosition(delta);
         slow.invalidate().restart(); // now decelerate
       },
     });
