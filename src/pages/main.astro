@@ -131,7 +131,6 @@ const optimizedMainBackground = await getImage({
     125
   );
 
-
   // window.addEventListener("wheel", (e) => {
   //   console.log(e.deltaY);
   //   e.preventDefault();
@@ -293,23 +292,6 @@ Features:
     optimizedMainBackground: `url(${optimizedMainBackground.src})`,
   }}
 >
-  #bg {
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    /* height: auto; */
-
-    background-image: var(--optimizedMainBackground);
-    background-repeat: repeat;
-    background-size: 40%;
-    background-position: 0px 0px;
-    opacity: 1;
-  }
-
   @media (min-width: 768px) {
     .playbills {
       @apply flex flex-nowrap flex-row items-center h-[calc(100vh-4rem)];
@@ -326,9 +308,42 @@ Features:
       background-color: transparent;
       border-radius: 0.8rem;
     }
+
+    #bg {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      /* height: auto; */
+
+      background-image: var(--optimizedMainBackground);
+      background-repeat: repeat;
+      background-size: 40%;
+      background-position: 0px 0px;
+      opacity: 1;
+    }
   }
 
   @media (max-width: 768px) {
+    #bg {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      /* height: auto; */
+
+      background-image: var(--optimizedMainBackground);
+      background-repeat: repeat;
+      background-size: 150%;
+      background-position: 0px 0px;
+      opacity: 1;
+    }
     .playbills {
       @apply grid grid-cols-2;
     }
@@ -338,6 +353,22 @@ Features:
   }
 
   @media (max-width: 640px) {
+    #bg {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      /* height: auto; */
+
+      background-image: var(--optimizedMainBackground);
+      background-repeat: repeat;
+      background-size: 150%;
+      background-position: 0px 0px;
+      opacity: 1;
+    }
     .playbills {
       @apply grid grid-cols-1 gap-y-8 px-8;
     }
