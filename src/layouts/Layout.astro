@@ -172,9 +172,7 @@ const { pathname } = Astro.url;
       crossorigin
     />
   </head>
-  <body
-    class={`m-0 p-0 min-h-svh h-auto overflow-x-hidden ${mobileOverflow ? "overflow-y-auto" : "overflow-y-hidden"} ${desktopOverflow ? "md:overflow-y-auto" : "md:overflow-y-hidden"}`}
-  >
+  <body class={`m-0 p-0 min-h-svh h-auto overflow-x-hidden`}>
     <main id="swup">
       {!["/"].includes(pathname) ? <Exit /> : null}
       <slot />
@@ -350,7 +348,7 @@ const { pathname } = Astro.url;
 
     window.swup.hooks.on("content:replace", () => {
       if (
-        window.innerWidth >= 768 &&
+        window.innerWidth > 768 &&
         window.location.pathname.includes("main")
       ) {
         initLoop();
@@ -446,7 +444,7 @@ const { pathname } = Astro.url;
     });
   };
 
-  if (window.innerWidth >= 768 && window.location.pathname.includes("main")) {
+  if (window.innerWidth > 768 && window.location.pathname.includes("main")) {
     initLoop();
   }
 

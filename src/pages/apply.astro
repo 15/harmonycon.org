@@ -1,9 +1,59 @@
 ---
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import img1 from "../assets/2025/flyer.png";
+
+import applyBackground from "../assets/2025/bg/stage2.png";
+const optimizedApplyBackground = await getImage({
+  src: applyBackground,
+  format: "avif",
+  width: 1920,
+});
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="HarmonyCon 2025 | Apply">
-  <div class="bg-neutral-800"></div>
+  <div id="bg" class="overflow-x-hidden"></div>
+  <Footer />
 </Layout>
+<style
+  define:vars={{
+    optimizedApplyBackground: `url(${optimizedApplyBackground.src})`,
+  }}
+>
+  @media (max-width: 768px) {
+    #bg {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+
+      background-image: var(--optimizedApplyBackground);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 25% 70px;
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #bg {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+
+      background-image: var(--optimizedApplyBackground);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 1;
+    }
+  }
+</style>
