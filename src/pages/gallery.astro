@@ -996,23 +996,6 @@ import Footer from "../components/Footer.astro";
     optimizedGalleryBackground: `url(${optimizedGalleryBackground.src})`,
   }}
 >
-  #bg {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    /* height: auto; */
-
-    background-image: var(--optimizedGalleryBackground);
-    background-repeat: repeat;
-    background-size: 100%;
-    background-position: center;
-    opacity: 1;
-  }
-
   .stroke {
     filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
       drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white);
@@ -1035,5 +1018,43 @@ import Footer from "../components/Footer.astro";
   .shine:hover {
     --i: -1;
     -webkit-mask-position: 0 0;
+  }
+
+  @media (min-width: 768px) {
+    #bg {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      /* height: auto; */
+
+      background-image: var(--optimizedGalleryBackground);
+      background-repeat: repeat;
+      background-size: 100%;
+      background-position: center;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #bg {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      /* height: auto; */
+
+      background-image: var(--optimizedGalleryBackground);
+      background-repeat: repeat;
+      background-size: 400%;
+      background-position: center;
+      opacity: 1;
+    }
   }
 </style>
