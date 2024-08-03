@@ -9,7 +9,8 @@ const textColor =
     : "text-white";
 
 const isMainPage = pathname === "/";
-const isRegisterPage = pathname.includes("register");
+const isRegisterPage =
+  pathname.includes("register") || pathname.includes("404");
 ---
 
 <footer
