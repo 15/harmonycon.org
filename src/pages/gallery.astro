@@ -53,10 +53,10 @@ import img11_2024 from "../assets/2024/badges/sunday.png";
 import img12_2024 from "../assets/2024/badges/design no name.png";
 import img13_2024 from "../assets/2024/badges/pepper badge.png";
 import img14_2024 from "../assets/2024/badges/luck rock badge.png";
-// import img15_2024 from "../assets/2024/badges/benjaminpinkerton badge.png";
-// import img16_2024 from "../assets/2024/badges/boyer badge.png";
-// import img17_2024 from "../assets/2024/badges/jenna warren.png";
-// import img18_2024 from "../assets/2024/badges/tonyfleecs badge.png";
+import img15_2024 from "../assets/2024/badges/benjaminpinkerton badge.png";
+import img16_2024 from "../assets/2024/badges/boyer badge.png";
+import img17_2024 from "../assets/2024/badges/jenna warren.png";
+import img18_2024 from "../assets/2024/badges/tonyfleecs badge.png";
 import img19_2024 from "../assets/2024/refs/ThemeConcept1.png";
 import img20_2024 from "../assets/2024/refs/harmony star ref 2024.png";
 import img21_2024 from "../assets/2024/refs/harmonic tune ref 2024.png";
@@ -72,7 +72,7 @@ import img29_2024 from "../assets/2024/av/general stream card.gif";
 // import img31_2024 from "../assets/2024/banners/musician banner.png";
 // import img32_2024 from "../assets/2024/banners/registration banner beeg with text.png";
 // import img33_2024 from "../assets/2024/banners/vendorbanner.png";
-// import img34_2024 from "../assets/2024/promo/sunnyannouncement.png";
+import img34_2024 from "../assets/2024/promo/sunnyannouncement.png";
 import img35_2024 from "../assets/2024/promo/harmonyantiprom.png";
 import img36_2024 from "../assets/2024/promo/Harmonycon_Haloween_w_text2.png";
 import img37_2024 from "../assets/2024/promo/Harmonycon_Haloween_wout_text.png";
@@ -683,10 +683,10 @@ const images2024 = [
   { img: img12_2024, artist: "Brittney Ackerman", description: "" },
   { img: img13_2024, artist: "Brittney Ackerman", description: "" },
   { img: img14_2024, artist: "Brittney Ackerman", description: "" },
-  // { img: img15_2024, artist: "Brittney Ackerman", description: "" },
-  // { img: img16_2024, artist: "Brittney Ackerman", description: "" },
-  // { img: img17_2024, artist: "Brittney Ackerman", description: "" },
-  // { img: img18_2024, artist: "Brittney Ackerman", description: "" },
+  { img: img15_2024, artist: "Brittney Ackerman", description: "" },
+  { img: img16_2024, artist: "Brittney Ackerman", description: "" },
+  { img: img17_2024, artist: "Brittney Ackerman", description: "" },
+  { img: img18_2024, artist: "Brittney Ackerman", description: "" },
   { img: img19_2024, artist: "Brittney Ackerman", description: "" },
   { img: img20_2024, artist: "Brittney Ackerman", description: "" },
   { img: img21_2024, artist: "Brittney Ackerman", description: "" },
@@ -702,7 +702,7 @@ const images2024 = [
   // { img: img31_2024, artist: "Brittney Ackerman", description: "" },
   // { img: img32_2024, artist: "Brittney Ackerman", description: "" },
   // { img: img33_2024, artist: "Brittney Ackerman", description: "" },
-  // { img: img34_2024, artist: "Brittney Ackerman", description: "" },
+  { img: img34_2024, artist: "Brittney Ackerman", description: "" },
   { img: img35_2024, artist: "Brittney Ackerman", description: "" },
   { img: img36_2024, artist: "Brittney Ackerman", description: "" },
   { img: img37_2024, artist: "Brittney Ackerman", description: "" },
@@ -718,6 +718,10 @@ const images2024 = [
   { img: img48_2024, artist: "Brittney Ackerman", description: "" },
   { img: img49_2024, artist: "Brittney Ackerman", description: "" },
   { img: img50_2024, artist: "Brittney Ackerman", description: "" },
+];
+
+const images2023 = [
+  { img: img0_2024, artist: "Brittney Ackerman", description: "" },
 ];
 
 const getBorder = (idx) =>
@@ -812,6 +816,35 @@ import Footer from "../components/Footer.astro";
                 src={img}
                 height={300}
                 format="avif"
+                class="stroke duration-300 p-1 h-16 sm:h-24 xl:h-32 w-auto md:w-auto cursor-pointer"
+              />
+            </a>
+          </div>
+        ))
+      }
+      <hr
+        class="border-black border-2 rounded my-8 mx-4 sm:mx-8 md:mx-12 lg:mx-12 xl:mx-12"
+      />
+      <div
+        class="text-black text-center font-serif text-5xl mb-4"
+        style="text-shadow: 3px 3px 1px #999;"
+      >
+        2023
+      </div>
+      {
+        images2023.map(({ img, artist, description }, idx) => (
+          <div
+            class="inline-block"
+            style="filter: drop-shadow(0 3px 3px #000);"
+            data-src={img.src}
+            data-sub-html={`<h4>Artist: ${artist}</h4>${description}`}
+          >
+            <a class="shine cursor-pointer rounded  inline-block m-2 sm:m-2 xl:m-2">
+              <Image
+                alt={`Art asset #${idx + 1}`}
+                src={img}
+                height={300}
+                format={img.format === "gif" ? "gif" : "avif"}
                 class="stroke duration-300 p-1 h-16 sm:h-24 xl:h-32 w-auto md:w-auto cursor-pointer"
               />
             </a>
