@@ -1,8 +1,12 @@
 ---
 import { Image, getImage } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import img1 from "../assets/2025/flyer.png";
-import hoof from "../assets/2025/fair_flyer.png";
+import clipboard from "../assets/2025/clipboardhoof.png";
+import hoof from "../assets/2025/harmony_star_extended.png";
+import staff from "../assets/2024/badge layout 2024 staff.png";
+import panelist from "../assets/2024/badge layout 2024 panelist.png";
+import cg from "../assets/2024/badge layout 2024 cg.png";
+import vendor from "../assets/2024/badge2024_Vendor.png";
 
 import applyBackground from "../assets/2025/bg/stage2.png";
 const optimizedApplyBackground = await getImage({
@@ -10,6 +14,12 @@ const optimizedApplyBackground = await getImage({
   format: "avif",
   width: 1920,
 });
+const optimizedClipboard = await getImage({
+  src: clipboard,
+  format: "avif",
+  width: 1920,
+});
+
 import Footer from "../components/Footer.astro";
 ---
 
@@ -17,22 +27,120 @@ import Footer from "../components/Footer.astro";
   <div id="bg" class="overflow-x-hidden">
     <div
       id="clipboard"
-      class="w-192 h-192 bg-white absolute bottom-0 left-0 right-0 mx-auto"
+      class="text-black font-serif text-center uppercase h-[95vh] w-auto flex flex-col gap-y-8 text-6xl items-center pt-24 bottom-[-1rem] fixed left-0 right-0 mx-auto"
     >
+      <div>Apply</div>
+      <div class="w-full items-center flex flex-col gap-y-6">
+        <a
+          href="https://reg-2025.harmonycon.org/staff/application.php"
+          target="_blank"
+          style="filter: drop-shadow(0 1px 1px #000);"
+          class="w-64 border-2 border-purple-200 relative rounded text-center duration-300 cursor-pointer"
+        >
+          <span
+            style="text-shadow: 2px 2px 1px black;"
+            class="absolute text-4xl bottom-2 z-50 mx-auto left-0 right-0 text-purple-800"
+          >
+            Staff
+          </span>
+          <Image
+            src={staff}
+            alt="Badge"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="w-full h-auto"
+          />
+        </a>
+        <a
+          href="https://reg-2025.harmonycon.org/staff/application.php"
+          target="_blank"
+          style="filter: drop-shadow(0 1px 1px #000);"
+          class="w-64 border-2 border-purple-200 relative rounded text-center duration-300 cursor-pointer"
+        >
+          <span
+            style="text-shadow: 2px 2px 1px black;"
+            class="absolute text-4xl bottom-2 z-50 mx-auto left-0 right-0 text-purple-800"
+          >
+            Panelist
+          </span>
+          <Image
+            src={panelist}
+            alt="Badge"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="w-full h-auto"
+          />
+        </a>
+        <a
+          href="https://reg-2025.harmonycon.org/staff/application.php"
+          target="_blank"
+          style="filter: drop-shadow(0 1px 1px #000);"
+          class="w-64 border-2 border-purple-200 relative rounded text-center duration-300 cursor-pointer"
+        >
+          <span
+            style="text-shadow: 2px 2px 1px black;"
+            class="absolute text-4xl bottom-2 z-50 mx-auto left-0 right-0 text-purple-800"
+          >
+            Vendor
+          </span>
+          <Image
+            src={vendor}
+            alt="Badge"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="w-full h-auto"
+          />
+        </a>
+        <!-- <a
+          href="https://reg-2025.harmonycon.org/staff/application.php"
+          target="_blank"
+          style="filter: drop-shadow(0 1px 1px #000);"
+          class="w-64 border-2 border-purple-200 relative rounded text-center duration-300 cursor-pointer"
+        >
+          <span
+            style="text-shadow: 2px 2px 1px black;"
+            class="absolute text-4xl bottom-3 z-50 mx-auto left-0 right-0 text-purple-800"
+          >
+            Community Guest
+          </span>
+          <Image
+            src={cg}
+            alt="Badge"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="w-full h-auto"
+          />
+        </a> -->
+      </div>
     </div>
-    <Image
+    <!-- <Image
       src={hoof}
-      class="w-120 h-auto fixed left-[16rem] bottom-[-8rem] rotate-[230deg]"
+      class="z-10 w-104 h-auto fixed left-[21vw] bottom-[-22rem] rotate-[205deg]"
       alt="Hoof"
-    />
+    /> -->
   </div>
   <Footer />
 </Layout>
 <style
   define:vars={{
     optimizedApplyBackground: `url(${optimizedApplyBackground.src})`,
+    optimizedClipboard: `url(${optimizedClipboard.src})`,
   }}
 >
+  a {
+    --a: 0deg; /* control the angle of rotation (the smaller, the better) */
+    transform: perspective(400px)
+      rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
+    -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100%/250%
+      250%;
+    transition: 0.4s;
+    /* animation:
+      jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2s forwards,
+      rotating 4s var(--sine) 0s infinite forwards; */
+
+    z-index: 50;
+  }
+
+  a:hover {
+    --i: -1;
+    -webkit-mask-position: 0 0;
+  }
   @media (max-width: 768px) {
     #bg {
       position: absolute;
@@ -66,6 +174,13 @@ import Footer from "../components/Footer.astro";
       background-size: cover;
       background-position: center;
       opacity: 1;
+    }
+
+    #clipboard {
+      background-image: var(--optimizedClipboard);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
     }
   }
 </style>
