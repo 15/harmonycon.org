@@ -2,6 +2,7 @@
 import { Image, getImage } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import img1 from "../assets/2025/flyer.png";
+import hoof from "../assets/2025/fair_flyer.png";
 
 import applyBackground from "../assets/2025/bg/stage2.png";
 const optimizedApplyBackground = await getImage({
@@ -13,7 +14,18 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="HarmonyCon 2025 | Apply">
-  <div id="bg" class="overflow-x-hidden"></div>
+  <div id="bg" class="overflow-x-hidden">
+    <div
+      id="clipboard"
+      class="w-192 h-192 bg-white absolute bottom-0 left-0 right-0 mx-auto"
+    >
+    </div>
+    <Image
+      src={hoof}
+      class="w-120 h-auto fixed left-[16rem] bottom-[-8rem] rotate-[230deg]"
+      alt="Hoof"
+    />
+  </div>
   <Footer />
 </Layout>
 <style
