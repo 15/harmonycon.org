@@ -37,6 +37,7 @@ import img23 from "../assets/2025/registration_ticket_v2.png";
 import img24 from "../assets/2025/tunesign.png";
 import img25 from "../assets/2025/starsign.png";
 import img26 from "../assets/2025/logowithdates.png";
+import img27 from "../assets/2025/bg/stage2.png";
 
 import img0_2024 from "../assets/2024/badges/badge layout 2024 staff.png";
 import img1_2024 from "../assets/2024/badges/badge2024_Vendor.png";
@@ -89,6 +90,8 @@ import img47_2024 from "../assets/2024/random/tunesticker.png";
 import img48_2024 from "../assets/2024/random/starsticker.png";
 import img49_2024 from "../assets/2024/random/harmonystar i can haz cookie.png";
 import img50_2024 from "../assets/2024/random/come to harmonycon we have cookiez.png";
+
+import img0_2023 from "../assets/2023/HarmonyCon 2023 Watermark.png";
 
 import photo0 from "../assets/2025/photos/HPC-1.jpg";
 import photo1 from "../assets/2025/photos/HPC-2.jpg";
@@ -637,36 +640,132 @@ const isLocal = ["localhost"].includes(Astro.url.hostname);
 const photos = [];
 
 const images2025 = [
-  { img: img0, artist: "Brittney Ackerman", description: "" },
-  { img: img1, artist: "Brittney Ackerman", description: "" },
-  { img: img2, artist: "Brittney Ackerman", description: "" },
-  { img: img3, artist: "Brittney Ackerman", description: "" },
-  { img: img4, artist: "Brittney Ackerman", description: "" },
-  { img: img5, artist: "Brittney Ackerman", description: "" },
-  { img: img26, artist: "Brittney Ackerman", description: "" },
-  { img: img6, artist: "Brittney Ackerman", description: "" },
+  {
+    img: img0,
+    artist: "Brittney Ackerman",
+    description: "HarmonyCon 2025 flyer",
+  },
+  {
+    img: img1,
+    artist: "Brittney Ackerman",
+    description: "Harmonic Tune at the bar",
+  },
+  {
+    img: img2,
+    artist: "Brittney Ackerman",
+    description: "Harmonic Tune at the bar looking at you",
+  },
+  {
+    img: img3,
+    artist: "JayArr",
+    description: "Harmony Star unlocking a phone",
+  },
+  // { img: img4, artist: "Brittney Ackerman", description: "" },
+  { img: img5, artist: "Brittney Ackerman", description: "HarmonyCon logo" },
+  // { img: img26, artist: "Brittney Ackerman", description: "" },
+  {
+    img: img6,
+    artist: "Brittney Ackerman",
+    description: "Splash page background",
+  },
+  { img: img27, artist: "WindShear", description: "Apply page background" },
   { img: img7, artist: "Brittney Ackerman", description: "" },
   { img: img8, artist: "Brittney Ackerman", description: "" },
-  { img: img9, artist: "Brittney Ackerman", description: "" },
-  { img: img10, artist: "Brittney Ackerman", description: "" },
-  { img: img11, artist: "Brittney Ackerman", description: "" },
-  { img: img12, artist: "Brittney Ackerman", description: "" },
-  { img: img13, artist: "Brittney Ackerman", description: "" },
-  { img: img14, artist: "Brittney Ackerman", description: "" },
-  { img: img15, artist: "Brittney Ackerman", description: "" },
-  { img: img16, artist: "Brittney Ackerman", description: "" },
-  { img: img17, artist: "Brittney Ackerman", description: "" },
-  { img: img18, artist: "Brittney Ackerman", description: "" },
-  { img: img19, artist: "Brittney Ackerman", description: "" },
-  { img: img20, artist: "Brittney Ackerman", description: "" },
-  { img: img21, artist: "Brittney Ackerman", description: "" },
-  { img: img22, artist: "Brittney Ackerman", description: "" },
-  { img: img23, artist: "Brittney Ackerman", description: "" },
-  { img: img24, artist: "Lunar Harmony", description: "" },
-  { img: img25, artist: "Lunar Harmony", description: "" },
+  { img: img9, artist: "JayArr", description: "Exit sign" },
+  {
+    img: img10,
+    artist: "Brittney Ackerman",
+    description:
+      "<span class='italic'>Clawstin</span> Ponybill poster (parody of <span class='italic'>Hamilton</span>)",
+  },
+  {
+    img: img11,
+    artist: "Brittney Ackerman",
+    description:
+      "<span class='italic'>Singin' in the Rein</span> Ponybill poster (parody of <span class='italic'>Singin' in the Rain</span>)",
+  },
+  {
+    img: img12,
+    artist: "Brittney Ackerman",
+    description:
+      "<span class='italic'>Singin' in the Rein</span> Ponybill poster (parody of <span class='italic'>Singin' in the Rain</span>)",
+  },
+  {
+    img: img13,
+    artist: "Brittney Ackerman",
+    description:
+      "<span class='italic'>The Prohoovers</span> Ponybill poster (parody of <span class='italic'>The Producers</span>)",
+  },
+  {
+    img: img14,
+    artist: "Brittney Ackerman",
+    description:
+      "<span class='italic'>The Stallion of the Opera</span> Ponybill poster (parody of <span class='italic'>The Phantom of the Opera</span>)",
+  },
+  {
+    img: img15,
+    artist: "Brittney Ackerman",
+    description:
+      "<span class='italic'>The Stallion of the Opera</span> Ponybill poster (parody of <span class='italic'>The Phantom of the Opera</span>)",
+  },
+  {
+    img: img16,
+    artist: "Brittney Ackerman",
+    description:
+      "<span class='italic'>Winged</span> Ponybill poster (parody of <span class='italic'>Wicked</span>)",
+  },
+  {
+    img: img17,
+    artist: "Brittney Ackerman",
+    description:
+      "<span class='italic'>Winged</span> Ponybill poster (parody of <span class='italic'>Wicked</span>)",
+  },
+  {
+    img: img18,
+    artist: "Brittney Ackerman",
+    description: "Harmonic Tune's cutie mark",
+  },
+  {
+    img: img19,
+    artist: "Brittney Ackerman",
+    description: "Harmony Star's cutie mark",
+  },
+  {
+    img: img20,
+    artist: "Brittney Ackerman",
+    description: "Splash page curtains",
+  },
+  {
+    img: img21,
+    artist: "Brittney Ackerman",
+    description: "Page transition curtains",
+  },
+  {
+    img: img22,
+    artist: "Brittney Ackerman",
+    description:
+      '"Enter" ticket (from <span class="italic">The Ticket Master</span>)',
+  },
+  {
+    img: img23,
+    artist: "Brittney Ackerman",
+    description:
+      '"Register" ticket (from <span class="italic">The Ticket Master</span>)',
+  },
+  {
+    img: img24,
+    artist: "Lunar Harmony",
+    description: "Harmonic Tune's signature",
+  },
+  {
+    img: img25,
+    artist: "Lunar Harmony",
+    description: "Harmony Star's signature",
+  },
 ];
 
 const images2024 = [
+  { img: img23_2024, artist: "Brittney Ackerman", description: "" },
   { img: img0_2024, artist: "Brittney Ackerman", description: "" },
   { img: img1_2024, artist: "Brittney Ackerman", description: "" },
   { img: img2_2024, artist: "Brittney Ackerman", description: "" },
@@ -690,8 +789,7 @@ const images2024 = [
   { img: img19_2024, artist: "Brittney Ackerman", description: "" },
   { img: img20_2024, artist: "Brittney Ackerman", description: "" },
   { img: img21_2024, artist: "Brittney Ackerman", description: "" },
-  { img: img22_2024, artist: "Brittney Ackerman", description: "" },
-  { img: img23_2024, artist: "Brittney Ackerman", description: "" },
+  // { img: img22_2024, artist: "Brittney Ackerman", description: "" },
   { img: img24_2024, artist: "Brittney Ackerman", description: "" },
   { img: img25_2024, artist: "Brittney Ackerman", description: "" },
   { img: img26_2024, artist: "Brittney Ackerman", description: "" },
@@ -721,7 +819,7 @@ const images2024 = [
 ];
 
 const images2023 = [
-  { img: img0_2024, artist: "Brittney Ackerman", description: "" },
+  { img: img0_2023, artist: "Brittney Ackerman", description: "" },
 ];
 
 const getBorder = (idx) =>
@@ -751,6 +849,22 @@ import Footer from "../components/Footer.astro";
       id="lightgallery"
       class="text-center block gap-y-2 w-full px-0 md:px-4 mb-8"
     >
+      <div
+        class=""
+        style="filter: drop-shadow(0 3px 3px #000);"
+        data-src={img4.src}
+        data-sub-html={`<h4>Artist: Brittney Ackerman</h4><h6>HarmonyCon 2025 logo</h6>`}
+      >
+        <a class="shine cursor-pointer rounded inline-block m-1 sm:m-2 xl:m-2">
+          <Image
+            alt={`HarmonyCon 2025 logo`}
+            src={img4}
+            height={400}
+            format="avif"
+            class="stroke duration-300 p-1 h-48 sm:h-64 xl:h-64 w-auto md:w-auto cursor-pointer"
+          />
+        </a>
+      </div>
       {
         images2025.map(({ img, artist, description }, idx) => (
           <div
@@ -759,7 +873,7 @@ import Footer from "../components/Footer.astro";
             data-src={img.src}
             data-sub-html={`<h4>Artist: ${artist}</h4>${description}`}
           >
-            <a class="shine cursor-pointer rounded  inline-block m-2 sm:m-2 xl:m-2">
+            <a class="shine cursor-pointer rounded  inline-block m-1 sm:m-2 xl:m-2">
               <Image
                 alt={`Art asset #${idx + 1}`}
                 src={img}
@@ -775,10 +889,20 @@ import Footer from "../components/Footer.astro";
         class="border-black border-2 rounded my-8 mx-4 sm:mx-8 md:mx-12 lg:mx-12 xl:mx-12"
       />
       <div
-        class="text-black text-center font-serif text-5xl mb-4"
-        style="text-shadow: 3px 3px 1px #999;"
+        class=""
+        style="filter: drop-shadow(0 3px 3px #000);"
+        data-src={img22_2024.src}
+        data-sub-html={`<h4>Artist: Brittney Ackerman</h4><h6>HarmonyCon 2024 logo</h6>`}
       >
-        2024
+        <a class="shine cursor-pointer rounded inline-block m-1 sm:m-2 xl:m-2">
+          <Image
+            alt={`HarmonyCon 2024 logo`}
+            src={img22_2024}
+            height={400}
+            format="avif"
+            class="stroke duration-300 p-1 h-48 sm:h-64 xl:h-64 w-auto md:w-auto cursor-pointer"
+          />
+        </a>
       </div>
       {
         images2024.map(({ img, artist, description }, idx) => (
@@ -788,7 +912,7 @@ import Footer from "../components/Footer.astro";
             data-src={img.src}
             data-sub-html={`<h4>Artist: ${artist}</h4>${description}`}
           >
-            <a class="shine cursor-pointer rounded  inline-block m-2 sm:m-2 xl:m-2">
+            <a class="shine cursor-pointer rounded  inline-block m-1 sm:m-2 xl:m-2">
               <Image
                 alt={`Art asset #${idx + 1}`}
                 src={img}
@@ -810,7 +934,7 @@ import Footer from "../components/Footer.astro";
               jdx + 1
             }`}
           >
-            <a class="shine cursor-pointer rounded  inline-block m-2 sm:m-2 xl:m-2">
+            <a class="shine cursor-pointer rounded  inline-block m-1 sm:m-2 xl:m-2">
               <Image
                 alt={`Photo #${jdx}`}
                 src={img}
@@ -826,10 +950,20 @@ import Footer from "../components/Footer.astro";
         class="border-black border-2 rounded my-8 mx-4 sm:mx-8 md:mx-12 lg:mx-12 xl:mx-12"
       />
       <div
-        class="text-black text-center font-serif text-5xl mb-4"
-        style="text-shadow: 3px 3px 1px #999;"
+        class=""
+        style="filter: drop-shadow(0 3px 3px #000);"
+        data-src={img0_2023.src}
+        data-sub-html={`<h4>Artist: Brittney Ackerman</h4><h6>HarmonyCon 2023 logo</h6>`}
       >
-        2023
+        <a class="shine cursor-pointer rounded inline-block m-1 sm:m-2 xl:m-2">
+          <Image
+            alt={`HarmonyCon 2023 logo`}
+            src={img0_2023}
+            height={400}
+            format="avif"
+            class="duration-300 p-1 h-48 sm:h-64 xl:h-64 w-auto md:w-auto cursor-pointer"
+          />
+        </a>
       </div>
       {
         images2023.map(({ img, artist, description }, idx) => (
@@ -839,7 +973,7 @@ import Footer from "../components/Footer.astro";
             data-src={img.src}
             data-sub-html={`<h4>Artist: ${artist}</h4>${description}`}
           >
-            <a class="shine cursor-pointer rounded  inline-block m-2 sm:m-2 xl:m-2">
+            <a class="shine cursor-pointer rounded  inline-block m-1 sm:m-2 xl:m-2">
               <Image
                 alt={`Art asset #${idx + 1}`}
                 src={img}
@@ -874,7 +1008,7 @@ import Footer from "../components/Footer.astro";
 
     background-image: var(--optimizedGalleryBackground);
     background-repeat: repeat;
-    background-size: 150%;
+    background-size: 100%;
     background-position: center;
     opacity: 1;
   }

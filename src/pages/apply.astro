@@ -5,6 +5,7 @@ import clipboard from "../assets/2025/clipboardhoof.png";
 import staff from "../assets/2024/badges/badge layout 2024 staff.png";
 import panelist from "../assets/2024/badges/badge layout 2024 panelist.png";
 import cg from "../assets/2024/badges/badge layout 2024 cg.png";
+import musicians from "../assets/2024/badges/musician badge.png";
 import vendor from "../assets/2024/badges/badge2024_Vendor.png";
 import Badge from "../components/Badge.astro";
 
@@ -27,15 +28,15 @@ import Footer from "../components/Footer.astro";
   <div id="bg" class="overflow-x-hidden overflow-y-hidden">
     <div
       id="clipboard"
-      class="text-black p-24 font-serif text-center uppercase flex flex-col gap-y-4 md:gap-y-8 items-center pt-24 absolute left-0 right-0 mx-auto"
+      class="text-black p-24 font-serif text-center uppercase flex flex-col items-center pt-24 absolute left-0 right-0 mx-auto"
     >
       <div
-        class="text-5xl sm:text-5xl lg:text-6xl"
+        class="text-5xl sm:text-5xl lg:text-6xl mb-6"
         style="text-shadow: 3px 3px 1px #999;"
       >
         Apply
       </div>
-      <div class="items-center flex flex-col gap-y-2 md:gap-y-6">
+      <div class="items-center grid grid-cols-2 gap-x-2 md:gap-y-2 mb-2">
         <Badge
           src={staff}
           href="https://reg-2025.harmonycon.org/staff/application.php"
@@ -45,16 +46,28 @@ import Footer from "../components/Footer.astro";
         <Badge
           src={panelist}
           href="https://reg-2025.harmonycon.org/staff/application.php"
-          active={false}
+          active={true}
           title="Panelist"
         />
         <Badge
           src={vendor}
           href="https://reg-2025.harmonycon.org/staff/application.php"
-          active={false}
+          active={true}
           title="Vendor"
         />
+        <Badge
+          src={cg}
+          href="https://reg-2025.harmonycon.org/staff/application.php"
+          active={true}
+          title="Guests"
+        />
       </div>
+      <Badge
+        src={musicians}
+        href="https://reg-2025.harmonycon.org/staff/application.php"
+        active={true}
+        title="Musicians"
+      />
     </div>
   </div>
   <Footer />
@@ -150,7 +163,7 @@ import Footer from "../components/Footer.astro";
     #clipboard {
       position: fixed;
       bottom: -120vh;
-      height: 95vh;
+      height: 105vh;
       width: auto;
       background-image: var(--optimizedClipboard);
       background-repeat: no-repeat;
