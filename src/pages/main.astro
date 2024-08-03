@@ -158,7 +158,7 @@ const optimizedMainBackground = await getImage({
             ? -self.deltaX
             : -self.deltaY;
         loop.timeScale(delta);
-        throttledUpdateBackgroundPosition(delta);
+        // throttledUpdateBackgroundPosition(delta);
         slow.invalidate().restart(); // now decelerate
       },
     });
@@ -258,6 +258,7 @@ Features:
         .add("label" + i, distanceToStart / pixelsPerSecond);
       times[i] = distanceToStart / pixelsPerSecond;
     }
+
     function toIndex(index, vars) {
       vars = vars || {};
       Math.abs(index - curIndex) > length / 2 &&
