@@ -38,41 +38,6 @@ const optimizedCreditsBackground = await getImage({
   width: 2000,
 });
 
-import wood1 from "../assets/2025/borders/wood.jpg";
-const optimizedWood1 = await getImage({
-  src: wood1,
-  format: "avif",
-  width: 500,
-});
-
-import wood2 from "../assets/2025/borders/dark_wood.jpg";
-const optimizedWood2 = await getImage({
-  src: wood2,
-  format: "avif",
-  width: 500,
-});
-
-import wood3 from "../assets/2025/borders/light_wood.jpg";
-const optimizedWood3 = await getImage({
-  src: wood3,
-  format: "avif",
-  width: 500,
-});
-
-import wood4 from "../assets/2025/borders/lighter_wood.jpg";
-const optimizedWood4 = await getImage({
-  src: wood4,
-  format: "avif",
-  width: 500,
-});
-
-import wood5 from "../assets/2025/borders/lightest_wood.jpg";
-const optimizedWood5 = await getImage({
-  src: wood5,
-  format: "avif",
-  width: 500,
-});
-
 const { pathname } = Astro.url;
 ---
 
@@ -185,11 +150,6 @@ const { pathname } = Astro.url;
   define:vars={{
     optimizedCurtains1: `url(${optimizedCurtains1.src})`,
     optimizedCurtains2: `url(${optimizedCurtains2.src})`,
-    optimizedWood1: `url(${optimizedWood1.src})`,
-    optimizedWood2: `url(${optimizedWood2.src})`,
-    optimizedWood3: `url(${optimizedWood3.src})`,
-    optimizedWood4: `url(${optimizedWood4.src})`,
-    optimizedWood5: `url(${optimizedWood5.src})`,
   }}
 >
   :root {
@@ -213,7 +173,7 @@ const { pathname } = Astro.url;
     --swup-overlay-theme-skew: 0deg;
 
     scrollbar-width: thin;
-    scrollbar-color: #771c2a #eaeaea;
+    scrollbar-color: #771c2a #151515;
     /* scrollbar-gutter: stable; */
     /* scrollbar-color: #eaeaea #771c2a; */
   }
@@ -294,31 +254,6 @@ const { pathname } = Astro.url;
         0
       )
       skewY(var(--swup-overlay-skew-value));
-  }
-
-  .wood {
-    border-image: url("/wood.jpg") 30 30 stretch;
-    border: 16px solid url("/wood.jpg") 30 30 stretch;
-  }
-
-  .wood2 {
-    border-image: url("/dark_wood.jpg") 30 30 stretch;
-    border: 16px solid url("/dark_wood.jpg") 30 30 stretch;
-  }
-
-  .wood3 {
-    border-image: url("/light_wood.jpg") 30 30 stretch;
-    border: 16px solid url("/light_wood.jpg") 30 30 stretch;
-  }
-
-  .wood4 {
-    border-image: url("/lighter_wood.jpg") 30 30 stretch;
-    border: 16px solid url("/lighter_wood.jpg") 30 30 stretch;
-  }
-
-  .wood5 {
-    border-image: url("/lightest_wood.jpg") 30 30 stretch;
-    border: 16px solid url("/lightest_wood.jpg") 30 30 stretch;
   }
 </style>
 

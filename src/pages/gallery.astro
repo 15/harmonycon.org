@@ -11,16 +11,32 @@ const optimizedGalleryBackground = await getImage({
 });
 
 import img0 from "../assets/2025/flyer.png";
-import img1 from "../assets/2025/bg/bar_temp1.png";
-import img2 from "../assets/2025/bg/bar_temp2.png";
+import img1 from "../assets/2025/bg/bar_final_.png";
+import img2 from "../assets/2025/bg/bar_final_2.png";
 import img3 from "../assets/2025/HC-LockedPhone2.png";
 import img4 from "../assets/2025/HarmonyCon 2025 Logo.png";
 import img5 from "../assets/2025/HarmonyCon 2025 Logo HC.png";
 import img6 from "../assets/2025/bg/stage3.png";
 import img7 from "../assets/2025/isolated_star.png";
 import img8 from "../assets/2025/isolated_tune.png";
-import img9 from "../assets/2025/image3.png";
-import img10 from "../assets/2025/image4.png";
+import img9 from "../assets/2025/exit.png";
+import img10 from "../assets/2025/playbill/Clawstin.png";
+import img11 from "../assets/2025/playbill/HarmonyCon-CodeOfConduct2.png";
+import img12 from "../assets/2025/playbill/HarmonyCon-CodeOfConducttext.png";
+import img13 from "../assets/2025/playbill/producersnotext.png";
+import img14 from "../assets/2025/playbill/the_Stallion_of_the_Opera.png";
+import img15 from "../assets/2025/playbill/the_Stallion_of_the_Opera_Final_No_Text.png";
+import img16 from "../assets/2025/playbill/winged.png";
+import img17 from "../assets/2025/playbill/winged_text.png";
+import img18 from "../assets/2025/harmonic_tune_cm2.png";
+import img19 from "../assets/2025/harmony_star_cm.png";
+import img20 from "../assets/2025/curtain_full.png";
+import img21 from "../assets/2025/curtain_fall2.png";
+import img22 from "../assets/2025/enter_ticket_v2.png";
+import img23 from "../assets/2025/registration_ticket_v2.png";
+import img24 from "../assets/2025/tunesign.png";
+import img25 from "../assets/2025/starsign.png";
+import img26 from "../assets/2025/logowithdates.png";
 
 import photo0 from "../assets/2025/photos/HPC-1.jpg";
 import photo1 from "../assets/2025/photos/HPC-2.jpg";
@@ -292,279 +308,280 @@ import photo351 from "../assets/2025/photos/HPC-351.jpg";
 import photo352 from "../assets/2025/photos/HPC-352.jpg";
 import photo353 from "../assets/2025/photos/HPC-353.jpg";
 
-const photos = [];
-
-// const photos = [
-//   { img: photo0, photographer: "IvoryBrony" },
-//   { img: photo1, photographer: "IvoryBrony" },
-//   { img: photo2, photographer: "IvoryBrony" },
-//   { img: photo3, photographer: "IvoryBrony" },
-//   { img: photo4, photographer: "IvoryBrony" },
-//   { img: photo5, photographer: "IvoryBrony" },
-//   { img: photo6, photographer: "IvoryBrony" },
-//   { img: photo7, photographer: "IvoryBrony" },
-//   { img: photo8, photographer: "IvoryBrony" },
-//   { img: photo9, photographer: "IvoryBrony" },
-//   { img: photo10, photographer: "IvoryBrony" },
-//   { img: photo11, photographer: "IvoryBrony" },
-//   { img: photo12, photographer: "IvoryBrony" },
-//   { img: photo13, photographer: "IvoryBrony" },
-//   { img: photo14, photographer: "IvoryBrony" },
-//   { img: photo100, photographer: "IvoryBrony" },
-//   { img: photo101, photographer: "IvoryBrony" },
-//   { img: photo102, photographer: "IvoryBrony" },
-//   { img: photo103, photographer: "IvoryBrony" },
-//   { img: photo104, photographer: "IvoryBrony" },
-//   { img: photo105, photographer: "IvoryBrony" },
-//   { img: photo106, photographer: "IvoryBrony" },
-//   { img: photo107, photographer: "IvoryBrony" },
-//   { img: photo108, photographer: "IvoryBrony" },
-//   { img: photo109, photographer: "IvoryBrony" },
-//   { img: photo110, photographer: "IvoryBrony" },
-//   { img: photo111, photographer: "IvoryBrony" },
-//   { img: photo112, photographer: "IvoryBrony" },
-//   { img: photo113, photographer: "IvoryBrony" },
-//   { img: photo114, photographer: "IvoryBrony" },
-//   { img: photo115, photographer: "IvoryBrony" },
-//   { img: photo116, photographer: "IvoryBrony" },
-//   { img: photo117, photographer: "IvoryBrony" },
-//   { img: photo118, photographer: "IvoryBrony" },
-//   { img: photo119, photographer: "IvoryBrony" },
-//   { img: photo120, photographer: "IvoryBrony" },
-//   { img: photo121, photographer: "IvoryBrony" },
-//   { img: photo122, photographer: "IvoryBrony" },
-//   { img: photo123, photographer: "IvoryBrony" },
-//   { img: photo124, photographer: "IvoryBrony" },
-//   { img: photo125, photographer: "IvoryBrony" },
-//   { img: photo126, photographer: "IvoryBrony" },
-//   { img: photo127, photographer: "IvoryBrony" },
-//   { img: photo128, photographer: "IvoryBrony" },
-//   { img: photo129, photographer: "IvoryBrony" },
-//   { img: photo130, photographer: "IvoryBrony" },
-//   { img: photo131, photographer: "IvoryBrony" },
-//   { img: photo132, photographer: "IvoryBrony" },
-//   { img: photo133, photographer: "IvoryBrony" },
-//   { img: photo134, photographer: "IvoryBrony" },
-//   { img: photo135, photographer: "IvoryBrony" },
-//   { img: photo136, photographer: "IvoryBrony" },
-//   { img: photo137, photographer: "IvoryBrony" },
-//   { img: photo138, photographer: "IvoryBrony" },
-//   { img: photo139, photographer: "IvoryBrony" },
-//   { img: photo140, photographer: "IvoryBrony" },
-//   { img: photo141, photographer: "IvoryBrony" },
-//   { img: photo142, photographer: "IvoryBrony" },
-//   { img: photo143, photographer: "IvoryBrony" },
-//   { img: photo144, photographer: "IvoryBrony" },
-//   { img: photo145, photographer: "IvoryBrony" },
-//   { img: photo146, photographer: "IvoryBrony" },
-//   { img: photo147, photographer: "IvoryBrony" },
-//   { img: photo148, photographer: "IvoryBrony" },
-//   { img: photo149, photographer: "IvoryBrony" },
-//   { img: photo150, photographer: "IvoryBrony" },
-//   { img: photo151, photographer: "IvoryBrony" },
-//   { img: photo152, photographer: "IvoryBrony" },
-//   { img: photo153, photographer: "IvoryBrony" },
-//   { img: photo154, photographer: "IvoryBrony" },
-//   { img: photo155, photographer: "IvoryBrony" },
-//   { img: photo156, photographer: "IvoryBrony" },
-//   { img: photo157, photographer: "IvoryBrony" },
-//   { img: photo158, photographer: "IvoryBrony" },
-//   { img: photo159, photographer: "IvoryBrony" },
-//   { img: photo160, photographer: "IvoryBrony" },
-//   { img: photo161, photographer: "IvoryBrony" },
-//   { img: photo162, photographer: "IvoryBrony" },
-//   { img: photo163, photographer: "IvoryBrony" },
-//   { img: photo164, photographer: "IvoryBrony" },
-//   { img: photo165, photographer: "IvoryBrony" },
-//   { img: photo166, photographer: "IvoryBrony" },
-//   { img: photo167, photographer: "IvoryBrony" },
-//   { img: photo168, photographer: "IvoryBrony" },
-//   { img: photo169, photographer: "IvoryBrony" },
-//   { img: photo170, photographer: "IvoryBrony" },
-//   { img: photo171, photographer: "IvoryBrony" },
-//   { img: photo172, photographer: "IvoryBrony" },
-//   { img: photo173, photographer: "IvoryBrony" },
-//   { img: photo174, photographer: "IvoryBrony" },
-//   { img: photo175, photographer: "IvoryBrony" },
-//   { img: photo176, photographer: "IvoryBrony" },
-//   { img: photo177, photographer: "IvoryBrony" },
-//   { img: photo178, photographer: "IvoryBrony" },
-//   { img: photo179, photographer: "IvoryBrony" },
-//   { img: photo180, photographer: "IvoryBrony" },
-//   { img: photo181, photographer: "IvoryBrony" },
-//   { img: photo182, photographer: "IvoryBrony" },
-//   { img: photo183, photographer: "IvoryBrony" },
-//   { img: photo184, photographer: "IvoryBrony" },
-//   { img: photo185, photographer: "IvoryBrony" },
-//   { img: photo186, photographer: "IvoryBrony" },
-//   { img: photo187, photographer: "IvoryBrony" },
-//   { img: photo188, photographer: "IvoryBrony" },
-//   { img: photo189, photographer: "IvoryBrony" },
-//   { img: photo190, photographer: "IvoryBrony" },
-//   { img: photo191, photographer: "IvoryBrony" },
-//   { img: photo192, photographer: "IvoryBrony" },
-//   { img: photo193, photographer: "IvoryBrony" },
-//   { img: photo194, photographer: "IvoryBrony" },
-//   { img: photo195, photographer: "IvoryBrony" },
-//   { img: photo196, photographer: "IvoryBrony" },
-//   { img: photo197, photographer: "IvoryBrony" },
-//   { img: photo198, photographer: "IvoryBrony" },
-//   { img: photo199, photographer: "IvoryBrony" },
-//   { img: photo200, photographer: "IvoryBrony" },
-//   { img: photo201, photographer: "IvoryBrony" },
-//   { img: photo202, photographer: "IvoryBrony" },
-//   { img: photo203, photographer: "IvoryBrony" },
-//   { img: photo204, photographer: "IvoryBrony" },
-//   { img: photo205, photographer: "IvoryBrony" },
-//   { img: photo206, photographer: "IvoryBrony" },
-//   { img: photo207, photographer: "IvoryBrony" },
-//   { img: photo208, photographer: "IvoryBrony" },
-//   { img: photo209, photographer: "IvoryBrony" },
-//   { img: photo210, photographer: "IvoryBrony" },
-//   { img: photo211, photographer: "IvoryBrony" },
-//   { img: photo212, photographer: "IvoryBrony" },
-//   { img: photo213, photographer: "IvoryBrony" },
-//   { img: photo214, photographer: "IvoryBrony" },
-//   { img: photo215, photographer: "IvoryBrony" },
-//   { img: photo216, photographer: "IvoryBrony" },
-//   { img: photo217, photographer: "IvoryBrony" },
-//   { img: photo218, photographer: "IvoryBrony" },
-//   { img: photo219, photographer: "IvoryBrony" },
-//   { img: photo220, photographer: "IvoryBrony" },
-//   { img: photo221, photographer: "IvoryBrony" },
-//   { img: photo222, photographer: "IvoryBrony" },
-//   { img: photo223, photographer: "IvoryBrony" },
-//   { img: photo224, photographer: "IvoryBrony" },
-//   { img: photo225, photographer: "IvoryBrony" },
-//   { img: photo226, photographer: "IvoryBrony" },
-//   { img: photo227, photographer: "IvoryBrony" },
-//   { img: photo228, photographer: "IvoryBrony" },
-//   { img: photo229, photographer: "IvoryBrony" },
-//   { img: photo230, photographer: "IvoryBrony" },
-//   { img: photo231, photographer: "IvoryBrony" },
-//   { img: photo232, photographer: "IvoryBrony" },
-//   { img: photo233, photographer: "IvoryBrony" },
-//   { img: photo234, photographer: "IvoryBrony" },
-//   { img: photo235, photographer: "IvoryBrony" },
-//   { img: photo236, photographer: "IvoryBrony" },
-//   { img: photo237, photographer: "IvoryBrony" },
-//   { img: photo238, photographer: "IvoryBrony" },
-//   { img: photo239, photographer: "IvoryBrony" },
-//   { img: photo240, photographer: "IvoryBrony" },
-//   { img: photo241, photographer: "IvoryBrony" },
-//   { img: photo242, photographer: "IvoryBrony" },
-//   { img: photo243, photographer: "IvoryBrony" },
-//   { img: photo244, photographer: "IvoryBrony" },
-//   { img: photo245, photographer: "IvoryBrony" },
-//   { img: photo246, photographer: "IvoryBrony" },
-//   { img: photo247, photographer: "IvoryBrony" },
-//   { img: photo248, photographer: "IvoryBrony" },
-//   { img: photo249, photographer: "IvoryBrony" },
-//   { img: photo250, photographer: "IvoryBrony" },
-//   { img: photo251, photographer: "IvoryBrony" },
-//   { img: photo252, photographer: "IvoryBrony" },
-//   { img: photo253, photographer: "IvoryBrony" },
-//   { img: photo254, photographer: "IvoryBrony" },
-//   { img: photo255, photographer: "IvoryBrony" },
-//   { img: photo256, photographer: "IvoryBrony" },
-//   { img: photo257, photographer: "IvoryBrony" },
-//   { img: photo258, photographer: "IvoryBrony" },
-//   { img: photo259, photographer: "IvoryBrony" },
-//   { img: photo260, photographer: "IvoryBrony" },
-//   { img: photo261, photographer: "IvoryBrony" },
-//   { img: photo262, photographer: "IvoryBrony" },
-//   { img: photo263, photographer: "IvoryBrony" },
-//   { img: photo264, photographer: "IvoryBrony" },
-//   { img: photo265, photographer: "IvoryBrony" },
-//   { img: photo266, photographer: "IvoryBrony" },
-//   { img: photo267, photographer: "IvoryBrony" },
-//   { img: photo268, photographer: "IvoryBrony" },
-//   { img: photo269, photographer: "IvoryBrony" },
-//   { img: photo270, photographer: "IvoryBrony" },
-//   { img: photo271, photographer: "IvoryBrony" },
-//   { img: photo272, photographer: "IvoryBrony" },
-//   { img: photo273, photographer: "IvoryBrony" },
-//   { img: photo274, photographer: "IvoryBrony" },
-//   { img: photo275, photographer: "IvoryBrony" },
-//   { img: photo276, photographer: "IvoryBrony" },
-//   { img: photo277, photographer: "IvoryBrony" },
-//   { img: photo278, photographer: "IvoryBrony" },
-//   { img: photo279, photographer: "IvoryBrony" },
-//   { img: photo280, photographer: "IvoryBrony" },
-//   { img: photo281, photographer: "IvoryBrony" },
-//   { img: photo282, photographer: "IvoryBrony" },
-//   { img: photo283, photographer: "IvoryBrony" },
-//   { img: photo284, photographer: "IvoryBrony" },
-//   { img: photo285, photographer: "IvoryBrony" },
-//   { img: photo286, photographer: "IvoryBrony" },
-//   { img: photo287, photographer: "IvoryBrony" },
-//   { img: photo288, photographer: "IvoryBrony" },
-//   { img: photo289, photographer: "IvoryBrony" },
-//   { img: photo290, photographer: "IvoryBrony" },
-//   { img: photo291, photographer: "IvoryBrony" },
-//   { img: photo292, photographer: "IvoryBrony" },
-//   { img: photo293, photographer: "IvoryBrony" },
-//   { img: photo294, photographer: "IvoryBrony" },
-//   { img: photo295, photographer: "IvoryBrony" },
-//   { img: photo296, photographer: "IvoryBrony" },
-//   { img: photo297, photographer: "IvoryBrony" },
-//   { img: photo298, photographer: "IvoryBrony" },
-//   { img: photo299, photographer: "IvoryBrony" },
-//   { img: photo300, photographer: "IvoryBrony" },
-//   { img: photo301, photographer: "IvoryBrony" },
-//   { img: photo302, photographer: "IvoryBrony" },
-//   { img: photo303, photographer: "IvoryBrony" },
-//   { img: photo304, photographer: "IvoryBrony" },
-//   { img: photo305, photographer: "IvoryBrony" },
-//   { img: photo306, photographer: "IvoryBrony" },
-//   { img: photo307, photographer: "IvoryBrony" },
-//   { img: photo308, photographer: "IvoryBrony" },
-//   { img: photo309, photographer: "IvoryBrony" },
-//   { img: photo310, photographer: "IvoryBrony" },
-//   { img: photo311, photographer: "IvoryBrony" },
-//   { img: photo312, photographer: "IvoryBrony" },
-//   { img: photo313, photographer: "IvoryBrony" },
-//   { img: photo314, photographer: "IvoryBrony" },
-//   { img: photo315, photographer: "IvoryBrony" },
-//   { img: photo316, photographer: "IvoryBrony" },
-//   { img: photo317, photographer: "IvoryBrony" },
-//   { img: photo318, photographer: "IvoryBrony" },
-//   { img: photo319, photographer: "IvoryBrony" },
-//   { img: photo320, photographer: "IvoryBrony" },
-//   { img: photo321, photographer: "IvoryBrony" },
-//   { img: photo322, photographer: "IvoryBrony" },
-//   { img: photo323, photographer: "IvoryBrony" },
-//   { img: photo324, photographer: "IvoryBrony" },
-//   { img: photo325, photographer: "IvoryBrony" },
-//   { img: photo326, photographer: "IvoryBrony" },
-//   { img: photo327, photographer: "IvoryBrony" },
-//   { img: photo328, photographer: "IvoryBrony" },
-//   { img: photo329, photographer: "IvoryBrony" },
-//   { img: photo330, photographer: "IvoryBrony" },
-//   { img: photo331, photographer: "IvoryBrony" },
-//   { img: photo332, photographer: "IvoryBrony" },
-//   { img: photo333, photographer: "IvoryBrony" },
-//   { img: photo334, photographer: "IvoryBrony" },
-//   { img: photo335, photographer: "IvoryBrony" },
-//   { img: photo336, photographer: "IvoryBrony" },
-//   { img: photo337, photographer: "IvoryBrony" },
-//   { img: photo338, photographer: "IvoryBrony" },
-//   { img: photo339, photographer: "IvoryBrony" },
-//   { img: photo340, photographer: "IvoryBrony" },
-//   { img: photo341, photographer: "IvoryBrony" },
-//   { img: photo342, photographer: "IvoryBrony" },
-//   { img: photo343, photographer: "IvoryBrony" },
-//   { img: photo344, photographer: "IvoryBrony" },
-//   { img: photo345, photographer: "IvoryBrony" },
-//   { img: photo346, photographer: "IvoryBrony" },
-//   { img: photo347, photographer: "IvoryBrony" },
-//   { img: photo348, photographer: "IvoryBrony" },
-//   { img: photo349, photographer: "IvoryBrony" },
-//   { img: photo350, photographer: "IvoryBrony" },
-//   { img: photo351, photographer: "IvoryBrony" },
-//   { img: photo352, photographer: "IvoryBrony" },
-//   { img: photo353, photographer: "IvoryBrony" },
-// ];
+const isLocal = ["localhost"].includes(Astro.url.hostname);
+const photos = isLocal
+  ? [
+      { img: photo0, photographer: "IvoryBrony" },
+      { img: photo1, photographer: "IvoryBrony" },
+      { img: photo2, photographer: "IvoryBrony" },
+      { img: photo3, photographer: "IvoryBrony" },
+      { img: photo4, photographer: "IvoryBrony" },
+      { img: photo5, photographer: "IvoryBrony" },
+      { img: photo6, photographer: "IvoryBrony" },
+      { img: photo7, photographer: "IvoryBrony" },
+      { img: photo8, photographer: "IvoryBrony" },
+      { img: photo9, photographer: "IvoryBrony" },
+      { img: photo10, photographer: "IvoryBrony" },
+      { img: photo11, photographer: "IvoryBrony" },
+      { img: photo12, photographer: "IvoryBrony" },
+      { img: photo13, photographer: "IvoryBrony" },
+      { img: photo14, photographer: "IvoryBrony" },
+      { img: photo100, photographer: "IvoryBrony" },
+      { img: photo101, photographer: "IvoryBrony" },
+      { img: photo102, photographer: "IvoryBrony" },
+      { img: photo103, photographer: "IvoryBrony" },
+      { img: photo104, photographer: "IvoryBrony" },
+      { img: photo105, photographer: "IvoryBrony" },
+      { img: photo106, photographer: "IvoryBrony" },
+      { img: photo107, photographer: "IvoryBrony" },
+      { img: photo108, photographer: "IvoryBrony" },
+      { img: photo109, photographer: "IvoryBrony" },
+      { img: photo110, photographer: "IvoryBrony" },
+      { img: photo111, photographer: "IvoryBrony" },
+      { img: photo112, photographer: "IvoryBrony" },
+      { img: photo113, photographer: "IvoryBrony" },
+      { img: photo114, photographer: "IvoryBrony" },
+      { img: photo115, photographer: "IvoryBrony" },
+      { img: photo116, photographer: "IvoryBrony" },
+      { img: photo117, photographer: "IvoryBrony" },
+      { img: photo118, photographer: "IvoryBrony" },
+      { img: photo119, photographer: "IvoryBrony" },
+      { img: photo120, photographer: "IvoryBrony" },
+      { img: photo121, photographer: "IvoryBrony" },
+      { img: photo122, photographer: "IvoryBrony" },
+      { img: photo123, photographer: "IvoryBrony" },
+      { img: photo124, photographer: "IvoryBrony" },
+      { img: photo125, photographer: "IvoryBrony" },
+      { img: photo126, photographer: "IvoryBrony" },
+      { img: photo127, photographer: "IvoryBrony" },
+      { img: photo128, photographer: "IvoryBrony" },
+      { img: photo129, photographer: "IvoryBrony" },
+      { img: photo130, photographer: "IvoryBrony" },
+      { img: photo131, photographer: "IvoryBrony" },
+      { img: photo132, photographer: "IvoryBrony" },
+      { img: photo133, photographer: "IvoryBrony" },
+      { img: photo134, photographer: "IvoryBrony" },
+      { img: photo135, photographer: "IvoryBrony" },
+      { img: photo136, photographer: "IvoryBrony" },
+      { img: photo137, photographer: "IvoryBrony" },
+      { img: photo138, photographer: "IvoryBrony" },
+      { img: photo139, photographer: "IvoryBrony" },
+      { img: photo140, photographer: "IvoryBrony" },
+      { img: photo141, photographer: "IvoryBrony" },
+      { img: photo142, photographer: "IvoryBrony" },
+      { img: photo143, photographer: "IvoryBrony" },
+      { img: photo144, photographer: "IvoryBrony" },
+      { img: photo145, photographer: "IvoryBrony" },
+      { img: photo146, photographer: "IvoryBrony" },
+      { img: photo147, photographer: "IvoryBrony" },
+      { img: photo148, photographer: "IvoryBrony" },
+      { img: photo149, photographer: "IvoryBrony" },
+      { img: photo150, photographer: "IvoryBrony" },
+      { img: photo151, photographer: "IvoryBrony" },
+      { img: photo152, photographer: "IvoryBrony" },
+      { img: photo153, photographer: "IvoryBrony" },
+      { img: photo154, photographer: "IvoryBrony" },
+      { img: photo155, photographer: "IvoryBrony" },
+      { img: photo156, photographer: "IvoryBrony" },
+      { img: photo157, photographer: "IvoryBrony" },
+      { img: photo158, photographer: "IvoryBrony" },
+      { img: photo159, photographer: "IvoryBrony" },
+      { img: photo160, photographer: "IvoryBrony" },
+      { img: photo161, photographer: "IvoryBrony" },
+      { img: photo162, photographer: "IvoryBrony" },
+      { img: photo163, photographer: "IvoryBrony" },
+      { img: photo164, photographer: "IvoryBrony" },
+      { img: photo165, photographer: "IvoryBrony" },
+      { img: photo166, photographer: "IvoryBrony" },
+      { img: photo167, photographer: "IvoryBrony" },
+      { img: photo168, photographer: "IvoryBrony" },
+      { img: photo169, photographer: "IvoryBrony" },
+      { img: photo170, photographer: "IvoryBrony" },
+      { img: photo171, photographer: "IvoryBrony" },
+      { img: photo172, photographer: "IvoryBrony" },
+      { img: photo173, photographer: "IvoryBrony" },
+      { img: photo174, photographer: "IvoryBrony" },
+      { img: photo175, photographer: "IvoryBrony" },
+      { img: photo176, photographer: "IvoryBrony" },
+      { img: photo177, photographer: "IvoryBrony" },
+      { img: photo178, photographer: "IvoryBrony" },
+      { img: photo179, photographer: "IvoryBrony" },
+      { img: photo180, photographer: "IvoryBrony" },
+      { img: photo181, photographer: "IvoryBrony" },
+      { img: photo182, photographer: "IvoryBrony" },
+      { img: photo183, photographer: "IvoryBrony" },
+      { img: photo184, photographer: "IvoryBrony" },
+      { img: photo185, photographer: "IvoryBrony" },
+      { img: photo186, photographer: "IvoryBrony" },
+      { img: photo187, photographer: "IvoryBrony" },
+      { img: photo188, photographer: "IvoryBrony" },
+      { img: photo189, photographer: "IvoryBrony" },
+      { img: photo190, photographer: "IvoryBrony" },
+      { img: photo191, photographer: "IvoryBrony" },
+      { img: photo192, photographer: "IvoryBrony" },
+      { img: photo193, photographer: "IvoryBrony" },
+      { img: photo194, photographer: "IvoryBrony" },
+      { img: photo195, photographer: "IvoryBrony" },
+      { img: photo196, photographer: "IvoryBrony" },
+      { img: photo197, photographer: "IvoryBrony" },
+      { img: photo198, photographer: "IvoryBrony" },
+      { img: photo199, photographer: "IvoryBrony" },
+      { img: photo200, photographer: "IvoryBrony" },
+      { img: photo201, photographer: "IvoryBrony" },
+      { img: photo202, photographer: "IvoryBrony" },
+      { img: photo203, photographer: "IvoryBrony" },
+      { img: photo204, photographer: "IvoryBrony" },
+      { img: photo205, photographer: "IvoryBrony" },
+      { img: photo206, photographer: "IvoryBrony" },
+      { img: photo207, photographer: "IvoryBrony" },
+      { img: photo208, photographer: "IvoryBrony" },
+      { img: photo209, photographer: "IvoryBrony" },
+      { img: photo210, photographer: "IvoryBrony" },
+      { img: photo211, photographer: "IvoryBrony" },
+      { img: photo212, photographer: "IvoryBrony" },
+      { img: photo213, photographer: "IvoryBrony" },
+      { img: photo214, photographer: "IvoryBrony" },
+      { img: photo215, photographer: "IvoryBrony" },
+      { img: photo216, photographer: "IvoryBrony" },
+      { img: photo217, photographer: "IvoryBrony" },
+      { img: photo218, photographer: "IvoryBrony" },
+      { img: photo219, photographer: "IvoryBrony" },
+      { img: photo220, photographer: "IvoryBrony" },
+      { img: photo221, photographer: "IvoryBrony" },
+      { img: photo222, photographer: "IvoryBrony" },
+      { img: photo223, photographer: "IvoryBrony" },
+      { img: photo224, photographer: "IvoryBrony" },
+      { img: photo225, photographer: "IvoryBrony" },
+      { img: photo226, photographer: "IvoryBrony" },
+      { img: photo227, photographer: "IvoryBrony" },
+      { img: photo228, photographer: "IvoryBrony" },
+      { img: photo229, photographer: "IvoryBrony" },
+      { img: photo230, photographer: "IvoryBrony" },
+      { img: photo231, photographer: "IvoryBrony" },
+      { img: photo232, photographer: "IvoryBrony" },
+      { img: photo233, photographer: "IvoryBrony" },
+      { img: photo234, photographer: "IvoryBrony" },
+      { img: photo235, photographer: "IvoryBrony" },
+      { img: photo236, photographer: "IvoryBrony" },
+      { img: photo237, photographer: "IvoryBrony" },
+      { img: photo238, photographer: "IvoryBrony" },
+      { img: photo239, photographer: "IvoryBrony" },
+      { img: photo240, photographer: "IvoryBrony" },
+      { img: photo241, photographer: "IvoryBrony" },
+      { img: photo242, photographer: "IvoryBrony" },
+      { img: photo243, photographer: "IvoryBrony" },
+      { img: photo244, photographer: "IvoryBrony" },
+      { img: photo245, photographer: "IvoryBrony" },
+      { img: photo246, photographer: "IvoryBrony" },
+      { img: photo247, photographer: "IvoryBrony" },
+      { img: photo248, photographer: "IvoryBrony" },
+      { img: photo249, photographer: "IvoryBrony" },
+      { img: photo250, photographer: "IvoryBrony" },
+      { img: photo251, photographer: "IvoryBrony" },
+      { img: photo252, photographer: "IvoryBrony" },
+      { img: photo253, photographer: "IvoryBrony" },
+      { img: photo254, photographer: "IvoryBrony" },
+      { img: photo255, photographer: "IvoryBrony" },
+      { img: photo256, photographer: "IvoryBrony" },
+      { img: photo257, photographer: "IvoryBrony" },
+      { img: photo258, photographer: "IvoryBrony" },
+      { img: photo259, photographer: "IvoryBrony" },
+      { img: photo260, photographer: "IvoryBrony" },
+      { img: photo261, photographer: "IvoryBrony" },
+      { img: photo262, photographer: "IvoryBrony" },
+      { img: photo263, photographer: "IvoryBrony" },
+      { img: photo264, photographer: "IvoryBrony" },
+      { img: photo265, photographer: "IvoryBrony" },
+      { img: photo266, photographer: "IvoryBrony" },
+      { img: photo267, photographer: "IvoryBrony" },
+      { img: photo268, photographer: "IvoryBrony" },
+      { img: photo269, photographer: "IvoryBrony" },
+      { img: photo270, photographer: "IvoryBrony" },
+      { img: photo271, photographer: "IvoryBrony" },
+      { img: photo272, photographer: "IvoryBrony" },
+      { img: photo273, photographer: "IvoryBrony" },
+      { img: photo274, photographer: "IvoryBrony" },
+      { img: photo275, photographer: "IvoryBrony" },
+      { img: photo276, photographer: "IvoryBrony" },
+      { img: photo277, photographer: "IvoryBrony" },
+      { img: photo278, photographer: "IvoryBrony" },
+      { img: photo279, photographer: "IvoryBrony" },
+      { img: photo280, photographer: "IvoryBrony" },
+      { img: photo281, photographer: "IvoryBrony" },
+      { img: photo282, photographer: "IvoryBrony" },
+      { img: photo283, photographer: "IvoryBrony" },
+      { img: photo284, photographer: "IvoryBrony" },
+      { img: photo285, photographer: "IvoryBrony" },
+      { img: photo286, photographer: "IvoryBrony" },
+      { img: photo287, photographer: "IvoryBrony" },
+      { img: photo288, photographer: "IvoryBrony" },
+      { img: photo289, photographer: "IvoryBrony" },
+      { img: photo290, photographer: "IvoryBrony" },
+      { img: photo291, photographer: "IvoryBrony" },
+      { img: photo292, photographer: "IvoryBrony" },
+      { img: photo293, photographer: "IvoryBrony" },
+      { img: photo294, photographer: "IvoryBrony" },
+      { img: photo295, photographer: "IvoryBrony" },
+      { img: photo296, photographer: "IvoryBrony" },
+      { img: photo297, photographer: "IvoryBrony" },
+      { img: photo298, photographer: "IvoryBrony" },
+      { img: photo299, photographer: "IvoryBrony" },
+      { img: photo300, photographer: "IvoryBrony" },
+      { img: photo301, photographer: "IvoryBrony" },
+      { img: photo302, photographer: "IvoryBrony" },
+      { img: photo303, photographer: "IvoryBrony" },
+      { img: photo304, photographer: "IvoryBrony" },
+      { img: photo305, photographer: "IvoryBrony" },
+      { img: photo306, photographer: "IvoryBrony" },
+      { img: photo307, photographer: "IvoryBrony" },
+      { img: photo308, photographer: "IvoryBrony" },
+      { img: photo309, photographer: "IvoryBrony" },
+      { img: photo310, photographer: "IvoryBrony" },
+      { img: photo311, photographer: "IvoryBrony" },
+      { img: photo312, photographer: "IvoryBrony" },
+      { img: photo313, photographer: "IvoryBrony" },
+      { img: photo314, photographer: "IvoryBrony" },
+      { img: photo315, photographer: "IvoryBrony" },
+      { img: photo316, photographer: "IvoryBrony" },
+      { img: photo317, photographer: "IvoryBrony" },
+      { img: photo318, photographer: "IvoryBrony" },
+      { img: photo319, photographer: "IvoryBrony" },
+      { img: photo320, photographer: "IvoryBrony" },
+      { img: photo321, photographer: "IvoryBrony" },
+      { img: photo322, photographer: "IvoryBrony" },
+      { img: photo323, photographer: "IvoryBrony" },
+      { img: photo324, photographer: "IvoryBrony" },
+      { img: photo325, photographer: "IvoryBrony" },
+      { img: photo326, photographer: "IvoryBrony" },
+      { img: photo327, photographer: "IvoryBrony" },
+      { img: photo328, photographer: "IvoryBrony" },
+      { img: photo329, photographer: "IvoryBrony" },
+      { img: photo330, photographer: "IvoryBrony" },
+      { img: photo331, photographer: "IvoryBrony" },
+      { img: photo332, photographer: "IvoryBrony" },
+      { img: photo333, photographer: "IvoryBrony" },
+      { img: photo334, photographer: "IvoryBrony" },
+      { img: photo335, photographer: "IvoryBrony" },
+      { img: photo336, photographer: "IvoryBrony" },
+      { img: photo337, photographer: "IvoryBrony" },
+      { img: photo338, photographer: "IvoryBrony" },
+      { img: photo339, photographer: "IvoryBrony" },
+      { img: photo340, photographer: "IvoryBrony" },
+      { img: photo341, photographer: "IvoryBrony" },
+      { img: photo342, photographer: "IvoryBrony" },
+      { img: photo343, photographer: "IvoryBrony" },
+      { img: photo344, photographer: "IvoryBrony" },
+      { img: photo345, photographer: "IvoryBrony" },
+      { img: photo346, photographer: "IvoryBrony" },
+      { img: photo347, photographer: "IvoryBrony" },
+      { img: photo348, photographer: "IvoryBrony" },
+      { img: photo349, photographer: "IvoryBrony" },
+      { img: photo350, photographer: "IvoryBrony" },
+      { img: photo351, photographer: "IvoryBrony" },
+      { img: photo352, photographer: "IvoryBrony" },
+      { img: photo353, photographer: "IvoryBrony" },
+    ]
+  : [];
 
 const images = [
   { img: img0, artist: "Brittney Ackerman", description: "" },
@@ -573,11 +590,27 @@ const images = [
   { img: img3, artist: "Brittney Ackerman", description: "" },
   { img: img4, artist: "Brittney Ackerman", description: "" },
   { img: img5, artist: "Brittney Ackerman", description: "" },
+  { img: img26, artist: "Brittney Ackerman", description: "" },
   { img: img6, artist: "Brittney Ackerman", description: "" },
   { img: img7, artist: "Brittney Ackerman", description: "" },
   { img: img8, artist: "Brittney Ackerman", description: "" },
   { img: img9, artist: "Brittney Ackerman", description: "" },
   { img: img10, artist: "Brittney Ackerman", description: "" },
+  { img: img11, artist: "Brittney Ackerman", description: "" },
+  { img: img12, artist: "Brittney Ackerman", description: "" },
+  { img: img13, artist: "Brittney Ackerman", description: "" },
+  { img: img14, artist: "Brittney Ackerman", description: "" },
+  { img: img15, artist: "Brittney Ackerman", description: "" },
+  { img: img16, artist: "Brittney Ackerman", description: "" },
+  { img: img17, artist: "Brittney Ackerman", description: "" },
+  { img: img18, artist: "Brittney Ackerman", description: "" },
+  { img: img19, artist: "Brittney Ackerman", description: "" },
+  { img: img20, artist: "Brittney Ackerman", description: "" },
+  { img: img21, artist: "Brittney Ackerman", description: "" },
+  { img: img22, artist: "Brittney Ackerman", description: "" },
+  { img: img23, artist: "Brittney Ackerman", description: "" },
+  { img: img24, artist: "Lunar Harmony", description: "" },
+  { img: img25, artist: "Lunar Harmony", description: "" },
 ];
 
 const getBorder = (idx) =>
@@ -608,45 +641,43 @@ import Footer from "../components/Footer.astro";
       class="text-center block gap-y-2 w-full px-0 md:px-4"
     >
       {
-        photos.map(({ img, photographer }, jdx) => (
-          <a
+        images.map(({ img, artist, description }, idx) => (
+          <div
+            class="inline-block"
             style="filter: drop-shadow(0 3px 3px #000);"
-            class={`${getBorder(jdx)} cursor-pointer hover:scale-[1.1] bg-white p-2 rounded border-black border-[8px] inline-block m-2 duration-300 ${
-              jdx % 2 ? "hover:rotate-3" : "hover:-rotate-3"
-            }`}
+            data-src={img.src}
+            data-sub-html={`<h4>Artist: ${artist}</h4>${description}`}
+          >
+            <a class="shine cursor-pointer rounded  inline-block m-2 sm:m-2 xl:m-2">
+              <Image
+                alt={`Art asset #${idx + 1}`}
+                src={img}
+                height={300}
+                class="stroke duration-300 p-1 h-24 sm:h-32 xl:h-32 w-auto md:w-auto cursor-pointer"
+              />
+            </a>
+          </div>
+        ))
+      }
+      {
+        photos.map(({ img, photographer }, jdx) => (
+          <div
+            class="inline-block"
+            style="filter: drop-shadow(0 3px 3px #000);"
             data-src={img.src}
             data-sub-html={`<h4>Photographer: ${photographer}</h4>HarmonyCon 2024 photo #${
               jdx + 1
             }`}
           >
-            <Image
-              alt={`Photo #${jdx}`}
-              src={img}
-              height={300}
-              style="filter: drop-shadow(0 2px 2px #000);"
-              class="duration-300 h-24 sm:h-32 xl:h-32 w-auto md:w-auto cursor-pointer"
-            />
-          </a>
-        ))
-      }
-      {
-        images.map(({ img, artist, description }, idx) => (
-          <a
-            style="filter: drop-shadow(0 3px 3px #000);"
-            class={`${getBorder(idx)} cursor-pointer hover:scale-[1.1] bg-white p-2 rounded border-black border-[8px] inline-block m-2 sm:m-2 xl:m-4 duration-300 ${
-              idx % 2 ? "hover:rotate-3" : "hover:-rotate-3"
-            }`}
-            data-src={img.src}
-            data-sub-html={`<h4>Artist: ${artist}</h4>${description}`}
-          >
-            <Image
-              alt={`Art asset #${idx + 1}`}
-              src={img}
-              height={300}
-              style="filter: drop-shadow(0 2px 2px #000);"
-              class="duration-300 h-24 sm:h-32 xl:h-32 w-auto md:w-auto cursor-pointer"
-            />
-          </a>
+            <a class="shine cursor-pointer rounded  inline-block m-2 sm:m-2 xl:m-2">
+              <Image
+                alt={`Photo #${jdx}`}
+                src={img}
+                height={300}
+                class="stroke duration-300 p-1 h-24 sm:h-32 xl:h-32 w-auto md:w-auto cursor-pointer"
+              />
+            </a>
+          </div>
         ))
       }
     </div>
@@ -672,8 +703,32 @@ import Footer from "../components/Footer.astro";
 
     background-image: var(--optimizedGalleryBackground);
     background-repeat: repeat;
-    background-size: 100%;
+    background-size: 150%;
     background-position: center;
     opacity: 1;
+  }
+
+  .stroke {
+    filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
+      drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white);
+  }
+
+  .shine {
+    --a: 0deg; /* control the angle of rotation (the smaller, the better) */
+    transform: perspective(0px)
+      rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
+    -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100%/250%
+      250%;
+    transition: 0.4s;
+    animation:
+      jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2s forwards,
+      rotating 4s var(--sine) 0s infinite forwards;
+
+    z-index: 50;
+  }
+
+  .shine:hover {
+    --i: -1;
+    -webkit-mask-position: 0 0;
   }
 </style>
