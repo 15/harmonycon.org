@@ -25,13 +25,13 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="HarmonyCon 2025 | Apply">
-  <div id="bg" class="overflow-x-hidden">
+  <div id="bg" class="overflow-x-hidden overflow-y-hidden">
     <div
       id="clipboard"
-      class="text-black font-serif text-center uppercase flex flex-col gap-y-8 text-6xl items-center pt-24 fixed left-0 right-0 mx-auto"
+      class="text-black p-24 font-serif text-center uppercase flex flex-col gap-y-4 md:gap-y-8 items-center pt-24 absolute left-0 right-0 mx-auto"
     >
-      <div>Apply</div>
-      <div class="items-center flex flex-col gap-y-6">
+      <div class="text-5xl sm:text-5xl lg:text-6xl">Apply</div>
+      <div class="items-center flex flex-col gap-y-2 md:gap-y-6">
         <Badge
           src={staff}
           href="https://reg-2025.harmonycon.org/staff/application.php"
@@ -79,11 +79,11 @@ import Footer from "../components/Footer.astro";
     }
 
     #clipboard {
-      position: fixed;
+      position: absolute;
       bottom: -120vh;
       height: auto;
-      width: 150vw;
-      left: -25vw;
+      width: 180vw;
+      left: -40vw;
 
       background-image: var(--optimizedClipboard);
       background-repeat: no-repeat;
@@ -100,7 +100,7 @@ import Footer from "../components/Footer.astro";
         bottom: -120vh;
       }
       to {
-        bottom: -4rem;
+        bottom: 0rem;
       }
     }
 
