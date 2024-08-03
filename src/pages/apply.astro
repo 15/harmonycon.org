@@ -28,7 +28,7 @@ import Footer from "../components/Footer.astro";
   <div id="bg" class="overflow-x-hidden">
     <div
       id="clipboard"
-      class="text-black font-serif text-center uppercase h-[95vh] w-auto flex flex-col gap-y-8 text-6xl items-center pt-24 bottom-[-1rem] fixed left-0 right-0 mx-auto"
+      class="text-black font-serif text-center uppercase h-[95vh] w-auto flex flex-col gap-y-8 text-6xl items-center pt-24 fixed left-0 right-0 mx-auto"
     >
       <div>Apply</div>
       <div class="w-full items-center flex flex-col gap-y-6">
@@ -52,11 +52,6 @@ import Footer from "../components/Footer.astro";
         />
       </div>
     </div>
-    <!-- <Image
-      src={hoof}
-      class="z-10 w-104 h-auto fixed left-[21vw] bottom-[-22rem] rotate-[205deg]"
-      alt="Hoof"
-    /> -->
   </div>
   <Footer />
 </Layout>
@@ -102,10 +97,95 @@ import Footer from "../components/Footer.astro";
     }
 
     #clipboard {
+      position: fixed;
+      bottom: -120vh;
       background-image: var(--optimizedClipboard);
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      animation:
+        reveal 0.7s cubic-bezier(0.5, 0.1, 0.1, 1) 0.5s forwards,
+        zoom 0.75s ease-out 0.5s forwards,
+        floating4 4s var(--sine) 1.25s infinite forwards;
     }
+  }
+
+  @keyframes reveal {
+    from {
+      bottom: -120vh;
+    }
+    to {
+      bottom: -1rem;
+    }
+  }
+
+  @keyframes zoom {
+    from {
+      transform: rotate(-10deg) scale(1.5);
+    }
+    to {
+      transform: rotate(-0.5deg) scale(1);
+    }
+  }
+
+  @keyframes floating4 {
+    0% {
+      transform: translate(0, 0) rotate(-0.5deg);
+    }
+    50% {
+      transform: translate(0, 3px) rotate(0.5deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(-0.5deg);
+    }
+  }
+
+  :root {
+    --elastic: linear(
+      0,
+      0.0009 8.51%,
+      -0.0047 19.22%,
+      0.0016 22.39%,
+      0.023 27.81%,
+      0.0237 30.08%,
+      0.0144 31.81%,
+      -0.0051 33.48%,
+      -0.1116 39.25%,
+      -0.1181 40.59%,
+      -0.1058 41.79%,
+      -0.0455,
+      0.0701 45.34%,
+      0.9702 55.19%,
+      1.0696 56.97%,
+      1.0987 57.88%,
+      1.1146 58.82%,
+      1.1181 59.83%,
+      1.1092 60.95%,
+      1.0057 66.48%,
+      0.986 68.14%,
+      0.9765 69.84%,
+      0.9769 72.16%,
+      0.9984 77.61%,
+      1.0047 80.79%,
+      0.9991 91.48%,
+      1
+    );
+
+    --sine: linear(
+      0,
+      0.007 5.35%,
+      0.0282 10.75%,
+      0.0638 16.26%,
+      0.1144 21.96%,
+      0.1833 28.16%,
+      0.2717 34.9%,
+      0.6868 62.19%,
+      0.775 68.54%,
+      0.8457 74.3%,
+      0.9141 81.07%,
+      0.9621 87.52%,
+      0.9905 93.8%,
+      1
+    );
   }
 </style>
