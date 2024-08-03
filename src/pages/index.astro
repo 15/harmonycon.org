@@ -313,7 +313,7 @@ const optimizedIndexBackground = await getImage({
   @media (max-width: 768px) {
     #tune {
       position: absolute;
-      width: 95%;
+      width: 90vw;
       top: -150%;
       left: -5%;
       animation:
@@ -323,7 +323,7 @@ const optimizedIndexBackground = await getImage({
 
     #star {
       position: absolute;
-      width: 90%;
+      width: 80vw;
       right: -10%;
       top: -146%;
       animation:
@@ -348,7 +348,8 @@ const optimizedIndexBackground = await getImage({
 
     #register {
       position: absolute;
-      left: 0;
+      left: 20vw;
+      right: auto;
       rotate: -2deg;
       width: auto;
       bottom: 4vh;
@@ -374,7 +375,8 @@ const optimizedIndexBackground = await getImage({
 
     #main {
       position: absolute;
-      right: 0;
+      right: 20vw;
+      left: auto;
       rotate: 2deg;
       width: auto;
       bottom: 4vh;
@@ -398,6 +400,11 @@ const optimizedIndexBackground = await getImage({
     }
 
     #buttons {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
       z-index: 50;
     }
 
