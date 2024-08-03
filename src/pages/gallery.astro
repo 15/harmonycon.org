@@ -68,10 +68,10 @@ import img26_2024 from "../assets/2024/av/HarmonyCon Daytime Screen Purple Backg
 import img27_2024 from "../assets/2024/av/HarmonyCon Daytime Screen White Background.png";
 import img28_2024 from "../assets/2024/av/starting soon.png";
 import img29_2024 from "../assets/2024/av/general stream card.gif";
-import img30_2024 from "../assets/2024/banners/harmonycon buhbhuhbuh.png";
-import img31_2024 from "../assets/2024/banners/musician banner.png";
-import img32_2024 from "../assets/2024/banners/registration banner beeg with text.png";
-import img33_2024 from "../assets/2024/banners/vendorbanner.png";
+// import img30_2024 from "../assets/2024/banners/harmonycon buhbhuhbuh.png";
+// import img31_2024 from "../assets/2024/banners/musician banner.png";
+// import img32_2024 from "../assets/2024/banners/registration banner beeg with text.png";
+// import img33_2024 from "../assets/2024/banners/vendorbanner.png";
 import img34_2024 from "../assets/2024/promo/sunnyannouncement.png";
 import img35_2024 from "../assets/2024/promo/harmonyantiprom.png";
 import img36_2024 from "../assets/2024/promo/Harmonycon_Haloween_w_text2.png";
@@ -698,10 +698,10 @@ const images2024 = [
   { img: img27_2024, artist: "Brittney Ackerman", description: "" },
   { img: img28_2024, artist: "Brittney Ackerman", description: "" },
   { img: img29_2024, artist: "Brittney Ackerman", description: "" },
-  { img: img30_2024, artist: "Brittney Ackerman", description: "" },
-  { img: img31_2024, artist: "Brittney Ackerman", description: "" },
-  { img: img32_2024, artist: "Brittney Ackerman", description: "" },
-  { img: img33_2024, artist: "Brittney Ackerman", description: "" },
+  // { img: img30_2024, artist: "Brittney Ackerman", description: "" },
+  // { img: img31_2024, artist: "Brittney Ackerman", description: "" },
+  // { img: img32_2024, artist: "Brittney Ackerman", description: "" },
+  // { img: img33_2024, artist: "Brittney Ackerman", description: "" },
   { img: img34_2024, artist: "Brittney Ackerman", description: "" },
   { img: img35_2024, artist: "Brittney Ackerman", description: "" },
   { img: img36_2024, artist: "Brittney Ackerman", description: "" },
@@ -760,6 +760,7 @@ import Footer from "../components/Footer.astro";
                 alt={`Art asset #${idx + 1}`}
                 src={img}
                 height={300}
+                format="avif"
                 class="stroke duration-300 p-1 h-24 sm:h-32 xl:h-32 w-auto md:w-auto cursor-pointer"
               />
             </a>
@@ -786,6 +787,7 @@ import Footer from "../components/Footer.astro";
                 alt={`Art asset #${idx + 1}`}
                 src={img}
                 height={300}
+                format={img.format === "gif" ? "gif" : "avif"}
                 class="stroke duration-300 p-1 h-24 sm:h-32 xl:h-32 w-auto md:w-auto cursor-pointer"
               />
             </a>
@@ -807,6 +809,7 @@ import Footer from "../components/Footer.astro";
                 alt={`Photo #${jdx}`}
                 src={img}
                 height={300}
+                format="avif"
                 class="stroke duration-300 p-1 h-24 sm:h-32 xl:h-32 w-auto md:w-auto cursor-pointer"
               />
             </a>
