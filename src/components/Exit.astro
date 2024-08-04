@@ -6,7 +6,9 @@ const { pathname } = Astro.url;
 const href = ["/main", "/main/"].includes(pathname) ? "/" : "/main/";
 ---
 
-<div class="fixed md:absolute top-2 left-2 sm:top-12 sm:left-12 z-50">
+<div
+  class="fixed md:absolute top-2 left-2 sm:top-4 sm:left-4 xl:top-12 xl:left-12 z-50"
+>
   <a
     href={href}
     class="opacity-60 hover:opacity-100 duration-500 flex items-center justify-center"
