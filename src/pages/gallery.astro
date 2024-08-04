@@ -1048,7 +1048,7 @@ import Footer from "../components/Footer.astro";
       class="text-center block gap-y-2 w-full px-0 md:px-4 pb-0 md:pb-8 mb-0 md:mb-8"
     >
       <div
-        class=""
+        class="logo"
         style="filter: drop-shadow(0 3px 3px #000);"
         data-src={img4.src}
         data-sub-html={`<h4>Artist: Brittney Ackerman</h4><h6>HarmonyCon 2025 logo</h6>`}
@@ -1100,7 +1100,7 @@ import Footer from "../components/Footer.astro";
         </a>
       </div>
       <div
-        class="mt-6"
+        class="mt-6 logo"
         style="filter: drop-shadow(0 3px 3px #000);"
         data-src={img22_2024.src}
         data-sub-html={`<h4>Artist: Brittney Ackerman</h4><h6>HarmonyCon 2024 logo</h6>`}
@@ -1174,7 +1174,7 @@ import Footer from "../components/Footer.astro";
         </a>
       </div>
       <div
-        class="mt-6"
+        class="mt-6 logo"
         style="filter: drop-shadow(0 3px 3px #000);"
         data-src={img0_2023.src}
         data-sub-html={`<h4>Artist: Brittney Ackerman</h4><h6>HarmonyCon 2023 logo</h6>`}
@@ -1226,7 +1226,7 @@ import Footer from "../components/Footer.astro";
         </a>
       </div>
       <div
-        class="mt-6"
+        class="mt-6 logo"
         style="filter: drop-shadow(0 3px 3px #000);"
         data-src={img0_2022.src}
         data-sub-html={`<h4>Artist: Brittney Ackerman</h4><h6>HarmonyCon 2022 logo</h6>`}
@@ -1331,6 +1331,33 @@ import Footer from "../components/Footer.astro";
       background-size: 400%;
       background-position: center;
       opacity: 1;
+    }
+  }
+
+  .logo {
+    animation: tease 4s ease 0s infinite forwards;
+    rotate: -1deg;
+  }
+
+  @keyframes tease {
+    0%,
+    70% {
+      transform: translateY(0px) scale(1);
+    }
+    85% {
+      transform: rotate(2.5deg) scale(1);
+    }
+    90% {
+      transform: rotate(-1.5deg) scale(1);
+    }
+    92.5% {
+      transform: rotate(1deg) scale(1);
+    }
+    95% {
+      transform: rotate(-1deg) scale(1);
+    }
+    100% {
+      transform: rotate(0) scale(1);
     }
   }
 </style>
