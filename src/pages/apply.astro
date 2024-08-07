@@ -118,7 +118,17 @@ import Footer from "../components/Footer.astro";
       }
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(-20%);
+      }
+    }
+    @keyframes zoom {
+      from {
+        rotate: -10deg;
+        scale: 2.5;
+      }
+      to {
+        rotate: -0.3deg;
+        scale: 1.8;
       }
     }
   }
@@ -164,16 +174,15 @@ import Footer from "../components/Footer.astro";
         transform: translateY(0vh);
       }
     }
-  }
-
-  @keyframes zoom {
-    from {
-      rotate: -10deg;
-      scale: 1.5;
-    }
-    to {
-      rotate: -0.3deg;
-      scale: 1.2;
+    @keyframes zoom {
+      from {
+        rotate: -10deg;
+        scale: 1.5;
+      }
+      to {
+        rotate: -0.3deg;
+        scale: 1.2;
+      }
     }
   }
 

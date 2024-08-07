@@ -9,9 +9,8 @@ const textColor =
     : "text-white";
 
 const isMainPage = pathname === "/";
-const isFixed = pathname.includes("404");
-const isMobileHidden =
-  pathname.includes("apply") || pathname.includes("register");
+const isFixed = pathname.includes("apply") || pathname.includes("404");
+const isMobileHidden = pathname.includes("register");
 ---
 
 <footer
