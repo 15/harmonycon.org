@@ -24,6 +24,12 @@ const optimizedClipboard = await getImage({
 import Footer from "../components/Footer.astro";
 ---
 
+<link
+  rel="preload"
+  href={optimizedClipboard.src}
+  as="image"
+  fetchpriority="high"
+/>
 <Layout title="HarmonyCon 2025 | Apply">
   <div
     id="bg"
