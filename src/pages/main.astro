@@ -83,7 +83,13 @@ const optimizedMainBackground = await getImage({
       class="hidden md:block absolute bottom-0 right-4 md:w-[25%] lg:w-[20%] xl:w-[15%]"
       id="scroll"
     >
-      <Image src={sign} format="avif" alt="Scroll here sign" width={300} />
+      <Image
+        draggable={false}
+        src={sign}
+        format="avif"
+        alt="Scroll here sign"
+        width={300}
+      />
     </div>
     <Footer />
   </div>
