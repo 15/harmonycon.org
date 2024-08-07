@@ -377,6 +377,20 @@ const { pathname } = Astro.url;
         slow.invalidate().restart(); // now decelerate
       },
     });
+
+    let scrollPosition = 0;
+
+    window.addEventListener("wheel", (event) => {
+      let delta = event.deltaY || event.detail || event.wheelDelta;
+      scrollPosition += Math.abs(delta) * 0.8;
+      if (scrollPosition < 1500) {
+        gsap.to("#scroll", {
+          y: scrollPosition,
+          ease: "power1.out",
+          duration: 0.5,
+        });
+      }
+    });
   };
 
   if (window.innerWidth > 768 && window.location.pathname.includes("main")) {

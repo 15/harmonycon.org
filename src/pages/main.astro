@@ -13,6 +13,8 @@ import img9 from "../assets/2025/flyer.png";
 import Playbill from "../components/Playbill.astro";
 import Footer from "../components/Footer.astro";
 
+import sign from "../assets/2025/scroll_sign.png";
+
 import mainBackground from "../assets/2025/bg/bricks.jpg";
 const optimizedMainBackground = await getImage({
   src: mainBackground,
@@ -77,6 +79,9 @@ const optimizedMainBackground = await getImage({
         />
       </li>
     </ul>
+    <div class="hidden lg:block absolute bottom-0 right-4 w-[15%]" id="scroll">
+      <Image src={sign} format="avif" alt="Scroll here sign" width={300} />
+    </div>
     <Footer />
   </div>
 </Layout>
