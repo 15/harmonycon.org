@@ -255,6 +255,16 @@ const { pathname } = Astro.url;
       )
       skewY(var(--swup-overlay-skew-value));
   }
+
+  html,
+  body {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    -ms-user-select: none;
+    user-select: none;
+  }
 </style>
 
 <script>
@@ -372,7 +382,7 @@ const { pathname } = Astro.url;
           Math.abs(self.deltaX) > Math.abs(self.deltaY)
             ? -self.deltaX
             : -self.deltaY;
-        const adjustedDelta = delta * (self.event.type === "wheel" ? 1 : 8);
+        const adjustedDelta = delta * (self.event.type === "wheel" ? 1 : 5);
         loop.timeScale(adjustedDelta);
         // throttledUpdateBackgroundPosition(delta);
         slow.invalidate().restart(); // now decelerate
