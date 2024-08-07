@@ -6,7 +6,7 @@ const { src, href, active, title = "Ponybill" } = Astro.props;
 <a
   style="filter: drop-shadow(0 3px 3px #000);"
   class={`playbill border-black bg-white rounded-sm p-1 border-[20px] sm:border-[16px] md:border-[20px] lg:border-[20px] xl:border-[24px] w-full items-center flex flex-col gap-y-1 lg:gap-y-2 duration-300 ${active ? "grayscale-0 cursor-pointer" : "grayscale cursor-not-allowed"}  hover:z-10 relative`}
-  href={active ? href : ""}
+  href={active ? href : null}
   draggable={false}
 >
   <div
