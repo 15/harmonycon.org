@@ -364,7 +364,7 @@ const { pathname } = Astro.url;
 
     // now use an Observer to listen to pointer/touch/wheel events and set the timeScale of the infinite looping timeline accordingly.
     Observer.create({
-      target: ".playbills",
+      target: "#bg",
       type: "pointer,touch,wheel",
       wheelSpeed: -1,
       onChange: (self) => {
@@ -372,7 +372,8 @@ const { pathname } = Astro.url;
           Math.abs(self.deltaX) > Math.abs(self.deltaY)
             ? -self.deltaX
             : -self.deltaY;
-        loop.timeScale(delta);
+        const adjustedDelta = delta * (self.event.type === "wheel" ? 1 : 8);
+        loop.timeScale(adjustedDelta);
         // throttledUpdateBackgroundPosition(delta);
         slow.invalidate().restart(); // now decelerate
       },
@@ -391,6 +392,19 @@ const { pathname } = Astro.url;
         });
       }
     });
+
+    // document.body.addEventListener("drag", (event) => {
+    //   console.log(event);
+    //   let delta = event.deltaY || event.detail || event.wheelDelta;
+    //   scrollPosition += Math.abs(delta) * 0.8;
+    //   if (scrollPosition < 1500) {
+    //     gsap.to("#scroll", {
+    //       y: scrollPosition,
+    //       ease: "power1.out",
+    //       duration: 0.5,
+    //     });
+    //   }
+    // });
   };
 
   if (window.innerWidth > 768 && window.location.pathname.includes("main")) {

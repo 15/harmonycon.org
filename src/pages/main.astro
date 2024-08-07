@@ -28,8 +28,8 @@ const optimizedMainBackground = await getImage({
   desktopOverflow="true"
   mobileOverflow="true"
 >
-  <div id="bg" class="md:px-0 px-4 flex flex-col">
-    <ul class="playbills text-black">
+  <div id="bg" class="md:px-0 px-4 flex flex-col cursor-grab">
+    <ul class="playbills text-black cursor-grab">
       <li class="xl:mb-8" style="filter: drop-shadow(0 5px 5px #000);">
         <Playbill
           src={img2}
@@ -175,5 +175,15 @@ const optimizedMainBackground = await getImage({
 
     .playbills li {
     }
+  }
+
+  ul,
+  li {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    -ms-user-select: none;
+    user-select: none;
   }
 </style>
