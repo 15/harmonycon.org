@@ -10,7 +10,7 @@ const { src, href, active, title = "Ponybill" } = Astro.props;
   draggable={false}
 >
   <div
-    style="filter: drop-shadow(0 1px 1px #000);"
+    style={`filter: drop-shadow(0 1px 1px #000) ${active ? "grayscale(0)" : "grayscale(100%)"}`}
     class={`w-full sm:w-full md:w-64 lg:w-72 xl:w-80 5xl:w-120 relative flex flex-col rounded ${active ? "grayscale-0" : "grayscale"}`}
   >
     <div

@@ -1,15 +1,13 @@
 ---
 import { Image, getImage } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import img1 from "../assets/2025/flyer.png";
 import img2 from "../assets/2025/playbill/temp.png";
 import img3 from "../assets/2025/playbill/producersnotext.png";
 import img4 from "../assets/2025/playbill/the_Stallion_of_the_Opera_Final_No_Text.png";
 import img5 from "../assets/2025/playbill/HarmonyCon-CodeOfConduct2.png";
-import img6 from "../assets/MF/playbills/mascots.png";
 import img7 from "../assets/2025/playbill/winged.png";
 import img8 from "../assets/2025/playbill/Clawstin.png";
-import img9 from "../assets/2025/flyer.png";
+import img9 from "../assets/2025/playbill/coming_soon_poster.png";
 import Playbill from "../components/Playbill.astro";
 import Footer from "../components/Footer.astro";
 
@@ -76,6 +74,37 @@ const optimizedMainBackground = await getImage({
           idx={8}
           active={true}
           title="Credits"
+        />
+      </li>
+      <li class="xl:mb-8" style="filter: drop-shadow(0 5px 5px #000);">
+        <Playbill
+          src={img9}
+          href="/"
+          idx={8}
+          active={false}
+          title="Musicians"
+        />
+      </li>
+      <!-- <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
+        <Playbill src={img9} href="/" idx={9} active={false} title="Mascots" />
+      </li>
+      <li class="xl:mb-8" style="filter: drop-shadow(0 5px 5px #000);">
+        <Playbill src={img9} href="/" idx={8} active={false} title="About us" />
+      </li> -->
+      <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
+        <Playbill src={img9} href="/" idx={9} active={false} title="Vendors" />
+      </li>
+      <li class="xl:mb-8" style="filter: drop-shadow(0 5px 5px #000);">
+        <Playbill src={img9} href="/" idx={8} active={false} title="Schedule" />
+      </li>
+      <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
+        <Playbill
+          src={img9}
+          href="/"
+          idx={9}
+          active={false}
+          title="Guests"
+          small={true}
         />
       </li>
     </ul>
