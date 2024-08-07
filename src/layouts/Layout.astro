@@ -38,6 +38,34 @@ const optimizedCreditsBackground = await getImage({
   width: 2000,
 });
 
+import applyBackground from "../assets/2025/bg/stage2.png";
+const optimizedApplyBackground = await getImage({
+  src: applyBackground,
+  format: "avif",
+  width: 1920,
+});
+
+import cocBackground from "../assets/2025/bg/wood-black.jpg";
+const optimizedCocBackground = await getImage({
+  src: cocBackground,
+  format: "avif",
+  width: 2000,
+});
+
+import registerBackground from "../assets/2025/bg/bar_final_2.png";
+const optimizedRegisterBackground = await getImage({
+  src: registerBackground,
+  format: "avif",
+  width: 1920,
+});
+
+import galleryBackground from "../assets/2025/marble.webp";
+const optimizedGalleryBackground = await getImage({
+  src: galleryBackground,
+  format: "avif",
+  width: 2000,
+});
+
 const { pathname } = Astro.url;
 ---
 
@@ -113,6 +141,30 @@ const { pathname } = Astro.url;
     <link
       rel="preload"
       href={optimizedMainBackground.src}
+      as="image"
+      fetchpriority="low"
+    />
+    <link
+      rel="preload"
+      href={optimizedApplyBackground.src}
+      as="image"
+      fetchpriority="low"
+    />
+    <link
+      rel="preload"
+      href={optimizedCocBackground.src}
+      as="image"
+      fetchpriority="low"
+    />
+    <link
+      rel="preload"
+      href={optimizedRegisterBackground.src}
+      as="image"
+      fetchpriority="low"
+    />
+    <link
+      rel="preload"
+      href={optimizedGalleryBackground.src}
       as="image"
       fetchpriority="low"
     />
