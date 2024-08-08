@@ -326,6 +326,10 @@ const { pathname } = Astro.url;
   let gallery;
   import { Howl } from "howler";
 
+  import tippy from "tippy.js";
+  import "tippy.js/dist/tippy.css";
+  import "tippy.js/animations/shift-away-extreme.css";
+
   // if (!window.location.pathname.includes("/main")) {
   //   window.scrollTo(0, 0);
   // }
@@ -354,6 +358,21 @@ const { pathname } = Astro.url;
 
         snoot.addEventListener("click", () => {
           boop.play();
+        });
+
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].forEach((i) => {
+          const r = document.getElementById(`register-${i}`);
+          const instance = tippy(r, {
+            content: `Registration opens on <span class='font-semibold'>August 12, 2024</span>!</span>`,
+            placement: "left",
+            animation: "shift-away-extreme",
+            allowHTML: true,
+            triggerTarget: document.getElementById(`${i}`),
+          });
+
+          document.getElementById("menu").addEventListener("scroll", () => {
+            instance.hide(0);
+          });
         });
       }
 

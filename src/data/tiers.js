@@ -15,6 +15,19 @@ export default [
     price: "<span class='text-xl xl:text-2xl'>$65</span>",
   },
   {
+    name: `<div class="text-2xl xl:text-3xl"><span class="italic">Marey Poppins</span></div>`,
+    perks: [
+      "Sponsor Badge",
+      "Conbook",
+      "Premium lanyard",
+      "2025 con shirt",
+      "2025 con bag",
+      "Reg line priority",
+      "Mane Stage line priority",
+    ],
+    price: "<span class='text-2xl xl:text-3xl'>$125</span>",
+  },
+  {
     name: `<div class="text-2xl xl:text-3xl"><span class="italic">My Fair Lyra</span></div>`,
     limit: 25,
     perks: ["All previous perks", "Access to VIP Meet and Greet"],
