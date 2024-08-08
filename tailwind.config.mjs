@@ -10,6 +10,7 @@ export default {
       },
       fontSize: {
         "4.5xl": ["2.625rem", 1],
+        "5.5xl": ["3.375rem", 1],
         "10xl": "10rem",
         "11xl": "11rem",
         "12xl": "12rem",

@@ -9,6 +9,10 @@ const optimizedRegisterBackground = await getImage({
   width: 1920,
 });
 import Footer from "../components/Footer.astro";
+
+import hclogo from "../assets/2025/HarmonyCon 2025 Logo.png";
+
+import tiers from "../data/tiers.js";
 ---
 
 <Layout
@@ -18,167 +22,60 @@ import Footer from "../components/Footer.astro";
 >
   <div id="bg" class="overflow-x-hidden">
     <div
-      class="text-black absolute bottom-28 md:bottom-8 md:w-240 bg-neutral-300 opacity-90 left-0 right-0 md:mx-auto mx-4 rounded p-6 md:p-8"
+      class="text-black absolute bottom-28 md:bottom-8 md:w-240 bg-neutral-300 opacity-90 left-0 right-0 md:mx-auto mx-4 rounded p-6 md:px-8 py-4"
     >
       <div class="font-semibold text-3xl md:text-3xl">Harmonic Tune</div>
       <div class="text-xl md:text-xl italic">Hey there! What'll it be?</div>
     </div>
     <div
-      style="filter: drop-shadow(0 15px 15px #000);"
-      class="flex flex-col gap-y-3 md:gap-y-4 text-[#fde300] font-serif md:absolute md:top-8 md:right-[15%] mx-4 md:mt-0 mt-12 md:mx-auto md:w-160 h-[calc(100vh-20rem)] md:h-2/3 bg-black border-yellow-200 border-4 opacity-70 md:opacity-90 rounded-lg p-4 md:p-8"
+      style="filter: drop-shadow(0 15px 15px #000); scrollbar-width: thin;"
+      class="uppercase overflow-y-scroll flex flex-col gap-y-1 md:gap-y-1 text-[#fde300] font-serif md:absolute md:top-[5%] md:right-[5%] mx-4 md:mt-0 mt-12 md:mx-auto md:w-1/2 h-[calc(100vh-20rem)] md:h-2/3 bg-black border-yellow-200 border-4 opacity-70 md:opacity-90 rounded-lg p-4"
     >
-      <div class="text-center uppercase text-3xl md:text-5xl">
-        HarmonyCon 2025
+      <div
+        class="text-center flex flex-col items-center justify-center uppercase text-3xl md:text-5xl"
+      >
+        <Image
+          src={hclogo}
+          format="avif"
+          alt="HarmonyCon 2025 logo"
+          width={600}
+          class="w-1/2"
+        />
+        <!-- <div class="text-6xl">Register</div> -->
       </div>
       <div class="flex flex-col gap-y-4">
-        <div>
-          <div class="uppercase text-xl md:text-3xl flex justify-between">
-            <div>3 Day Attendee</div>
-            <div>$60</div>
-          </div>
-          <ul class="hidden text-lg">
-            <li>3-Day Con Admission</li>
-            <li>Coltchella Admission</li>
-            <li>Convention Booklet</li>
-            <li>Sponsor Priority Line for Mane Events</li>
-            <li>Show Pony Badge Art</li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex flex-col gap-y-4">
-        <div>
-          <div class="uppercase text-xl md:text-3xl flex justify-between">
-            <div>1 Day Attendee (Fri/Sat)</div>
-            <div>$35</div>
-          </div>
-          <ul class="hidden text-lg">
-            <li>3-Day Con Admission</li>
-            <li>Coltchella Admission</li>
-            <li>Convention Booklet</li>
-            <li>Sponsor Priority Line for Mane Events</li>
-            <li>Show Pony Badge Art</li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex flex-col gap-y-4">
-        <div>
-          <div class="uppercase text-xl md:text-3xl flex justify-between">
-            <div>1 Day Attendee (Sun)</div>
-            <div>$25</div>
-          </div>
-          <ul class="hidden text-lg">
-            <li>3-Day Con Admission</li>
-            <li>Coltchella Admission</li>
-            <li>Convention Booklet</li>
-            <li>Sponsor Priority Line for Mane Events</li>
-            <li>Show Pony Badge Art</li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex flex-col gap-y-4">
-        <div>
-          <div class="uppercase text-xl md:text-3xl flex justify-between">
-            <div>Teen (Age 13-17)</div>
-            <div>$30</div>
-          </div>
-          <ul class="hidden text-lg">
-            <li>3-Day Con Admission</li>
-            <li>Coltchella Admission</li>
-            <li>Convention Booklet</li>
-            <li>Sponsor Priority Line for Mane Events</li>
-            <li>Show Pony Badge Art</li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex flex-col gap-y-4">
-        <div>
-          <div class="uppercase text-xl md:text-3xl flex justify-between">
-            <div>Child (Age 3-12)</div>
-            <div>$20</div>
-          </div>
-          <ul class="hidden text-lg">
-            <li>3-Day Con Admission</li>
-            <li>Coltchella Admission</li>
-            <li>Convention Booklet</li>
-            <li>Sponsor Priority Line for Mane Events</li>
-            <li>Show Pony Badge Art</li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex flex-col gap-y-4">
-        <div>
-          <div class="uppercase text-xl md:text-3xl flex justify-between">
-            <div>Show Pony</div>
-            <div>$125</div>
-          </div>
-          <ul class="hidden text-lg">
-            <li>3-Day Con Admission</li>
-            <li>Coltchella Admission</li>
-            <li>Convention Booklet</li>
-            <li>Sponsor Priority Line for Mane Events</li>
-            <li>Show Pony Badge Art</li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex flex-col gap-y-4">
-        <div>
-          <div class="uppercase text-xl md:text-3xl flex justify-between">
-            <div>Lead Singer</div>
-            <div>$350</div>
-          </div>
-          <ul class="hidden text-lg">
-            <li>3-Day Con Admission</li>
-            <li>Coltchella Admission</li>
-            <li>Convention Booklet</li>
-            <li>Sponsor Priority Line for Mane Events</li>
-            <li>Show Pony Badge Art</li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex flex-col gap-y-4">
-        <div>
-          <div class="uppercase text-xl md:text-3xl flex justify-between">
-            <div>Producer</div>
-            <div>$650</div>
-          </div>
-          <ul class="hidden text-lg">
-            <li>3-Day Con Admission</li>
-            <li>Coltchella Admission</li>
-            <li>Convention Booklet</li>
-            <li>Sponsor Priority Line for Mane Events</li>
-            <li>Show Pony Badge Art</li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex flex-col gap-y-4">
-        <div>
-          <div class="uppercase text-xl md:text-3xl flex justify-between">
-            <div>Executive Producer</div>
-            <div>$2000</div>
-          </div>
-          <ul class="hidden text-lg">
-            <li>3-Day Con Admission</li>
-            <li>Coltchella Admission</li>
-            <li>Convention Booklet</li>
-            <li>Sponsor Priority Line for Mane Events</li>
-            <li>Show Pony Badge Art</li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex flex-col gap-y-4">
-        <div>
-          <div class="uppercase text-xl md:text-3xl flex justify-between">
-            <div>Executive Producer</div>
-            <div>$5000</div>
-          </div>
-          <ul class="hidden text-lg">
-            <li>3-Day Con Admission</li>
-            <li>Coltchella Admission</li>
-            <li>Convention Booklet</li>
-            <li>Sponsor Priority Line for Mane Events</li>
-            <li>Show Pony Badge Art</li>
-          </ul>
-        </div>
+        {
+          tiers.map(({ name, perks, price, style = null, limit }) => (
+            <div class="hover:bg-neutral-800 duration-300 rounded">
+              <a
+                target="_blank"
+                class="flex flex-col hover:bg-neutral-800 rounded px-8 py-4 duration-300"
+                href="/"
+              >
+                <div class="flex justify-between">
+                  <div class="flex flex-col gap-y-2" style={style}>
+                    <div set:html={name} />
+
+                    <ul class="list-disc pl-8">
+                      {perks.map((perk) => (
+                        <li set:html={perk} />
+                      ))}
+                    </ul>
+                  </div>
+                  <div class="flex flex-col items-end gap-y-1">
+                    <div set:html={price} />
+                    <div class="active bg-yellow-200 hover:bg-yellow-300 duration-300 py-1 px-2 rounded text-black w-auto text-base uppercase font-serif">
+                      Register
+                    </div>
+                    {limit ? (
+                      <div class="text-red-400 text-sm">Only {limit} left!</div>
+                    ) : null}
+                  </div>
+                </div>
+              </a>
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>
@@ -190,6 +87,24 @@ import Footer from "../components/Footer.astro";
     optimizedRegisterBackground: `url(${optimizedRegisterBackground.src})`,
   }}
 >
+  .active {
+    --a: 0deg; /* control the angle of rotation (the smaller, the better) */
+    transform: perspective(100px)
+      rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
+    -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100%/250%
+      250%;
+    transition: 0.4s;
+    /* animation:
+      jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2s forwards,
+      rotating 4s var(--sine) 0s infinite forwards; */
+
+    z-index: 50;
+  }
+
+  .active:hover {
+    --i: -1;
+    -webkit-mask-position: 0 0;
+  }
   @media (max-width: 768px) {
     #bg {
       position: absolute;
