@@ -35,7 +35,7 @@ export default [
     name: `<div class="text-3xl xl:text-4xl"><span class="italic">Into the Everfree</span></div>`,
     limit: 5,
     perks: [
-      "All previous perks",
+      `All previous perks (<span class="italic">The Prohoovers</span>)`,
       "King Room (check in Thursday, check out Monday)",
       "Opera Binoculars and Gloves",
       "Gift basket waiting for you in suite",
@@ -49,7 +49,7 @@ export default [
     name: `<div class="text-3xl xl:text-4xl"><span class="italic">In the Zephyr Heights</span></div>`,
     limit: 2,
     perks: [
-      "All previous perks",
+      `All previous perks (<span class="italic">The Prohoovers</span>)`,
       "Terrace suite (check in Thursday, check out Sunday)",
     ],
     price: "<span class='text-3xl xl:text-4xl'>$4,000</span>",
@@ -58,7 +58,7 @@ export default [
     name: `<div class="text-3.5xl xl:text-4.5xl"><span class="italic">The Book of Harmony</span></div>`,
     limit: 2,
     perks: [
-      "All previous perks",
+      `All previous perks (<span class="italic">The Prohoovers</span>)`,
       "Balcony suite (check in Thursday, check out Monday)",
     ],
     price: "<span class='text-3.5xl xl:text-4.5xl'>$5,000</span>",
