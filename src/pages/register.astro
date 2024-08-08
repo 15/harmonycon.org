@@ -22,12 +22,13 @@ import tiers from "../data/tiers.js";
     >
       <div class="font-semibold text-2xl md:text-3xl">Harmonic Tune</div>
       <div class="text-base md:text-xl italic leading-tight" id="text">
-        Hey there! What'll it be?
+        Hey there! What'll it be? Scroll down the menu for your
       </div>
     </div>
     <div
+      id="menu"
       style="filter: drop-shadow(0 15px 15px #000);"
-      class="uppercase overflow-y-scroll flex flex-col gap-y-1 md:gap-y-1 text-[#fde300] font-serif md:absolute md:top-[5%] md:right-[5%] md:mt-0 mt-12 mx-0 md:mx-auto w-full md:w-3/4 lg:w-2/3 xl:w-1/2 h-[calc(100vh-20rem)] md:h-2/3 bg-black border-yellow-200 border-4 opacity-80 md:opacity-90 rounded-lg p-2 xl:p-4"
+      class="uppercase overflow-y-scroll flex flex-col gap-y-1 md:gap-y-8 text-[#fde300] font-serif md:absolute md:top-[5%] md:right-[5%] md:mt-0 mt-12 mx-0 md:mx-auto w-full md:w-3/4 lg:w-2/3 xl:w-1/2 h-[calc(100vh-20rem)] md:h-2/3 bg-black border-yellow-200 border-4 opacity-80 md:opacity-90 rounded-lg p-2 xl:p-4"
     >
       <div
         class="text-center flex flex-col items-center justify-center uppercase text-3xl md:text-5xl"
@@ -39,22 +40,30 @@ import tiers from "../data/tiers.js";
           width={600}
           class="w-3/4 md:w-1/2 lg:w-1/2 xl:w-1/2"
         />
-        <!-- <div class="text-2xl">Registrations open</div> -->
+        <div
+          class="text-xl font-sans uppercase"
+          style="text-shadow: 2px 2px 1px black;"
+        >
+          Registrations open on <span class="font-bold">August 12, 2024!</span>
+        </div>
       </div>
       <div class="flex flex-col gap-y-4">
         {
-          tiers.map(({ name, perks, price, style = null, limit }) => (
+          tiers.map(({ name, perks, price, style = null, limit }, idx) => (
             <div class="hover:bg-neutral-800 duration-300 rounded">
               <a
+                id={`${idx}`}
                 target="_blank"
-                class="flex flex-col hover:bg-neutral-800 rounded px-4 py-2 lg:px-6 lg:py-3 2xl:px-8 2xl:py-4 duration-300"
+                class=" flex flex-col hover:bg-neutral-800 rounded px-4 py-2 lg:px-6 lg:py-3 2xl:px-8 2xl:py-4 duration-300"
                 href="https://reg-2025.harmonycon.org/register/edit.php"
               >
                 <div class="flex justify-between">
                   <div class="flex flex-col gap-y-1 xl:gap-y-2" style={style}>
                     <div set:html={name} />
 
-                    <ul class="list-disc pl-6 xl:pl-8 blurred">
+                    <ul
+                      class={`list-disc pl-6 xl:pl-8 ${idx >= 3 ? "blurred" : null}`}
+                    >
                       {perks.map((perk) => (
                         <li set:html={perk} />
                       ))}
@@ -62,7 +71,10 @@ import tiers from "../data/tiers.js";
                   </div>
                   <div class="flex flex-col items-end gap-y-1">
                     <div set:html={price} />
-                    <div class="active bg-yellow-200 hover:bg-yellow-300 duration-300 py-1 px-2 rounded text-black w-auto text-sm xl:text-base uppercase font-serif">
+                    <div
+                      id={`register-${idx}`}
+                      class={`active bg-yellow-200 hover:bg-yellow-300 duration-300 py-1 px-2 rounded text-black w-auto text-sm xl:text-base uppercase font-serif`}
+                    >
                       Register
                     </div>
                     {limit ? (
@@ -152,6 +164,25 @@ import tiers from "../data/tiers.js";
 </style>
 
 <script>
+  import tippy from "tippy.js";
+  import "tippy.js/dist/tippy.css";
+  import "tippy.js/animations/shift-away-extreme.css";
+
+  [0, 1, 2, 3, 4, 5, 6, 7, 8].forEach((i) => {
+    const r = document.getElementById(`register-${i}`);
+    const instance = tippy(r, {
+      content: `Registration opens on <span class='font-semibold'>August 12, 2024</span>!</span>`,
+      placement: "left",
+      animation: "shift-away-extreme",
+      allowHTML: true,
+      triggerTarget: document.getElementById(`${i}`),
+    });
+
+    document.getElementById("menu").addEventListener("scroll", () => {
+      instance.hide(0);
+    });
+  });
+
   import { Howl } from "howler";
   const snoot = document.getElementById("snoot");
 
