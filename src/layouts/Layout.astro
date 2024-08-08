@@ -479,7 +479,7 @@ const { pathname } = Astro.url;
     window.addEventListener("wheel", (event) => {
       let delta = event.deltaY || event.detail || event.wheelDelta;
       scrollPosition += Math.abs(delta) * 0.8;
-      if (scrollPosition < 1500) {
+      if (scrollPosition < 1500 && document.getElementById("scroll")) {
         gsap.to("#scroll", {
           y: scrollPosition,
           ease: "power1.out",
