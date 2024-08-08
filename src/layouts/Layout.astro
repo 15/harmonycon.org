@@ -324,6 +324,7 @@ const { pathname } = Astro.url;
   import lgThumbnail from "lightgallery/plugins/thumbnail";
   import lgZoom from "lightgallery/plugins/zoom";
   let gallery;
+  import { Howl } from "howler";
 
   // if (!window.location.pathname.includes("/main")) {
   //   window.scrollTo(0, 0);
@@ -344,12 +345,25 @@ const { pathname } = Astro.url;
     }
 
     window.swup.hooks.on("content:replace", () => {
+      const snoot = document.getElementById("snoot");
+      if (window.location.pathname.includes("register") && snoot) {
+        const boop = new Howl({
+          src: ["/audio/boop.wav"],
+          volume: 0.15,
+        });
+
+        snoot.addEventListener("click", () => {
+          boop.play();
+        });
+      }
+
       if (
         window.innerWidth > 768 &&
         window.location.pathname.includes("main")
       ) {
         initLoop();
       }
+
       if (window.location.pathname.includes("gallery")) {
         gallery = lightGallery(document.getElementById("lightgallery"), {
           plugins: [lgZoom, lgThumbnail],
