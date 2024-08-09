@@ -436,6 +436,7 @@ const { pathname } = Astro.url;
         window.innerWidth > 768 &&
         window.location.pathname.includes("main")
       ) {
+        console.log("initloop1");
         initLoop();
       }
 
@@ -546,6 +547,7 @@ const { pathname } = Astro.url;
   };
 
   if (window.innerWidth > 768 && window.location.pathname.includes("main")) {
+    console.log("initloop2");
     initLoop();
   }
 
