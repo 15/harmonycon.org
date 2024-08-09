@@ -1,26 +1,26 @@
 export default [
   {
-    name: `<div class="text-xl xl:text-2xl"><span class="italic">Filly Elliot</span> - Child (Age 3&ndash;12)</div>`,
+    name: `<div class="text-lg sm:text-xl xl:text-2xl"><span class="italic">Filly Elliot</span> - Child (Age 3&ndash;12)</div>`,
     perks: ["Badge", "Conbook", "Simple colored lanyard"],
     price: "<span class='text-lg sm:text-xl xl:text-2xl'>$20</span>",
   },
   {
-    name: `<div class="text-xl xl:text-2xl"><span class="italic">Hoofloose</span> - Teen (Age 13&ndash;17)</div>`,
+    name: `<div class="text-lg sm:text-xl xl:text-2xl"><span class="italic">Hoofloose</span> - Teen (Age 13&ndash;17)</div>`,
     perks: ["Badge", "Conbook", "Simple colored lanyard"],
     price: "<span class='text-lg sm:text-xl xl:text-2xl'>$20</span>",
   },
   {
-    name: `<div class="text-xl xl:text-2xl"><span class="italic">The Sound of Magic - 1 Day Pass</span></div>`,
+    name: `<div class="text-lg sm:text-xl xl:text-2xl"><span class="italic">The Sound of Magic - 1 Day Pass</span></div>`,
     perks: ["Badge", "Conbook", "Simple colored lanyard"],
     price: "<span class='text-lg sm:text-xl xl:text-2xl'>$35</span>",
   },
   {
-    name: `<div class="text-xl xl:text-2xl"><span class="italic">The Sound of Magic - 3 Day Pass</span></div>`,
+    name: `<div class="text-lg sm:text-xl xl:text-2xl"><span class="italic">The Sound of Magic - 3 Day Pass</span></div>`,
     perks: ["Badge", "Conbook", "Simple colored lanyard"],
     price: "<span class='text-lg sm:text-xl xl:text-2xl'>$65</span>",
   },
   {
-    name: `<div class="text-2xl xl:text-3xl"><span class="italic">Marey Poppins</span></div>`,
+    name: `<div class="text-xl sm:text-2xl xl:text-3xl"><span class="italic">Marey Poppins</span></div>`,
     perks: [
       "Sponsor Badge",
       "Conbook",
@@ -36,10 +36,10 @@ export default [
     price: "<span class='text-xl sm:text-2xl xl:text-3xl'>$125</span>",
   },
   {
-    name: `<div class="text-2xl xl:text-3xl"><span class="italic">My Fair Lyra</span></div>`,
+    name: `<div class="text-xl sm:text-2xl xl:text-3xl"><span class="italic">My Fair Lyra</span></div>`,
     limit: 25,
     perks: [
-      "<span class='text-xl'>Limited to 25 spots</span>",
+      "<span class='text-sm sm:text-xl'>Limited to 25 spots</span>",
       `All <span class="italic">Marey Poppins</span> perks`,
       "Access to VIP Meet and Greet",
       "Mention in the Con Book",
@@ -48,10 +48,10 @@ export default [
     price: "<span class='text-xl sm:text-2xl xl:text-3xl'>$350</span>",
   },
   {
-    name: `<div class="text-2xl xl:text-3xl"><span class="italic">The Prohoovers</span></div>`,
+    name: `<div class="text-xl sm:text-2xl xl:text-3xl"><span class="italic">The Prohoovers</span></div>`,
     limit: 10,
     perks: [
-      "<span class='text-xl'>Limited to 10 spots</span>",
+      "<span class='text-sm sm:text-xl'>Limited to 10 spots</span>",
       `All <span class="italic">My Fair Lyra</span> perks`,
       "Breakfast Vouchers for all 3 Days",
       "Access to VIP Sponsor Dinner",
@@ -62,10 +62,10 @@ export default [
     price: "<span class='text-xl sm:text-2xl xl:text-3xl'>$650</span>",
   },
   {
-    name: `<div class="text-3xl xl:text-4xl"><span class="italic">Into the Everfree</span></div>`,
+    name: `<div class="text-xl sm:text-3xl xl:text-4xl"><span class="italic">Into the Everfree</span></div>`,
     limit: 5,
     perks: [
-      "<span class='text-xl'>Limited to 5 spots</span>",
+      "<span class='text-sm sm:text-xl'>Limited to 5 spots</span>",
       `All <span class="italic">The Prohoovers</span> perks`,
       "Very specialized mention in the Con Book",
       "Executive king room (check in Thursday, check out Monday)",
@@ -80,10 +80,10 @@ export default [
     price: "<span class='text-xl sm:text-3xl xl:text-4xl'>$2,500</span>",
   },
   {
-    name: `<div class="text-3xl xl:text-4xl"><span class="italic">A Gentleman's Guide to Love and Mares</span></div>`,
+    name: `<div class="text-xl sm:text-3xl xl:text-4xl"><span class="italic">A Gentleman's Guide to Love and Mares</span></div>`,
     limit: 2,
     perks: [
-      "<span class='text-2xl'>Limited to 2 spots</span>",
+      "<span class='text-sm sm:text-2xl'>Limited to 2 spots</span>",
       `All <span class="italic">Into the Everfree</span> perks (except executive king room)`,
       "Extremely specialized mention in the Con Book",
       "Terrace suite (check in Thursday, check out Sunday)",
@@ -94,10 +94,10 @@ export default [
     price: "<span class='text-xl sm:text-3xl xl:text-4xl'>$4,000</span>",
   },
   {
-    name: `<div class="text-3.5xl xl:text-4.5xl"><span class="italic">The Book of Harmony</span></div>`,
+    name: `<div class="text-xl sm:text-3.5xl xl:text-4.5xl"><span class="italic">The Book of Harmony</span></div>`,
     limit: 2,
     perks: [
-      "<span class='text-2xl'>Limited to 2 spots</span>",
+      "<span class='text-sm sm:text-2xl'>Limited to 2 spots</span>",
       `All <span class="italic">A Gentleman's Guide to Love and Mares</span> perks (except suite)`,
       "Balcony suite (check in Thursday, check out Monday)",
       `Up to three (3) <span class="italic">Marey Poppins</span> badges for your friends`,
@@ -107,10 +107,10 @@ export default [
     price: "<span class='text-xl sm:text-3.5xl xl:text-4.5xl'>$5,000</span>",
   },
   {
-    name: `<div class="text-4xl xl:text-5xl"><span class="italic">Princess Celestia Superstar</span></div>`,
+    name: `<div class="text-xl sm:text-4xl xl:text-5xl"><span class="italic">Princess Celestia Superstar</span></div>`,
     limit: 1,
     perks: [
-      "<span class='text-2xl'>Limited to 1 spot</span>",
+      "<span class='text-sm sm:text-2xl'>Limited to 1 spot</span>",
       `All <span class="italic">The Book of Harmony</span> perks (except suite)`,
       "VIP suite (check in Thursday, check out Monday)",
       "Superbly specialized mention in the Con Book",
