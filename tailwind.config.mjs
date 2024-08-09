@@ -9,6 +9,7 @@ export default {
         mono: ["Inconsolata"],
       },
       fontSize: {
+        "3.5xl": ["2rem", "2.375rem"],
         "4.5xl": ["2.625rem", 1],
         "5.5xl": ["3.375rem", 1],
         "10xl": "10rem",

@@ -84,7 +84,7 @@ export default [
     limit: 2,
     perks: [
       "<span class='text-2xl'>Limited to 2 spots</span>",
-      `All <span class="italic">Into the Everfree</span> perks (except suite)`,
+      `All <span class="italic">Into the Everfree</span> perks (except executive king room)`,
       "Extremely specialized mention in the Con Book",
       "Terrace suite (check in Thursday, check out Sunday)",
       `Up to three (3) <span class="italic">Marey Poppins</span> badges for your friends`,
@@ -127,7 +127,7 @@ export default [
       "Invitation to come on stage to speak briefly during the opening and closing ceremonies (optional)",
       "VIP Velvet Rope Seats (Personally Reserved)*",
       `Get a sponsor lounge for <span class="italic">My Fair Lyra</span> sponsors and above in your name (Friday and Saturday)`,
-      "Backstage pass (may require a staff escort when in areas restricted to convention staff)",
+      "Backstage pass (may require a staff escort when in areas restricted to convention staff)*",
       "Have an extra special page on the HarmonyCon website just for (you)! (discuss with 15 for details)",
     ],
     price: "<span class='text-4xl xl:text-5xl'>$20,000</span>",
