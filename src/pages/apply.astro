@@ -33,7 +33,7 @@ import Footer from "../components/Footer.astro";
 <Layout title="HarmonyCon 2025 | Apply">
   <div
     id="bg"
-    class="overflow-x-hidden overflow-y-hidden w-screen h-screen flex flex-col justify-end"
+    class="overflow-x-hidden overflow-y-hidden w-screen h-screen relative"
   >
     <div
       id="clipboard"
@@ -119,7 +119,7 @@ import Footer from "../components/Footer.astro";
       }
       to {
         opacity: 1;
-        transform: translateY(-15%);
+        transform: translateY(0%);
       }
     }
     @keyframes zoom {
