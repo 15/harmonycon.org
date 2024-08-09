@@ -66,6 +66,27 @@ const optimizedGalleryBackground = await getImage({
   width: 2000,
 });
 
+import tune from "../assets/2025/tune1.png";
+const optimizedTune = await getImage({
+  src: tune,
+  format: "avif",
+  width: 600,
+});
+
+import star from "../assets/2025/star1.png";
+const optimizedStar = await getImage({
+  src: star,
+  format: "avif",
+  width: 600,
+});
+
+import logo from "../assets/2025/logowithdates.png";
+const optimizedLogo = await getImage({
+  src: logo,
+  format: "avif",
+  width: 1000,
+});
+
 const { pathname } = Astro.url;
 ---
 
@@ -124,7 +145,25 @@ const { pathname } = Astro.url;
       rel="preload"
       href={optimizedIndexBackground.src}
       as="image"
-      fetchpriority="low"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href={optimizedTune.src}
+      as="image"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href={optimizedStar.src}
+      as="image"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href={optimizedLogo.src}
+      as="image"
+      fetchpriority="high"
     />
     <link
       rel="preload"
