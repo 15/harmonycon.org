@@ -22,7 +22,7 @@ const { src, href, active, title = "Ponybill" } = Astro.props;
       draggable={false}
       src={src}
       width="300"
-      alt=""
+      alt={`${title} Playbill`}
       format="avif"
       class="w-full sm:w-full md:w-64 lg:w-72 xl:w-80 5xl:w-120 aspect-[4/5] object-cover object-center"
     />
@@ -77,3 +77,5 @@ const { src, href, active, title = "Ponybill" } = Astro.props;
     user-select: none;
   }
 </style>
+
+<script></script>
