@@ -43,7 +43,7 @@ export default [
       `All <span class="italic">Marey Poppins</span> perks`,
       "Access to VIP Meet and Greet",
       "Mention in the Con Book",
-      "Access to private channel with other higher tier sponsors in the HarmonyCon Discord Server",
+      "Access to a private channel with other higher tier sponsors in the HarmonyCon Discord Server",
     ],
     price: "<span class='text-2xl xl:text-3xl'>$350</span>",
   },
@@ -83,7 +83,7 @@ export default [
     name: `<div class="text-3xl xl:text-4xl"><span class="italic">A Gentleman's Guide to Love and Mares</span></div>`,
     limit: 2,
     perks: [
-      "<span class='text-xl'>Limited to 2 spots</span>",
+      "<span class='text-2xl'>Limited to 2 spots</span>",
       `All <span class="italic">Into the Everfree</span> perks (except suite)`,
       "Extremely specialized mention in the Con Book",
       "Terrace suite (check in Thursday, check out Sunday)",
@@ -97,7 +97,7 @@ export default [
     name: `<div class="text-3.5xl xl:text-4.5xl"><span class="italic">The Book of Harmony</span></div>`,
     limit: 2,
     perks: [
-      "<span class='text-xl'>Limited to 2 spots</span>",
+      "<span class='text-2xl'>Limited to 2 spots</span>",
       `All <span class="italic">A Gentleman's Guide to Love and Mares</span> perks (except suite)`,
       "Balcony suite (check in Thursday, check out Monday)",
       `Up to three (3) <span class="italic">Marey Poppins</span> badges for your friends`,
@@ -110,7 +110,7 @@ export default [
     name: `<div class="text-4xl xl:text-5xl"><span class="italic">Princess Celestia Superstar</span></div>`,
     limit: 1,
     perks: [
-      "<span class='text-xl'>Limited to 1 spot</span>",
+      "<span class='text-2xl'>Limited to 1 spot</span>",
       `All <span class="italic">The Book of Harmony</span> perks (except suite)`,
       "VIP suite (check in Thursday, check out Monday)",
       "Superbly specialized mention in the Con Book",
@@ -128,7 +128,7 @@ export default [
       "VIP Velvet Rope Seats (Personally Reserved)*",
       `Get a sponsor lounge for <span class="italic">My Fair Lyra</span> sponsors and above in your name (Friday and Saturday)`,
       "Backstage pass (may require a staff escort when in areas restricted to convention staff)",
-      "Have an extra special page on the HarmonyCon website just for you! (discuss with 15 for details)",
+      "Have an extra special page on the HarmonyCon website just for (you)! (discuss with 15 for details)",
     ],
     price: "<span class='text-4xl xl:text-5xl'>$20,000</span>",
     style: `  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
