@@ -37,7 +37,7 @@ import Footer from "../components/Footer.astro";
   >
     <div
       id="clipboard"
-      class="text-black font-serif uppercase aspect-[0.85] w-auto h-screen mx-auto"
+      class="text-black font-serif uppercase aspect-[0.85] md:w-auto h-screen"
     >
       <a
         target="_blank"
@@ -100,9 +100,9 @@ import Footer from "../components/Footer.astro";
       opacity: 0;
       background-image: var(--optimizedClipboard);
       background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      height: 100vh;
+      /* background-size: contain; */
+      background-position: 60%;
+      /* height: 100vh; */
       /* scale: 1.2; */
       rotate: -0.3deg;
       animation:
@@ -129,7 +129,7 @@ import Footer from "../components/Footer.astro";
       }
       to {
         rotate: -0.3deg;
-        scale: 1.2;
+        scale: 1;
       }
     }
   }
@@ -154,9 +154,9 @@ import Footer from "../components/Footer.astro";
       opacity: 0;
       background-image: var(--optimizedClipboard);
       background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      height: 100vh;
+      /* background-size: contain; */
+      background-position: 60%;
+      /* height: 100vh; */
       scale: 1;
       rotate: -0.3deg;
       animation:
@@ -183,7 +183,7 @@ import Footer from "../components/Footer.astro";
       }
       to {
         rotate: -0.3deg;
-        scale: 1.2;
+        scale: 1;
       }
     }
   }
