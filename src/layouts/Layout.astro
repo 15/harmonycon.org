@@ -7,42 +7,49 @@ import curtains1 from "../assets/2025/curtain_full.png";
 const optimizedCurtains1 = await getImage({
   src: curtains1,
   format: "avif",
-  width: 2000,
+  width: 400,
 });
 
 import curtains2 from "../assets/2025/curtain_fall.png";
 const optimizedCurtains2 = await getImage({
   src: curtains2,
   format: "avif",
-  width: 2000,
+  width: 1400,
 });
 
 import indexBackground from "../assets/2025/bg/stage3.png";
 const optimizedIndexBackground = await getImage({
   src: indexBackground,
   format: "avif",
-  width: 2000,
+  width: 800,
 });
 
 import mainBackground from "../assets/2025/bg/bricks.jpg";
 const optimizedMainBackground = await getImage({
   src: mainBackground,
   format: "avif",
-  width: 2000,
+  width: 600,
 });
 
 import creditsBackground from "../assets/2025/bg/terrazzo-transformed.jpg";
 const optimizedCreditsBackground = await getImage({
   src: creditsBackground,
   format: "avif",
-  width: 2000,
+  width: 1000,
 });
 
 import applyBackground from "../assets/2025/bg/stage2.png";
 const optimizedApplyBackground = await getImage({
   src: applyBackground,
   format: "avif",
-  width: 1920,
+  width: 1400,
+});
+
+import clipboard from "../assets/2025/clipboardhoof2.png";
+const optimizedClipboard = await getImage({
+  src: clipboard,
+  format: "avif",
+  width: 1000,
 });
 
 import cocBackground from "../assets/2025/bg/wood-black.jpg";
@@ -56,14 +63,14 @@ import registerBackground from "../assets/2025/bg/bar_final_2.png";
 const optimizedRegisterBackground = await getImage({
   src: registerBackground,
   format: "avif",
-  width: 1920,
+  width: 1000,
 });
 
 import galleryBackground from "../assets/2025/marble.webp";
 const optimizedGalleryBackground = await getImage({
   src: galleryBackground,
   format: "avif",
-  width: 2000,
+  width: 1000,
 });
 
 import tune from "../assets/2025/tune1.png";
@@ -186,6 +193,12 @@ const { pathname } = Astro.url;
     <link
       rel="preload"
       href={optimizedApplyBackground.src}
+      as="image"
+      fetchpriority="low"
+    />
+    <link
+      rel="preload"
+      href={optimizedClipboard.src}
       as="image"
       fetchpriority="low"
     />
