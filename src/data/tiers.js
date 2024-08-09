@@ -88,7 +88,7 @@ export default [
       "Extremely specialized mention in the Con Book",
       "Terrace suite (check in Thursday, check out Sunday)",
       `Up to three (3) <span class="italic">Marey Poppins</span> badges for your friends`,
-      "Coupon for Beaver Nuggets at Buc-ee's",
+      "Coupon for a bag of Beaver Nuggets at Buc-ee's",
       "Concierge to get your Beaver Nuggets for you",
     ],
     price: "<span class='text-3xl xl:text-4xl'>$4,000</span>",
