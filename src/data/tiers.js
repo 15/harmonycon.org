@@ -2,22 +2,22 @@ export default [
   {
     name: `<div class="text-xl xl:text-2xl"><span class="italic">Filly Elliot</span> - Child (Age 3&ndash;12)</div>`,
     perks: ["Badge", "Conbook", "Simple colored lanyard"],
-    price: "<span class='text-lg md:text-xl xl:text-2xl'>$20</span>",
+    price: "<span class='text-lg sm:text-xl xl:text-2xl'>$20</span>",
   },
   {
     name: `<div class="text-xl xl:text-2xl"><span class="italic">Hoofloose</span> - Teen (Age 13&ndash;17)</div>`,
     perks: ["Badge", "Conbook", "Simple colored lanyard"],
-    price: "<span class='text-lg md:text-xl xl:text-2xl'>$20</span>",
+    price: "<span class='text-lg sm:text-xl xl:text-2xl'>$20</span>",
   },
   {
     name: `<div class="text-xl xl:text-2xl"><span class="italic">The Sound of Magic - 1 Day Pass</span></div>`,
     perks: ["Badge", "Conbook", "Simple colored lanyard"],
-    price: "<span class='text-lg md:text-xl xl:text-2xl'>$35</span>",
+    price: "<span class='text-lg sm:text-xl xl:text-2xl'>$35</span>",
   },
   {
     name: `<div class="text-xl xl:text-2xl"><span class="italic">The Sound of Magic - 3 Day Pass</span></div>`,
     perks: ["Badge", "Conbook", "Simple colored lanyard"],
-    price: "<span class='text-lg md:text-xl xl:text-2xl'>$65</span>",
+    price: "<span class='text-lg sm:text-xl xl:text-2xl'>$65</span>",
   },
   {
     name: `<div class="text-2xl xl:text-3xl"><span class="italic">Marey Poppins</span></div>`,
@@ -33,7 +33,7 @@ export default [
       "Thanks on website",
       "Custom role in the HarmonyCon Discord Server",
     ],
-    price: "<span class='text-xl md:text-2xl xl:text-3xl'>$125</span>",
+    price: "<span class='text-xl sm:text-2xl xl:text-3xl'>$125</span>",
   },
   {
     name: `<div class="text-2xl xl:text-3xl"><span class="italic">My Fair Lyra</span></div>`,
@@ -45,7 +45,7 @@ export default [
       "Mention in the Con Book",
       "Access to a private channel with other higher tier sponsors in the HarmonyCon Discord Server",
     ],
-    price: "<span class='text-xl md:text-2xl xl:text-3xl'>$350</span>",
+    price: "<span class='text-xl sm:text-2xl xl:text-3xl'>$350</span>",
   },
   {
     name: `<div class="text-2xl xl:text-3xl"><span class="italic">The Prohoovers</span></div>`,
@@ -59,7 +59,7 @@ export default [
       "Specialized mention in the Con Book",
       "Manesquerade Mask",
     ],
-    price: "<span class='text-xl md:text-2xl xl:text-3xl'>$650</span>",
+    price: "<span class='text-xl sm:text-2xl xl:text-3xl'>$650</span>",
   },
   {
     name: `<div class="text-3xl xl:text-4xl"><span class="italic">Into the Everfree</span></div>`,
@@ -77,7 +77,7 @@ export default [
       "Dinner at the Crown Block Steakhouse Friday evening (Formal wear mandatory) with Guests of Honor opting in",
       `<span class="italic">Super Awesome Manesquerade Mask</span> just for you, bucko!`,
     ],
-    price: "<span class='text-xl md:text-3xl xl:text-4xl'>$2,500</span>",
+    price: "<span class='text-xl sm:text-3xl xl:text-4xl'>$2,500</span>",
   },
   {
     name: `<div class="text-3xl xl:text-4xl"><span class="italic">A Gentleman's Guide to Love and Mares</span></div>`,
@@ -91,7 +91,7 @@ export default [
       "Coupon for a bag of Beaver Nuggets at Buc-ee's",
       "Concierge to get your Beaver Nuggets for you",
     ],
-    price: "<span class='text-xl md:text-3xl xl:text-4xl'>$4,000</span>",
+    price: "<span class='text-xl sm:text-3xl xl:text-4xl'>$4,000</span>",
   },
   {
     name: `<div class="text-3.5xl xl:text-4.5xl"><span class="italic">The Book of Harmony</span></div>`,
@@ -104,7 +104,7 @@ export default [
       "Coupon for a Whataburger box at Whataburger (10,675 CALORIES)",
       "Concierge to get your Whataburger for you",
     ],
-    price: "<span class='text-xl md:text-3.5xl xl:text-4.5xl'>$5,000</span>",
+    price: "<span class='text-xl sm:text-3.5xl xl:text-4.5xl'>$5,000</span>",
   },
   {
     name: `<div class="text-4xl xl:text-5xl"><span class="italic">Princess Celestia Superstar</span></div>`,
@@ -130,7 +130,7 @@ export default [
       "Backstage pass (may require a staff escort when in areas restricted to convention staff)*",
       "Have an extra special page on the HarmonyCon website just for (you)! (discuss with 15 for details)",
     ],
-    price: "<span class='text-xl md:text-4xl xl:text-5xl'>$20,000</span>",
+    price: "<span class='text-xl sm:text-4xl xl:text-5xl'>$20,000</span>",
     style: `  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent; text-shadow: 1px 1px 1px #ffffff55;`,
