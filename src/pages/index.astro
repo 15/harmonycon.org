@@ -199,7 +199,7 @@ const optimizedIndexBackground = await getImage({
 
     #logo {
       position: absolute;
-      opacity: 0;
+      visibility: hidden;
       left: 0;
       right: 0;
       height: 50vh;
@@ -243,7 +243,7 @@ const optimizedIndexBackground = await getImage({
       right: 28vh;
       height: 11vh;
       bottom: 4vh;
-      opacity: 0;
+      visibility: hidden;
       --a: 8deg; /* control the angle of rotation (the smaller, the better) */
       transform: perspective(400px)
         rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
@@ -273,7 +273,7 @@ const optimizedIndexBackground = await getImage({
       left: 28vh;
       height: 11vh;
       bottom: 4vh;
-      opacity: 0;
+      visibility: hidden;
       --a: 8deg; /* control the angle of rotation (the smaller, the better) */
       transform: perspective(400px)
         rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
@@ -337,7 +337,7 @@ const optimizedIndexBackground = await getImage({
 
     #logo {
       position: absolute;
-      opacity: 0;
+      visibility: hidden;
       left: 0;
       right: 0;
       width: 100vw;
@@ -357,7 +357,7 @@ const optimizedIndexBackground = await getImage({
       rotate: -2deg;
       width: auto;
       bottom: 4vh;
-      opacity: 0;
+      visibility: hidden;
 
       --a: 8deg; /* control the angle of rotation (the smaller, the better) */
       transform: perspective(400px)
@@ -384,7 +384,7 @@ const optimizedIndexBackground = await getImage({
       rotate: 2deg;
       width: auto;
       bottom: 4vh;
-      opacity: 0;
+      visibility: hidden;
       --a: 8deg; /* control the angle of rotation (the smaller, the better) */
       transform: perspective(400px)
         rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
@@ -456,7 +456,7 @@ const optimizedIndexBackground = await getImage({
 
     #logo {
       position: absolute;
-      opacity: 0;
+      visibility: hidden;
       left: 0;
       right: 0;
       width: 100vw;
@@ -474,7 +474,7 @@ const optimizedIndexBackground = await getImage({
       left: 10%;
       width: 35%;
       bottom: 16%;
-      opacity: 0;
+      visibility: hidden;
 
       --a: 8deg; /* control the angle of rotation (the smaller, the better) */
       transform: perspective(400px)
@@ -499,7 +499,7 @@ const optimizedIndexBackground = await getImage({
       right: 10%;
       width: 35%;
       bottom: 16%;
-      opacity: 0;
+      visibility: hidden;
       --a: 8deg; /* control the angle of rotation (the smaller, the better) */
       transform: perspective(400px)
         rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
@@ -609,7 +609,7 @@ const optimizedIndexBackground = await getImage({
   }
   /* 
   #buttons {
-    opacity: 0;
+    visibility: hidden;
     animation: jump 1.2s cubic-bezier(0.77, 0.01, 0.25, 1) 2.3s forwards;
   } */
 
@@ -645,19 +645,23 @@ const optimizedIndexBackground = await getImage({
       opacity: 0;
     }
     50% {
+      visibility: visible;
       opacity: 1;
     }
     100% {
+      visibility: visible;
       opacity: 1;
     }
   }
 
   @keyframes popup {
     0% {
+      visibility: hidden;
       opacity: 0;
       transform: translateY(50px);
     }
     60% {
+      visibility: visible;
       opacity: 1;
       transform: translateY(-20px);
     }
@@ -668,7 +672,7 @@ const optimizedIndexBackground = await getImage({
       transform: translateY(-5px);
     }
     100% {
-      opacity: 1;
+      visibility: visible;
       transform: translateY(0px);
     }
   }
@@ -753,22 +757,6 @@ const optimizedIndexBackground = await getImage({
     }
     100% {
       transform: translateX(100%);
-    }
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes fadeout {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
     }
   }
 
