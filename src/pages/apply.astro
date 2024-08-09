@@ -89,7 +89,7 @@ import Footer from "../components/Footer.astro";
   }
 
   #clipboard {
-    opacity: 0;
+    visibility: hidden;
     background-image: var(--optimizedClipboard);
     background-repeat: no-repeat;
     background-size: contain;
@@ -116,12 +116,12 @@ import Footer from "../components/Footer.astro";
 
     @keyframes reveal {
       from {
-        opacity: 1;
+        visibility: visible;
         /* bottom: -150vh; */
         transform: translateX(-50%) translateY(150%);
       }
       to {
-        opacity: 1;
+        visibility: visible;
         transform: translateX(-50%) translateY(0%);
       }
     }
@@ -141,12 +141,12 @@ import Footer from "../components/Footer.astro";
 
     @keyframes reveal {
       from {
-        opacity: 1;
+        visibility: visible;
         /* bottom: -150vh; */
         transform: translateX(-50%) translateY(150%);
       }
       to {
-        opacity: 1;
+        visibility: visible;
         transform: translateX(-50%) translateY(0%);
       }
     }
@@ -166,12 +166,12 @@ import Footer from "../components/Footer.astro";
 
     @keyframes reveal {
       from {
-        opacity: 1;
+        visibility: visible;
         /* bottom: -150vh; */
         transform: translateX(-50%) translateY(150%);
       }
       to {
-        opacity: 1;
+        visibility: visible;
         transform: translateX(-50%) translateY(0%) scale(1.2);
       }
     }
