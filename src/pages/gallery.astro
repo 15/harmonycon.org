@@ -17,8 +17,8 @@ import img3 from "../assets/2025/HC-LockedPhone2.png";
 import img4 from "../assets/2025/HarmonyCon 2025 Logo.png";
 import img5 from "../assets/2025/HarmonyCon 2025 Logo HC.png";
 import img6 from "../assets/2025/bg/stage3.png";
-import img7 from "../assets/2025/isolated_star.png";
-import img8 from "../assets/2025/isolated_tune.png";
+import img7 from "../assets/2025/star.png";
+import img8 from "../assets/2025/tune.png";
 import img9 from "../assets/2025/exit.png";
 import img10 from "../assets/2025/playbill/Clawstin.png";
 import img11 from "../assets/2025/playbill/HarmonyCon-CodeOfConduct2.png";
@@ -749,12 +749,12 @@ const images2025 = [
   },
   {
     img: img1,
-    artist: "Brittney Ackerman",
+    artist: "Brittney Ackerman & SaphyPone",
     description: "Harmonic Tune at the bar",
   },
   {
     img: img2,
-    artist: "Brittney Ackerman",
+    artist: "Brittney Ackerman & SaphyPone",
     description: "Harmonic Tune at the bar looking at you",
   },
   {
@@ -770,9 +770,9 @@ const images2025 = [
     artist: "Brittney Ackerman",
     description: "Splash page background",
   },
-  { img: img27, artist: "WindShear", description: "Apply page background" },
-  { img: img7, artist: "Brittney Ackerman", description: "" },
-  { img: img8, artist: "Brittney Ackerman", description: "" },
+  { img: img27, artist: "WindyKirin", description: "Apply page background" },
+  { img: img7, artist: "Brittney Ackerman", description: "Harmony Star" },
+  { img: img8, artist: "Brittney Ackerman", description: "Harmonic Tune" },
   { img: img9, artist: "JayArr", description: "Exit sign" },
   {
     img: img10,
@@ -780,45 +780,45 @@ const images2025 = [
     description:
       "<span class='italic'>Clawstin</span> Ponybill poster (parody of <span class='italic'>Hamilton</span>)",
   },
-  {
-    img: img11,
-    artist: "Brittney Ackerman",
-    description:
-      "<span class='italic'>Singin' in the Rein</span> Ponybill poster (parody of <span class='italic'>Singin' in the Rain</span>)",
-  },
+  // {
+  //   img: img11,
+  //   artist: "Brittney Ackerman",
+  //   description:
+  //     "<span class='italic'>Singin' in the Rein</span> Ponybill poster (parody of <span class='italic'>Singin' in the Rain</span>)",
+  // },
   {
     img: img12,
-    artist: "Brittney Ackerman",
+    artist: "JayArr",
     description:
       "<span class='italic'>Singin' in the Rein</span> Ponybill poster (parody of <span class='italic'>Singin' in the Rain</span>)",
   },
   {
     img: img13,
-    artist: "Brittney Ackerman",
+    artist: "WindyKirin",
     description:
       "<span class='italic'>The Prohoovers</span> Ponybill poster (parody of <span class='italic'>The Producers</span>)",
   },
   {
     img: img14,
-    artist: "Brittney Ackerman",
+    artist: "ConfettiCakez",
     description:
       "<span class='italic'>The Stallion of the Opera</span> Ponybill poster (parody of <span class='italic'>The Phantom of the Opera</span>)",
   },
-  {
-    img: img15,
-    artist: "Brittney Ackerman",
-    description:
-      "<span class='italic'>The Stallion of the Opera</span> Ponybill poster (parody of <span class='italic'>The Phantom of the Opera</span>)",
-  },
-  {
-    img: img16,
-    artist: "Brittney Ackerman",
-    description:
-      "<span class='italic'>Winged</span> Ponybill poster (parody of <span class='italic'>Wicked</span>)",
-  },
+  // {
+  //   img: img15,
+  //   artist: "Brittney Ackerman",
+  //   description:
+  //     "<span class='italic'>The Stallion of the Opera</span> Ponybill poster (parody of <span class='italic'>The Phantom of the Opera</span>)",
+  // },
+  // {
+  //   img: img16,
+  //   artist: "Brittney Ackerman",
+  //   description:
+  //     "<span class='italic'>Winged</span> Ponybill poster (parody of <span class='italic'>Wicked</span>)",
+  // },
   {
     img: img17,
-    artist: "Brittney Ackerman",
+    artist: "ConfettiCakez",
     description:
       "<span class='italic'>Winged</span> Ponybill poster (parody of <span class='italic'>Wicked</span>)",
   },
@@ -856,8 +856,8 @@ const images2025 = [
   },
   {
     img: img28,
-    artist: "Lunar Harmony",
-    description: "Harmony Star's signature",
+    artist: "Brittney Ackerman",
+    description: "Scroll here sign",
   },
   {
     img: img29,
@@ -1133,7 +1133,6 @@ import Footer from "../components/Footer.astro";
             class="inline-block"
             style="filter: drop-shadow(0 3px 3px #000);"
             data-src={img.src}
-            data-sub-html={`<h4>Artist: ${artist}</h4>${description}`}
           >
             <a class="shine cursor-pointer rounded  inline-block m-1 sm:m-2 xl:m-2">
               <Image
@@ -1207,7 +1206,6 @@ import Footer from "../components/Footer.astro";
             class="inline-block"
             style="filter: drop-shadow(0 3px 3px #000);"
             data-src={img.src}
-            data-sub-html={`<h4>Artist: ${artist}</h4>${description}`}
           >
             <a class="shine cursor-pointer rounded  inline-block m-1 sm:m-2 xl:m-2">
               <Image
@@ -1259,7 +1257,6 @@ import Footer from "../components/Footer.astro";
             class="inline-block"
             style="filter: drop-shadow(0 3px 3px #000);"
             data-src={img.src}
-            data-sub-html={`<h4>Artist: ${artist}</h4>${description}`}
           >
             <a class="shine cursor-pointer rounded  inline-block m-1 sm:m-2 xl:m-2">
               <Image
