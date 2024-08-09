@@ -31,7 +31,7 @@ import Footer from "../components/Footer.astro";
   >
     <div
       id="clipboard"
-      class="text-black font-serif uppercase aspect-[0.85] w-auto h-screen mx-auto absolute bottom-0 left-1/2 transform -translate-x-1/2 opacity-0"
+      class="text-black font-serif uppercase aspect-[0.85] w-auto h-screen mx-auto absolute bottom-0 left-1/2 transform -translate-x-1/2"
     >
       <a
         target="_blank"
@@ -89,6 +89,7 @@ import Footer from "../components/Footer.astro";
   }
 
   #clipboard {
+    opacity: 0;
     background-image: var(--optimizedClipboard);
     background-repeat: no-repeat;
     background-size: contain;
