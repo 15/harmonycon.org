@@ -387,7 +387,11 @@ const { pathname } = Astro.url;
   // }
 
   document.addEventListener("swup:enable", () => {
-    if (document.getElementById("lightgallery") && !gallery) {
+    if (
+      window.location.pathname.includes("gallery") &&
+      document.getElementById("lightgallery") &&
+      !gallery
+    ) {
       gallery = lightGallery(document.getElementById("lightgallery"), {
         plugins: [lgZoom, lgThumbnail],
         speed: 500,
