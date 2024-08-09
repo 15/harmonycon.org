@@ -78,7 +78,7 @@ import tiers from "../data/tiers.js";
                       Register
                     </div>
                     {limit ? (
-                      <div class="hidden sm:block  text-red-400 text-xs xl:text-sm whitespace-nowrap">
+                      <div class="blurred hidden sm:block  text-red-400 text-xs xl:text-sm whitespace-nowrap">
                         Only {limit} left!
                       </div>
                     ) : null}
@@ -99,7 +99,7 @@ import tiers from "../data/tiers.js";
                     Register
                   </div>
                   {limit ? (
-                    <div class="text-red-400 text-xs xl:text-sm whitespace-nowrap">
+                    <div class="blurred text-red-400 text-xs xl:text-sm whitespace-nowrap">
                       Only {limit} left!
                     </div>
                   ) : null}
@@ -179,7 +179,7 @@ import tiers from "../data/tiers.js";
   }
 
   .blurred {
-    filter: blur(4px);
+    filter: blur(3px);
   }
 </style>
 
