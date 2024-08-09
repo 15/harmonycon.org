@@ -63,7 +63,7 @@ import tiers from "../data/tiers.js";
                     <div set:html={name} />
 
                     <ul
-                      class={`list-disc pl-6 xl:pl-8 ${idx >= 4 ? "blurred" : null}`}
+                      class={`list-disc pl-6 xl:pl-8 ${idx >= 100 ? "blurred" : null}`}
                     >
                       {perks.map((perk) => (
                         <li set:html={perk} />
@@ -79,7 +79,7 @@ import tiers from "../data/tiers.js";
                       Register
                     </div>
                     {limit ? (
-                      <div class="text-red-400 text-xs xl:text-sm">
+                      <div class="text-red-400 text-xs xl:text-sm whitespace-nowrap">
                         Only {limit} left!
                       </div>
                     ) : null}
