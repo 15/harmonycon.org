@@ -13,14 +13,14 @@ import curtains1 from "../assets/2025/curtain_full.png";
 const optimizedCurtains1 = await getImage({
   src: curtains1,
   format: "avif",
-  width: 2000,
+  width: 1400,
 });
 
 import indexBackground from "../assets/2025/bg/stage3.png";
 const optimizedIndexBackground = await getImage({
   src: indexBackground,
   format: "avif",
-  width: 2000,
+  width: 1400,
 });
 ---
 
@@ -34,6 +34,7 @@ const optimizedIndexBackground = await getImage({
       <Image
         id="tune"
         alt="Harmonic Tune"
+        format="avif"
         src={img1}
         width={600}
         style="filter: drop-shadow(0 10px 10px #000);"
@@ -41,6 +42,7 @@ const optimizedIndexBackground = await getImage({
       <Image
         id="star"
         alt="Harmony Star"
+        format="avif"
         src={img2}
         width={600}
         style="filter: drop-shadow(0 10px 10px #000);"
@@ -49,6 +51,7 @@ const optimizedIndexBackground = await getImage({
     <Image
       id="logo"
       alt="HarmonyCon 2025 logo"
+      format="avif"
       src={img3}
       width={1000}
       style="filter: drop-shadow(0 10px 10px #000);"
@@ -60,6 +63,7 @@ const optimizedIndexBackground = await getImage({
           id="register"
           style="filter: drop-shadow(0 2px 2px #000);"
           alt="Register!"
+          format="avif"
           src={img4}
           width={200}
         />
@@ -69,6 +73,7 @@ const optimizedIndexBackground = await getImage({
           id="main"
           style="filter: drop-shadow(0 2px 2px #000);"
           alt="Enter!"
+          format="avif"
           src={img5}
           width={200}
         />
