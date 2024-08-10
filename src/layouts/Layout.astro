@@ -432,11 +432,7 @@ const { pathname } = Astro.url;
         });
       }
 
-      if (
-        window.innerWidth > 768 &&
-        window.location.pathname.includes("main")
-      ) {
-        console.log(window.innerWidth);
+      if (screen.width > 768 && window.location.pathname.includes("main")) {
         initLoop();
       }
 
@@ -546,7 +542,7 @@ const { pathname } = Astro.url;
     });
   };
 
-  if (window.innerWidth > 768 && window.location.pathname.includes("main")) {
+  if (screen.width > 768 && window.location.pathname.includes("main")) {
     initLoop();
   }
 
