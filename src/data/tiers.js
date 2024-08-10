@@ -80,7 +80,7 @@ export default [
     price: "<span class='text-xl sm:text-3xl xl:text-4xl'>$2,500</span>",
   },
   {
-    name: `<div class="text-xl sm:text-3xl xl:text-4xl"><span class="italic">A Gentleman's Guide to Love and Mares</span></div>`,
+    name: `<div class="text-xl sm:text-3xl xl:text-4xl"><span class="italic">A Gentlecolt's Guide to Love and Mares</span></div>`,
     limit: 2,
     perks: [
       "<span class='text-sm sm:text-2xl'>Limited to 2 spots</span>",
@@ -98,7 +98,7 @@ export default [
     limit: 2,
     perks: [
       "<span class='text-sm sm:text-2xl'>Limited to 2 spots</span>",
-      `All <span class="italic">A Gentleman's Guide to Love and Mares</span> perks (except suite)`,
+      `All <span class="italic">A Gentlecolt's Guide to Love and Mares</span> perks (except suite)`,
       "Balcony suite (check in Thursday, check out Monday)",
       "Coupon for a Whataburger box at Whataburger (10,675 CALORIES)",
       "Concierge to get your Whataburger for you",
