@@ -38,6 +38,7 @@ export default [
   {
     name: `<div class="text-xl sm:text-2xl xl:text-3xl"><span class="italic">My Fair Lyra</span></div>`,
     limit: 25,
+    remaining: 24,
     perks: [
       "<span class='text-sm sm:text-xl'>Limited to 25 spots</span>",
       `All <span class="italic">Marey Poppins</span> perks`,
@@ -50,6 +51,7 @@ export default [
   {
     name: `<div class="text-xl sm:text-2xl xl:text-3xl"><span class="italic">The Prohoofers</span></div>`,
     limit: 8,
+    remaining: 4,
     perks: [
       "<span class='text-sm sm:text-xl'>Limited to 8 spots</span>",
       `All <span class="italic">My Fair Lyra</span> perks`,
@@ -64,6 +66,7 @@ export default [
   {
     name: `<div class="text-xl sm:text-3xl xl:text-4xl"><span class="italic">Into the Everfree</span></div>`,
     limit: 2,
+    remaining: 0,
     perks: [
       "<span class='text-sm sm:text-xl'>Limited to 5 spots</span>",
       `All <span class="italic">The Prohoofers</span> perks`,
@@ -82,6 +85,7 @@ export default [
   {
     name: `<div class="text-xl sm:text-3xl xl:text-4xl"><span class="italic">A Gentlecolt's Guide to Love and Mares</span></div>`,
     limit: 2,
+    remaining: 2,
     perks: [
       "<span class='text-sm sm:text-2xl'>Limited to 2 spots</span>",
       `All <span class="italic">Into the Everfree</span> perks (except executive king room)`,
@@ -96,6 +100,7 @@ export default [
   {
     name: `<div class="text-xl sm:text-3.5xl xl:text-4.5xl"><span class="italic">The Book of Harmony</span></div>`,
     limit: 2,
+    remaining: 1,
     perks: [
       "<span class='text-sm sm:text-2xl'>Limited to 2 spots</span>",
       `All <span class="italic">Into the Everfree</span> perks (except executive king room)`,
@@ -110,6 +115,7 @@ export default [
   {
     name: `<div class="text-xl sm:text-4xl xl:text-5xl"><span class="italic">Princess Celestia Superstar</span></div>`,
     limit: 1,
+    remaining: 1,
     perks: [
       "<span class='text-sm sm:text-2xl'>Limited to 1 spot</span>",
       `All <span class="italic">The Book of Harmony</span> perks (except suite)`,

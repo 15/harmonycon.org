@@ -54,64 +54,66 @@ import tiers from "../data/tiers.js";
       </div>
       <div class="flex flex-col gap-y-2">
         {
-          tiers.map(({ name, perks, price, style = null, limit }, idx) => (
-            <div class="hover:bg-neutral-800 duration-300 rounded">
-              <a
-                id={`${idx}`}
-                href="https://reg-2025.harmonycon.org/register/"
-                target="_blank"
-                class="flex flex-col hover:bg-neutral-800 rounded px-1 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 2xl:px-8 2xl:py-4 duration-300"
-              >
-                <div class="flex justify-between">
-                  <div class="flex flex-col gap-y-1 xl:gap-y-2" style={style}>
-                    <div set:html={name} />
+          tiers.map(
+            ({ name, perks, price, style = null, limit, remaining }, idx) => (
+              <div class="hover:bg-neutral-800 duration-300 rounded">
+                <a
+                  id={`${idx}`}
+                  href="https://reg-2025.harmonycon.org/register/"
+                  target="_blank"
+                  class="flex flex-col hover:bg-neutral-800 rounded px-1 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 2xl:px-8 2xl:py-4 duration-300"
+                >
+                  <div class="flex justify-between">
+                    <div class="flex flex-col gap-y-1 xl:gap-y-2" style={style}>
+                      <div set:html={name} />
 
-                    <ul
-                      class={`hidden sm:block list-disc pl-4 md:pl-6 xl:pl-8 ${idx >= 100 ? "blurred" : null}`}
-                    >
-                      {perks.map((perk) => (
-                        <li set:html={perk} class="text-sm sm:text-base" />
-                      ))}
-                    </ul>
+                      <ul
+                        class={`hidden sm:block list-disc pl-4 md:pl-6 xl:pl-8 ${idx >= 100 ? "blurred" : null}`}
+                      >
+                        {perks.map((perk) => (
+                          <li set:html={perk} class="text-sm sm:text-base" />
+                        ))}
+                      </ul>
+                    </div>
+                    <div class="flex flex-col items-end gap-y-1">
+                      <div set:html={price} />
+                      <div
+                        id={`register-${idx}`}
+                        class={`hidden sm:block active bg-yellow-200 hover:bg-yellow-300 duration-300 py-1 px-2 rounded text-black w-auto text-sm xl:text-base uppercase font-serif`}
+                      >
+                        Register
+                      </div>
+                      {remaining !== undefined ? (
+                        <div class="hidden sm:block  text-red-400 text-xs xl:text-sm whitespace-nowrap">
+                          {remaining ? `Only ${remaining} left!` : "Sold out!"}
+                        </div>
+                      ) : null}
+                    </div>
                   </div>
-                  <div class="flex flex-col items-end gap-y-1">
-                    <div set:html={price} />
+                  <ul
+                    class={`my-2 block sm:hidden list-disc pl-4 md:pl-6 xl:pl-8 ${idx >= 100 ? "blurred" : null}`}
+                  >
+                    {perks.map((perk) => (
+                      <li set:html={perk} class="text-sm sm:text-base" />
+                    ))}
+                  </ul>
+                  <div class="sm:hidden flex mt-2 sm:mt-0 flex-col items-center gap-y-1">
                     <div
                       id={`register-${idx}`}
-                      class={`hidden sm:block active bg-yellow-200 hover:bg-yellow-300 duration-300 py-1 px-2 rounded text-black w-auto text-sm xl:text-base uppercase font-serif`}
+                      class={` active bg-yellow-200 hover:bg-yellow-300 duration-300 pt-1 pb-0.5 px-2 rounded text-black w-auto text-base xl:text-base uppercase font-serif`}
                     >
                       Register
                     </div>
-                    {limit ? (
-                      <div class="hidden sm:block  text-red-400 text-xs xl:text-sm whitespace-nowrap">
-                        Only {limit} left!
+                    {remaining !== undefined ? (
+                      <div class="text-red-400 text-xs xl:text-sm whitespace-nowrap">
+                        {remaining ? `Only ${remaining} left!` : "Sold out!"}
                       </div>
                     ) : null}
                   </div>
-                </div>
-                <ul
-                  class={`my-2 block sm:hidden list-disc pl-4 md:pl-6 xl:pl-8 ${idx >= 100 ? "blurred" : null}`}
-                >
-                  {perks.map((perk) => (
-                    <li set:html={perk} class="text-sm sm:text-base" />
-                  ))}
-                </ul>
-                <div class="sm:hidden flex mt-2 sm:mt-0 flex-col items-center gap-y-1">
-                  <div
-                    id={`register-${idx}`}
-                    class={` active bg-yellow-200 hover:bg-yellow-300 duration-300 pt-1 pb-0.5 px-2 rounded text-black w-auto text-base xl:text-base uppercase font-serif`}
-                  >
-                    Register
-                  </div>
-                  {limit ? (
-                    <div class="text-red-400 text-xs xl:text-sm whitespace-nowrap">
-                      Only {limit} left!
-                    </div>
-                  ) : null}
-                </div>
-              </a>
-            </div>
-          ))
+                </a>
+              </div>
+            )
+          )
         }
       </div>
     </div>
