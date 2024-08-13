@@ -51,7 +51,7 @@ export default [
   {
     name: `<div class="text-xl sm:text-2xl xl:text-3xl"><span class="italic">The Prohoofers</span></div>`,
     limit: 8,
-    remaining: 4,
+    remaining: 1,
     perks: [
       "<span class='text-sm sm:text-xl'>Limited to 8 spots</span>",
       `All <span class="italic">My Fair Lyra</span> perks`,
