@@ -7,7 +7,7 @@ export default [
   {
     name: `<div class="text-lg sm:text-xl xl:text-2xl"><span class="italic">Hoofloose</span> - Teen (Age 13&ndash;17)</div>`,
     perks: ["Badge", "Conbook", "Simple colored lanyard"],
-    price: "<span class='text-lg sm:text-xl xl:text-2xl'>$20</span>",
+    price: "<span class='text-lg sm:text-xl xl:text-2xl'>$30</span>",
   },
   {
     name: `<div class="text-lg sm:text-xl xl:text-2xl"><span class="italic">The Sound of Magic - 1 Day Pass</span></div>`,
