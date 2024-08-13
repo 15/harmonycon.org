@@ -17,7 +17,7 @@ export default [
   {
     name: `<div class="text-lg sm:text-xl xl:text-2xl"><span class="italic">The Sound of Magic - 3 Day Pass</span></div>`,
     perks: ["Badge", "Conbook", "Simple colored lanyard"],
-    price: "<span class='text-lg sm:text-xl xl:text-2xl'>$65</span>",
+    price: "<span class='text-lg sm:text-xl xl:text-2xl'>$60</span>",
   },
   {
     name: `<div class="text-xl sm:text-2xl xl:text-3xl"><span class="italic">Marey Poppins</span></div>`,
