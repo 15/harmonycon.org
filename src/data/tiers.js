@@ -68,7 +68,7 @@ export default [
     limit: 2,
     remaining: 0,
     perks: [
-      "<span class='text-sm sm:text-xl'>Limited to 5 spots</span>",
+      "<span class='text-sm sm:text-xl'>Limited to 2 spots</span>",
       `All <span class="italic">The Prohoofers</span> perks`,
       "Very specialized mention in the Con Book",
       "Executive king room (check in Thursday, check out Monday)",
