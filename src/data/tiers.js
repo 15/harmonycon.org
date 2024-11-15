@@ -100,7 +100,7 @@ export default [
   {
     name: `<div class="text-xl sm:text-3.5xl xl:text-4.5xl"><span class="italic">The Book of Harmony</span></div>`,
     limit: 2,
-    remaining: 1,
+    remaining: 0,
     perks: [
       "<span class='text-sm sm:text-2xl'>Limited to 2 spots</span>",
       `All <span class="italic">Into the Everfree</span> perks (except executive king room)`,
