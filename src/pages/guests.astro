@@ -1,0 +1,132 @@
+---
+import { Image, getImage } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+
+import cocBackground from "../assets/2025/bg/stage3.png";
+const optimizedCocBackground = await getImage({
+  src: cocBackground,
+  format: "avif",
+  width: 2000,
+});
+
+import guest1 from "../assets/2025/guests/ChanKent1.jpeg";
+import guest2 from "../assets/2025/guests/Jeremy_Whitley.jpg";
+import guest3 from "../assets/2025/guests/Kazumi Evams 2024.jpeg";
+import guest4 from "../assets/2025/guests/Rena Headshot.png";
+import guest5 from "../assets/2025/guests/Tony Headshot.png";
+
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="HarmonyCon 2025 | Venue">
+  <div id="bg" class="flex flex-col justify-between min-h-screen">
+    <div class="flex flex-col items-center justify-center my-auto gap-y-12 py-12">
+      {/* Top Row */}
+      <div class="flex flex-col md:flex-row gap-4 md:gap-8 justify-center">
+        <div
+          class="card1 p-1 bg-white border-4 border-black w-64 h-80 -rotate-3 rounded-lg drop-shadow-xl hover:scale-105 transition-transform overflow-hidden"
+        >
+          <Image
+            src={guest1}
+            alt="Guest 1"
+            width={400}
+            format="avif"
+            class="w-full h-full object-cover rounded"
+          />
+        </div>
+        <div
+          class="card2 p-1 bg-white border-4 border-black w-64 h-80 rotate-2 rounded-lg drop-shadow-xl hover:scale-105 transition-transform overflow-hidden"
+        >
+          <Image
+            src={guest2}
+            alt="Guest 2"
+            width={400}
+            format="avif"
+            class="w-full h-full object-cover rounded"
+          />
+        </div>
+        <div
+          class="card3 p-1 bg-white border-4 border-black w-64 h-80 -rotate-2 rounded-lg drop-shadow-xl hover:scale-105 transition-transform overflow-hidden"
+        >
+          <Image
+            src={guest3}
+            alt="Guest 3"
+            width={400}
+            format="avif"
+            class="w-full h-full object-cover rounded"
+          />
+        </div>
+      </div>
+
+      {/* Bottom Row */}
+      <div class="flex flex-col md:flex-row gap-4 md:gap-8 justify-center mt-4 md:mt-8">
+        <div
+          class="card4 p-1 bg-white border-4 border-black w-64 h-80 rotate-3 rounded-lg drop-shadow-xl hover:scale-105 transition-transform overflow-hidden"
+        >
+          <Image
+            src={guest4}
+            alt="Guest 4"
+            width={400}
+            format="avif"
+            class="w-full h-full object-cover rounded"
+          />
+        </div>
+        <div
+          class="card5 p-1 bg-white border-4 border-black w-64 h-80 -rotate-1 rounded-lg drop-shadow-xl hover:scale-105 transition-transform overflow-hidden"
+        >
+          <Image
+            src={guest5}
+            alt="Guest 5"
+            width={400}
+            format="avif"
+            class="w-full h-full object-cover rounded"
+          />
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </div>
+
+  <style
+    define:vars={{
+      optimizedCocBackground: `url(${optimizedCocBackground.src})`,
+    }}
+  >
+    #bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      background-image: var(--optimizedCocBackground);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 1;
+    }
+
+    .card1, .card2, .card3, .card4, .card5 {
+      animation: float 3s ease-in-out infinite;
+      animation-delay: var(--delay, 0s);
+    }
+
+    .card1 { --delay: 0s; }
+    .card2 { --delay: 0.2s; }
+    .card3 { --delay: 0.4s; }
+    .card4 { --delay: 0.6s; }
+    .card5 { --delay: 0.8s; }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px) rotate(var(--rotate, -3deg));
+      }
+      50% {
+        transform: translateY(-10px) rotate(var(--rotate, -3deg));
+      }
+      100% {
+        transform: translateY(0px) rotate(var(--rotate, -3deg));
+      }
+    }
+  </style>
+</Layout>
