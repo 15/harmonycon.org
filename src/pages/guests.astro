@@ -23,10 +23,16 @@ import Footer from "../components/Footer.astro";
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
   
-  <div id="bg" class="flex flex-col justify-between min-h-screen">
-    <div class="flex flex-col items-center justify-center my-auto gap-y-12 py-12">
-      {/* Top Row */}
-      <div class="flex flex-col md:flex-row gap-4 md:gap-8 justify-center">
+  <div id="bg" class="relative flex flex-col h-screen pt-8 md:pt-16 gap-y-8">
+    <div
+      class="cursor-default font-serif uppercase text-center font-semibold text-6xl text-yellow-200 z-10"
+          style="text-shadow: 3px 3px 1px #000;"
+    >
+      Very Important Ponies
+    </div>
+    <div class="flex flex-col items-center justify-center my-auto gap-y-12 py-12 lg:mt-32">
+      {/* Cards Container */}
+      <div class="flex flex-col md:flex-row gap-4 lg:gap-8 justify-center">
         <div
           class="card1 p-1 bg-white border-4 border-black w-64 h-96 -rotate-3 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
         >
@@ -75,10 +81,42 @@ import Footer from "../components/Footer.astro";
             <p class="font-yesteryear text-2xl text-black">Kazumi Evans</p>
           </div>
         </div>
+        <div
+          class="hidden lg:block card4 p-1 bg-white border-4 border-black w-64 h-96 rotate-3 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
+        >
+          <div class="h-72 overflow-hidden">
+            <Image
+              src={guest4}
+              alt="Rena Anakwe"
+              width={400}
+              format="avif"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="flex items-center justify-center h-24">
+            <p class="font-yesteryear text-2xl text-black">Rena Anakwe</p>
+          </div>
+        </div>
+        <div
+          class="hidden lg:block card5 p-1 bg-white border-4 border-black w-64 h-96 -rotate-1 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
+        >
+          <div class="h-72 overflow-hidden">
+            <Image
+              src={guest5}
+              alt="Tony Fleecs"
+              width={400}
+              format="avif"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="flex items-center justify-center h-24">
+            <p class="font-yesteryear text-2xl text-black">Tony Fleecs</p>
+          </div>
+        </div>
       </div>
 
-      {/* Bottom Row */}
-      <div class="flex flex-col md:flex-row gap-4 md:gap-8 justify-center mt-4 md:mt-8">
+      {/* Bottom Row for Medium Screens */}
+      <div class="hidden md:flex lg:hidden flex-row gap-4 md:gap-8 justify-center mt-4">
         <div
           class="card4 p-1 bg-white border-4 border-black w-64 h-96 rotate-3 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
         >
@@ -136,25 +174,46 @@ import Footer from "../components/Footer.astro";
     }
 
     .card1, .card2, .card3, .card4, .card5 {
-      animation: float 3s ease-in-out infinite;
+      animation: float 4s ease-in-out infinite;
       animation-delay: var(--delay, 0s);
+      transform: translateY(var(--start-y, 0px)) rotate(var(--rotate, 0deg));
     }
 
-    .card1 { --delay: 0s; }
-    .card2 { --delay: 0.2s; }
-    .card3 { --delay: 0.4s; }
-    .card4 { --delay: 0.6s; }
-    .card5 { --delay: 0.8s; }
+    .card1 { 
+      --delay: 0s; 
+      --rotate: -3deg;
+      --start-y: 0px;
+    }
+    .card2 { 
+      --delay: -1s; 
+      --rotate: 2deg;
+      --start-y: -10px;
+    }
+    .card3 { 
+      --delay: -2s; 
+      --rotate: -2deg;
+      --start-y: -5px;
+    }
+    .card4 { 
+      --delay: -1.5s; 
+      --rotate: 3deg;
+      --start-y: -15px;
+    }
+    .card5 { 
+      --delay: -0.5s; 
+      --rotate: -1deg;
+      --start-y: -8px;
+    }
 
     @keyframes float {
       0% {
-        transform: translateY(0px) rotate(var(--rotate, -3deg));
+        transform: translateY(var(--start-y)) rotate(var(--rotate));
       }
       50% {
-        transform: translateY(-10px) rotate(var(--rotate, -3deg));
+        transform: translateY(calc(var(--start-y) - 7px)) rotate(var(--rotate));
       }
       100% {
-        transform: translateY(0px) rotate(var(--rotate, -3deg));
+        transform: translateY(var(--start-y)) rotate(var(--rotate));
       }
     }
 
