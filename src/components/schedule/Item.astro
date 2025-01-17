@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+import img from "@assets/2025/schedule/ponyawards.png";
+
 
 const {
   title,
@@ -26,7 +28,7 @@ const roomType = [
 ];
 ---
 
-<dialog class="p-0 cursor-default text-black font-serif text-center" id={title}>
+<dialog class="p-0 cursor-default text-white font-serif text-center" id={title}>
   <div
     class={`p-8 relative justify-center rounded flex flex-col w-full h-auto sm:w-96 md:w-128 lg:w-160 xl:w-224 lg:h-auto  ${roomType[type]}-dialog`}
   >
@@ -43,8 +45,17 @@ const roomType = [
     <div class="font-medium text-3xl leading-none mb-8 uppercase"  style="font-family: 'Poppins';">
       {day} @ {start}-{end} ({colspan * 30} minutes)
     </div>
-    <div class="my-2 leading-5 text-lg"  style="font-family: 'Poppins';" set:html={description} />
-    <div class="w-[80%] mx-auto h-[3px] bg-black my-8"></div>
+    <div class="my-8 leading-5 text-lg"  style="font-family: 'Poppins';" set:html={description} />
+    <div class="w-[80%] mx-auto h-[3px] bg-white my-8"></div>
+
+    <div class="mt-auto bg-black">
+      <Image
+        src={img}
+        alt="The Pony Awards"
+        width={150}
+        class="mx-auto"
+      />
+    </div>
   </div>
 </dialog>
 <td
@@ -95,7 +106,7 @@ const roomType = [
     @apply bg-neutral-50 hover:bg-black text-black hover:text-white;
   }
   .room1-dialog {
-    @apply bg-white;
+    @apply bg-black;
   }
   .room2-dialog {
     @apply bg-white;
