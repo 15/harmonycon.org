@@ -24,7 +24,7 @@ import Footer from "../components/Footer.astro";
   <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
   
   {/* Dialogs */}
-  <dialog class="p-0 cursor-default" id="dialog-shannon">
+  <dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw]" id="dialog-shannon">
     <div
       class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
       id="close-shannon"
@@ -42,16 +42,16 @@ import Footer from "../components/Footer.astro";
       </svg>
     </div>
     <div
-      class="overflow-hidden p-4 md:p-8 bg-blue-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-160"
+      class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-blue-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 max-h-[90vh]"
     >
-      <div class="flex items-center justify-center w-full lg:pl-6">
+      <div class="flex items-center justify-center w-full lg:w-1/2 lg:pl-6">
         <Image
           src={guest1}
           format="avif"
           height="800"
           alt="Shannon Chan-Kent"
           style="filter: drop-shadow(0 2px 2px #000);"
-          class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-56 xl:min-w-72 bg-white rounded-lg p-4"
+          class="w-auto h-auto max-h-[60vh] object-contain"
         />
       </div>
       <div class="flex flex-col w-auto lg:ml-12">
@@ -59,14 +59,13 @@ import Footer from "../components/Footer.astro";
           Shannon Chan-Kent
         </div>
         <div class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal text-black">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Shannon has been in the film/tv/voice over industry for nearly 20 years. She is a trained opera singer holding a BMUS and MMUS in Opera Performance from the University of British Columbia. A few of Shannon's VO credits include <i>My Little Pony: Friendship is Magic</i> (series and feature), <i>Gigantosaurus</i>, <i>Polly Pocket</i>, <i>Corner Gas: The Animated Series</i>, <i>Slugterra</i>, <i>DeathNote</i>, <i>16 Hudson</i>, <i>The Bravest Knight</i>, <i>Mega Man</i> and <i>Hello Ninja</i>. Film and tv credits include <i>Life Sentence</i> (CW), <i>Another Life</i> (Netflix), <i>Good Trouble</i> (Hulu/Freeform) and <i>You</i> (Netflix). Shannon is also no stranger to the live stage. She has been in productions such as <i>Beauty And The Beast</i> (Belle), <i>Avenue Q</i>, <i>Evita</i>, <i>The Magic Flute</i> and <i>The Flick</i>.
         </div>
       </div>
     </div>
   </dialog>
 
-  <dialog class="p-0 cursor-default" id="dialog-jeremy">
+  <dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw]" id="dialog-jeremy">
     <div
       class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
       id="close-jeremy"
@@ -84,16 +83,16 @@ import Footer from "../components/Footer.astro";
       </svg>
     </div>
     <div
-      class="overflow-hidden p-4 md:p-8 bg-orange-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-160"
+      class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-orange-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 max-h-[90vh]"
     >
-      <div class="flex items-center justify-center w-full lg:pl-6">
+      <div class="flex items-center justify-center w-full lg:w-1/2 lg:pl-6">
         <Image
           src={guest2}
           format="avif"
           height="800"
           alt="Jeremy Whitley"
           style="filter: drop-shadow(0 2px 2px #000);"
-          class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-56 xl:min-w-72 bg-white rounded-lg p-4"
+          class="w-auto h-auto max-h-[60vh] object-contain"
         />
       </div>
       <div class="flex flex-col w-auto lg:ml-12">
@@ -101,14 +100,13 @@ import Footer from "../components/Footer.astro";
           Jeremy Whitley
         </div>
         <div class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal text-black">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Jeremy Whitley is a writer from Durham, NC. He is the writer/creator of <i>The Dog Knight</i>, <i>Princeless</i>, <i>The School for Extraterrestrial Girls</i>, and <i>Navigating with You</i>. He is also the writer of over fifty issues of <i>My Little Pony</i> comics including <i>Nightmare Knights</i>, <i>Siege of the Crystal Empire</i>, and Season 10. He was once bitten by a radioactive pegasus.
         </div>
       </div>
     </div>
   </dialog>
 
-  <dialog class="p-0 cursor-default" id="dialog-kazumi">
+  <dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw]" id="dialog-kazumi">
     <div
       class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
       id="close-kazumi"
@@ -126,16 +124,16 @@ import Footer from "../components/Footer.astro";
       </svg>
     </div>
     <div
-      class="overflow-hidden p-4 md:p-8 bg-amber-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-160"
+      class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-amber-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 max-h-[90vh]"
     >
-      <div class="flex items-center justify-center w-full lg:pl-6">
+      <div class="flex items-center justify-center w-full lg:w-1/2 lg:pl-6">
         <Image
           src={guest3}
           format="avif"
           height="800"
           alt="Kazumi Evans"
           style="filter: drop-shadow(0 2px 2px #000);"
-          class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-56 xl:min-w-72 bg-white rounded-lg p-4"
+          class="w-auto h-auto max-h-[60vh] object-contain"
         />
       </div>
       <div class="flex flex-col w-auto lg:ml-12">
@@ -143,14 +141,16 @@ import Footer from "../components/Footer.astro";
           Kazumi Evans
         </div>
         <div class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal text-black">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Kazumi Evans is a singer/actor born and raised in Vancouver BC, where she has performed professionally onstage with companies such as the Vancouver Opera, Vancouver Playhouse and The Arts Club.<br/><br/>
+          As a voice actor, she has had roles on numerous animated TV series and movies such as Nisha in <i>The Hollow</i>, Queen Sarai in <i>The Dragon Prince</i>, Jewel Sparkles in <i>We're Lalaloopsy</i>, Iris in <i>Lolirock</i>, Skipper in the <i>Barbie and Her Sisters</i> series, Rouge in <i>Sonic Prime</i>, Wyldfyre in <i>Ninjago: Dragons Rising</i> and nine seasons as the singing voice of Rarity in <i>My Little Pony Friendship is Magic</i>.<br/><br/>
+          On camera, she has appeared in productions such as <i>Mech X-4</i> (Disney XD) <i>The Bridge</i>, <i>With Love Christmas</i> & <i>The Mistletoe Secret</i> for the Hallmark Channel.<br/><br/>
+          When not acting, she enjoys writing and photography. She lives in Vancouver with her husband, two sons, and their cat & dog.
         </div>
       </div>
     </div>
   </dialog>
 
-  <dialog class="p-0 cursor-default" id="dialog-rena">
+  <dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw]" id="dialog-rena">
     <div
       class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
       id="close-rena"
@@ -168,16 +168,16 @@ import Footer from "../components/Footer.astro";
       </svg>
     </div>
     <div
-      class="overflow-hidden p-4 md:p-8 bg-rose-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-160"
+      class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-rose-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 max-h-[90vh]"
     >
-      <div class="flex items-center justify-center w-full lg:pl-6">
+      <div class="flex items-center justify-center w-full lg:w-1/2 lg:pl-6">
         <Image
           src={guest4}
           format="avif"
           height="800"
           alt="Rena Anakwe"
           style="filter: drop-shadow(0 2px 2px #000);"
-          class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-56 xl:min-w-72 bg-white rounded-lg p-4"
+          class="w-auto h-auto max-h-[60vh] object-contain"
         />
       </div>
       <div class="flex flex-col w-auto lg:ml-12">
@@ -185,14 +185,13 @@ import Footer from "../components/Footer.astro";
           Rena Anakwe
         </div>
         <div class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal text-black">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Rena Anakwe is a Nigerian-Canadian-American voice actor, interdisciplinary artist and performer based in Brooklyn, New York. She is best known as the voice of Sapphire Shores on <i>My Little Pony: Friendship is Magic</i> and Janai on <i>The Dragon Prince</i>.
         </div>
       </div>
     </div>
   </dialog>
 
-  <dialog class="p-0 cursor-default" id="dialog-tony">
+  <dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw]" id="dialog-tony">
     <div
       class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
       id="close-tony"
@@ -210,16 +209,16 @@ import Footer from "../components/Footer.astro";
       </svg>
     </div>
     <div
-      class="overflow-hidden p-4 md:p-8 bg-purple-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-160"
+      class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-purple-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 max-h-[90vh]"
     >
-      <div class="flex items-center justify-center w-full lg:pl-6">
+      <div class="flex items-center justify-center w-full lg:w-1/2 lg:pl-6">
         <Image
           src={guest5}
           format="avif"
           height="800"
           alt="Tony Fleecs"
           style="filter: drop-shadow(0 2px 2px #000);"
-          class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-56 xl:min-w-72 bg-white rounded-lg p-4"
+          class="w-auto h-auto max-h-[60vh] object-contain"
         />
       </div>
       <div class="flex flex-col w-auto lg:ml-12">
@@ -227,8 +226,7 @@ import Footer from "../components/Footer.astro";
           Tony Fleecs
         </div>
         <div class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal text-black">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Tony Fleecs is a prolific and critically acclaimed comic book creator and TV writer. His comics have sold millions of copies in the United States and have been translated and reprinted all over the world. Tony's creator owned books include <i>STRAY DOGS</i> (2021,) <i>FERAL</i> (2024,) <i>UNCANNY VALLEY</i> (2024,) <i>LOCAL MAN</i> (2023) and <i>TIME SHOPPER</i> (2022.) His work has been nominated for multiple Eisner Awards and the Ringo Award. Tony has worked for every major U.S. comics publisher. You've seen his name on some of your favorite comic book titles like <i>Star Wars</i>, <i>Rick & Morty</i>, <i>Avengers</i>, <i>Spider-Man</i>, <i>Wolverine</i>, <i>Batman</i>, <i>TMNT</i>, <i>Transformers</i>, <i>Army of Darkness</i> and a literal TON of <i>My Little Pony</i>. He also wrote on the wildly popular Netflix show <i>My Little Pony: Make Your Mark</i>.
         </div>
       </div>
     </div>
@@ -460,6 +458,24 @@ import Footer from "../components/Footer.astro";
       @apply rounded-xl;
       filter: drop-shadow(0 50px 50px #000);
       outline: none;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      max-height: 90vh;
+      max-width: 90vw;
+    }
+
+    dialog > div {
+      max-height: calc(90vh - 2rem);
+      overflow-y: auto;
+      scrollbar-gutter: stable;
+    }
+
+    dialog img {
+      max-height: 60vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
     }
 
     dialog[open] {
@@ -469,18 +485,47 @@ import Footer from "../components/Footer.astro";
     dialog::backdrop {
       background-image: linear-gradient(45deg, #000, #000);
       opacity: 0.5;
+      backdrop-filter: blur(5px);
     }
 
     dialog:focus {
       outline: none;
     }
 
+    /* Update the background colors of each guest's modal content div to be transparent */
+    #dialog-shannon > div {
+      background: rgba(219, 234, 254, 0.7) !important;
+      backdrop-filter: blur(10px);
+    }
+
+    #dialog-jeremy > div {
+      background: rgba(255, 237, 213, 0.7) !important;
+      backdrop-filter: blur(10px);
+    }
+
+    #dialog-kazumi > div {
+      background: rgba(254, 243, 199, 0.7) !important;
+      backdrop-filter: blur(10px);
+    }
+
+    #dialog-rena > div {
+      background: rgba(254, 226, 226, 0.7) !important;
+      backdrop-filter: blur(10px);
+    }
+
+    #dialog-tony > div {
+      background: rgba(237, 233, 254, 0.7) !important;
+      backdrop-filter: blur(10px);
+    }
+
     @keyframes fade {
       from {
         opacity: 0;
+        transform: translateY(-20px);
       }
       to {
         opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
