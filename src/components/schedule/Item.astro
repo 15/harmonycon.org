@@ -26,24 +26,24 @@ const roomType = [
 ];
 ---
 
-<dialog class="p-0 cursor-default" id={title}>
+<dialog class="p-0 cursor-default text-black font-serif text-center" id={title}>
   <div
-    class={`p-8 relative justify-center rounded flex flex-col gap-y-1 w-full h-auto sm:w-96 md:w-128 lg:w-160 xl:w-192 lg:h-auto  ${roomType[type]}-dialog`}
-    style="font-family: 'Single Day'"
+    class={`p-8 relative justify-center rounded flex flex-col w-full h-auto sm:w-96 md:w-128 lg:w-160 xl:w-224 lg:h-auto  ${roomType[type]}-dialog`}
   >
-    <div class="font-semibold text-4xl leading-none">{title}</div>
-    <div class="font-medium text-2xl leading-none">
+  <!-- {
+    type !== 6 ? (
+      <div class="font-normal italic text-3xl leading-none uppercase font-sans">
+        Rating: {rating}
+      </div>
+    ) : null
+  } -->
+
+  <div class="font-medium text-3xl leading-none italic mb-12">Host: {host}</div>
+    <div class="font-medium text-6xl leading-none uppercase tracking-wide mb-4" style="font-family: 'Poppins';">{title}</div>
+    <div class="font-medium text-3xl leading-none mb-8"  style="font-family: 'Poppins';">
       {day} @ {start}-{end} ({colspan * 30} minutes)
     </div>
-    <div class="font-medium text-xl leading-none">Host: {host}</div>
-    {
-      type !== 6 ? (
-        <div class="font-semibold text-base leading-none uppercase">
-          Rating: {rating}
-        </div>
-      ) : null
-    }
-    <div class="my-2 leading-5 text-lg" set:html={description} />
+    <div class="my-2 leading-5 text-lg"  style="font-family: 'Poppins';" set:html={description} />
   </div>
 </dialog>
 <td
@@ -94,25 +94,25 @@ const roomType = [
     @apply bg-neutral-50 hover:bg-black text-black hover:text-white;
   }
   .room1-dialog {
-    @apply bg-pink-200;
+    @apply bg-white;
   }
   .room2-dialog {
-    @apply bg-orange-200;
+    @apply bg-white;
   }
   .room3-dialog {
-    @apply bg-blue-200;
+    @apply bg-white;
   }
   .room4-dialog {
-    @apply bg-green-200;
+    @apply bg-white;
   }
   .room5-dialog {
-    @apply bg-red-200;
+    @apply bg-white;
   }
   .room6-dialog {
-    @apply bg-purple-200;
+    @apply bg-white;
   }
   .room7-dialog {
-    @apply bg-neutral-300;
+    @apply bg-white;
   }
   .concert-dialog {
     @apply bg-black text-white;
