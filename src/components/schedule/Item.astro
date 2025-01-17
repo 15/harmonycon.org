@@ -39,11 +39,12 @@ const roomType = [
   } -->
 
   <div class="font-medium text-3xl leading-none italic mb-12">Host: {host}</div>
-    <div class="font-medium text-6xl leading-none uppercase tracking-wide mb-4" style="font-family: 'Poppins';">{title}</div>
-    <div class="font-medium text-3xl leading-none mb-8"  style="font-family: 'Poppins';">
+    <div class="font-medium text-6xl leading-none uppercase tracking-wider mb-6" style="font-family: 'Poppins';">{title}</div>
+    <div class="font-medium text-3xl leading-none mb-8 uppercase"  style="font-family: 'Poppins';">
       {day} @ {start}-{end} ({colspan * 30} minutes)
     </div>
     <div class="my-2 leading-5 text-lg"  style="font-family: 'Poppins';" set:html={description} />
+    <div class="w-[80%] mx-auto h-[3px] bg-black my-8"></div>
   </div>
 </dialog>
 <td
