@@ -1,7 +1,6 @@
 ---
 import { Image, getImage } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import GuestModal from "../components/GuestModal.astro";
 
 import cocBackground from "../assets/2025/bg/stage3.png";
 const optimizedCocBackground = await getImage({
@@ -24,6 +23,237 @@ import Footer from "../components/Footer.astro";
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
   
+  {/* Dialogs */}
+  <dialog class="p-0 cursor-default" id="dialog-shannon">
+    <div
+      class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
+      id="close-shannon"
+    >
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+          fill="currentColor"></path>
+      </svg>
+    </div>
+    <div
+      class="overflow-hidden p-4 md:p-8 bg-blue-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-160"
+    >
+      <div class="flex items-center justify-center w-full lg:pl-6">
+        <Image
+          src={guest1}
+          format="avif"
+          height="800"
+          alt="Shannon Chan-Kent"
+          style="filter: drop-shadow(0 2px 2px #000);"
+          class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-56 xl:min-w-72 bg-white rounded-lg -rotate-3 p-4"
+        />
+      </div>
+      <div class="flex flex-col w-auto lg:ml-12">
+        <div
+          class="pt-4 pb-2 md:py-4 text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left tracking-wide font-semibold uppercase"
+        >
+          Shannon Chan-Kent
+        </div>
+        <div
+          class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="p-0 cursor-default" id="dialog-jeremy">
+    <div
+      class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
+      id="close-jeremy"
+    >
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+          fill="currentColor"></path>
+      </svg>
+    </div>
+    <div
+      class="overflow-hidden p-4 md:p-8 bg-orange-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-160"
+    >
+      <div class="flex items-center justify-center w-full lg:pl-6">
+        <Image
+          src={guest2}
+          format="avif"
+          height="800"
+          alt="Jeremy Whitley"
+          style="filter: drop-shadow(0 2px 2px #000);"
+          class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-56 xl:min-w-72 bg-white rounded-lg -rotate-3 p-4"
+        />
+      </div>
+      <div class="flex flex-col w-auto lg:ml-12">
+        <div
+          class="pt-4 pb-2 md:py-4 text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left tracking-wide font-semibold uppercase"
+        >
+          Jeremy Whitley
+        </div>
+        <div
+          class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="p-0 cursor-default" id="dialog-kazumi">
+    <div
+      class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
+      id="close-kazumi"
+    >
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+          fill="currentColor"></path>
+      </svg>
+    </div>
+    <div
+      class="overflow-hidden p-4 md:p-8 bg-amber-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-160"
+    >
+      <div class="flex items-center justify-center w-full lg:pl-6">
+        <Image
+          src={guest3}
+          format="avif"
+          height="800"
+          alt="Kazumi Evans"
+          style="filter: drop-shadow(0 2px 2px #000);"
+          class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-56 xl:min-w-72 bg-white rounded-lg -rotate-3 p-4"
+        />
+      </div>
+      <div class="flex flex-col w-auto lg:ml-12">
+        <div
+          class="pt-4 pb-2 md:py-4 text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left tracking-wide font-semibold uppercase"
+        >
+          Kazumi Evans
+        </div>
+        <div
+          class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="p-0 cursor-default" id="dialog-rena">
+    <div
+      class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
+      id="close-rena"
+    >
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+          fill="currentColor"></path>
+      </svg>
+    </div>
+    <div
+      class="overflow-hidden p-4 md:p-8 bg-rose-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-160"
+    >
+      <div class="flex items-center justify-center w-full lg:pl-6">
+        <Image
+          src={guest4}
+          format="avif"
+          height="800"
+          alt="Rena Anakwe"
+          style="filter: drop-shadow(0 2px 2px #000);"
+          class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-56 xl:min-w-72 bg-white rounded-lg -rotate-3 p-4"
+        />
+      </div>
+      <div class="flex flex-col w-auto lg:ml-12">
+        <div
+          class="pt-4 pb-2 md:py-4 text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left tracking-wide font-semibold uppercase"
+        >
+          Rena Anakwe
+        </div>
+        <div
+          class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="p-0 cursor-default" id="dialog-tony">
+    <div
+      class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
+      id="close-tony"
+    >
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+          fill="currentColor"></path>
+      </svg>
+    </div>
+    <div
+      class="overflow-hidden p-4 md:p-8 bg-purple-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-160"
+    >
+      <div class="flex items-center justify-center w-full lg:pl-6">
+        <Image
+          src={guest5}
+          format="avif"
+          height="800"
+          alt="Tony Fleecs"
+          style="filter: drop-shadow(0 2px 2px #000);"
+          class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-56 xl:min-w-72 bg-white rounded-lg -rotate-3 p-4"
+        />
+      </div>
+      <div class="flex flex-col w-auto lg:ml-12">
+        <div
+          class="pt-4 pb-2 md:py-4 text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left tracking-wide font-semibold uppercase"
+        >
+          Tony Fleecs
+        </div>
+        <div
+          class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+    </div>
+  </dialog>
+
   <div id="bg" class="relative flex flex-col h-screen pt-8 md:pt-16 gap-y-8">
     <!-- <div
       class="cursor-default font-serif uppercase text-center font-semibold text-6xl text-yellow-200 z-10"
@@ -36,7 +266,7 @@ import Footer from "../components/Footer.astro";
       <div class="flex flex-col md:flex-row gap-4 lg:gap-8 justify-center">
         <div
           class="card1 p-1 bg-white border-4 border-black w-64 h-96 -rotate-3 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
-          onclick="showModal('modal-shannon')"
+          id="shannon"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -54,7 +284,7 @@ import Footer from "../components/Footer.astro";
         </div>
         <div
           class="card2 p-1 bg-white border-4 border-black w-64 h-96 rotate-2 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
-          onclick="showModal('modal-jeremy')"
+          id="jeremy"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -72,7 +302,7 @@ import Footer from "../components/Footer.astro";
         </div>
         <div
           class="card3 p-1 bg-white border-4 border-black w-64 h-96 -rotate-2 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
-          onclick="showModal('modal-kazumi')"
+          id="kazumi"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -90,7 +320,7 @@ import Footer from "../components/Footer.astro";
         </div>
         <div
           class="hidden lg:block card4 p-1 bg-white border-4 border-black w-64 h-96 rotate-3 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
-          onclick="showModal('modal-rena')"
+          id="rena"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -108,7 +338,7 @@ import Footer from "../components/Footer.astro";
         </div>
         <div
           class="hidden lg:block card5 p-1 bg-white border-4 border-black w-64 h-96 -rotate-1 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
-          onclick="showModal('modal-tony')"
+          id="tony"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -130,7 +360,7 @@ import Footer from "../components/Footer.astro";
       <div class="hidden md:flex lg:hidden flex-row gap-4 md:gap-8 justify-center mt-4">
         <div
           class="card4 p-1 bg-white border-4 border-black w-64 h-96 rotate-3 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
-          onclick="showModal('modal-rena')"
+          id="rena-md"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -138,16 +368,17 @@ import Footer from "../components/Footer.astro";
               alt="Rena Anakwe"
               width={400}
               format="avif"
-              class="w-full h-full object-cover"
+              class="w-full h-full object-cover select-none"
+              draggable="false"
             />
           </div>
           <div class="flex items-center justify-center h-24">
-            <p class="font-yesteryear text-2xl text-black">Rena Anakwe</p>
+            <p class="font-yesteryear text-2xl text-black select-none">Rena Anakwe</p>
           </div>
         </div>
         <div
           class="card5 p-1 bg-white border-4 border-black w-64 h-96 -rotate-1 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
-          onclick="showModal('modal-tony')"
+          id="tony-md"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -155,34 +386,18 @@ import Footer from "../components/Footer.astro";
               alt="Tony Fleecs"
               width={400}
               format="avif"
-              class="w-full h-full object-cover"
+              class="w-full h-full object-cover select-none"
+              draggable="false"
             />
           </div>
           <div class="flex items-center justify-center h-24">
-            <p class="font-yesteryear text-2xl text-black">Tony Fleecs</p>
+            <p class="font-yesteryear text-2xl text-black select-none">Tony Fleecs</p>
           </div>
         </div>
       </div>
     </div>
     <Footer />
   </div>
-
-  {/* Modals */}
-  <GuestModal name="Shannon Chan-Kent" image={guest1} modalId="modal-shannon" />
-  <GuestModal name="Jeremy Whitley" image={guest2} modalId="modal-jeremy" />
-  <GuestModal name="Kazumi Evans" image={guest3} modalId="modal-kazumi" />
-  <GuestModal name="Rena Anakwe" image={guest4} modalId="modal-rena" />
-  <GuestModal name="Tony Fleecs" image={guest5} modalId="modal-tony" />
-
-  <script is:inline>
-    function showModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.classList.remove("hidden");
-        document.body.style.overflow = "hidden";
-      }
-    }
-  </script>
 
   <style
     define:vars={{
@@ -259,5 +474,172 @@ import Footer from "../components/Footer.astro";
     .font-yesteryear {
       font-family: 'Yesteryear', cursive;
     }
+
+    dialog {
+      font-family: Poppins, Arial, sans-serif;
+      @apply rounded-xl;
+      filter: drop-shadow(0 50px 50px #000);
+      outline: none;
+    }
+
+    dialog[open] {
+      animation: fade 0.3s ease-in-out normal;
+    }
+
+    dialog::backdrop {
+      background-image: linear-gradient(45deg, #000, #000);
+      opacity: 0.5;
+    }
+
+    dialog:focus {
+      outline: none;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   </style>
+
+  <script>
+    function setupDialogs() {
+      // Shannon
+      const shannonDialog = document.getElementById("dialog-shannon");
+      const shannonImg = document.getElementById("shannon");
+      if (shannonDialog instanceof HTMLDialogElement && shannonImg) {
+        shannonImg.addEventListener("click", () => {
+          shannonDialog.showModal();
+        });
+        shannonDialog.addEventListener("click", (e) => {
+          if (e.target === shannonDialog) {
+            shannonDialog.close();
+          }
+        });
+      }
+      const shannonClose = document.getElementById("close-shannon");
+      if (shannonClose && shannonDialog instanceof HTMLDialogElement) {
+        shannonClose.addEventListener("click", () => {
+          shannonDialog.close();
+        });
+      }
+
+      // Jeremy
+      const jeremyDialog = document.getElementById("dialog-jeremy");
+      const jeremyImg = document.getElementById("jeremy");
+      if (jeremyDialog instanceof HTMLDialogElement && jeremyImg) {
+        jeremyImg.addEventListener("click", () => {
+          jeremyDialog.showModal();
+        });
+        jeremyDialog.addEventListener("click", (e) => {
+          if (e.target === jeremyDialog) {
+            jeremyDialog.close();
+          }
+        });
+      }
+      const jeremyClose = document.getElementById("close-jeremy");
+      if (jeremyClose && jeremyDialog instanceof HTMLDialogElement) {
+        jeremyClose.addEventListener("click", () => {
+          jeremyDialog.close();
+        });
+      }
+
+      // Kazumi
+      const kazumiDialog = document.getElementById("dialog-kazumi");
+      const kazumiImg = document.getElementById("kazumi");
+      if (kazumiDialog instanceof HTMLDialogElement && kazumiImg) {
+        kazumiImg.addEventListener("click", () => {
+          kazumiDialog.showModal();
+        });
+        kazumiDialog.addEventListener("click", (e) => {
+          if (e.target === kazumiDialog) {
+            kazumiDialog.close();
+          }
+        });
+      }
+      const kazumiClose = document.getElementById("close-kazumi");
+      if (kazumiClose && kazumiDialog instanceof HTMLDialogElement) {
+        kazumiClose.addEventListener("click", () => {
+          kazumiDialog.close();
+        });
+      }
+
+      // Rena
+      const renaDialog = document.getElementById("dialog-rena");
+      const renaImg = document.getElementById("rena");
+      const renaMdImg = document.getElementById("rena-md");
+      if (renaDialog instanceof HTMLDialogElement) {
+        if (renaImg) {
+          renaImg.addEventListener("click", () => {
+            renaDialog.showModal();
+          });
+        }
+        if (renaMdImg) {
+          renaMdImg.addEventListener("click", () => {
+            renaDialog.showModal();
+          });
+        }
+        renaDialog.addEventListener("click", (e) => {
+          if (e.target === renaDialog) {
+            renaDialog.close();
+          }
+        });
+      }
+      const renaClose = document.getElementById("close-rena");
+      if (renaClose && renaDialog instanceof HTMLDialogElement) {
+        renaClose.addEventListener("click", () => {
+          renaDialog.close();
+        });
+      }
+
+      // Tony
+      const tonyDialog = document.getElementById("dialog-tony");
+      const tonyImg = document.getElementById("tony");
+      const tonyMdImg = document.getElementById("tony-md");
+      if (tonyDialog instanceof HTMLDialogElement) {
+        if (tonyImg) {
+          tonyImg.addEventListener("click", () => {
+            tonyDialog.showModal();
+          });
+        }
+        if (tonyMdImg) {
+          tonyMdImg.addEventListener("click", () => {
+            tonyDialog.showModal();
+          });
+        }
+        tonyDialog.addEventListener("click", (e) => {
+          if (e.target === tonyDialog) {
+            tonyDialog.close();
+          }
+        });
+      }
+      const tonyClose = document.getElementById("close-tony");
+      if (tonyClose && tonyDialog instanceof HTMLDialogElement) {
+        tonyClose.addEventListener("click", () => {
+          tonyDialog.close();
+        });
+      }
+
+      // Close all modals with Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          document.querySelectorAll("dialog[open]").forEach((dialog) => {
+            if (dialog instanceof HTMLDialogElement) {
+              dialog.close();
+            }
+          });
+        }
+      });
+    }
+
+    // Run setup on initial load
+    setupDialogs();
+
+    // Run setup again after Astro view transitions
+    document.addEventListener("astro:page-load", setupDialogs);
+    document.addEventListener("astro:after-swap", setupDialogs);
+  </script>
 </Layout>
