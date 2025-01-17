@@ -4,7 +4,13 @@ import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 
 
-import mainBackground from "../assets/2025/bg/bricks.jpg";
+import scheduleBackground from "../assets/2025/schedule/HC25_Tile_Pink.png";
+const optimizedScheduleBackground = await getImage({
+  src: scheduleBackground,
+  format: "avif",
+  width: 2000,
+});
+
 import ScheduleHeader from "../components/schedule/ScheduleHeader.astro";
 
 
@@ -13,6 +19,7 @@ const { day = "Friday", additionalevents = {} } = Astro.props;
 
 <Layout title="HarmonyCon 2025 | Schedule">
   <section
+  id="bg"
       class="overflow-x-hidden mx-auto pl-2 pr-0 lg:pr-0 lg:pl-12 cursor-default flex flex-col pt-12 pb-0 lg:pt-12 lg:pb-0 items-center justify-center w-full"
   >
     <ScheduleHeader />
@@ -135,8 +142,24 @@ const { day = "Friday", additionalevents = {} } = Astro.props;
   <Footer />
 </Layout>
 
+<style 
+define:vars={{
+  optimizedScheduleBackground: `url(${optimizedScheduleBackground.src})`,
+}}>
 
-<style>
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-image: var(--optimizedScheduleBackground);
+  background-repeat: repeat;
+  background-size: 20%;
+  background-position: center;
+  opacity: 1;
+}
   table {
     tr>th:first-child,
     tr>td:first-child {
