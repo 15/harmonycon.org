@@ -124,20 +124,20 @@ import Footer from "../components/Footer.astro";
       </svg>
     </div>
     <div
-      class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-amber-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-[640px] md:w-[768px] lg:w-[1024px] 2xl:w-[1280px] max-h-[90vh]"
+      class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-amber-50 flex flex-col lg:flex-row items-center justify-start w-full h-auto sm:w-[640px] md:w-[768px] lg:w-[1024px] 2xl:w-[1280px] max-h-[90vh]"
     >
-      <div class="flex items-start justify-center w-full lg:w-1/3 lg:sticky lg:top-0">
+      <div class="w-full max-w-xl lg:w-1/3 lg:sticky lg:top-0">
         <Image
           src={guest3}
           format="avif"
           height="800"
           alt="Kazumi Evans"
           style="filter: drop-shadow(0 2px 2px #000);"
-          class="w-full h-auto max-w-sm object-contain"
+          class="w-full h-auto max-h-[40vh] lg:max-h-none lg:max-w-sm object-contain"
         />
       </div>
-      <div class="flex flex-col w-full lg:w-2/3 lg:pl-8 justify-center h-full">
-        <div class="whitespace-nowrap pt-4 pb-2 md:py-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center lg:text-left tracking-wide font-semibold uppercase text-white">
+      <div class="flex flex-col w-full lg:w-2/3 lg:pl-8">
+        <div class="whitespace-nowrap py-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center lg:text-left tracking-wide font-semibold uppercase text-white">
           Kazumi Evans
         </div>
         <div class="py-1 md:py-2 text-sm sm:text-base md:text-lg 2xl:text-lg leading-snug sm:leading-normal text-white">
