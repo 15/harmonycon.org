@@ -1,6 +1,7 @@
 ---
 import { Image, getImage } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+import GuestModal from "../components/GuestModal.astro";
 
 import cocBackground from "../assets/2025/bg/stage3.png";
 const optimizedCocBackground = await getImage({
@@ -24,17 +25,18 @@ import Footer from "../components/Footer.astro";
   <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
   
   <div id="bg" class="relative flex flex-col h-screen pt-8 md:pt-16 gap-y-8">
-    <div
+    <!-- <div
       class="cursor-default font-serif uppercase text-center font-semibold text-6xl text-yellow-200 z-10"
-          style="text-shadow: 3px 3px 1px #000;"
+      style="text-shadow: 3px 3px 1px #000;"
     >
-      Very Important Ponies
-    </div>
-    <div class="flex flex-col items-center justify-center my-auto gap-y-12 py-12 lg:mt-32">
+      OUR GUESTS
+    </div> -->
+    <div class="flex flex-col items-center justify-center my-auto gap-y-12 py-12 lg:mt-48">
       {/* Cards Container */}
       <div class="flex flex-col md:flex-row gap-4 lg:gap-8 justify-center">
         <div
-          class="card1 p-1 bg-white border-4 border-black w-64 h-96 -rotate-3 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
+          class="card1 p-1 bg-white border-4 border-black w-64 h-96 -rotate-3 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
+          onclick="showModal('modal-shannon')"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -42,15 +44,17 @@ import Footer from "../components/Footer.astro";
               alt="Shannon Chan-Kent"
               width={400}
               format="avif"
-              class="w-full h-full object-cover"
+              class="w-full h-full object-cover select-none"
+              draggable="false"
             />
           </div>
           <div class="flex items-center justify-center h-24">
-            <p class="font-yesteryear text-2xl text-black">Shannon Chan-Kent</p>
+            <p class="font-yesteryear text-2xl text-black select-none">Shannon Chan-Kent</p>
           </div>
         </div>
         <div
-          class="card2 p-1 bg-white border-4 border-black w-64 h-96 rotate-2 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
+          class="card2 p-1 bg-white border-4 border-black w-64 h-96 rotate-2 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
+          onclick="showModal('modal-jeremy')"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -58,15 +62,17 @@ import Footer from "../components/Footer.astro";
               alt="Jeremy Whitley"
               width={400}
               format="avif"
-              class="w-full h-full object-cover"
+              class="w-full h-full object-cover select-none"
+              draggable="false"
             />
           </div>
           <div class="flex items-center justify-center h-24">
-            <p class="font-yesteryear text-2xl text-black">Jeremy Whitley</p>
+            <p class="font-yesteryear text-2xl text-black select-none">Jeremy Whitley</p>
           </div>
         </div>
         <div
-          class="card3 p-1 bg-white border-4 border-black w-64 h-96 -rotate-2 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
+          class="card3 p-1 bg-white border-4 border-black w-64 h-96 -rotate-2 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
+          onclick="showModal('modal-kazumi')"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -74,15 +80,17 @@ import Footer from "../components/Footer.astro";
               alt="Kazumi Evans"
               width={400}
               format="avif"
-              class="w-full h-full object-cover"
+              class="w-full h-full object-cover select-none"
+              draggable="false"
             />
           </div>
           <div class="flex items-center justify-center h-24">
-            <p class="font-yesteryear text-2xl text-black">Kazumi Evans</p>
+            <p class="font-yesteryear text-2xl text-black select-none">Kazumi Evans</p>
           </div>
         </div>
         <div
-          class="hidden lg:block card4 p-1 bg-white border-4 border-black w-64 h-96 rotate-3 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
+          class="hidden lg:block card4 p-1 bg-white border-4 border-black w-64 h-96 rotate-3 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
+          onclick="showModal('modal-rena')"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -90,15 +98,17 @@ import Footer from "../components/Footer.astro";
               alt="Rena Anakwe"
               width={400}
               format="avif"
-              class="w-full h-full object-cover"
+              class="w-full h-full object-cover select-none"
+              draggable="false"
             />
           </div>
           <div class="flex items-center justify-center h-24">
-            <p class="font-yesteryear text-2xl text-black">Rena Anakwe</p>
+            <p class="font-yesteryear text-2xl text-black select-none">Rena Anakwe</p>
           </div>
         </div>
         <div
-          class="hidden lg:block card5 p-1 bg-white border-4 border-black w-64 h-96 -rotate-1 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
+          class="hidden lg:block card5 p-1 bg-white border-4 border-black w-64 h-96 -rotate-1 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
+          onclick="showModal('modal-tony')"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -106,11 +116,12 @@ import Footer from "../components/Footer.astro";
               alt="Tony Fleecs"
               width={400}
               format="avif"
-              class="w-full h-full object-cover"
+              class="w-full h-full object-cover select-none"
+              draggable="false"
             />
           </div>
           <div class="flex items-center justify-center h-24">
-            <p class="font-yesteryear text-2xl text-black">Tony Fleecs</p>
+            <p class="font-yesteryear text-2xl text-black select-none">Tony Fleecs</p>
           </div>
         </div>
       </div>
@@ -118,7 +129,8 @@ import Footer from "../components/Footer.astro";
       {/* Bottom Row for Medium Screens */}
       <div class="hidden md:flex lg:hidden flex-row gap-4 md:gap-8 justify-center mt-4">
         <div
-          class="card4 p-1 bg-white border-4 border-black w-64 h-96 rotate-3 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
+          class="card4 p-1 bg-white border-4 border-black w-64 h-96 rotate-3 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
+          onclick="showModal('modal-rena')"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -134,7 +146,8 @@ import Footer from "../components/Footer.astro";
           </div>
         </div>
         <div
-          class="card5 p-1 bg-white border-4 border-black w-64 h-96 -rotate-1 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
+          class="card5 p-1 bg-white border-4 border-black w-64 h-96 -rotate-1 rounded-lg drop-shadow-xl hover:scale-110 hover:rotate-0 transition-all cursor-pointer"
+          onclick="showModal('modal-tony')"
         >
           <div class="h-72 overflow-hidden">
             <Image
@@ -153,6 +166,23 @@ import Footer from "../components/Footer.astro";
     </div>
     <Footer />
   </div>
+
+  {/* Modals */}
+  <GuestModal name="Shannon Chan-Kent" image={guest1} modalId="modal-shannon" />
+  <GuestModal name="Jeremy Whitley" image={guest2} modalId="modal-jeremy" />
+  <GuestModal name="Kazumi Evans" image={guest3} modalId="modal-kazumi" />
+  <GuestModal name="Rena Anakwe" image={guest4} modalId="modal-rena" />
+  <GuestModal name="Tony Fleecs" image={guest5} modalId="modal-tony" />
+
+  <script is:inline>
+    function showModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+    }
+  </script>
 
   <style
     define:vars={{
@@ -177,6 +207,14 @@ import Footer from "../components/Footer.astro";
       animation: float 4s ease-in-out infinite;
       animation-delay: var(--delay, 0s);
       transform: translateY(var(--start-y, 0px)) rotate(var(--rotate, 0deg));
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+
+    .card1:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover {
+      transform: translateY(calc(var(--start-y) - 10px)) rotate(0deg) scale(1.1);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2);
+      z-index: 20;
     }
 
     .card1 { 

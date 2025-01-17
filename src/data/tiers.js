@@ -115,7 +115,7 @@ export default [
   {
     name: `<div class="text-xl sm:text-4xl xl:text-5xl"><span class="italic">Princess Celestia Superstar</span></div>`,
     limit: 1,
-    remaining: 1,
+    remaining: 0,
     perks: [
       "<span class='text-sm sm:text-2xl'>Limited to 1 spot</span>",
       `All <span class="italic">The Book of Harmony</span> perks (except suite)`,
