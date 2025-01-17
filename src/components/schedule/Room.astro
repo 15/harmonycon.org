@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+import type { Event, PlaceholderEvent } from "@layouts/SchedulePage.astro";
+import { ROOM } from "@layouts/SchedulePage.astro";
+import Item from "@components/schedule/Item.astro";
+import EmptyItem from "@components/schedule/EmptyItem.astro";
+
+interface Props {
+  roomname: string;
+  roomsrc: ImageMetadata | string | null;
+  events: (Event | PlaceholderEvent)[];
+}
+
+const { roomname = "", roomsrc = null, events = [], } = Astro.props;
+
+let roomColor = "bg-white";
+switch (roomname) {
+  case "A":
+    roomColor = "bg-pink-200";
+    break;
+  case "B":
+    roomColor = "bg-orange-200";
+    break;
+  case "C":
+    roomColor = "bg-blue-200";
+    break;
+  case "D":
+    roomColor = "bg-green-200";
+    break;
+  case "E":
+    roomColor = "bg-red-200";
+    break;
+  case "F":
+    roomColor = "bg-purple-200";
+    break;
+  case "G":
+    roomColor = "bg-neutral-300";
+    break;
+  default:
+    roomColor = "bg-white";
+    break;
+}
+---
+
+<tr>
+  <th
+    class={`agenda-room-cell border-2 border-black text-xs md:text-xl text-center h-16 md:h-20 lg:h-24 ${roomColor} z-50`}
+  >
+    <div class="uppercase flex items-center justify-end">
+      <div class="w-12 md:w-24 lg:w-32 leading-none">{roomname}</div>
+      <Image
+        format="avif"
+        src={roomsrc}
+        width={40}
+        height={105}
+        alt={roomname}
+        class="h-16 md:h-20 lg:h-24 w-auto border-2 border-black"
+      />
+    </div>
+  </th>
+  {
+    events.map((event) =>
+      event.placeholder === true ? (
+        <EmptyItem colspan={event.timeslots} />
+      ) : (
+        <Item
+          colspan={event.timeslots}
+          title={event.title}
+          host={event.host}
+          start={event.start}
+          end={event.end}
+          rating={event.rating}
+          day={event.day}
+          type={event.isConcert ? ROOM.Concert : event.room}
+          description={event.description}
+        />
+      )
+    )
+  }
+</tr>
