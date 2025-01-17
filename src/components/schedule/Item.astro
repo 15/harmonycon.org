@@ -10,6 +10,7 @@ const {
   colspan,
   type = 0,
   day = "Friday",
+  rating = "Not Rated"
 } = Astro.props;
 
 
@@ -52,17 +53,16 @@ const roomType = [
 >
   <div
     class="relative rounded p-1 md:p-2 h-16 md:h-24"
-    style="font-family: 'Single Day'"
   >
     <div
-      class="md:line-clamp-none line-clamp-3 font-semibold text-base md:text-lg lg:text-xl !leading-none"
+      class="md:line-clamp-none line-clamp-3 font-semibold text-base md:text-lg lg:text-xl !leading-none font-serif"
     >
       {title}
     </div>
     <!-- <div class="text-lg">{start} &ndash; {end}</div> -->
 
     <div
-      class="hidden md:block leading-5 text-sm md:text-lg"
+      class="hidden md:block leading-5 text-xs md:text-base font-sans"
       set:html="Click for more info!"
     />
   </div>
@@ -161,20 +161,34 @@ const roomType = [
 </script> -->
 
 <script define:vars={{ title }}>
-  document.addEventListener("astro:page-load", () => {
+  function initializeDialog(title) {
     const dialog = document.getElementById(title);
     const el = document.getElementById(`item-${title}`);
 
-    if (dialog instanceof HTMLDialogElement) {
+    if (dialog instanceof HTMLDialogElement && el) {
       el.addEventListener("click", () => {
         dialog.showModal();
       });
 
       dialog.addEventListener("click", (e) => {
-        if (e.target === dialog) {
+        const dialogDimensions = dialog.getBoundingClientRect();
+        if (
+          e.clientX < dialogDimensions.left ||
+          e.clientX > dialogDimensions.right ||
+          e.clientY < dialogDimensions.top ||
+          e.clientY > dialogDimensions.bottom
+        ) {
           dialog.close();
         }
       });
     }
+  }
+
+  // Initialize on page load
+  document.addEventListener("astro:page-load", () => {
+    initializeDialog(title);
   });
+
+  // Also initialize immediately in case astro:page-load doesn't fire
+  initializeDialog(title);
 </script>
