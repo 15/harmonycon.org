@@ -19,68 +19,97 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="HarmonyCon 2025 | Venue">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+  
   <div id="bg" class="flex flex-col justify-between min-h-screen">
     <div class="flex flex-col items-center justify-center my-auto gap-y-12 py-12">
       {/* Top Row */}
       <div class="flex flex-col md:flex-row gap-4 md:gap-8 justify-center">
         <div
-          class="card1 p-1 bg-white border-4 border-black w-64 h-80 -rotate-3 rounded-lg drop-shadow-xl hover:scale-105 transition-transform overflow-hidden"
+          class="card1 p-1 bg-white border-4 border-black w-64 h-96 -rotate-3 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
         >
-          <Image
-            src={guest1}
-            alt="Guest 1"
-            width={400}
-            format="avif"
-            class="w-full h-full object-cover rounded"
-          />
+          <div class="h-72 overflow-hidden">
+            <Image
+              src={guest1}
+              alt="Shannon Chan-Kent"
+              width={400}
+              format="avif"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="flex items-center justify-center h-24">
+            <p class="font-yesteryear text-2xl text-black">Shannon Chan-Kent</p>
+          </div>
         </div>
         <div
-          class="card2 p-1 bg-white border-4 border-black w-64 h-80 rotate-2 rounded-lg drop-shadow-xl hover:scale-105 transition-transform overflow-hidden"
+          class="card2 p-1 bg-white border-4 border-black w-64 h-96 rotate-2 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
         >
-          <Image
-            src={guest2}
-            alt="Guest 2"
-            width={400}
-            format="avif"
-            class="w-full h-full object-cover rounded"
-          />
+          <div class="h-72 overflow-hidden">
+            <Image
+              src={guest2}
+              alt="Jeremy Whitley"
+              width={400}
+              format="avif"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="flex items-center justify-center h-24">
+            <p class="font-yesteryear text-2xl text-black">Jeremy Whitley</p>
+          </div>
         </div>
         <div
-          class="card3 p-1 bg-white border-4 border-black w-64 h-80 -rotate-2 rounded-lg drop-shadow-xl hover:scale-105 transition-transform overflow-hidden"
+          class="card3 p-1 bg-white border-4 border-black w-64 h-96 -rotate-2 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
         >
-          <Image
-            src={guest3}
-            alt="Guest 3"
-            width={400}
-            format="avif"
-            class="w-full h-full object-cover rounded"
-          />
+          <div class="h-72 overflow-hidden">
+            <Image
+              src={guest3}
+              alt="Kazumi Evans"
+              width={400}
+              format="avif"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="flex items-center justify-center h-24">
+            <p class="font-yesteryear text-2xl text-black">Kazumi Evans</p>
+          </div>
         </div>
       </div>
 
       {/* Bottom Row */}
       <div class="flex flex-col md:flex-row gap-4 md:gap-8 justify-center mt-4 md:mt-8">
         <div
-          class="card4 p-1 bg-white border-4 border-black w-64 h-80 rotate-3 rounded-lg drop-shadow-xl hover:scale-105 transition-transform overflow-hidden"
+          class="card4 p-1 bg-white border-4 border-black w-64 h-96 rotate-3 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
         >
-          <Image
-            src={guest4}
-            alt="Guest 4"
-            width={400}
-            format="avif"
-            class="w-full h-full object-cover rounded"
-          />
+          <div class="h-72 overflow-hidden">
+            <Image
+              src={guest4}
+              alt="Rena Anakwe"
+              width={400}
+              format="avif"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="flex items-center justify-center h-24">
+            <p class="font-yesteryear text-2xl text-black">Rena Anakwe</p>
+          </div>
         </div>
         <div
-          class="card5 p-1 bg-white border-4 border-black w-64 h-80 -rotate-1 rounded-lg drop-shadow-xl hover:scale-105 transition-transform overflow-hidden"
+          class="card5 p-1 bg-white border-4 border-black w-64 h-96 -rotate-1 rounded-lg drop-shadow-xl hover:scale-105 transition-transform"
         >
-          <Image
-            src={guest5}
-            alt="Guest 5"
-            width={400}
-            format="avif"
-            class="w-full h-full object-cover rounded"
-          />
+          <div class="h-72 overflow-hidden">
+            <Image
+              src={guest5}
+              alt="Tony Fleecs"
+              width={400}
+              format="avif"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="flex items-center justify-center h-24">
+            <p class="font-yesteryear text-2xl text-black">Tony Fleecs</p>
+          </div>
         </div>
       </div>
     </div>
@@ -127,6 +156,11 @@ import Footer from "../components/Footer.astro";
       100% {
         transform: translateY(0px) rotate(var(--rotate, -3deg));
       }
+    }
+
+    /* Add Yesteryear font family */
+    .font-yesteryear {
+      font-family: 'Yesteryear', cursive;
     }
   </style>
 </Layout>
