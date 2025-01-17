@@ -15,25 +15,25 @@ const { roomname = "", roomsrc = null, events = [], } = Astro.props;
 
 let roomColor = "bg-white";
 switch (roomname) {
-  case "A":
+  case "MANE EVENTS":
     roomColor = "bg-pink-200";
     break;
-  case "B":
+  case "CUMBERLAND IJK":
     roomColor = "bg-orange-200";
     break;
-  case "C":
+  case "CUMBERLAND EF":
     roomColor = "bg-blue-200";
     break;
-  case "D":
+  case "CUMBERLAND L":
     roomColor = "bg-green-200";
     break;
-  case "E":
+  case "CUMBERLAND GH":
     roomColor = "bg-red-200";
     break;
-  case "F":
+  case "AUTOGRAPH ROOM":
     roomColor = "bg-purple-200";
     break;
-  case "G":
+  case "VENDOR HALL":
     roomColor = "bg-neutral-300";
     break;
   default:
@@ -46,16 +46,8 @@ switch (roomname) {
   <th
     class={`agenda-room-cell border-2 border-black text-xs md:text-xl text-center h-16 md:h-20 lg:h-24 ${roomColor} z-50`}
   >
-    <div class="uppercase flex items-center justify-end">
-      <div class="w-12 md:w-24 lg:w-32 leading-none">{roomname}</div>
-      <Image
-        format="avif"
-        src={roomsrc}
-        width={40}
-        height={105}
-        alt={roomname}
-        class="h-16 md:h-20 lg:h-24 w-auto border-2 border-black"
-      />
+    <div class="uppercase flex items-center justify-center">
+      {roomname}
     </div>
   </th>
   {
