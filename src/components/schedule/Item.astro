@@ -2,12 +2,9 @@
 import { Image } from "astro:assets";
 import img from "@assets/2025/schedule/ponyawards.png";
 
-
 const {
   title,
-  start = "11:30 AM",
-  end = "12:00 AM",
-  startDate = "",
+  startDate,
   host = "Host",
   description = "Lorem ipsum dolor sit amet",
   colspan,
@@ -16,8 +13,20 @@ const {
   rating = "Not Rated"
 } = Astro.props;
 
-console.log(startDate)
+// Format start time and calculate end time
+const startTime = startDate ? new Date(startDate) : new Date();
+const endTime = new Date(startTime.getTime() + (colspan * 30 * 60 * 1000));
 
+const formatTime = (date) => {
+  return date.toLocaleTimeString('en-US', { 
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true 
+  });
+};
+
+const start = formatTime(startTime);
+const end = formatTime(endTime);
 
 const roomType = [
   "room1",
