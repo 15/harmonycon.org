@@ -14,7 +14,7 @@ interface Props {
 }
 
 const {
-  day = "Friday",
+  day = "friday",
   starttime: START_TIME = "10:00",
   endtime: END_TIME = "04:00",
   additionalevents = {}
@@ -54,124 +54,24 @@ export type PlaceholderEvent = {
   startDate: Date,
 }
 
-const convertTime = (d: Date) => {
-  const hours = d.getHours();
-  let hString = hours.toString().padStart(2, "0");
-  let suffix = "";
-  const mString = d.getMinutes().toString().padStart(2, "0");
-  if (hours === 0) {
-    hString = "12";
-    suffix = "AM";
-  } else if (hours < 12) {
-    suffix = "AM";
-  } else if (hours === 12) {
-    suffix = "PM";
-  } else {
-    hString = (hours - 12).toString().padStart(2, "0");
-    suffix = "PM";
-  }
 
-  return `${hString}:${mString} ${suffix}`;
+function convertTime(date: Date): string {
+  return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+}
+function asDate(date: string): Date {
+  return new Date(date);
 }
 
+import schedule from "@data/schedule/friday.json";
 
-
-function fetchEvents() {
-  interface RawEvent {
-    "application-name": string;
-    "start-time": string;
-    "end-time": string;
-    "business-name": string;
-    "Panel description"?: string[];
-    "Set description"?: string[];
-    "Rate your panel"?: string[];
-    "room-or-table-id": string;
-  }
-
-  const events = [].map((rawEvents : RawEvent[]) => {
-    try {
-      return rawEvents.map(ev => {
-        const start = new Date(ev["start-time"]);
-        const end = new Date(ev["end-time"]);
-        return {
-          title: ev["application-name"],
-          host: ev["business-name"],
-          description: (ev["Panel description"] || ev["Set description"])?.join("\n") || "",
-          startDate: start,
-          start: convertTime(start),
-          endDate: end,
-          end: convertTime(end),
-          timeslots: Math.round((end.getTime() - start.getTime()) / (30 * 60 * 1000)),
-          day: (() => {
-            const dClone = new Date(start.getTime());
-            dClone.setHours(dClone.getHours() - 6); // Offset by 6 hours to make sure events past 12AM are still counted on this day
-            return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][dClone.getDay()] as DayOfTheWeek;
-          })(),
-          room: (() => {
-            switch (ev["room-or-table-id"]) {
-              case "A":
-                return ROOM.A;
-              case "B":
-                return ROOM.B;
-              case "C":
-                return ROOM.C;
-              case "D":
-                return ROOM.D;
-              case "E":
-                return ROOM.E;
-              case "F":
-                return ROOM.F;
-              case "G":
-                return ROOM.G;
-              default:
-                return ROOM.UNKNOWN;
-            }
-          })(),
-          isConcert: ev["room-or-table-id"] === "Concert"
-        }
-      });
-    } catch (error) {
-      console.warn(error);
-      return [];
-    }
-  })
-  return events.flat();
-};
-
-const remoteEvents = fetchEvents().filter(event => {
+const remoteEvents = schedule.filter(event => {
   if (event.day === day) return true;
   else return false;
 });
-remoteEvents.sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
+remoteEvents.sort((a, b) => asDate(a.startDate).getTime() - asDate(b.startDate).getTime());
 
 const events: {[key: number]: (Event|PlaceholderEvent)[]} = {
-  [ROOM.A]: [{
-    placeholder: false,
-    title: "Opening",
-    host: "HarmonyCon",
-    description: "Join us in Mane Events for our HarmonyCon 2025 kickoff!!! (Also, rawr >:3)",
-    startDate: new Date(2025, 1, 31, 11, 30),
-    start: "11:30 AM",
-    endDate: new Date(2025, 1, 31, 12, 30),
-    end: "12:30 PM",
-    day: "Friday",
-    timeslots: 4,
-    room: ROOM.A,
-    isConcert: false,
-  }, {
-    placeholder: false,
-    title: "Bright Eyes in the Thunderclouds: The Official Premiere",
-    host: "Pinkaboo",
-    description: `The first half will be a discussion on what musical would be the favorite musical of our favorite ponies, the second half will be what the audience's favorite musicals say about them. Fair warning, you might get roasted if you like a bad musical!`,
-    startDate: new Date(2025, 1, 31, 12, 45),
-    start: "12:45 PM",
-    endDate: new Date(2025, 1, 31, 13, 15),
-    end: "1:15 PM",
-    day: "Friday",
-    timeslots: 2,
-    room: ROOM.A,
-    isConcert: false,
-  }],
+  [ROOM.A]: [],
   [ROOM.B]: [],
   [ROOM.C]: [],
   [ROOM.D]: [],
@@ -179,6 +79,7 @@ const events: {[key: number]: (Event|PlaceholderEvent)[]} = {
   [ROOM.F]: [],
   [ROOM.G]: [],
 };
+
 remoteEvents.forEach(event => {
   if (Array.isArray(events[event.room])) events[event.room].push(event);
 });
@@ -190,14 +91,14 @@ Object.keys(events).forEach(room => {
     const nextEvent: Event = evs[index + 1];
     placeholderEvents.push({
       placeholder: true,
-      startDate: event.endDate,
-      timeslots: Math.round((nextEvent.startDate.getTime() - event.endDate.getTime()) / (30 * 60 * 1000))
+      startDate:  asDate(event.endDate),
+      timeslots: Math.round((asDate(nextEvent.startDate).getTime() - asDate(event.endDate).getTime()) / (30 * 60 * 1000))
     });
   });
   {
     const firstEvent: Event | undefined = events[room][0];
     if (firstEvent) {
-      const fEStartDate = firstEvent.startDate;
+      const fEStartDate = asDate(firstEvent.startDate);
       const startDate = new Date(`${fEStartDate.getFullYear()}-${fEStartDate.getMonth() + 1}-${fEStartDate.getDate()} ${START_TIME}:00`);
       placeholderEvents.push({
         placeholder: true,
@@ -209,7 +110,7 @@ Object.keys(events).forEach(room => {
   {
     const lastEvent: Event | undefined = events[room][events[room].length - 1];
     if (lastEvent) {
-      const fEEndDate = lastEvent.endDate;
+      const fEEndDate = asDate(lastEvent.endDate);
       const startDate = new Date(`${fEEndDate.getFullYear()}-${fEEndDate.getMonth() + 1}-${fEEndDate.getDate() + (
         (parseInt(END_TIME) <= 10 && fEEndDate.getHours() >= 10) ? 1 : 0
       )} ${END_TIME}:00`);
@@ -224,48 +125,58 @@ Object.keys(events).forEach(room => {
     placeholderEvents.push({
       placeholder: true,
       timeslots: 1000,
-      startDate: new Date(`${remoteEvents[0]?.startDate.getFullYear()}-${remoteEvents[0]?.startDate.getDate()}-${remoteEvents[0]?.startDate.getMonth() + 1} ${START_TIME}`)
+      startDate: new Date(`${asDate(remoteEvents[0]?.startDate).getFullYear()}-${asDate(remoteEvents[0]?.startDate).getDate()}-${asDate(remoteEvents[0]?.startDate).getMonth() + 1} ${START_TIME}`)
     });
   }
   events[room] = events[room].concat(
     placeholderEvents.filter(event => event.timeslots > 0)
   );
-  events[room].sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
+  events[room].sort((a, b) => asDate(a.startDate).getTime() - asDate(b.startDate).getTime());
 
 });
+
+console.log(events)
+
 ---
 <Schedule day={day} additionalevents={additionalevents}>
   <Room
+    index="1"
     roomname="MANE EVENTS"
     roomsrc={roomEmpty}
     events={events[ROOM.A]}
   />
   <Room
+    index="2"
     roomname="CUMBERLAND IJK"
     roomsrc={roomEmpty}
     events={events[ROOM.B]}
   />
   <Room
+    index="3"
     roomname="CUMBERLAND EF"
     roomsrc={roomEmpty}
     events={events[ROOM.C]}
   />
   <Room
+    index="4"
     roomname="CUMBERLAND L"
     roomsrc={roomEmpty}
     events={events[ROOM.D]}
   />
   <Room
+    index="5"
     roomname="CUMBERLAND GH"
     roomsrc={roomEmpty}
     events={events[ROOM.E]}
   />
   <Room
+    index="6"
     roomname="AUTOGRAPH ROOM"
     roomsrc={roomEmpty}
     events={events[ROOM.F]}
   />
   <Room
+    index="7"
     roomname="VENDOR HALL"
     roomsrc={roomEmpty}
     events={events[ROOM.G]}

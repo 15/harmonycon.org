@@ -6,45 +6,24 @@ import Item from "@components/schedule/Item.astro";
 import EmptyItem from "@components/schedule/EmptyItem.astro";
 
 interface Props {
+  index: string;
   roomname: string;
   roomsrc: ImageMetadata | string | null;
   events: (Event | PlaceholderEvent)[];
 }
 
-const { roomname = "", roomsrc = null, events = [], } = Astro.props;
+const { index = "Default", roomname = "", roomsrc = null, events = [], } = Astro.props;
 
-let roomColor = "bg-white";
-switch (roomname) {
-  case "MANE EVENTS":
-    roomColor = "bg-pink-200";
-    break;
-  case "CUMBERLAND IJK":
-    roomColor = "bg-orange-200";
-    break;
-  case "CUMBERLAND EF":
-    roomColor = "bg-blue-200";
-    break;
-  case "CUMBERLAND L":
-    roomColor = "bg-green-200";
-    break;
-  case "CUMBERLAND GH":
-    roomColor = "bg-red-200";
-    break;
-  case "AUTOGRAPH ROOM":
-    roomColor = "bg-purple-200";
-    break;
-  case "VENDOR HALL":
-    roomColor = "bg-neutral-300";
-    break;
-  default:
-    roomColor = "bg-white";
-    break;
-}
+import fridaySchedule from "@data/schedule/friday.json";
+
+const testEvent = fridaySchedule[0];
+const testEvent2 = fridaySchedule[1];
+
 ---
 
 <tr>
   <th
-    class={`agenda-room-cell border-2 border-black text-xs md:text-xl text-center h-16 md:h-20 lg:h-24 ${roomColor} z-50`}
+    class={`agenda-room-cell border-2 border-black text-xs md:text-xl text-center h-16 md:h-20 lg:h-24 room${index} z-50`}
   >
     <div class="uppercase flex items-center justify-center">
       {roomname}
@@ -70,3 +49,30 @@ switch (roomname) {
     )
   }
 </tr>
+
+<style>
+  .room1, .room1 ~ :global(td:not([data-empty])) {
+    @apply bg-pink-200 hover:bg-pink-300;
+  }
+  .room2, .room2 ~ :global(td:not([data-empty])) {
+    @apply bg-orange-200 hover:bg-orange-300;
+  }
+  .room3, .room3 ~ :global(td:not([data-empty])) {
+    @apply bg-blue-200 hover:bg-blue-300;
+  }
+  .room4, .room4 ~ :global(td:not([data-empty])) {
+    @apply bg-green-200 hover:bg-green-300;
+  }
+  .room5, .room5 ~ :global(td:not([data-empty])) {
+    @apply bg-red-200 hover:bg-red-300;
+  }
+  .room6, .room6 ~ :global(td:not([data-empty])) {
+    @apply bg-purple-200 hover:bg-purple-300;
+  }
+  .room7, .room7 ~ :global(td:not([data-empty])) {
+    @apply bg-neutral-300 hover:bg-neutral-400;
+  }
+  .roomDefault, .roomDefault ~ :global(td:not([data-empty])) {
+    @apply bg-white hover:bg-neutral-400;
+  }
+</style>

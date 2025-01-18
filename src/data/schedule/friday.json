@@ -1,0 +1,20 @@
+[
+    {
+        "room": "Mane Events",
+        "startDate": "2025.01.31T12:45:00",
+        "day": "friday",
+        "slots": 2,
+        "host": "Pinkaboo",
+        "title": "Bright Eyes in the Thunderclouds: The Official Premiere",
+        "description": "The first half will be a discussion on what musical would be the favorite musical of our favorite ponies, the second half will be what the audience's favorite musicals say about them. Fair warning, you might get roasted if you like a bad musical!"
+    },
+    {
+        "room": "Mane Events",
+        "startDate": "2025.01.31T11:30:00",
+        "day":  "friday",
+        "slots": 4,
+        "host": "HarmonyCon",
+        "title": "Opening",
+        "description": "Join us in Mane Events for our HarmonyCon 2025 kickoff!!! (Also, rawr >:3)"
+    }
+]

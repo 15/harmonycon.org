@@ -14,7 +14,48 @@ const optimizedScheduleBackground = await getImage({
 import ScheduleHeader from "../components/schedule/ScheduleHeader.astro";
 
 
-const { day = "Friday", additionalevents = {} } = Astro.props;
+const { day = "friday", additionalevents = {} } = Astro.props;
+
+const slots =  {
+  'friday': {
+    start: new Date(2025, 0, 31, 11, 30),
+    end: new Date(2025, 1, 1, 1, 0),
+  },
+  'saturday': {
+    start: new Date(2025, 1, 1, 10, 0),
+    end: new Date(2025, 1, 2, 2, 0),
+  },
+  'sunday': {
+    start: new Date(2025, 1, 2, 10, 0),
+    end: new Date(2025, 1, 2, 16, 0),
+  },
+}
+
+const slotLength = 15
+
+function getSlotTime(date: Date): string {
+  return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+}
+
+function nextSlot(date: Date): Date {
+  const next = new Date(date);
+  next.setMinutes(next.getMinutes() + slotLength);
+  return next;
+}
+
+const daySlots = slots[day]
+
+const allSlots = []
+
+let date = daySlots.start;
+
+while (date < daySlots.end) {
+  allSlots.push(getSlotTime(date));
+  date = nextSlot(date);
+}
+
+console.log(allSlots)
+
 ---
 
 <Layout title="HarmonyCon 2025 | Schedule">
@@ -36,101 +77,11 @@ const { day = "Friday", additionalevents = {} } = Astro.props;
         <tbody>
         <tr class="border-2 bg-black text-white border-black font-semibold text-sm md:text-l text-center">
           <th class="w-20 md:w-32 lg:w-44 z-50 bg-black border-black"></th>
-          <td class="md:w-24 w-16 border-white border-r">9:15 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">9:30 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">9:45 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">10:00 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">10:15 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">10:30 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">10:45 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">11:00 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">11:15 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">11:30 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">11:45 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">12:00 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">12:15 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">12:30 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">12:45 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">1:00 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">1:15 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">1:30 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">1:45 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">2:00 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">2:15 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">2:30 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">2:45 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">3:00 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">3:15 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">3:30 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">3:45 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">4:00 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">4:15 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">4:30 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">4:45 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">5:00 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">5:15 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">5:30 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">5:45 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">6:00 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">6:15 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">6:30 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">6:45 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">7:00 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">7:15 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">7:30 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">7:45 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">8:00 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">8:15 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">8:30 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">8:45 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">9:00 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">9:15 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">9:30 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">9:45 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">10:00 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">10:15 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">10:30 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">10:45 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">11:00 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">11:15 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">11:30 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">11:45 PM</td>
-          <td class="md:w-24 w-16 border-white border-r">12:00 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">12:15 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">12:30 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">12:45 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">1:00 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">1:15 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">1:30 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">1:45 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">2:00 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">2:15 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">2:30 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">2:45 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">3:00 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">3:15 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">3:30 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">3:45 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">4:00 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">4:15 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">4:30 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">4:45 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">5:00 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">5:15 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">5:30 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">5:45 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">6:00 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">6:15 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">6:30 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">6:45 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">7:00 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">7:15 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">7:30 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">7:45 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">8:00 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">8:15 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">8:30 AM</td>
-          <td class="md:w-24 w-16 border-white border-r">8:45 AM</td>
+          {
+            allSlots.map((slot, index) => (
+                <td class="md:w-24 w-16 border-white border-r">{slot}</td>
+            ))
+          }
         </tr>
         <slot />
         </tbody>
@@ -141,7 +92,7 @@ const { day = "Friday", additionalevents = {} } = Astro.props;
   <Footer />
 </Layout>
 
-<style 
+<style
 define:vars={{
   optimizedScheduleBackground: `url(${optimizedScheduleBackground.src})`,
 }}>

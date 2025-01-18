@@ -28,46 +28,46 @@ const roomType = [
 ];
 ---
 
-<dialog class="p-0 cursor-default text-white font-serif text-center" id={title}>
-  <div
-    class={`p-8 relative justify-center rounded flex flex-col w-full h-auto sm:w-96 md:w-128 lg:w-160 xl:w-224 lg:h-auto  ${roomType[type]}-dialog`}
-  >
-  <!-- {
-    type !== 6 ? (
-      <div class="font-normal italic text-3xl leading-none uppercase font-sans">
-        Rating: {rating}
-      </div>
-    ) : null
-  } -->
-
-  <div class="font-medium text-3xl leading-none italic mb-12">Host: {host}</div>
-    <div class="font-medium text-6xl leading-none uppercase tracking-wider mb-6" style="font-family: 'Poppins';">{title}</div>
-    <div class="font-medium text-3xl leading-none mb-8 uppercase"  style="font-family: 'Poppins';">
-      {day} @ {start}-{end} ({colspan * 30} minutes)
-    </div>
-    <div class="my-8 leading-5 text-lg text-left w-[70%] mx-auto"  style="font-family: 'Poppins';" set:html={description} />
-    <div class="w-[80%] mx-auto h-[3px] bg-white my-8"></div>
-
-    <div class="mt-auto bg-black">
-      <Image
-        src={img}
-        alt="The Pony Awards"
-        width={150}
-        class="mx-auto"
-      />
-    </div>
-  </div>
-</dialog>
 <td
-  class={`${roomType[type]} border-2 border-black align-top duration-300 cursor-pointer`}
+  class={`border-2 border-black align-top duration-300 cursor-pointer`}
   colspan={colspan}
   id={`item-${title}`}
 >
+  <dialog class="p-0 cursor-default text-white font-serif text-center" id={title}>
+    <div
+        class={`p-8 relative justify-center rounded flex flex-col w-full h-auto sm:w-96 md:w-128 lg:w-160 xl:w-224 lg:h-auto  ${roomType[type]}-dialog`}
+    >
+      <!-- {
+        type !== 6 ? (
+          <div class="font-normal italic text-3xl leading-none uppercase font-sans">
+            Rating: {rating}
+          </div>
+        ) : null
+      } -->
+
+      <div class="font-medium text-3xl leading-none italic mb-12">Host: {host}</div>
+      <div class="font-medium text-6xl leading-none uppercase tracking-wider mb-6" style="font-family: 'Poppins';">{title}</div>
+      <div class="font-medium text-3xl leading-none mb-8 uppercase"  style="font-family: 'Poppins';">
+        {day} @ {start}-{end} ({colspan * 30} minutes)
+      </div>
+      <div class="my-8 leading-5 text-lg text-left w-[70%] mx-auto"  style="font-family: 'Poppins';" set:html={description} />
+      <div class="w-[80%] mx-auto h-[3px] bg-white my-8"></div>
+
+      <div class="mt-auto bg-black">
+        <Image
+            src={img}
+            alt="The Pony Awards"
+            width={150}
+            class="mx-auto"
+        />
+      </div>
+    </div>
+  </dialog>
   <div
     class="relative rounded p-1 md:p-2 h-16 md:h-24"
   >
     <div
-      class="md:line-clamp-none line-clamp-3 font-semibold text-base md:text-lg lg:text-xl !leading-none font-serif"
+      class="line-clamp-3 font-semibold text-base md:text-lg lg:text-xl !leading-none font-serif"
     >
       {title}
     </div>
@@ -81,27 +81,6 @@ const roomType = [
 </td>
 
 <style>
-  .room1 {
-    @apply bg-pink-200 hover:bg-pink-300;
-  }
-  .room2 {
-    @apply bg-orange-200 hover:bg-orange-300;
-  }
-  .room3 {
-    @apply bg-blue-200 hover:bg-blue-300;
-  }
-  .room4 {
-    @apply bg-green-200 hover:bg-green-300;
-  }
-  .room5 {
-    @apply bg-red-200 hover:bg-red-300;
-  }
-  .room6 {
-    @apply bg-purple-200 hover:bg-purple-300;
-  }
-  .room7 {
-    @apply bg-neutral-300 hover:bg-neutral-400;
-  }
   .concert {
     @apply bg-neutral-50 hover:bg-black text-black hover:text-white;
   }
