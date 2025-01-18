@@ -111,10 +111,7 @@ function asDate(date: string): Date {
 
 import schedule from "@data/schedule/friday.json";
 
-const sourceEvents = schedule.filter(event => {
-  if (event.day === day) return true;
-  else return false;
-});
+const sourceEvents = schedule.filter(event => event.day === day);
 sourceEvents.sort((a, b) => asDate(a.startDate).getTime() - asDate(b.startDate).getTime());
 
 

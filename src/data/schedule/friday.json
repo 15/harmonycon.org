@@ -1,20 +1,389 @@
 [
     {
-        "room": "Mane Events",
-        "startDate": "2025-01-31T12:45:00",
-        "day": "friday",
-        "timeslots": 2,
-        "host": "Pinkaboo",
-        "title": "Bright Eyes in the Thunderclouds: The Official Premiere",
-        "description": "The first half will be a discussion on what musical would be the favorite musical of our favorite ponies, the second half will be what the audience's favorite musicals say about them. Fair warning, you might get roasted if you like a bad musical!"
+      "room": "Reg Desk",
+      "startDate": "2025-01-31T10:00:00",
+      "day": "friday",
+      "timeslots": 48,
+      "host": "HarmonyCon",
+      "title": "Registration",
+      "description": "Pick up your badge and convention materials"
     },
     {
-        "room": "Mane Events",
-        "startDate": "2025-01-31T11:30:00",
-        "day":  "friday",
+      "room": "Vendor Hall",
+      "startDate": "2025-01-31T11:00:00",
+      "day": "friday",
+      "timeslots": 28,
+      "host": "HarmonyCon",
+      "title": "Vendor Hall",
+      "description": "Shop for all your favorite pony merchandise!"
+    },
+    {
+      "room": "Mane Events",
+      "startDate": "2025-01-31T11:30:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "HarmonyCon",
+      "title": "Opening",
+      "description": "Join us in Mane Events for our HarmonyCon 2025 kickoff!!! (Also, rawr >:3)"
+    },
+    {
+      "room": "Cumberland L",
+      "startDate": "2025-01-31T12:30:00",
+      "day": "friday",
+      "timeslots": 3,
+      "host": "Pinkaboo",
+      "title": "What's Your Favorite Pony's Favorite Musical",
+      "description": "The first half will be a discussion on what musical would be the favorite musical of our favorite ponies, the second half will be what the audience's favorite musicals say about them. Fair warning, you might get roasted if you like a bad musical!"
+    },
+    {
+      "room": "Mane Events",
+      "startDate": "2025-01-31T12:45:00",
+      "day": "friday",
+      "timeslots": 2,
+      "host": "Minty Root",
+      "title": "Bright Eyes in the Thunderclouds: The Official Premiere",
+      "description": "The official premiere of the animated remake of Project Thundercloud, a fully animated 15 minutes long short film about Derpy Hooves having to save Equestria from a mysterious storm."
+    },
+    {
+      "room": "Cumberland EF",
+      "startDate": "2025-01-31T12:45:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "CaptainHoers",
+      "title": "Animation Horror Picture Show - Tales of Animation Gone Wrong",
+      "description": "Animation is a monument to mankind's hubris. CaptainHoers regales over a decade of trials and tribulations of wrangling pixels into motion against their will."
+    },
+    {
+      "room": "Cumberland GH",
+      "startDate": "2025-01-31T12:45:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "Fuzzy",
+      "title": "Fanfiction Writing Workshop",
+      "description": "Learn the fundamentals of writing fanfiction and workshop your ideas with fellow writers"
+    },
+    {
+      "room": "Cumberland IJK",
+      "startDate": "2025-01-31T13:00:00",
+      "day": "friday",
+      "timeslots": 6,
+      "host": "DJMusicman",
+      "title": "Cutting Half the Track List",
+      "description": "A panel where you create music through the art of mashups! First, we'll discuss what makes a mashup work, and then we'll take requests from the audience on what songs they want to see mashed up!"
+    },
+    {
+      "room": "Mane Events",
+      "startDate": "2025-01-31T13:30:00",
+      "day": "friday",
+      "timeslots": 6,
+      "host": "Dragonboy",
+      "title": "Trivia Trot 2: The Second One",
+      "description": "Think you know all there is to know about MLP and related media! Come test that knowledge and compete in Trivia Trot 2! Not just your average trivia panel. Here there are even questions about questions! The Second one brings more fun."
+    },
+    {
+      "room": "Cumberland L",
+      "startDate": "2025-01-31T13:30:00",
+      "day": "friday",
+      "timeslots": 2,
+      "host": "RPG Team",
+      "title": "Before You Play 'The Pony Puzzle': Essence 20 Overview",
+      "description": "Learn the basics of the Essence 20 system before diving into The Pony Puzzle adventure!"
+    },
+    {
+      "room": "Cumberland GH",
+      "startDate": "2025-01-31T14:00:00",
+      "day": "friday",
+      "timeslots": 8,
+      "host": "CraftyPony",
+      "title": "Perler Bead Workshop",
+      "description": "Learn how to create cute pony designs with Perler beads!"
+    },
+    {
+      "room": "Cumberland EF",
+      "startDate": "2025-01-31T14:15:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "Voice Actors",
+      "title": "Singing in Character with Shannon, Kazumi, & Rena",
+      "description": "Join our special guests for a musical demonstration of character voices!"
+    },
+    {
+      "room": "Cumberland L",
+      "startDate": "2025-01-31T14:15:00",
+      "day": "friday",
+      "timeslots": 8,
+      "host": "HarmonyCon",
+      "title": "Creator Roundup: Harmony Con Edition!",
+      "description": "Meet your favorite content creators and learn about their latest projects!"
+    },
+    {
+      "room": "Cumberland IJK",
+      "startDate": "2025-01-31T14:45:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "Willow",
+      "title": "Let's Make Harmony!",
+      "description": "A collaborative creativity workshop where we make something wonderful together!"
+    },
+    {
+      "room": "Mane Events",
+      "startDate": "2025-01-31T15:15:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "RiffTeam",
+      "title": "RiffPonies!",
+      "description": "Join us as we lovingly riff on some classic pony content!"
+    },
+    {
+      "room": "Cumberland EF",
+      "startDate": "2025-01-31T15:30:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "Tony Fleecs & Jeremy Whitley",
+      "title": "How Comics Come to Life with Tony & Jeremy",
+      "description": "Get an inside look at the comic creation process from the pros!"
+    },
+    {
+      "room": "Autograph Room",
+      "startDate": "2025-01-31T15:30:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "HarmonyCon",
+      "title": "Autographs for VAs",
+      "description": "Meet and get autographs from our special voice actor guests!"
+    },
+    {
+      "room": "Cumberland IJK",
+      "startDate": "2025-01-31T16:15:00",
+      "day": "friday",
+      "timeslots": 6,
+      "host": "JeopardyTeam",
+      "title": "Jeopardy!: My Little Pony Edition",
+      "description": "Test your pony knowledge in this game show format!"
+    },
+    {
+      "room": "Mane Events",
+      "startDate": "2025-01-31T16:30:00",
+      "day": "friday",
+      "timeslots": 10,
+      "host": "HarmonyCon",
+      "title": "Soundcheck",
+      "description": "Technical preparation for the evening's concert"
+    },
+    {
+      "room": "Cumberland L",
+      "startDate": "2025-01-31T16:30:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "AnimeScholar",
+      "title": "Iyashikei and MLP: Slice of Life and Healing",
+      "description": "Exploring the healing aspects of MLP through the lens of Japanese anime concepts"
+    },
+    {
+      "room": "Cumberland GH",
+      "startDate": "2025-01-31T16:30:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "Community Guests",
+      "title": "Meet the Community Guests",
+      "description": "Meet and chat with our wonderful community guests!"
+    },
+    {
+      "room": "Cumberland EF",
+      "startDate": "2025-01-31T16:45:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "PonyTown Team",
+      "title": "Pony Town's Something Social",
+      "description": "Learn about and discuss this unique social platform!"
+    },
+    {
+      "room": "Cumberland L",
+      "startDate": "2025-01-31T17:45:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "CosplayTeam",
+      "title": "Getting Creative with Pony Cosplay!",
+      "description": "Tips and tricks for creating your own pony costumes!"
+    },
+    {
+      "room": "Cumberland GH",
+      "startDate": "2025-01-31T17:45:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "FriendshipTeam",
+      "title": "How to make Furrends @ cons",
+      "description": "Tips and strategies for meeting new friends at conventions!"
+    },
+    {
+      "room": "Cumberland IJK",
+      "startDate": "2025-01-31T18:00:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "MovieTeam",
+      "title": "Ponify That Movie!",
+      "description": "Reimagining famous movies in the world of Equestria!"
+    },
+    {
+      "room": "Cumberland EF",
+      "startDate": "2025-01-31T18:00:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "BracketTeam",
+      "title": "The Best Thing About MLP Bracket",
+      "description": "Help us determine the best thing about MLP in this interactive bracket!"
+    },
+    {
+      "room": "Mane Events",
+      "startDate": "2025-01-31T19:00:00",
+      "day": "friday",
+      "timeslots": 24,
+      "host": "HarmonyCon",
+      "title": "Concert",
+      "description": "An evening of amazing pony music!"
+    },
+    {
+      "room": "Cumberland L",
+      "startDate": "2025-01-31T19:00:00",
+      "day": "friday",
+      "timeslots": 6,
+      "host": "LoppyTeam",
+      "title": "Don't Be a Loppy!",
+      "description": "Learn about convention etiquette and how to be a good con-goer!"
+    },
+    {
+      "room": "Cumberland GH",
+      "startDate": "2025-01-31T19:00:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "ColorTeam",
+      "title": "Color-A-Critter Club",
+      "description": "Join us for a relaxing coloring session!"
+    },
+    {
+      "room": "Cumberland IJK",
+      "startDate": "2025-01-31T19:15:00",
+      "day": "friday",
+      "timeslots": 6,
+      "host": "FOE Team",
+      "title": "Fallout Equestria: The Animated Series",
+      "description": "Updates and discussion about the Fallout Equestria animation project"
+    },
+    {
+      "room": "Cumberland EF",
+      "startDate": "2025-01-31T19:15:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "FanficTeam",
+      "title": "Cultural Impact of Bad FanFic - The My Immortal Panel",
+      "description": "A deep dive into infamous fanfiction and its impact on fandom culture"
+    },
+    {
+      "room": "Cumberland GH",
+      "startDate": "2025-01-31T20:15:00",
+      "day": "friday",
+      "timeslots": 2,
+      "host": "GlimmerGang",
+      "title": "Glimmer Gang Appreciation Meetup",
+      "description": "A meetup for fans of Starlight Glimmer!"
+    },
+    {
+      "room": "Cumberland EF",
+      "startDate": "2025-01-31T20:30:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "AviationTeam",
+      "title": "Flying in Formation: The similarities in the Pegasi of Equestria and Human Aviation",
+      "description": "Exploring the parallels between pegasus flight and real-world aviation"
+    },
+    {
+      "room": "Cumberland L",
+      "startDate": "2025-01-31T20:45:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "StageTeam",
+      "title": "The Stage Coach",
+      "description": "Learn about stage presence and performance techniques!"
+    },
+    {
+      "room": "Cumberland IJK",
+      "startDate": "2025-01-31T21:00:00",
+      "day": "friday",
+      "timeslots": 4,
+      "host": "TriviaTeam",
+      "title": "Name That Frame! A Pony Trivia Game",
+      "description": "Test your visual memory of pony episodes in this fast-paced game!"
+    },
+    {
+      "room": "Cumberland GH", 
+      "startDate": "2025-01-31T21:00:00",
+      "day": "friday",
+      "timeslots": 6,
+      "host": "Fuzzy",
+      "title": "The Blind Brainstorm - Creating OC's Edition!",
+      "description": "Last year we had you all create barmy stories in teams that didn't know what each other was thinking. This year it's the turn of characters! Come and learn how to concept and design OCs FOR a story, with Fuzzy of Murky Number Seven giving writing advice, as well as hosting the titular Blind Brainstorm where teams will design an OC... without knowing what each other are planning to add!"
+    },
+    {
+        "room": "Cumberland IJK",
+        "startDate": "2025-01-31T22:15:00", 
+        "day": "friday",
+        "timeslots": 6,
+        "host": "WhoovesTeam",
+        "title": "Whooves Line Is It Anyway?",
+        "description": "Pony-themed improv comedy where everything's made up and the points don't matter!"
+      },
+      {
+        "room": "Cumberland EF",
+        "startDate": "2025-01-31T22:15:00",
+        "day": "friday",
         "timeslots": 4,
-        "host": "HarmonyCon",
-        "title": "Opening",
-        "description": "Join us in Mane Events for our HarmonyCon 2025 kickoff!!! (Also, rawr >:3)"
-    }
-]
+        "host": "GameTeam",
+        "title": "2 Ponies, 1 Lie",
+        "description": "A fun deduction game where players try to spot the lie among pony facts!"
+      },
+      {
+        "room": "Cumberland L",
+        "startDate": "2025-01-31T22:15:00",
+        "day": "friday",
+        "timeslots": 4,
+        "host": "SmallYoutubers",
+        "title": "Small-Time Horse Youtubers",
+        "description": "Meet and support smaller YouTubers in the MLP community!"
+      },
+      {
+        "room": "Cumberland GH",
+        "startDate": "2025-01-31T22:45:00",
+        "day": "friday",
+        "timeslots": 6,
+        "host": "CharityTeam",
+        "title": "Cards Against Equestria for Charity",
+        "description": "Play a pony-themed card game while raising money for charity!"
+      },
+      {
+        "room": "Cumberland EF",
+        "startDate": "2025-01-31T23:30:00",
+        "day": "friday",
+        "timeslots": 4,
+        "host": "ConStories",
+        "title": "Convention Stories",
+        "description": "Share your favorite convention memories and stories!"
+      },
+      {
+        "room": "Cumberland L",
+        "startDate": "2025-01-31T23:30:00",
+        "day": "friday",
+        "timeslots": 6,
+        "host": "OpenMicTeam",
+        "title": "Magic of Friendship Open Mic",
+        "description": "Share your talents with fellow fans in this open mic session!"
+      },
+      {
+        "room": "Cumberland IJK",
+        "startDate": "2025-02-01T00:00:00",
+        "day": "friday",
+        "timeslots": 4,
+        "host": "GrimdarkTeam",
+        "title": "Pony Tales Lost as a Curse Word: A Brony's Guide to MLP Grimdark",
+        "description": "Exploring the darker side of pony fan content"
+      }
+    ]
