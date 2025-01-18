@@ -33,8 +33,8 @@ const optimizedScheduleBackground = await getImage({
 
 const slots =  {
   'friday': {
-    start: new Date(2025, 0, 31, 10, 30),
-    end: new Date(2025, 1, 1, 1, 30),
+    start: new Date(2025, 0, 31, 11, 0),
+    end: new Date(2025, 1, 1, 1, 0),
   },
   'saturday': {
     start: new Date(2025, 1, 1, 10, 0),
@@ -294,7 +294,7 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
   const line = document.getElementById("with-vertical-line");
   const roomCell = document.getElementsByClassName("agenda-room-cell")[0];
 
-  const fridayBegin = new Date(2025, 0, 31, 10, 30).getTime()
+  const fridayBegin = new Date(2025, 0, 31, 11, 0).getTime()
   const fridayEnd = new Date(2025, 1, 1, 1, 0).getTime()
   const fridayDuration = fridayEnd - fridayBegin
 
