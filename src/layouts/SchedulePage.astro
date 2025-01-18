@@ -32,18 +32,18 @@ const optimizedScheduleBackground = await getImage({
 
 
 const slots =  {
- 'friday': {
- start: new Date(2025, 0, 31, 11, 30),
- end: new Date(2025, 1, 1, 1, 0),
- },
- 'saturday': {
- start: new Date(2025, 1, 1, 10, 0),
- end: new Date(2025, 1, 2, 2, 0),
- },
- 'sunday': {
- start: new Date(2025, 1, 2, 10, 0),
- end: new Date(2025, 1, 2, 16, 0),
- },
+  'friday': {
+    start: new Date(2025, 0, 31, 10, 30),
+    end: new Date(2025, 1, 1, 1, 30),
+  },
+  'saturday': {
+    start: new Date(2025, 1, 1, 10, 0),
+    end: new Date(2025, 1, 2, 2, 0),
+  },
+  'sunday': {
+    start: new Date(2025, 1, 2, 10, 0),
+    end: new Date(2025, 1, 2, 16, 0),
+  },
  }
 
 const slotLength = 15
@@ -169,7 +169,7 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
   }
 }
 
-console.log(events)
+// console.log(events)
 
 ---
 
@@ -322,7 +322,7 @@ console.log(events)
     let tableWidth = table.scrollWidth - roomCellOffset
 
     const moveLine = (progression) => {
-      console.log({progression, tableWidth, roomCellOffset})
+    //   console.log({progression, tableWidth, roomCellOffset})
       const y =  (progression * tableWidth) + roomCellOffset + 2
       if (line) {
         line.style.left = `${y}px`;
