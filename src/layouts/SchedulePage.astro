@@ -48,7 +48,7 @@ const slots =  {
 
 const slotLength = 15
 
-function getSlotTime(date: Date): string {
+function asSlotTime(date: Date): string {
  return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
  }
 
@@ -65,12 +65,9 @@ const allSlots = []
 let date = daySlots.start;
 
 while (date < daySlots.end) {
- allSlots.push(getSlotTime(date));
- date = nextSlot(date);
- }
-
-console.log(allSlots)
-
+  allSlots.push(date);
+  date = nextSlot(date);
+}
 
 export type DayOfTheWeek = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
 
@@ -103,9 +100,7 @@ export type Event = {
 export type PlaceholderEvent = {
   placeholder: true,
   timeslots: number,
-  startDate: Date,
 }
-
 
 function convertTime(date: Date): string {
   return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
@@ -116,76 +111,66 @@ function asDate(date: string): Date {
 
 import schedule from "@data/schedule/friday.json";
 
-const remoteEvents = schedule.filter(event => {
+const sourceEvents = schedule.filter(event => {
   if (event.day === day) return true;
   else return false;
 });
-remoteEvents.sort((a, b) => asDate(a.startDate).getTime() - asDate(b.startDate).getTime());
+sourceEvents.sort((a, b) => asDate(a.startDate).getTime() - asDate(b.startDate).getTime());
+
 
 const events: {[key: number]: (Event|PlaceholderEvent)[]} = {
-  [ROOM.A]: [],
-  [ROOM.B]: [],
-  [ROOM.C]: [],
-  [ROOM.D]: [],
-  [ROOM.E]: [],
-  [ROOM.F]: [],
-  [ROOM.G]: [],
+  ["Mane Events"]: [],
+  ["Cumberland IJK"]: [],
+  ["Cumberland EF"]: [],
+  ["Cumberland L"]: [],
+  ["Cumberland GH"]: [],
+  ["Autograph Room"]: [],
+  ["Vendor Hall"]: [],
 };
 
-remoteEvents.forEach(event => {
-  if (Array.isArray(events[event.room])) events[event.room].push(event);
+let sourceEventsPerRoom = []
+sourceEvents.forEach(event => {
+  if(!sourceEventsPerRoom[event.room]) {
+    sourceEventsPerRoom[event.room] = []
+  }
+  sourceEventsPerRoom[event.room].push(event);
 });
 
-Object.keys(events).forEach(room => {
-  const placeholderEvents: PlaceholderEvent[] = [];
-  events[room].forEach((event: Event, index, evs) => {
-    if (index === (events[room].length - 1)) return;
-    const nextEvent: Event = evs[index + 1];
-    placeholderEvents.push({
-      placeholder: true,
-      startDate:  asDate(event.endDate),
-      timeslots: Math.round((asDate(nextEvent.startDate).getTime() - asDate(event.endDate).getTime()) / (30 * 60 * 1000))
-    });
-  });
-  {
-    const firstEvent: Event | undefined = events[room][0];
-    if (firstEvent) {
-      const fEStartDate = asDate(firstEvent.startDate);
-      const startDate = new Date(`${fEStartDate.getFullYear()}-${fEStartDate.getMonth() + 1}-${fEStartDate.getDate()} ${START_TIME}:00`);
-      placeholderEvents.push({
-        placeholder: true,
-        startDate,
-        timeslots: Math.round((fEStartDate.getTime() - startDate.getTime()) / (30 * 60 * 1000))
-      });
-    }
-  }
-  {
-    const lastEvent: Event | undefined = events[room][events[room].length - 1];
-    if (lastEvent) {
-      const fEEndDate = asDate(lastEvent.endDate);
-      const startDate = new Date(`${fEEndDate.getFullYear()}-${fEEndDate.getMonth() + 1}-${fEEndDate.getDate() + (
-        (parseInt(END_TIME) <= 10 && fEEndDate.getHours() >= 10) ? 1 : 0
-      )} ${END_TIME}:00`);
-      placeholderEvents.push({
-        placeholder: true,
-        startDate,
-        timeslots: Math.round((startDate.getTime() - fEEndDate.getTime()) / (30 * 60 * 1000))
-      });
-    }
-  }
-  if (events[room].length === 0) {
-    placeholderEvents.push({
-      placeholder: true,
-      timeslots: 1000,
-      startDate: new Date(`${asDate(remoteEvents[0]?.startDate).getFullYear()}-${asDate(remoteEvents[0]?.startDate).getDate()}-${asDate(remoteEvents[0]?.startDate).getMonth() + 1} ${START_TIME}`)
-    });
-  }
-  events[room] = events[room].concat(
-    placeholderEvents.filter(event => event.timeslots > 0)
-  );
-  events[room].sort((a, b) => asDate(a.startDate).getTime() - asDate(b.startDate).getTime());
 
-});
+for (let [roomKey, roomArray] of Object.entries(events)) {
+  let eventIndex = 0;
+  let remainingEventSlots = 0;
+  let currentEmpty = null;
+
+  for (const slot of allSlots) {
+    const roomEvents = sourceEventsPerRoom[roomKey]
+
+    if (roomEvents != null) {
+      const event = roomEvents[eventIndex]
+      if (remainingEventSlots > 0) {
+        remainingEventSlots -= 1;
+        currentEmpty = null
+        continue;
+      } else if (event && asDate(event?.startDate) <= asDate(slot)) {
+        remainingEventSlots = event.timeslots - 1;
+        eventIndex += 1;
+        roomArray.push(event);
+        currentEmpty = null
+        continue;
+      }
+    }
+
+    if (currentEmpty != null) {
+      currentEmpty.timeslots += 1;
+    } else {
+      currentEmpty = {
+        placeholder: true,
+        timeslots: 1,
+      }
+      roomArray.push(currentEmpty);
+    }
+  }
+}
 
 console.log(events)
 
@@ -212,7 +197,7 @@ console.log(events)
           <th class="w-20 md:w-32 lg:w-44 z-50 bg-black border-black"></th>
           {
             allSlots.map((slot, index) => (
-                <td class="md:w-24 w-16 border-white border-r">{slot}</td>
+                <td class="md:w-24 w-16 border-white border-r">{asSlotTime(slot)}</td>
             ))
           }
         </tr>
@@ -221,43 +206,43 @@ console.log(events)
           index="1"
           roomname="MANE EVENTS"
           roomsrc={roomEmpty}
-          events={events[ROOM.A]}
+          events={events["Mane Events"]}
         />
         <Room
           index="2"
           roomname="CUMBERLAND IJK"
           roomsrc={roomEmpty}
-          events={events[ROOM.B]}
+          events={events["Cumberland IJK"]}
         />
         <Room
           index="3"
           roomname="CUMBERLAND EF"
           roomsrc={roomEmpty}
-          events={events[ROOM.C]}
+          events={events["Cumberland EF"]}
         />
         <Room
           index="4"
           roomname="CUMBERLAND L"
           roomsrc={roomEmpty}
-          events={events[ROOM.D]}
+          events={events["Cumberland L"]}
         />
         <Room
           index="5"
           roomname="CUMBERLAND GH"
           roomsrc={roomEmpty}
-          events={events[ROOM.E]}
+          events={events["Cumberland GH"]}
         />
         <Room
           index="6"
           roomname="AUTOGRAPH ROOM"
           roomsrc={roomEmpty}
-          events={events[ROOM.F]}
+          events={events["Autograph Room"]}
         />
         <Room
           index="7"
           roomname="VENDOR HALL"
           roomsrc={roomEmpty}
-          events={events[ROOM.G]}
+          events={events["Vendor Hall"]}
         />
 
         </tbody>
