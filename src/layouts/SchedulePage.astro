@@ -1,7 +1,9 @@
 ---
 import { Image, getImage } from "astro:assets";
-import Schedule from "@layouts/Schedule.astro";
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
 import Room from "@components/schedule/Room.astro";
+import ScheduleHeader from "@components/schedule/ScheduleHeader.astro";
 
 import roomEmpty from "@assets/2025/schedule/room-empty.png";
 
@@ -19,6 +21,56 @@ const {
   endtime: END_TIME = "04:00",
   additionalevents = {}
 } = Astro.props
+
+import scheduleBackground from "../assets/2025/schedule/HC25_Tile_Pink.png";
+const optimizedScheduleBackground = await getImage({
+ src: scheduleBackground,
+ format: "avif",
+ width: 2000,
+ });
+
+
+
+const slots =  {
+ 'friday': {
+ start: new Date(2025, 0, 31, 11, 30),
+ end: new Date(2025, 1, 1, 1, 0),
+ },
+ 'saturday': {
+ start: new Date(2025, 1, 1, 10, 0),
+ end: new Date(2025, 1, 2, 2, 0),
+ },
+ 'sunday': {
+ start: new Date(2025, 1, 2, 10, 0),
+ end: new Date(2025, 1, 2, 16, 0),
+ },
+ }
+
+const slotLength = 15
+
+function getSlotTime(date: Date): string {
+ return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+ }
+
+function nextSlot(date: Date): Date {
+ const next = new Date(date);
+ next.setMinutes(next.getMinutes() + slotLength);
+ return next;
+ }
+
+const daySlots = slots[day]
+
+const allSlots = []
+
+let date = daySlots.start;
+
+while (date < daySlots.end) {
+ allSlots.push(getSlotTime(date));
+ date = nextSlot(date);
+ }
+
+console.log(allSlots)
+
 
 export type DayOfTheWeek = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
 
@@ -138,48 +190,202 @@ Object.keys(events).forEach(room => {
 console.log(events)
 
 ---
-<Schedule day={day} additionalevents={additionalevents}>
-  <Room
-    index="1"
-    roomname="MANE EVENTS"
-    roomsrc={roomEmpty}
-    events={events[ROOM.A]}
-  />
-  <Room
-    index="2"
-    roomname="CUMBERLAND IJK"
-    roomsrc={roomEmpty}
-    events={events[ROOM.B]}
-  />
-  <Room
-    index="3"
-    roomname="CUMBERLAND EF"
-    roomsrc={roomEmpty}
-    events={events[ROOM.C]}
-  />
-  <Room
-    index="4"
-    roomname="CUMBERLAND L"
-    roomsrc={roomEmpty}
-    events={events[ROOM.D]}
-  />
-  <Room
-    index="5"
-    roomname="CUMBERLAND GH"
-    roomsrc={roomEmpty}
-    events={events[ROOM.E]}
-  />
-  <Room
-    index="6"
-    roomname="AUTOGRAPH ROOM"
-    roomsrc={roomEmpty}
-    events={events[ROOM.F]}
-  />
-  <Room
-    index="7"
-    roomname="VENDOR HALL"
-    roomsrc={roomEmpty}
-    events={events[ROOM.G]}
-  />
-</Schedule>
 
+<Layout title="HarmonyCon 2025 | Schedule">
+  <section
+      id="bg"
+      class="overflow-x-hidden mx-auto pl-2 pr-0 lg:pr-0 lg:pl-12 cursor-default flex flex-col pt-12 pb-0 lg:pt-12 lg:pb-0 items-center justify-center w-full"
+  >
+    <ScheduleHeader />
+
+    <div
+        class="border-2 border-black rounded-sm md:mx-0 mx-4 mb-8 w-full bg-[#fcf1e0] overscroll-none overflow-y-hidden overflow-x-scroll text-black flex "
+        style="filter: drop-shadow(0 5px 5px #000); scrollbar-color: #771c2a #151515; scrollbar-gutter: stable;"
+        id="table"
+    >
+      <table
+          class="table-fixed font-serif border-2 border-black w-full relative"
+      >
+        <div id="with-vertical-line"></div>
+        <tbody>
+        <tr class="border-2 bg-black text-white border-black font-semibold text-sm md:text-l text-center">
+          <th class="w-20 md:w-32 lg:w-44 z-50 bg-black border-black"></th>
+          {
+            allSlots.map((slot, index) => (
+                <td class="md:w-24 w-16 border-white border-r">{slot}</td>
+            ))
+          }
+        </tr>
+
+        <Room
+          index="1"
+          roomname="MANE EVENTS"
+          roomsrc={roomEmpty}
+          events={events[ROOM.A]}
+        />
+        <Room
+          index="2"
+          roomname="CUMBERLAND IJK"
+          roomsrc={roomEmpty}
+          events={events[ROOM.B]}
+        />
+        <Room
+          index="3"
+          roomname="CUMBERLAND EF"
+          roomsrc={roomEmpty}
+          events={events[ROOM.C]}
+        />
+        <Room
+          index="4"
+          roomname="CUMBERLAND L"
+          roomsrc={roomEmpty}
+          events={events[ROOM.D]}
+        />
+        <Room
+          index="5"
+          roomname="CUMBERLAND GH"
+          roomsrc={roomEmpty}
+          events={events[ROOM.E]}
+        />
+        <Room
+          index="6"
+          roomname="AUTOGRAPH ROOM"
+          roomsrc={roomEmpty}
+          events={events[ROOM.F]}
+        />
+        <Room
+          index="7"
+          roomname="VENDOR HALL"
+          roomsrc={roomEmpty}
+          events={events[ROOM.G]}
+        />
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <Footer />
+</Layout>
+
+
+<style
+    define:vars={{
+      optimizedScheduleBackground: `url(${optimizedScheduleBackground.src})`,
+    }}>
+
+  #bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-image: var(--optimizedScheduleBackground);
+    background-repeat: repeat;
+    background-size: 20%;
+    background-position: center;
+    opacity: 1;
+  }
+  table {
+    tr>th:first-child,
+    tr>td:first-child {
+      position: sticky;
+      left: 0;
+    }
+  }
+  #with-vertical-line {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0rem;
+    width: 4px;
+    @apply rounded z-0;
+    background-color: red;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+</style>
+
+<script define:vars={{day}}>
+  const table = document.getElementById('table');
+  const line = document.getElementById("with-vertical-line");
+  const roomCell = document.getElementsByClassName("agenda-room-cell")[0];
+
+  const fridayBegin = new Date(2024,8,27,10,0,0).getTime()
+  const fridayEnd = new Date(2024,8,28,4,0,0).getTime()
+  const fridayDuration = fridayEnd - fridayBegin
+
+  const saturdayBegin = new Date(2024,8,28,10,0,0).getTime()
+  const saturdayEnd = new Date(2024,8,29,4,0,0).getTime()
+  const saturdayDuration = saturdayEnd - saturdayBegin
+
+  const sundayBegin = new Date(2024,8,29,9,0,0).getTime()
+  const sundayEnd = new Date(2024,8,29,20,30,0).getTime()
+  const sundayDuration = sundayEnd - sundayBegin
+
+  const isFriday = (ms) => ms >= fridayBegin && ms < fridayEnd;
+  const isSaturday = (ms) => ms >= saturdayBegin && ms < saturdayEnd;
+  const isSunday = (ms) => ms >= sundayBegin && ms < sundayEnd;
+
+  const placeRedline = function() {
+    if (line) {
+      line.style.left = '0';
+    }
+
+    let now = new Date();
+    let tt = now.getTime()
+
+    let roomCellOffset = roomCell.scrollWidth
+    let tableWidth = table.scrollWidth - roomCellOffset
+
+    const moveLine = (progression) => {
+      console.log({progression, tableWidth, roomCellOffset})
+      const y =  (progression * tableWidth) + roomCellOffset + 2
+      if (line) {
+        line.style.left = `${y}px`;
+      }
+    }
+
+    if (isFriday(tt) && day === 'Friday') {
+      moveLine((tt-fridayBegin)/(fridayDuration))
+    } else if (isSaturday(tt) && day === 'Saturday') {
+      moveLine((tt-saturdayBegin)/(saturdayDuration))
+    } else if (isSunday(tt) && day === 'Sunday') {
+      moveLine((tt-sundayBegin)/(sundayDuration))
+    } else {
+      if (line) {
+        line.style.left = '0';
+      }
+    }
+  }
+
+  let timeout = false
+  document.addEventListener("astro:page-load", placeRedline);
+  window.addEventListener("resize", function() {
+    clearTimeout(timeout)
+    timeout = setTimeout(placeRedline, 100)
+  });
+
+  import { gsap } from "gsap";
+
+  import ScrollToPlugin from "gsap/ScrollToPlugin";
+  gsap.registerPlugin(ScrollToPlugin);
+
+  document.addEventListener("astro:page-load", () => {
+    const table = document.getElementById('table');
+    if (table) {
+      table.addEventListener('wheel', (event) => {
+        event.preventDefault();
+        gsap.to(table, {
+          scrollTo: {
+            x: table.scrollLeft + event.deltaY * 2, // Adjust multiplier for speed
+            autoKill: false
+          },
+          ease: "power2",
+          duration: 0.1
+        });
+      });
+    }
+  });
+</script>
