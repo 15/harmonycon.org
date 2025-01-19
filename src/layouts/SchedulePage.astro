@@ -121,10 +121,10 @@ sourceEvents.sort((a, b) => asDate(a.startDate).getTime() - asDate(b.startDate).
 
 const events: {[key: number]: (Event|PlaceholderEvent)[]} = {
   ["Mane Events"]: [],
-  ["Cumberland IJK"]: [],
-  ["Cumberland EF"]: [],
-  ["Cumberland L"]: [],
-  ["Cumberland GH"]: [],
+  ["Crystal Empire Theatre"]: [],
+  ["Broadhorse Theatre"]: [],
+  ["Horsefeld Theatre"]: [],
+  ["Graumare’s Chineighs Theatre"]: [],
   ["Autograph Room"]: [],
   ["Vendor Hall"]: [],
 };
@@ -211,27 +211,27 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
         />
         <Room
           index="2"
-          roomname="CUMBERLAND IJK"
+          roomname="Crystal Empire Theatre"
           roomsrc={roomEmpty}
-          events={events["Cumberland IJK"]}
+          events={events["Crystal Empire Theatre"]}
         />
         <Room
           index="3"
-          roomname="CUMBERLAND EF"
+          roomname="Broadhorse Theatre"
           roomsrc={roomEmpty}
-          events={events["Cumberland EF"]}
+          events={events["Broadhorse Theatre"]}
         />
         <Room
           index="4"
-          roomname="CUMBERLAND L"
+          roomname="Horsefeld Theatre"
           roomsrc={roomEmpty}
-          events={events["Cumberland L"]}
+          events={events["Horsefeld Theatre"]}
         />
         <Room
           index="5"
-          roomname="CUMBERLAND GH"
+          roomname="Graumare’s Chineighs Theatre"
           roomsrc={roomEmpty}
-          events={events["Cumberland GH"]}
+          events={events["Graumare’s Chineighs Theatre"]}
         />
         <Room
           index="6"
