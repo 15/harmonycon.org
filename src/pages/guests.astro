@@ -684,8 +684,10 @@ import Footer from "../components/Footer.astro";
     // Run setup on initial load
     setupDialogs();
 
-    // Run setup again after Astro view transitions
-    document.addEventListener("astro:page-load", setupDialogs);
-    document.addEventListener("astro:after-swap", setupDialogs);
+    document.addEventListener("swup:enable", () => {
+    window.swup.hooks.on("content:replace", () => {
+      setupDialogs();
+    });
+  });
   </script>
 </Layout>
