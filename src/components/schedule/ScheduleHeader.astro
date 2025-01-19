@@ -3,25 +3,25 @@ const { pathname, origin } = Astro.url;
 ---
 
 <div
-  class="font-serif uppercase flex flex-row justify-center flex-wrap gap-x-4 lg:gap-x-6 xl:gap-x-24 mb-8 lg:mb-16 text-lg lg:text-5xl text-[#fde300] "
-  style="text-shadow: 3px 3px 1px black;"
+  class="font-serif uppercase flex flex-row justify-center flex-wrap gap-4 sm:gap-6 lg:gap-x-12 xl:gap-x-24 mb-4 sm:mb-8 lg:mb-16 text-base sm:text-lg md:text-2xl lg:text-5xl text-[#fde300]"
+  style="text-shadow: 2px 2px 1px black;"
 >
   <a href="/schedule/friday" class="schedule-card glass">
-    <div class="flex flex-col items-center px-8 py-4 rounded-xl">
+    <div class="flex flex-col items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-xl">
       <div>FRIDAY</div>
-      <div class="text-2xl">JAN 31</div>
+      <div class="text-base sm:text-xl lg:text-2xl">JAN 31</div>
     </div>
   </a>
   <a href="/schedule/saturday" class="schedule-card glass">
-    <div class="flex flex-col items-center px-8 py-4 rounded">
+    <div class="flex flex-col items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-xl">
       <div>SATURDAY</div>
-      <div class="text-2xl">FEB 1</div>
+      <div class="text-base sm:text-xl lg:text-2xl">FEB 1</div>
     </div>
   </a>
   <a href="/schedule/sunday" class="schedule-card glass">
-    <div class="flex flex-col items-center px-8 py-4 rounded">
+    <div class="flex flex-col items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-xl">
       <div>SUNDAY</div>
-      <div class="text-2xl">FEB 2</div>
+      <div class="text-base sm:text-xl lg:text-2xl">FEB 2</div>
     </div>
   </a>
 </div>
@@ -49,5 +49,11 @@ const { pathname, origin } = Astro.url;
         --i: -1;
         -webkit-mask-position: 0 0;
         transform: perspective(400px) rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a))) scale(1.03);
+    }
+
+    @media (max-width: 640px) {
+        .schedule-card {
+            --a: 0.25deg;
+        }
     }
 </style>
