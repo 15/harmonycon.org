@@ -8,6 +8,8 @@ import img5 from "../assets/2025/playbill/HarmonyCon-CodeOfConduct2.png";
 import img7 from "../assets/2025/playbill/winged.png";
 import img8 from "../assets/2025/playbill/Clawstin.png";
 import img9 from "../assets/2025/playbill/coming_soon_poster.png";
+import img10 from "../assets/2025/playbill/marey_poppins_art_cropped.png";
+import img11 from "../assets/2025/playbill/badcrop.png";
 import Playbill from "../components/Playbill.astro";
 import Footer from "../components/Footer.astro";
 
@@ -73,19 +75,7 @@ const optimizedMainBackground = await getImage({
         />
       </li>
       <li class="xl:mb-8" style="filter: drop-shadow(0 5px 5px #000);">
-        <Playbill
-          src={img9}
-          href="/404"
-          idx={8}
-          active={true}
-          title="Musicians"
-        />
-      </li>
-      <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
-        <Playbill src={img9} href="/404" idx={9} active={true} title="Vendors" />
-      </li>
-      <li class="xl:mb-8" style="filter: drop-shadow(0 5px 5px #000);">
-        <Playbill src={img9} href="/schedule/friday" idx={8} active={true} title="Schedule" />
+        <Playbill src={img10} href="/schedule/friday" idx={8} active={true} title="Schedule" />
       </li>
       <!-- <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
         <Playbill src={img9} href="/" idx={9} active={false} title="Mascots" />
@@ -95,13 +85,25 @@ const optimizedMainBackground = await getImage({
       </li> -->
       <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
         <Playbill
-          src={img9}
+          src={img11}
           href="/guests"
           idx={9}
           active={true}
           title="Guests"
           small={true}
         />
+      </li>
+      <li class="xl:mb-8" style="filter: drop-shadow(0 5px 5px #000);">
+        <Playbill
+          src={img9}
+          href="/404"
+          idx={8}
+          active={false}
+          title="Musicians"
+        />
+      </li>
+      <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
+        <Playbill src={img9} href="/404" idx={9} active={false} title="Vendors" />
       </li>
     </ul>
     <div
