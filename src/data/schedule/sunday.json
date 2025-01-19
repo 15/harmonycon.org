@@ -63,6 +63,15 @@
         "description": "Official Buckball Tournament. Bring a team, join a team, or cheer them on. Fun for all skill levels. No experience needed. Medals awarded to the top teams! Fun had by all!"
     },
     {
+        "room": "Autograph Room",
+        "startDate": "2025-02-02T12:15:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "HarmonyCon",
+        "title": "Autographs for all VIPs",
+        "description": "Autographs for all VIPs"
+    },
+    {
         "room": "Mane Events",
         "startDate": "2025-02-02T11:00:00",
         "day": "sunday",
