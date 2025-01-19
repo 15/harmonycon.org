@@ -124,7 +124,7 @@ const events: {[key: number]: (Event|PlaceholderEvent)[]} = {
   ["Crystal Empire Theatre"]: [],
   ["Broadhorse Theatre"]: [],
   ["Horsefeld Theatre"]: [],
-  ["Graumare’s Chineighs Theatre"]: [],
+  ["Graumare's Chineighs Theatre"]: [],
   ["Autograph Room"]: [],
   ["Vendor Hall"]: [],
 };
@@ -229,9 +229,9 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
         />
         <Room
           index="5"
-          roomname="Graumare’s Chineighs Theatre"
+          roomname="Graumare's Chineighs Theatre"
           roomsrc={roomEmpty}
-          events={events["Graumare’s Chineighs Theatre"]}
+          events={events["Graumare's Chineighs Theatre"]}
         />
         <Room
           index="6"
@@ -258,20 +258,55 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
     define:vars={{
       optimizedScheduleBackground: `url(${optimizedScheduleBackground.src})`,
     }}>
-
-  #bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    background-image: var(--optimizedScheduleBackground);
-    background-repeat: repeat;
-    background-size: 20%;
-    background-position: center;
-    opacity: 1;
+    
+  @media (min-width: 1024px) {
+    #bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      background-image: var(--optimizedScheduleBackground);
+      background-repeat: repeat;
+      background-size: 20%;
+      background-position: center;
+      opacity: 1;
+    }
   }
+
+  @media (max-width: 1024px) {
+    #bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      background-image: var(--optimizedScheduleBackground);
+      background-repeat: repeat;
+      background-size: 50%;
+      background-position: center;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      background-image: var(--optimizedScheduleBackground);
+      background-repeat: repeat;
+      background-size: 80%;
+      background-position: center;
+      opacity: 1;
+    }
+  }
+
   table {
     tr>th:first-child,
     tr>td:first-child {
