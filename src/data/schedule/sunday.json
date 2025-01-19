@@ -1,0 +1,74 @@
+[
+    {
+      "room": "Reg Desk",
+      "startDate": "2025-02-02T09:00:00",
+      "day": "sunday",
+      "timeslots": 48,
+      "host": "HarmonyCon",
+      "title": "Registration",
+      "description": "Pick up your badge and convention materials"
+    },
+    {
+      "room": "Vendor Hall",
+      "startDate": "2025-02-02T10:00:00",
+      "day": "sunday",
+      "timeslots": 32,
+      "host": "HarmonyCon",
+      "title": "Vendor Hall",
+      "description": "Shop for all your favorite pony merchandise!"
+    },
+    {
+      "room": "Mane Events",
+      "startDate": "2025-02-02T13:00:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "MethodMares",
+      "title": "Method Mares Improv Theater",
+      "description": "Interactive improv comedy show"
+    },
+    {
+      "room": "Cumberland IJK",
+      "startDate": "2025-02-02T13:00:00",
+      "day": "sunday",
+      "timeslots": 6,
+      "host": "CartoonTeam",
+      "title": "sunday Morning Cartoons",
+      "description": "Watch and discuss classic pony episodes"
+    },
+    {
+      "room": "Cumberland L",
+      "startDate": "2025-02-02T13:00:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "CosplayTeam",
+      "title": "Cosplay is for Every Body",
+      "description": "An inclusive discussion about cosplay"
+    },
+    {
+      "room": "Cumberland GH",
+      "startDate": "2025-02-02T13:00:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "CraftTeam",
+      "title": "Make Your Own Award Ribbon!",
+      "description": "Craft workshop for creating ribbons"
+    },
+    {
+      "room": "Cumberland EF",
+      "startDate": "2025-02-02T13:15:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "WritingTeam",
+      "title": "Writing Pony Parodies",
+      "description": "Learn how to write entertaining pony parodies"
+    },
+    {
+      "room": "Autograph Room",
+      "startDate": "2025-02-02T14:00:00",
+      "day": "sunday",
+      "timeslots": 8,
+      "host": "HarmonyCon",
+      "title": "Talent Show Prejudge",
+      "description": "Preliminary judging for the talent show"
+    }
+  ]
