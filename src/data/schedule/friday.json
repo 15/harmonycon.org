@@ -60,7 +60,7 @@
       "timeslots": 4,
       "host": "Fuzzy",
       "title": "Fanfiction Writing Workshop",
-      "description": "Learn the fundamentals of writing fanfiction and workshop your ideas with fellow writers"
+      "description": "Are you a novice fanfic writer with questions? Or an experienced author with advice to impart? Do you just need a name for your OC? This is a friendly, informal discussion panel for fanfic writers of all levels to come together to talk shop, share tips, and work on problems unique to horse words."
     },
     {
       "room": "Cumberland IJK",
@@ -69,7 +69,7 @@
       "timeslots": 6,
       "host": "DJMusicman",
       "title": "Cutting Half the Track List",
-      "description": "A panel where you create music through the art of mashups! First, we'll discuss what makes a mashup work, and then we'll take requests from the audience on what songs they want to see mashed up!"
+      "description": "There are ~115 songs in \"Friendship is Magic\". To make room for more music, Princess Celestia has issued an ultimatum to our panelists: 50 songs can be saved for posterity, while the rest will be thrown into the sun, never to be heard from again. It's up to our panelists to make some tough calls!"
     },
     {
       "room": "Mane Events",
@@ -78,7 +78,7 @@
       "timeslots": 6,
       "host": "Dragonboy",
       "title": "Trivia Trot 2: The Second One",
-      "description": "Think you know all there is to know about MLP and related media! Come test that knowledge and compete in Trivia Trot 2! Not just your average trivia panel. Here there are even questions about questions! The Second one brings more fun."
+      "description": "Back by no demand, Trivia Trot makes its (not so) triumphant return, better(?) than ever! Join Bobby Seas and eight of our community guests as they compete to earn the title of Trivia Trot Champions, and hopefully not go over time like last year! With brand new categories and returning favorites, who knows what will happen in the second episode? Join us and find out!"
     },
     {
       "room": "Cumberland L",
@@ -87,7 +87,7 @@
       "timeslots": 2,
       "host": "RPG Team",
       "title": "Before You Play 'The Pony Puzzle': Essence 20 Overview",
-      "description": "Learn the basics of the Essence 20 system before diving into The Pony Puzzle adventure!"
+      "description": "Are you playing in Saturday's 'World's Collide Part 2: The Pony Puzzle?' but never played in a tabletop RPG, let alone an EPIC event? Fear not, we are here to answer all your burning questions, from a brief overview on Essence 20, how to read character sheets, and what to expect at Saturday's event!"
     },
     {
       "room": "Cumberland GH",
@@ -96,7 +96,7 @@
       "timeslots": 8,
       "host": "CraftyPony",
       "title": "Perler Bead Workshop",
-      "description": "Learn how to create cute pony designs with Perler beads!"
+      "description": "Make your own Perler bead creations of HarmonyCon's iconic pony duo! All ages welcome!"
     },
     {
       "room": "Cumberland EF",
@@ -105,7 +105,7 @@
       "timeslots": 4,
       "host": "Voice Actors",
       "title": "Singing in Character with Shannon, Kazumi, & Rena",
-      "description": "Join our special guests for a musical demonstration of character voices!"
+      "description": "You can't have a musical without songs, and the wonderful singing voices of Pinkie Pie, Rarity, and Sapphire Shores know all about what it takes to perform as an animated pony (or a Berry Buddy, or a Siren, a lowly pirate). Is there something you want to know about voice acting, singing, etc? There will be a Q&A so you can find out!"
     },
     {
       "room": "Cumberland L",
@@ -114,7 +114,7 @@
       "timeslots": 8,
       "host": "HarmonyCon",
       "title": "Creator Roundup: Harmony Con Edition!",
-      "description": "Meet your favorite content creators and learn about their latest projects!"
+      "description": "Ever wanted to know what made your favorite creators decide to do what they do? Ever wondered how they make the things that you love from them? Well wonder no more! Join the Nameless as he interviews some of your favorite creators in a con only version of his Creator Roundup podcast!"
     },
     {
       "room": "Cumberland IJK",
@@ -123,7 +123,7 @@
       "timeslots": 4,
       "host": "Willow",
       "title": "Let's Make Harmony!",
-      "description": "A collaborative creativity workshop where we make something wonderful together!"
+      "description": "The Pit Crew are going to write a new song with your suggestions and play it on main stage! What's the theme? Which pony? It's up to you!"
     },
     {
       "room": "Mane Events",
@@ -132,7 +132,7 @@
       "timeslots": 4,
       "host": "RiffTeam",
       "title": "RiffPonies!",
-      "description": "Join us as we lovingly riff on some classic pony content!"
+      "description": "Just when you thought it was safe to watch pony cartoons again...a bunch of jerks from New Jersey found THE WORST ONES imaginable!  Join the RiffPonies crew of Thoth Penswell and a slew of other special Community Guest stars as they take you on an epic journey through some of THE WORST My Little Pony cartoons they can find and brutally mock them for your enjoyment!  From decades gone by to current day, jeer and suffer through the worst of Equine animation & more along with the rest of your friends!"
     },
     {
       "room": "Cumberland EF",
@@ -141,16 +141,7 @@
       "timeslots": 4,
       "host": "Tony Fleecs & Jeremy Whitley",
       "title": "How Comics Come to Life with Tony & Jeremy",
-      "description": "Get an inside look at the comic creation process from the pros!"
-    },
-    {
-      "room": "Autograph Room",
-      "startDate": "2025-01-31T15:30:00",
-      "day": "friday",
-      "timeslots": 4,
-      "host": "HarmonyCon",
-      "title": "Autographs for VAs",
-      "description": "Meet and get autographs from our special voice actor guests!"
+      "description": "Dive into comics new and old with two of the great industry pros - Tony Fleecs and Jeremy Whitley. Hear about how your favorite (or soon to be favorite!) comic books were designed. Whether you have been reading for a while or even not at all, you will leave with a deeper appreciation for this way of storytelling!"
     },
     {
       "room": "Cumberland IJK",
@@ -159,16 +150,7 @@
       "timeslots": 6,
       "host": "JeopardyTeam",
       "title": "Jeopardy!: My Little Pony Edition",
-      "description": "Test your pony knowledge in this game show format!"
-    },
-    {
-      "room": "Mane Events",
-      "startDate": "2025-01-31T16:30:00",
-      "day": "friday",
-      "timeslots": 10,
-      "host": "HarmonyCon",
-      "title": "Soundcheck",
-      "description": "Technical preparation for the evening's concert"
+      "description": "Do you think you're an expert at all things pony related? Do you think you know the fandom like the back of your hoof? Well, if that's the case, you won't want to miss Jeopardy!: My Little Pony Edition! Based off of America's Favorite Quiz Show \"Jeopardy!\", you, yes YOU, may be able to compete against others in answering trivia-based questions about MLP and its fandom, and potentially even win a prize in the process."
     },
     {
       "room": "Cumberland L",
@@ -177,7 +159,7 @@
       "timeslots": 4,
       "host": "AnimeScholar",
       "title": "Iyashikei and MLP: Slice of Life and Healing",
-      "description": "Exploring the healing aspects of MLP through the lens of Japanese anime concepts"
+      "description": "Fans have stated for years that MLP:FiM has helped them heal and get through tough times. Here we aim to dissect some of the tropes that make that possible, and compare them to the popular Japanese media sub-genre known as Iyashikei."
     },
     {
       "room": "Cumberland GH",
@@ -186,7 +168,7 @@
       "timeslots": 4,
       "host": "Community Guests",
       "title": "Meet the Community Guests",
-      "description": "Meet and chat with our wonderful community guests!"
+      "description": "Come meet the talented community guests of HarmonyCon 2025!"
     },
     {
       "room": "Cumberland EF",
@@ -195,7 +177,7 @@
       "timeslots": 4,
       "host": "PonyTown Team",
       "title": "Pony Town's Something Social",
-      "description": "Learn about and discuss this unique social platform!"
+      "description": "Come join our panelists, who are part of the Pony Town team, as they take a deep dive into Pony Town culture and content creation. We will explain how the game works, talk about the people who make it possible, and how HarmonyCon itself was built into the game for those who could not attend in person. There will also be a Q&A for all your Pony Town questions!"
     },
     {
       "room": "Cumberland L",
@@ -204,7 +186,7 @@
       "timeslots": 4,
       "host": "CosplayTeam",
       "title": "Getting Creative with Pony Cosplay!",
-      "description": "Tips and tricks for creating your own pony costumes!"
+      "description": "Interested in dipping your hooves into the cosplay side of the pony community? There are so many ideas and possibilities out there for so many different characters this series has brought us!"
     },
     {
       "room": "Cumberland GH",
@@ -213,7 +195,7 @@
       "timeslots": 4,
       "host": "FriendshipTeam",
       "title": "How to make Furrends @ cons",
-      "description": "Tips and strategies for meeting new friends at conventions!"
+      "description": "Cons are a magical place where people can let loose and have fun. Make the magic last all year long with this hybrid style panel to teach you how to make friends, and a meet and greet to get started right away!"
     },
     {
       "room": "Cumberland IJK",
@@ -222,7 +204,7 @@
       "timeslots": 4,
       "host": "MovieTeam",
       "title": "Ponify That Movie!",
-      "description": "Reimagining famous movies in the world of Equestria!"
+      "description": "Do you like My Little Pony? Do you like movies?? Us too! Join our colorful cast of equine and film aficionados as they try to decipher movie plots being depicted exclusively through MLP! Play along as the audience to see if you can emerge victorious over our star-studded panelists!"
     },
     {
       "room": "Cumberland EF",
@@ -231,16 +213,7 @@
       "timeslots": 4,
       "host": "BracketTeam",
       "title": "The Best Thing About MLP Bracket",
-      "description": "Help us determine the best thing about MLP in this interactive bracket!"
-    },
-    {
-      "room": "Mane Events",
-      "startDate": "2025-01-31T19:00:00",
-      "day": "friday",
-      "timeslots": 24,
-      "host": "HarmonyCon",
-      "title": "Concert",
-      "description": "An evening of amazing pony music!"
+      "description": "Ever wonder what has been the best thing to come out of MLP? Well you the audience have the power to decide what is indeed the best by voting in this new and very wacky bracket that can range from pony episodes, music, community guests, panels etc. You never know what will go against what!"
     },
     {
       "room": "Cumberland L",
@@ -249,7 +222,7 @@
       "timeslots": 6,
       "host": "LoppyTeam",
       "title": "Don't Be a Loppy!",
-      "description": "Learn about convention etiquette and how to be a good con-goer!"
+      "description": "Learn about Online Social Etiquette by watching the displays and interactions between a Draconaquus named \"Loppy\" and Lightning Bliss"
     },
     {
       "room": "Cumberland GH",
@@ -258,88 +231,88 @@
       "timeslots": 4,
       "host": "ColorTeam",
       "title": "Color-A-Critter Club",
-      "description": "Join us for a relaxing coloring session!"
-    },
-    {
-      "room": "Cumberland IJK",
-      "startDate": "2025-01-31T19:15:00",
-      "day": "friday",
-      "timeslots": 6,
-      "host": "FOE Team",
-      "title": "Fallout Equestria: The Animated Series",
-      "description": "Updates and discussion about the Fallout Equestria animation project"
-    },
-    {
-      "room": "Cumberland EF",
-      "startDate": "2025-01-31T19:15:00",
-      "day": "friday",
-      "timeslots": 4,
-      "host": "FanficTeam",
-      "title": "Cultural Impact of Bad FanFic - The My Immortal Panel",
-      "description": "A deep dive into infamous fanfiction and its impact on fandom culture"
-    },
-    {
-      "room": "Cumberland GH",
-      "startDate": "2025-01-31T20:15:00",
-      "day": "friday",
-      "timeslots": 2,
-      "host": "GlimmerGang",
-      "title": "Glimmer Gang Appreciation Meetup",
-      "description": "A meetup for fans of Starlight Glimmer!"
-    },
-    {
-      "room": "Cumberland EF",
-      "startDate": "2025-01-31T20:30:00",
-      "day": "friday",
-      "timeslots": 4,
-      "host": "AviationTeam",
-      "title": "Flying in Formation: The similarities in the Pegasi of Equestria and Human Aviation",
-      "description": "Exploring the parallels between pegasus flight and real-world aviation"
-    },
-    {
-      "room": "Cumberland L",
-      "startDate": "2025-01-31T20:45:00",
-      "day": "friday",
-      "timeslots": 4,
-      "host": "StageTeam",
-      "title": "The Stage Coach",
-      "description": "Learn about stage presence and performance techniques!"
-    },
-    {
-      "room": "Cumberland IJK",
-      "startDate": "2025-01-31T21:00:00",
-      "day": "friday",
-      "timeslots": 4,
-      "host": "TriviaTeam",
-      "title": "Name That Frame! A Pony Trivia Game",
-      "description": "Test your visual memory of pony episodes in this fast-paced game!"
-    },
-    {
-      "room": "Cumberland GH", 
-      "startDate": "2025-01-31T21:00:00",
-      "day": "friday",
-      "timeslots": 6,
-      "host": "Fuzzy",
-      "title": "The Blind Brainstorm - Creating OC's Edition!",
-      "description": "Last year we had you all create barmy stories in teams that didn't know what each other was thinking. This year it's the turn of characters! Come and learn how to concept and design OCs FOR a story, with Fuzzy of Murky Number Seven giving writing advice, as well as hosting the titular Blind Brainstorm where teams will design an OC... without knowing what each other are planning to add!"
+      "description": "In this relaxing, casual, and fun panel, create one-of-a-kind art with the power of a button press, some markers, and your imagination! Here, you'll be able to choose from dozens of blank pieces of art to color in. Once you're done creating your masterpiece, transform it into a piece of wearable art to bring home!  Whether you're a coloring book pro or haven't touched a marker since childhood, everyone is welcome in the Color-a-Critter Club. Join us today!"
     },
     {
         "room": "Cumberland IJK",
-        "startDate": "2025-01-31T22:15:00", 
+        "startDate": "2025-01-31T19:15:00",
         "day": "friday",
+        "timeslots": 6,
+        "host": "FOE Team",
+        "title": "Fallout Equestria: The Animated Series",
+        "description": "Wasteland Productions is coming out live to all our residents of the Wasteland with news on an upcoming, new animated series based off of the beloved fanfic from Kkat. We will show you the project, reveal new content, and introduce the team! You won't want to miss this!"
+      },
+      {
+        "room": "Cumberland EF",
+        "startDate": "2025-01-31T19:15:00",
+        "day": "friday",
+        "timeslots": 4,
+        "host": "FanficTeam",
+        "title": "Cultural Impact of Bad FanFic - The My Immortal Panel",
+        "description": "How the Wost FanFic of All Time Make All Other FanFiction Better?"
+      },
+      {
+        "room": "Cumberland GH",
+        "startDate": "2025-01-31T20:15:00",
+        "day": "friday",
+        "timeslots": 2,
+        "host": "GlimmerGang",
+        "title": "Glimmer Gang Appreciation Meetup",
+        "description": "Calling all members of the Glimmer Gang! Join us as we discuss, talk about, and share your favorite moments about a pony that once was a villain, but is now be considered a fandom favorite by many...well mostly. And that being Starlight Glimmer."
+      },
+      {
+        "room": "Cumberland EF",
+        "startDate": "2025-01-31T20:30:00",
+        "day": "friday",
+        "timeslots": 4,
+        "host": "AviationTeam",
+        "title": "Flying in Formation: The similarities in the Pegasi of Equestria and Human Aviation",
+        "description": "Calling all pegasi! Curious about flying or already doing it? This panel will showcase several examples of the similarities and differences between the Pegasi of Equestria and Human Aviation on Earth. You can also learn how to join us in the sky!"
+      },
+      {
+        "room": "Cumberland L",
+        "startDate": "2025-01-31T20:45:00",
+        "day": "friday",
+        "timeslots": 4,
+        "host": "StageTeam",
+        "title": "The Stage Coach",
+        "description": "All of Equestria's a stage! Come check out how the set designers (erm, animators) packed so much information into each shot of \"Friendship is Magic\", and learn some of the tricks they used to perfectly design the scenes you know and love."
+      },
+      {
+        "room": "Cumberland IJK",
+        "startDate": "2025-01-31T21:00:00",
+        "day": "friday",
+        "timeslots": 4,
+        "host": "TriviaTeam",
+        "title": "Name That Frame! A Pony Trivia Game",
+        "description": "Name That Frame! returns to HarmonyCon for its 2nd year bringing new twists and turns. Watch our contestants test their memories of My Little Pony: Friendship is Magic, frame by frame. Plus, have a chance to win a prize of your very own by competing in our audience rounds. See how well you know the show and Name That Frame!"
+      },
+      {
+        "room": "Cumberland GH",
+        "startDate": "2025-01-31T21:00:00",
+        "day": "friday",
+        "timeslots": 6,
+        "host": "Fuzzy",
+        "title": "The Blind Brainstorm - Creating OC's Edition!",
+        "description": "Last year we had you all create barmy stories in teams that didn't know what each other was thinking. This year it's the turn of characters! Come and learn how to concept and design OCs FOR a story, with Fuzzy of Murky Number Seven giving writing advice, as well as hosting the titular Blind Brainstorm where teams will design an OC... without knowing what each other are planning to add!"
+      },
+      {
+        "room": "Cumberland IJK",
+        "startDate": "2025-01-31T22:15:00",
+        "day": "friday", 
         "timeslots": 6,
         "host": "WhoovesTeam",
         "title": "Whooves Line Is It Anyway?",
-        "description": "Pony-themed improv comedy where everything's made up and the points don't matter!"
+        "description": "The audience participation sensation that grips the pony nation is back once again because the con just can't get rid of us!  Come out for ninety minutes of improvization games and skits, and even join in if you feel like it!  We guarantee a barrel of laughs by the end of the panel or your money back (offer not valid in any countries)!"
       },
       {
         "room": "Cumberland EF",
         "startDate": "2025-01-31T22:15:00",
         "day": "friday",
         "timeslots": 4,
-        "host": "GameTeam",
+        "host": "GameTeam", 
         "title": "2 Ponies, 1 Lie",
-        "description": "A fun deduction game where players try to spot the lie among pony facts!"
+        "description": "\"2 truths and a lie\" is an icebreaker game nearly everyone has heard about, but have you ever seen the ponified version of it? If not, then you should stop by and experience 2 Ponies, 1 Lie! Join Bobby Seas, DoTheDaringDew, TaylorBMcardle, and Nevaylin, as they try and determine which bits of MLP trivia are real, and which ones are completely made up."
       },
       {
         "room": "Cumberland L",
@@ -348,7 +321,7 @@
         "timeslots": 4,
         "host": "SmallYoutubers",
         "title": "Small-Time Horse Youtubers",
-        "description": "Meet and support smaller YouTubers in the MLP community!"
+        "description": "What do Ponies and these Youtube channels have in common? They're all small! Making My Little Pony content comes with its own challenges and hurdles along the way. If you've ever wondered how to get started yourself or want to commiserate with fellow content creators, come join us for this Q&A session with some of the fandom's small-time Brony Youtubers!"
       },
       {
         "room": "Cumberland GH",
@@ -357,7 +330,7 @@
         "timeslots": 6,
         "host": "CharityTeam",
         "title": "Cards Against Equestria for Charity",
-        "description": "Play a pony-themed card game while raising money for charity!"
+        "description": "Bringing the fun down to the Dallas area, this is a game that encourages audience participation to raise money for the convention's charity. In order for a black card to be played, a donation to charity must be made. The host will also be MATCHING every dollar raised and rounded up to the next $5 mark. As an added incentive for the theater theme, if the black card the attendee got is read in a theatrical way, the host will throw in an additional $5 each time it's done."
       },
       {
         "room": "Cumberland EF",
@@ -366,7 +339,7 @@
         "timeslots": 4,
         "host": "ConStories",
         "title": "Convention Stories",
-        "description": "Share your favorite convention memories and stories!"
+        "description": "We have all been very fortunate to have some amazing conventions over the years! One of the greatest parts of this reality is all of the wonderful stories we have been able to make over the years. Come join some convention veterans as they share a handful of the tales from over the last decade of pony cons!"
       },
       {
         "room": "Cumberland L",
@@ -375,7 +348,7 @@
         "timeslots": 6,
         "host": "OpenMicTeam",
         "title": "Magic of Friendship Open Mic",
-        "description": "Share your talents with fellow fans in this open mic session!"
+        "description": "It's time to come together and share how this fandom has affected your life. Be ready to laugh and cry as we tell our story!"
       },
       {
         "room": "Cumberland IJK",
@@ -384,6 +357,5 @@
         "timeslots": 4,
         "host": "GrimdarkTeam",
         "title": "Pony Tales Lost as a Curse Word: A Brony's Guide to MLP Grimdark",
-        "description": "Exploring the darker side of pony fan content"
-      }
-    ]
+        "description": "Come one, come all (if you dare)! As you will be able to learn about the spooky side of My Little Pony fanfiction. Will this panel have an ending as sweet as \"Cupcakes\", or will friendship be more tragic than magic? The choice is yours every-pony."
+      }]
