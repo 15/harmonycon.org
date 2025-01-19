@@ -1,9 +1,9 @@
 [
     {
       "room": "Reg Desk",
-      "startDate": "2025-02-02T09:00:00",
+      "startDate": "2025-02-02T10:00:00",
       "day": "sunday",
-      "timeslots": 48,
+      "timeslots": 24,
       "host": "HarmonyCon",
       "title": "Registration",
       "description": "Pick up your badge and convention materials"
@@ -12,63 +12,189 @@
       "room": "Vendor Hall",
       "startDate": "2025-02-02T10:00:00",
       "day": "sunday",
-      "timeslots": 32,
+      "timeslots": 24,
       "host": "HarmonyCon",
       "title": "Vendor Hall",
       "description": "Shop for all your favorite pony merchandise!"
     },
     {
-      "room": "Mane Events",
-      "startDate": "2025-02-02T13:00:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "MethodMares",
-      "title": "Method Mares Improv Theater",
-      "description": "Interactive improv comedy show"
-    },
-    {
       "room": "Cumberland IJK",
-      "startDate": "2025-02-02T13:00:00",
-      "day": "sunday",
-      "timeslots": 6,
-      "host": "CartoonTeam",
-      "title": "sunday Morning Cartoons",
-      "description": "Watch and discuss classic pony episodes"
-    },
-    {
-      "room": "Cumberland L",
-      "startDate": "2025-02-02T13:00:00",
+      "startDate": "2025-02-02T10:00:00",
       "day": "sunday",
       "timeslots": 4,
-      "host": "CosplayTeam",
-      "title": "Cosplay is for Every Body",
-      "description": "An inclusive discussion about cosplay"
-    },
-    {
-      "room": "Cumberland GH",
-      "startDate": "2025-02-02T13:00:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "CraftTeam",
-      "title": "Make Your Own Award Ribbon!",
-      "description": "Craft workshop for creating ribbons"
+      "host": "PartyTeam",
+      "title": "The Good, The Bad, & The Pony With The Party Cannon",
+      "description": "Interactive panel discussion"
     },
     {
       "room": "Cumberland EF",
-      "startDate": "2025-02-02T13:15:00",
+      "startDate": "2025-02-02T10:00:00",
+      "day": "sunday",
+      "timeslots": 6,
+      "host": "ChurchTeam",
+      "title": "Why Adults Enjoy Ponies aka Brony Church",
+      "description": "Discussion about adult fandom"
+    },
+    {
+      "room": "Cumberland L",
+      "startDate": "2025-02-02T10:00:00",
       "day": "sunday",
       "timeslots": 4,
-      "host": "WritingTeam",
-      "title": "Writing Pony Parodies",
-      "description": "Learn how to write entertaining pony parodies"
+      "host": "DebateTeam",
+      "title": "Who is Best Pony?",
+      "description": "Friendly debate about favorite characters"
+    },
+    {
+      "room": "Cumberland GH",
+      "startDate": "2025-02-02T10:00:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "CraftTeam",
+      "title": "Kandi/Friendship Bracelet Making",
+      "description": "Craft workshop for making friendship bracelets"
     },
     {
       "room": "Autograph Room",
-      "startDate": "2025-02-02T14:00:00",
+      "startDate": "2025-02-02T10:00:00",
+      "day": "sunday",
+      "timeslots": 6,
+      "host": "SportsTeam",
+      "title": "Buckball Tournament",
+      "description": "Sports competition event"
+    },
+    {
+      "room": "Mane Events",
+      "startDate": "2025-02-02T11:00:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "HarmonyCon",
+      "title": "HarmonyCon Talent Show",
+      "description": "Convention talent show"
+    },
+    {
+      "room": "Cumberland IJK",
+      "startDate": "2025-02-02T11:15:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "TalkingTeam",
+      "title": "Talking Points is Magic",
+      "description": "Public speaking workshop"
+    },
+    {
+      "room": "Cumberland EF",
+      "startDate": "2025-02-02T11:45:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "MusicTeam",
+      "title": "Modern Brony Music",
+      "description": "Discussion of current fandom music"
+    },
+    {
+      "room": "Cumberland L",
+      "startDate": "2025-02-02T11:15:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "PowerPointTeam",
+      "title": "PowerPoint Pony Party",
+      "description": "Fun presentation showcase"
+    },
+    {
+      "room": "Cumberland GH",
+      "startDate": "2025-02-02T11:15:00",
       "day": "sunday",
       "timeslots": 8,
+      "host": "CraftTeam",
+      "title": "DIY Badge Exchange",
+      "description": "Create and trade custom badges"
+    },
+    {
+      "room": "Cumberland IJK",
+      "startDate": "2025-02-02T12:30:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "SwarmTeam",
+      "title": "After the Fact Live! Swarm of the Century",
+      "description": "Live commentary event"
+    },
+    {
+      "room": "Cumberland EF",
+      "startDate": "2025-02-02T13:00:00",
+      "day": "sunday",
+      "timeslots": 2,
+      "host": "PanelTeam",
+      "title": "If You Get a Question Wrong, a Panelist Leaves",
+      "description": "Interactive panel game"
+    },
+    {
+      "room": "Cumberland L",
+      "startDate": "2025-02-02T12:30:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "TechTeam",
+      "title": "How to fix Ponies with iPhones",
+      "description": "Tech support workshop"
+    },
+    {
+      "room": "Autograph Room",
+      "startDate": "2025-02-02T12:15:00",
+      "day": "sunday",
+      "timeslots": 4,
       "host": "HarmonyCon",
-      "title": "Talent Show Prejudge",
-      "description": "Preliminary judging for the talent show"
+      "title": "Autographs for all VIPs",
+      "description": "Meet and get autographs from special guests"
+    },
+    {
+      "room": "Mane Events",
+      "startDate": "2025-02-02T12:30:00",
+      "day": "sunday",
+      "timeslots": 10,
+      "host": "CharityTeam",
+      "title": "Charity Auction",
+      "description": "Fundraising auction event"
+    },
+    {
+      "room": "Cumberland IJK",
+      "startDate": "2025-02-02T13:45:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "MusicTeam",
+      "title": "Coltchella Musicians Meet & Greet",
+      "description": "Meet musical guests"
+    },
+    {
+      "room": "Cumberland EF",
+      "startDate": "2025-02-02T13:45:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "MemoryTeam",
+      "title": "Bronies Remember",
+      "description": "Fandom memories and stories"
+    },
+    {
+      "room": "Cumberland L",
+      "startDate": "2025-02-02T13:45:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "SciFiTeam",
+      "title": "Science Fiction, Cyberpunk, Ponies and You - Sunjackers Panel",
+      "description": "Genre crossover discussion"
+    },
+    {
+      "room": "Cumberland GH",
+      "startDate": "2025-02-02T13:30:00",
+      "day": "sunday",
+      "timeslots": 5,
+      "host": "InterruptionTeam",
+      "title": "Pony the Interruption",
+      "description": "Interactive comedy panel"
+    },
+    {
+      "room": "Mane Events",
+      "startDate": "2025-02-02T15:00:00",
+      "day": "sunday",
+      "timeslots": 4,
+      "host": "HarmonyCon",
+      "title": "Closing Ceremonies",
+      "description": "Final convention event"
     }
   ]
