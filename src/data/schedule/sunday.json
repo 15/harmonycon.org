@@ -1,182 +1,182 @@
 [
     {
-      "room": "Reg Desk",
-      "startDate": "2025-02-02T10:00:00",
-      "day": "sunday",
-      "timeslots": 24,
-      "host": "HarmonyCon",
-      "title": "Registration",
-      "description": "Pick up your badge and convention materials"
+        "room": "Reg Desk",
+        "startDate": "2025-02-02T10:00:00",
+        "day": "sunday",
+        "timeslots": 24,
+        "host": "HarmonyCon",
+        "title": "Registration",
+        "description": "Pick up your badge and convention materials"
     },
     {
-      "room": "Vendor Hall",
-      "startDate": "2025-02-02T10:00:00",
-      "day": "sunday",
-      "timeslots": 24,
-      "host": "HarmonyCon",
-      "title": "Vendor Hall",
-      "description": "Shop for all your favorite pony merchandise!"
+        "room": "Vendor Hall",
+        "startDate": "2025-02-02T10:00:00",
+        "day": "sunday",
+        "timeslots": 24,
+        "host": "HarmonyCon",
+        "title": "Vendor Hall",
+        "description": "Shop for all your favorite pony merchandise!"
     },
     {
-      "room": "Cumberland IJK",
-      "startDate": "2025-02-02T10:00:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "PartyTeam",
-      "title": "The Good, The Bad, & The Pony With The Party Cannon",
-      "description": "Wanna watch a crazy storytelling game? This is the place for that! Watch the almighty D20 influence just how crazy of a pony story we wind up with as Dewie and the other panelists must work together to tell one crazy story after the next, all influenced by the D20!"
+        "room": "Cumberland IJK",
+        "startDate": "2025-02-02T10:00:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "DoTheDaringDew",
+        "title": "The Good, The Bad, & The Pony With The Party Cannon",
+        "description": "Wanna watch a crazy storytelling game? This is the place for that! Watch the almighty D20 influence just how crazy of a pony story we wind up with as Dewie and the other panelists must work together to tell one crazy story after the next, all influenced by the D20!"
     },
     {
-      "room": "Cumberland EF",
-      "startDate": "2025-02-02T10:00:00",
-      "day": "sunday",
-      "timeslots": 6,
-      "host": "ChurchTeam",
-      "title": "Why Adults Enjoy Ponies aka Brony Church",
-      "description": "Do you want to know why you go to a MLP Convention as an Adult? I'm here to show you how much the show has reminded you of lessons you may have forgotten."
+        "room": "Cumberland EF",
+        "startDate": "2025-02-02T10:00:00",
+        "day": "sunday",
+        "timeslots": 6,
+        "host": "Fiaura The Tank Girl",
+        "title": "Why Adults Enjoy Ponies aka Brony Church",
+        "description": "Do you want to know why you go to a MLP Convention as an Adult? I'm here to show you how much the show has reminded you of lessons you may have forgotten."
     },
     {
-      "room": "Cumberland L",
-      "startDate": "2025-02-02T10:00:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "DebateTeam",
-      "title": "Who is Best Pony?",
-      "description": "We've been arguing for over a decade, so it is time for HarmonyCon to decide who is the best MLP character! Your vote in this 64-character tournament helps decide the winner!"
+        "room": "Cumberland L",
+        "startDate": "2025-02-02T10:00:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "Evershade",
+        "title": "Who is Best Pony?",
+        "description": "We've been arguing for over a decade, so it is time for HarmonyCon to decide who is the best MLP character! Your vote in this 64-character tournament helps decide the winner!"
     },
     {
-      "room": "Cumberland GH",
-      "startDate": "2025-02-02T10:00:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "CraftTeam",
-      "title": "Kandi/Friendship Bracelet Making",
-      "description": "Hey Parents of Lil Kids!!!!! Bring your kiddos by to make some Kandi/Friendship bracelets! All supplies will be provided so stop on by!"
+        "room": "Cumberland GH",
+        "startDate": "2025-02-02T10:00:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "OceanBreeze",
+        "title": "Kandi/Friendship Bracelet Making",
+        "description": "Hey Parents of Lil Kids!!!!! Bring your kiddos by to make some Kandi/Friendship bracelets! All supplies will be provided so stop on by!"
     },
     {
-      "room": "Autograph Room",
-      "startDate": "2025-02-02T10:00:00",
-      "day": "sunday",
-      "timeslots": 6,
-      "host": "SportsTeam",
-      "title": "Buckball Tournament",
-      "description": "Official Buckball Tournament. Bring a team, join a team, or cheer them on. Fun for all skill levels. No experience needed. Medals awarded to the top teams! Fun had by all!"
+        "room": "Autograph Room",
+        "startDate": "2025-02-02T10:00:00",
+        "day": "sunday",
+        "timeslots": 6,
+        "host": "Crackle's Cousin Cosplay",
+        "title": "Buckball Tournament",
+        "description": "Official Buckball Tournament. Bring a team, join a team, or cheer them on. Fun for all skill levels. No experience needed. Medals awarded to the top teams! Fun had by all!"
     },
     {
-      "room": "Mane Events",
-      "startDate": "2025-02-02T11:00:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "HarmonyCon",
-      "title": "HarmonyCon Talent Show",
-      "description": "Show off your skills at Harmonycon's first ever Talent Show! Whether you sing, dance, play an instrument, or have a unique talent, this is your opportunity to shine on stage. Support your fellow con goers while they perform in front of our panel of judges! Enjoy an afternoon of amazing performances that highlight the diverse talents of our fandom!"
+        "room": "Mane Events",
+        "startDate": "2025-02-02T11:00:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "HarmonyCon",
+        "title": "HarmonyCon Talent Show",
+        "description": "Show off your skills at Harmonycon's first ever Talent Show! Whether you sing, dance, play an instrument, or have a unique talent, this is your opportunity to shine on stage. Support your fellow con goers while they perform in front of our panel of judges! Enjoy an afternoon of amazing performances that highlight the diverse talents of our fandom!"
     },
     {
-      "room": "Cumberland IJK",
-      "startDate": "2025-02-02T11:15:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "TalkingTeam",
-      "title": "Talking Points is Magic",
-      "description": "Come have some fun as we gather to play the Jackbox game \"Talking Points.\" Come watch people give speeches about ponies but they have no idea what the slides will be. Hilarity is bound to happen when nobody knows what's coming next, least of all the speechmaker"
+        "room": "Cumberland IJK",
+        "startDate": "2025-02-02T11:15:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "ajnrules",
+        "title": "Talking Points is Magic",
+        "description": "Come have some fun as we gather to play the Jackbox game \"Talking Points.\" Come watch people give speeches about ponies but they have no idea what the slides will be. Hilarity is bound to happen when nobody knows what's coming next, least of all the speechmaker"
     },
     {
-      "room": "Cumberland EF",
-      "startDate": "2025-02-02T11:45:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "MusicTeam",
-      "title": "Modern Brony Music",
-      "description": "There's so much fandom music getting released every day! With many new songs frequently appearing, it can be difficult to keep up and know what to listen to! Come participate as we show you the different resources you can use to find your new favorite fandom tunes and help us pick out which songs we listen to during the panel!"
+        "room": "Cumberland EF",
+        "startDate": "2025-02-02T11:45:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "Evershade",
+        "title": "Modern Brony Music",
+        "description": "There's so much fandom music getting released every day! With many new songs frequently appearing, it can be difficult to keep up and know what to listen to! Come participate as we show you the different resources you can use to find your new favorite fandom tunes and help us pick out which songs we listen to during the panel!"
     },
     {
-      "room": "Cumberland L",
-      "startDate": "2025-02-02T11:15:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "PowerPointTeam",
-      "title": "PowerPoint Pony Party",
-      "description": "A bunch of informative and curated PowerPoints being presented by a very NOT informative cast of silly horse people."
+        "room": "Cumberland L",
+        "startDate": "2025-02-02T11:15:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "Nevaylin",
+        "title": "PowerPoint Pony Party",
+        "description": "A bunch of informative and curated PowerPoints being presented by a very NOT informative cast of silly horse people."
     },
     {
-      "room": "Cumberland GH",
-      "startDate": "2025-02-02T11:15:00",
-      "day": "sunday",
-      "timeslots": 8,
-      "host": "CraftTeam",
-      "title": "DIY Badge Exchange",
-      "description": "Have you ever wanted a badge of your OC or wanted to add another one to your collection? Come to the DIY Badge Exchange where you'll be randomly assigned to draw an attendee's badge and exchange them at the end! Supplies will be provided and all art skill levels welcome."
+        "room": "Cumberland GH",
+        "startDate": "2025-02-02T11:15:00",
+        "day": "sunday",
+        "timeslots": 8,
+        "host": "fannytastical",
+        "title": "DIY Badge Exchange",
+        "description": "Have you ever wanted a badge of your OC or wanted to add another one to your collection? Come to the DIY Badge Exchange where you'll be randomly assigned to draw an attendee's badge and exchange them at the end! Supplies will be provided and all art skill levels welcome."
     },
     {
-      "room": "Cumberland IJK",
-      "startDate": "2025-02-02T12:30:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "SwarmTeam",
-      "title": "After the Fact Live! Swarm of the Century",
-      "description": "It's everypony for themselves as the Parasprites roll into town! Join Silver Quill for a look at this season one episode. Expect gags, quips, and maybe a moment of insight. Q&A to follow after the presentation!"
+        "room": "Cumberland IJK",
+        "startDate": "2025-02-02T12:30:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "Silver Quill",
+        "title": "After the Fact Live! Swarm of the Century",
+        "description": "It's everypony for themselves as the Parasprites roll into town! Join Silver Quill for a look at this season one episode. Expect gags, quips, and maybe a moment of insight. Q&A to follow after the presentation!"
     },
     {
-      "room": "Cumberland EF",
-      "startDate": "2025-02-02T13:00:00",
-      "day": "sunday",
-      "timeslots": 2,
-      "host": "PanelTeam",
-      "title": "If You Get a Question Wrong, a Panelist Leaves",
-      "description": "A trivia game with the highest stakes of any other My Little Pony convention panel: If any questions are answered incorrectly, a panelist will leave."
+        "room": "Cumberland EF",
+        "startDate": "2025-02-02T13:00:00",
+        "day": "sunday",
+        "timeslots": 2,
+        "host": "Nevaylin",
+        "title": "If You Get a Question Wrong, a Panelist Leaves",
+        "description": "A trivia game with the highest stakes of any other My Little Pony convention panel: If any questions are answered incorrectly, a panelist will leave."
     },
     {
-      "room": "Cumberland L",
-      "startDate": "2025-02-02T12:30:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "TechTeam",
-      "title": "How to fix Ponies with iPhones",
-      "description": "Do you hate the idea of ponies with iphones? Tablets? Social media? Not after this panel you won't. ;)"
+        "room": "Cumberland L",
+        "startDate": "2025-02-02T12:30:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "Jack (Scootertrix)",
+        "title": "How to fix Ponies with iPhones",
+        "description": "Do you hate the idea of ponies with iphones? Tablets? Social media? Not after this panel you won't. ;)"
     },
     {
-      "room": "Cumberland IJK",
-      "startDate": "2025-02-02T13:45:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "MusicTeam",
-      "title": "Coltchella Musicians Meet & Greet",
-      "description": "Come meet the Coltchella musicians!"
+        "room": "Cumberland IJK",
+        "startDate": "2025-02-02T13:45:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "Koa",
+        "title": "Coltchella Musicians Meet & Greet",
+        "description": "Come meet the Coltchella musicians!"
     },
     {
-      "room": "Cumberland EF",
-      "startDate": "2025-02-02T13:45:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "MemoryTeam",
-      "title": "Bronies Remember",
-      "description": "Join Zenith and Onyx on a fun and nostalgia-driven trip down FiM memory lane!"
+        "room": "Cumberland EF",
+        "startDate": "2025-02-02T13:45:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "zenith",
+        "title": "Bronies Remember",
+        "description": "Join Zenith and Onyx on a fun and nostalgia-driven trip down FiM memory lane!"
     },
     {
-      "room": "Cumberland L",
-      "startDate": "2025-02-02T13:45:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "SciFiTeam",
-      "title": "Science Fiction, Cyberpunk, Ponies and You - Sunjackers Panel",
-      "description": "CaptainHoers talks about his longrunning Sunjackers comic, cyberpunk as a genre more generally, and why even get in your perfectly good ponies in the first place. Live video essay."
+        "room": "Cumberland L",
+        "startDate": "2025-02-02T13:45:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "CaptainHoers",
+        "title": "Science Fiction, Cyberpunk, Ponies and You - Sunjackers Panel",
+        "description": "CaptainHoers talks about his longrunning Sunjackers comic, cyberpunk as a genre more generally, and why even get in your perfectly good ponies in the first place. Live video essay."
     },
     {
-      "room": "Cumberland GH",
-      "startDate": "2025-02-02T13:30:00",
-      "day": "sunday",
-      "timeslots": 5,
-      "host": "InterruptionTeam",
-      "title": "Pony the Interruption",
-      "description": "Based on the ESPN show \"Pardon the Interruption,\" the audience decides what we discuss! Drawing from cards with subjects the crowd writes down, we will take turns drawing at random of all sorts of horse subjects to discuss. Once we select a subject, we set a timer for three minutes and spend that time discussing the topic. Once the timer goes off, we stop and draw again. Lather, rinse, repeat!"
+        "room": "Cumberland GH",
+        "startDate": "2025-02-02T13:30:00",
+        "day": "sunday",
+        "timeslots": 5,
+        "host": "DoTheDaringDew",
+        "title": "Pony the Interruption",
+        "description": "Based on the ESPN show \"Pardon the Interruption,\" the audience decides what we discuss! Drawing from cards with subjects the crowd writes down, we will take turns drawing at random of all sorts of horse subjects to discuss. Once we select a subject, we set a timer for three minutes and spend that time discussing the topic. Once the timer goes off, we stop and draw again. Lather, rinse, repeat!"
     },
     {
-      "room": "Mane Events",
-      "startDate": "2025-02-02T15:00:00",
-      "day": "sunday",
-      "timeslots": 4,
-      "host": "HarmonyCon",
-      "title": "Closing Ceremonies",
-      "description": "Final convention event"
+        "room": "Mane Events",
+        "startDate": "2025-02-02T15:00:00",
+        "day": "sunday",
+        "timeslots": 4,
+        "host": "HarmonyCon",
+        "title": "Closing Ceremonies",
+        "description": "Final convention event"
     }
 ]
