@@ -135,6 +135,33 @@
         "description": "Just when you thought it was safe to watch pony cartoons again...a bunch of jerks from New Jersey found THE WORST ONES imaginable!  Join the RiffPonies crew of Thoth Penswell and a slew of other special Community Guest stars as they take you on an epic journey through some of THE WORST My Little Pony cartoons they can find and brutally mock them for your enjoyment!  From decades gone by to current day, jeer and suffer through the worst of Equine animation & more along with the rest of your friends!"
     },
     {
+        "room": "Mane Events",
+        "startDate": "2025-01-31T16:30:00",
+        "day": "friday",
+        "timeslots": 10,
+        "host": "HarmonyCon",
+        "title": "Soundcheck",
+        "description": "Soundcheck"
+    },
+    {
+        "room": "Mane Events",
+        "startDate": "2025-01-31T19:00:00",
+        "day": "friday",
+        "timeslots": 24,
+        "host": "HarmonyCon",
+        "title": "Concert",
+        "description": "Coltchella 6"
+    },
+    {
+        "room": "Autograph Room",
+        "startDate": "2025-01-31T15:30:00",
+        "day": "friday",
+        "timeslots": 4,
+        "host": "HarmonyCon",
+        "title": "Autographs for VAs",
+        "description": "Autographs for VAs"
+    },
+    {
         "room": "Broadhorse Theatre",
         "startDate": "2025-01-31T15:30:00",
         "day": "friday",
