@@ -542,7 +542,7 @@
     {
         "day": "saturday",
         "title": "Rise and Shine! It's Streetpass Time! 2025 Edition!",
-        "room": "Videogames",
+        "room": "Videogames*",
         "startDate": "2025-02-01T10:30:00",
         "timeslots": 4,
         "host": "Storm Chaser",
@@ -551,7 +551,7 @@
     {
         "day": "saturday",
         "title": "StickPony RPG",
-        "room": "Tabletop",
+        "room": "Tabletop*",
         "startDate": "2025-02-01T11:00:00",
         "timeslots": 4,
         "host": "Undead_Rattler",
@@ -578,7 +578,7 @@
     {
         "day": "saturday",
         "title": "World’s Collide Part 2: The Pony Puzzle",
-        "room": "Tabletop",
+        "room": "Tabletop*",
         "startDate": "2025-02-01T16:00:00",
         "timeslots": 16,
         "host": "Storm Chaser, Jeff Provine, Daniel Brown",
@@ -633,7 +633,7 @@
     {
         "day": "saturday",
         "title": "Are You a Changeling?",
-        "room": "Tabletop",
+        "room": "Tabletop*",
         "startDate": "2025-02-01T23:00:00",
         "timeslots": 8,
         "host": "Undead_Rattler",
@@ -651,7 +651,7 @@
     {
         "day": "saturday",
         "title": "The Witch is Dead",
-        "room": "Tabletop",
+        "room": "Tabletop*",
         "startDate": "2025-02-02T01:00:00",
         "timeslots": 4,
         "host": "Undead_Rattler",

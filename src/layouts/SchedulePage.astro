@@ -34,11 +34,11 @@ const optimizedScheduleBackground = await getImage({
 const slots =  {
   'friday': {
     start: new Date(2025, 0, 31, 10, 30),
-    end: new Date(2025, 1, 1, 1, 30),
+    end: new Date(2025, 1, 1, 2, 15),
   },
   'saturday': {
     start: new Date(2025, 1, 1, 9, 30),
-    end: new Date(2025, 1, 2, 2, 30),
+    end: new Date(2025, 1, 2, 2, 15),
   },
   'sunday': {
     start: new Date(2025, 1, 2, 9, 30),
@@ -130,7 +130,9 @@ const events: {[key: number]: (Event|PlaceholderEvent)[]} = {
   ["Autograph Room"]: [],
   ["Vendor Hall"]: [],
   ["Videogames"]: [],
+  ["Videogames*"]: [],
   ["Tabletop"]: [],
+  ["Tabletop*"]: [],
 };
 
 let sourceEventsPerRoom = []
@@ -257,9 +259,21 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
         />
         <Room
             index="9"
+            roomname="VIDEOGAMES"
+            roomsrc={roomEmpty}
+            events={events["Videogames*"]}
+        />
+        <Room
+            index="10"
             roomname="TABLETOP"
             roomsrc={roomEmpty}
             events={events["Tabletop"]}
+        />
+        <Room
+            index="11"
+            roomname="TABLETOP"
+            roomsrc={roomEmpty}
+            events={events["Tabletop*"]}
         />
 
         </tbody>
@@ -344,21 +358,29 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
   }
 </style>
 
-<script define:vars={{ day }}>
+<script define:vars={{
+    day,
+    fridayBeginDateTime: slots.friday.start,
+    fridayEndDateTime: slots.friday.end,
+    saturdayBeginDateTime: slots.saturday.start,
+    saturdayEndDateTime: slots.saturday.end,
+    sundayBeginDateTime: slots.sunday.start,
+    sundayEndDateTime: slots.sunday.end,
+  }}>
   const table = document.getElementById('table');
   const line = document.getElementById("with-vertical-line");
   const roomCell = document.getElementsByClassName("agenda-room-cell")[0];
 
-  const fridayBegin = new Date(2025, 0, 31, 11, 0).getTime()
-  const fridayEnd = new Date(2025, 1, 1, 1, 0).getTime()
+  const fridayBegin = fridayBeginDateTime.getTime()
+  const fridayEnd = fridayEndDateTime.getTime()
   const fridayDuration = fridayEnd - fridayBegin
 
-  const saturdayBegin = new Date(2025, 1, 1, 10, 0).getTime()
-  const saturdayEnd = new Date(2025, 1, 2, 2, 0).getTime()
+  const saturdayBegin = saturdayBeginDateTime.getTime()
+  const saturdayEnd = saturdayEndDateTime.getTime()
   const saturdayDuration = saturdayEnd - saturdayBegin
 
-  const sundayBegin = new Date(2025, 1, 2, 10, 0).getTime()
-  const sundayEnd = new Date(2025, 1, 2, 16, 0).getTime()
+  const sundayBegin = sundayBeginDateTime.getTime()
+  const sundayEnd = sundayEndDateTime.getTime()
   const sundayDuration = sundayEnd - sundayBegin
 
   const isFriday = (ms) => ms >= fridayBegin && ms < fridayEnd;

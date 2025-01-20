@@ -16,9 +16,6 @@ const { index = "Default", roomname = "", roomsrc = null, events = [], } = Astro
 
 import fridaySchedule from "@data/schedule/friday.json";
 
-const testEvent = fridaySchedule[0];
-const testEvent2 = fridaySchedule[1];
-
 ---
 
 <tr>
@@ -76,6 +73,12 @@ const testEvent2 = fridaySchedule[1];
     @apply bg-cyan-200 hover:bg-cyan-300;
   }
   .room9, .room9 ~ :global(td:not([data-empty])) {
+    @apply bg-cyan-200 hover:bg-cyan-300;
+  }
+  .room10, .room10 ~ :global(td:not([data-empty])) {
+    @apply bg-indigo-200 hover:bg-indigo-300;
+  }
+  .room11, .room11 ~ :global(td:not([data-empty])) {
     @apply bg-indigo-200 hover:bg-indigo-300;
   }
   .roomDefault, .roomDefault ~ :global(td:not([data-empty])) {

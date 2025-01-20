@@ -200,9 +200,9 @@
     {
         "day": "sunday",
         "title": "Unbound RPG",
-        "room": "Tabletop",
-        "timeframe": "10:00 AM - 12:00 PM",
+        "room": "Tabletop*",
         "startDate": "2025-02-02T10:00:00",
+        "timeslots": 8,
         "host": "Undead_Rattler",
         "description": "A roleplaying game with a twist: the players and the gm create the world, the plot, and the adversaries during character creation."
     },
