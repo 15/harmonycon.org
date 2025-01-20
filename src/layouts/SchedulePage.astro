@@ -360,27 +360,22 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
 
 <script define:vars={{
     day,
-    fridayBeginDateTime: slots.friday.start,
-    fridayEndDateTime: slots.friday.end,
-    saturdayBeginDateTime: slots.saturday.start,
-    saturdayEndDateTime: slots.saturday.end,
-    sundayBeginDateTime: slots.sunday.start,
-    sundayEndDateTime: slots.sunday.end,
+    slots,
   }}>
   const table = document.getElementById('table');
   const line = document.getElementById("with-vertical-line");
   const roomCell = document.getElementsByClassName("agenda-room-cell")[0];
 
-  const fridayBegin = fridayBeginDateTime.getTime()
-  const fridayEnd = fridayEndDateTime.getTime()
+  const fridayBegin = new Date(slots.friday.start).getTime()
+  const fridayEnd = new Date(slots.friday.end).getTime()
   const fridayDuration = fridayEnd - fridayBegin
 
-  const saturdayBegin = saturdayBeginDateTime.getTime()
-  const saturdayEnd = saturdayEndDateTime.getTime()
+  const saturdayBegin = new Date(slots.saturday.start).getTime()
+  const saturdayEnd = new Date(slots.saturday.end).getTime()
   const saturdayDuration = saturdayEnd - saturdayBegin
 
-  const sundayBegin = sundayBeginDateTime.getTime()
-  const sundayEnd = sundayEndDateTime.getTime()
+  const sundayBegin = new Date(slots.sunday.start).getTime()
+  const sundayEnd = new Date(slots.sunday.end).getTime()
   const sundayDuration = sundayEnd - sundayBegin
 
   const isFriday = (ms) => ms >= fridayBegin && ms < fridayEnd;
@@ -399,7 +394,6 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
     let tableWidth = table.scrollWidth - roomCellOffset
 
     const moveLine = (progression) => {
-    //   console.log({progression, tableWidth, roomCellOffset})
       const y =  (progression * tableWidth) + roomCellOffset + 2
       if (line) {
         line.style.left = `${y}px`;
