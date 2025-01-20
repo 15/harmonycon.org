@@ -80,7 +80,9 @@ export enum ROOM {
   F = 5,
   G = 6,
   H = 7,
-  UNKNOWN = 8,
+  I = 8,
+  J = 9,
+  UNKNOWN = 10,
 }
 
 export type Event = {
@@ -127,6 +129,8 @@ const events: {[key: number]: (Event|PlaceholderEvent)[]} = {
   ["Graumare's Chineighs Theatre"]: [],
   ["Autograph Room"]: [],
   ["Vendor Hall"]: [],
+  ["Videogames"]: [],
+  ["Tabletop"]: [],
 };
 
 let sourceEventsPerRoom = []
@@ -245,6 +249,18 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
           roomsrc={roomEmpty}
           events={events["Vendor Hall"]}
         />
+        <Room
+            index="8"
+            roomname="VIDEOGAMES"
+            roomsrc={roomEmpty}
+            events={events["Videogames"]}
+        />
+        <Room
+            index="9"
+            roomname="TABLETOP"
+            roomsrc={roomEmpty}
+            events={events["Tabletop"]}
+        />
 
         </tbody>
       </table>
@@ -258,7 +274,7 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
     define:vars={{
       optimizedScheduleBackground: `url(${optimizedScheduleBackground.src})`,
     }}>
-    
+
   @media (min-width: 1024px) {
     #bg {
       position: absolute;
