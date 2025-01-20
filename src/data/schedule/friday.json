@@ -326,7 +326,7 @@
     {
         "room": "Crystal Empire Theatre",
         "startDate": "2025-01-31T22:15:00",
-        "day": "friday", 
+        "day": "friday",
         "timeslots": 6,
         "host": "Rytex",
         "title": "Whooves Line Is It Anyway?",
@@ -385,5 +385,140 @@
         "host": "Harmonight",
         "title": "Pony Tales Lost as a Curse Word: A Brony's Guide to MLP Grimdark",
         "description": "Come one, come all (if you dare)! As you will be able to learn about the spooky side of My Little Pony fanfiction. Will this panel have an ending as sweet as \"Cupcakes\", or will friendship be more tragic than magic? The choice is yours every-pony."
+    },
+    {
+        "day": "friday",
+        "title": "Lasers and Feelings",
+        "room": "Tabletop",
+        "startDate": "2025-01-31T12:00:00",
+        "timeslots": 6,
+        "host": "Undead_Rattler",
+        "description": "Take the helm as Captain Darcy is incapacitated! A quick silly space RPG"
+    },
+    {
+        "day": "friday",
+        "title": "Stardew Valley Co-Op",
+        "room": "Videogames",
+        "startDate": "2025-01-31T12:00:00",
+        "timeslots": 8,
+        "host": "Eliwood Sain",
+        "description": "Hang out with your friends and build up a countryside farm together *Game available whenever computers are free"
+    },
+    {
+        "day": "friday",
+        "title": "Mario Kart 8",
+        "room": "Videogames",
+        "startDate": "2025-01-31T13:00:00",
+        "timeslots": 11,
+        "host": "Winds Requiem",
+        "description": "Race across different realms within different Nintendo Games Univurses, playing as and against your favorite Nintendo characters! "
+    },
+    {
+        "day": "friday",
+        "title": "Pathfinder 2E Beginner Box",
+        "room": "Tabletop",
+        "timeslots": 4,
+        "startDate": "2025-01-31T14:00:00",
+        "host": "Undead_Rattler",
+        "description": "A good length roleplaying adventure that introduces and teaches the mechanics of Pathfinder 2nd Edition"
+    },
+    {
+        "day": "friday",
+        "title": "Tails of Equestria",
+        "room": "Tabletop",
+        "startDate": "2025-01-31T14:45:00",
+        "timeslots": 7,
+        "host": "Eliwood Sain",
+        "description": "Make your own foal in this family-friendly RPG set in the world of Gen 4 MLP"
+    },
+    {
+        "day": "friday",
+        "title": "Street Fighter 5",
+        "room": "Videogames",
+        "startDate": "2025-01-31T16:00:00",
+        "timeslots": 4,
+        "host": "Winds Requiem",
+        "description": "A traditional 2d fighter, one on one with your favorite Street Fighter Characters! "
+    },
+    {
+        "day": "friday",
+        "title": "Quest for Harmony #3 - Siege of the Crystal Empire",
+        "room": "Tabletop",
+        "startDate": "2025-01-31T18:00:00",
+        "timeslots": 12,
+        "host": "Winds Requiem, Cinder Smith",
+        "description": "D&D 5e one shot! Play as the Mane 6, Shining Armor or Cadence and retake the Crystal Empire from the evil Darkness that has consumed it! Are you up to this task? Can you free the kingdom from darkness?"
+    },
+    {
+        "day": "friday",
+        "title": "Getting Over It Race",
+        "room": "Videogames",
+        "startDate": "2025-01-31T18:00:00",
+        "timeslots": 6,
+        "host": "Undead_Rattler",
+        "description": "Climb in your Cauldrons and speed up the mountain! First one to make it to a predetermined point or be the furthest along at the end of an hour wins!"
+    },
+    {
+        "day": "friday",
+        "title": "Root RPG",
+        "room": "Tabletop",
+        "startDate": "2025-01-31T19:00:00",
+        "timeslots": 8,
+        "host": "Eliwood Sain",
+        "description": "Caught in the middle of a woodland war, you are a group of animal outcasts who band together to protect the denizens from threatening armies"
+    },
+    {
+        "day": "friday",
+        "title": "Quake",
+        "room": "Videogames",
+        "startDate": "2025-01-31T21:00:00",
+        "timeslots": 6,
+        "host": "VideoGame Team",
+        "description": "Enjoy a Quake 3 Clone and have some run'n'gun fun in a classic boomer-shooter\n\n*Content Warning"
+    },
+    {
+        "day": "friday",
+        "title": "Keep Calm and Kill the Princess",
+        "room": "Tabletop",
+        "startDate": "2025-01-31T21:15:00",
+        "timeslots": 4,
+        "host": "Undead_Rattler",
+        "description": "Among Us, tabletop edition! Someponies want to off one of the princesses; Other ponies want to keep her safe. Fast Paced and lots of note passing make this game hectic and fun!"
+    },
+    {
+        "day": "friday",
+        "title": "Blades in the Dark",
+        "room": "Tabletop",
+        "startDate": "2025-01-31T21:30:00",
+        "timeslots": 4,
+        "host": "Eliwood Sain",
+        "description": "(18+) Go on a heist in a world where the sun went dim and the only thing protecting the city from horrific beings outside it is an electric barrier powered by demon whale blood."
+    },
+    {
+        "day": "friday",
+        "title": "Golden Eye",
+        "room": "Videogames",
+        "startDate": "2025-01-31T22:00:00",
+        "timeslots": 6,
+        "host": "Winds Requiem",
+        "description": "The N64 Classic! A multiplayer FPS fun time on 4 player split screen!"
+    },
+    {
+        "day": "friday",
+        "title": "Maid RPG",
+        "room": "Tabletop",
+        "startDate": "2025-02-01T00:00:00",
+        "timeslots": 8,
+        "host": "Eliwood Sain",
+        "description": "(18+) Inspired by ALL the anime tropes, become maids in service of a master/mistress in their mansion and let the hilarity ensue"
+    },
+    {
+        "day": "friday",
+        "title": "Mothership RPG",
+        "room": "Tabletop",
+        "startDate": "2025-02-01T00:00:00",
+        "timeslots": 8,
+        "host": "Undead_Rattler",
+        "description": "Need a nightmare? Like cosmic horror? Come wander through a scary space and lose your life to save your friends. PG-13 rating"
     }
 ]

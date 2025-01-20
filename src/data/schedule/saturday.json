@@ -520,5 +520,141 @@
     "host": "Cocktail Olive",
     "title": "Hello Pinkie Pie: The Lost Episode",
     "description": "After FiM was over, several G4.5 projects cropped up: Pony Life, stop-motion shorts, and a little CGI show called Hello Pinkie Pie. But there's evidence of an episode of Hello Pinkie Pie that never aired: a one-second clip shown during a montage at a Hasbro investor presentation. This panel will explain and explore what is known about this lost little piece of MLP media."
-}
+},
+    {
+        "day": "saturday",
+        "title": "Wanderhome",
+        "room": "Tabletop",
+        "startDate": "2025-02-01T10:00:00",
+        "timeslots": 8,
+        "host": "Eliwood Sain",
+        "description": "This idyllic pastoral fantasy game allows players to explore a world we create together in the aftermath of a war as we think about what home means to us"
+    },
+    {
+        "day": "saturday",
+        "title": "MCC Halo 3",
+        "room": "Videogames",
+        "startDate": "2025-02-01T10:00:00",
+        "timeslots": 8,
+        "host": "Winds Requiem",
+        "description": "FPS team based shooter with objectives in the Halo universe. "
+    },
+    {
+        "day": "saturday",
+        "title": "Rise and Shine! It's Streetpass Time! 2025 Edition!",
+        "room": "Videogames",
+        "startDate": "2025-02-01T10:30:00",
+        "timeslots": 4,
+        "host": "Storm Chaser",
+        "description": "Has it been almost 13 years since the Nintendo DS launched? Wild! Come start your day making new friends playing your 3DS and Nintendo Switches and getting those elusive mini game bonus! "
+    },
+    {
+        "day": "saturday",
+        "title": "StickPony RPG",
+        "room": "Tabletop",
+        "startDate": "2025-02-01T11:00:00",
+        "timeslots": 4,
+        "host": "Undead_Rattler",
+        "description": "Doodle up a stick pony, give them a name, and then wander around stickponyvile! A simple story RPG that's great for beginners."
+    },
+    {
+        "day": "saturday",
+        "title": "Pathfinder Oneshot",
+        "room": "Tabletop",
+        "startDate": "2025-02-01T13:00:00",
+        "timeslots": 16,
+        "host": "Undead_Rattler",
+        "description": "Choose from my collection of one-shots and premade characters and wander through an adventure!"
+    },
+    {
+        "day": "saturday",
+        "title": "Super Smash Brothers Ultimate Tournament",
+        "room": "Videogames",
+        "startDate": "2025-02-01T13:00:00",
+        "timeslots": 12,
+        "host": "Winds Requiem",
+        "description": "Fight in the newest, most exciting platforming fighting game from Nintendo! "
+    },
+    {
+        "day": "saturday",
+        "title": "World’s Collide Part 2: The Pony Puzzle",
+        "room": "Tabletop",
+        "startDate": "2025-02-01T16:00:00",
+        "timeslots": 16,
+        "host": "Storm Chaser, Jeff Provine, Daniel Brown",
+        "description": "In partnership with Renegade Game Studios, 2024's exclusive GenCon event arrives at Harmonycon! The sequel to GenCon 2023’s ‘World’s Collide: Battle for the Multiverse,’ play in the D&D EPIC-esc Crossover Event featured at GenCon 2024. Come play as a Pony, Transformer, Power Ranger, or G.I. JOE as they save the multiverse! "
+    },
+    {
+        "day": "saturday",
+        "title": "Community Guest Smash Tournament",
+        "room": "Videogames",
+        "timeframe": "4:30 PM - 6:00 PM",
+        "startDate": "2025-02-01T16:30:00",
+        "timeslots": 14,
+        "host": "Nevaylin, HarmonyCon Community Guests",
+        "description": "Which of our Community Guests will come out on top of an all-out Super Smash Bros. Ultimate tournament?"
+    },
+    {
+        "day": "saturday",
+        "title": "Quest for Harmony #3 - Siege of the Crystal Empire",
+        "room": "Tabletop",
+        "startDate": "2025-02-01T18:00:00",
+        "timeslots": 12,
+        "host": "Winds Requiem, Cinder Smith",
+        "description": "D&D 5e one shot! Play as the Mane 6, Shining Armor or Cadence and retake the Crystal Empire from the evil Darkness that has consumed it! Are you up to this task? Can you free the kingdom from darkness?"
+    },
+    {
+        "day": "saturday",
+        "title": "Empty Epsilon",
+        "room": "Videogames",
+        "startDate": "2025-02-01T18:00:00",
+        "timeslots": 12,
+        "host": "Eliwood Sain",
+        "description": "Come together with a crew of friends as you pilot a starship together in this simulation game."
+    },
+    {
+        "day": "saturday",
+        "title": "Mortal Kombat 11",
+        "room": "Videogames",
+        "startDate": "2025-02-01T21:00:00",
+        "timeslots": 8,
+        "host": "Winds Requiem",
+        "description": "Within the brutal world of mortal kombat, fight to the death in this 1 on 1 fighting game!\n\n*Content Warning"
+    },
+    {
+        "day": "saturday",
+        "title": "CBR+PNK",
+        "room": "Tabletop",
+        "startDate": "2025-02-01T21:30:00",
+        "timeslots": 8,
+        "host": "Eliwood Sain",
+        "description": "(18+) You are veteran shadowrunners trying to get out by completing one final run."
+    },
+    {
+        "day": "saturday",
+        "title": "Are You a Changeling?",
+        "room": "Tabletop",
+        "startDate": "2025-02-01T23:00:00",
+        "timeslots": 8,
+        "host": "Undead_Rattler",
+        "description": "Werewolf/Town of Salem but ponified! Can you root out the changelings before they take over the town?"
+    },
+    {
+        "day": "saturday",
+        "title": "Player's Choice",
+        "room": "Tabletop",
+        "startDate": "2025-02-02T00:00:00",
+        "timeslots": 8,
+        "host": "Eliwood Sain",
+        "description": "PIck one of the above RPGs or another from The File Of Good Stuff"
+    },
+    {
+        "day": "saturday",
+        "title": "The Witch is Dead",
+        "room": "Tabletop",
+        "startDate": "2025-02-02T01:00:00",
+        "timeslots": 4,
+        "host": "Undead_Rattler",
+        "description": "You are a fuzzy little woodland critter that was a witche's familiar, until she was MURDERED. Go get revenge..."
+    }
 ]

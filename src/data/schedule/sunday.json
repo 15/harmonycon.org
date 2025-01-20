@@ -187,5 +187,41 @@
         "host": "HarmonyCon",
         "title": "Closing Ceremonies",
         "description": "Final convention event"
+    },
+    {
+        "day": "sunday",
+        "title": "Player's Choice",
+        "room": "Tabletop",
+        "startDate": "2025-02-02T10:00:00",
+        "timeslots": 8,
+        "host": "Eliwood Sain",
+        "description": "PIck one of the above RPGs or another from The File Of Good Stuff"
+    },
+    {
+        "day": "sunday",
+        "title": "Unbound RPG",
+        "room": "Tabletop",
+        "timeframe": "10:00 AM - 12:00 PM",
+        "startDate": "2025-02-02T10:00:00",
+        "host": "Undead_Rattler",
+        "description": "A roleplaying game with a twist: the players and the gm create the world, the plot, and the adversaries during character creation."
+    },
+    {
+        "day": "sunday",
+        "title": "Mario Party Jamboree",
+        "room": "Videogames",
+        "startDate": "2025-02-02T10:00:00",
+        "timeslots": 12,
+        "host": "Wind Requiem",
+        "description": "Play among multiple boards in a 4 player free for all, playing minigames and rolling dice to purchase stars and come on up top in the newest game in the series!"
+    },
+    {
+        "day": "sunday",
+        "title": "Player's Choice #2",
+        "room": "Tabletop",
+        "startDate": "2025-02-02T13:00:00",
+        "timeslots": 12,
+        "host": "Undead_Rattler",
+        "description": "Choose anything in my collection you'd like to try and we'll play it together!"
     }
 ]
