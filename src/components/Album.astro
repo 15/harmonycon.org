@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+const { src, alt, time="" } = Astro.props;
+---
+
+<div class="text-center flex flex-col items-center relative">
+  <Image src={src}
+    format="avif"
+    height={400}
+    alt={alt}
+    class="object-cover bg-white rounded-none border-4 border-[#EFBF04] w-full lg:w-40 xl:w-64 aspect-square z-0"
+  >
+  </Image>
+  <div class="h-8 flex justify-center text-2xl md:text-base lg:text-2xl font-semibold uppercase font-serif text-white mt-4 tracking-wide leading-none" 
+  style="text-shadow: 3px 3px 1px #000;">
+    {alt}
+  </div>
+  <div class="absolute right-0 bottom-16 rotate-3 bg-red-100 text-black px-2 py-1 whitespace-nowrap lg:px-4 lg:py-2 text-sm lg:text-base rounded-sm uppercase font-semibold" 
+  style="filter: drop-shadow(0 2px 2px #000);">
+    {time}
+  </div>
+</div>
