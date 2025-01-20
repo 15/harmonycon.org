@@ -414,7 +414,14 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
   }
 
   let timeout = false
-  document.addEventListener("swup:enable", placeRedline);
+
+  placeRedline()
+  document.addEventListener("swup:enable", () => {
+    window.swup.hooks.on("content:replace", () => {
+      placeRedline()
+    })
+  });
+
   window.addEventListener("resize", function() {
     clearTimeout(timeout)
     timeout = setTimeout(placeRedline, 100)
@@ -428,20 +435,28 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
 
   gsap.registerPlugin(ScrollToPlugin);
 
-  document.addEventListener("swup:enable", () => {
-    const table = document.getElementById('table');
-    if (table) {
-      table.addEventListener('wheel', (event) => {
-        event.preventDefault();
-        gsap.to(table, {
-          scrollTo: {
-            x: table.scrollLeft + event.deltaY * 2, // Adjust multiplier for speed
-            autoKill: false
-          },
-          ease: "power2",
-          duration: 0.1
-        });
+  const scrollSideways = function () {
+   const table = document.getElementById('table');
+   if (table) {
+     table.addEventListener('wheel', (event) => {
+     event.preventDefault();
+  console.log('aaaa')
+     gsap.to(table, {
+      scrollTo: {
+       x: table.scrollLeft + event.deltaY * 2, // Adjust multiplier for speed
+                autoKill: false
+       },
+      ease: "power2",
+      duration: 0.1
       });
+     });
     }
-  })
+  }
+
+  scrollSideways()
+  document.addEventListener("swup:enable", () => {
+   window.swup.hooks.on("content:replace", () => {
+      scrollSideways()
+    })
+  });
 </script>

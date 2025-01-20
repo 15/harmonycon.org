@@ -184,8 +184,10 @@ const roomType = [
     }
   }
 
-  // Initialize on page load
+  initializeDialog(title);
   document.addEventListener("swup:enable", () => {
-    initializeDialog(title);
+    window.swup.hooks.on("content:replace", () => {
+      initializeDialog(title);
+    })
   });
 </script>
