@@ -38,10 +38,10 @@ import Footer from "../components/Footer.astro";
         format="avif"
         height={400}
         alt="Coltchella 6"
-        class="bg-transparent rounded-none xl:w-1/2 w-auto z-0"
+        class="bg-transparent rounded-none md:w-full xl:w-1/2 w-auto"
       />
     </div>
-    <div class="grid grid-cols-4 items-center justify-center w-[80rem] gap-8 mx-auto mb-24 relative">
+    <div class="px-4 grid grid-cols-2 md:grid-cols-4 items-center justify-center w-full xl:w-[80rem] gap-8 mx-auto mb-24 relative">
       <Album
         src={musician1}
         alt="Pit Crew"
@@ -69,8 +69,8 @@ import Footer from "../components/Footer.astro";
         alt="Maerstrom"
         time="Friday, 7:30-8:30pm"
       />
-      <div></div>
-      <div></div>
+      <div class="hidden md:block"></div>
+      <div class="hidden md:block"></div>
       <Album
         src={musician4}
         alt="The Wonderbolts"
@@ -82,8 +82,8 @@ import Footer from "../components/Footer.astro";
         time="Friday, 8:30-9:15am"
       />
 
-      <div></div>
-      <div></div>
+      <div class="hidden md:block"></div>
+      <div class="hidden md:block"></div>
 
       <Album
         src={musician8}
@@ -96,8 +96,8 @@ import Footer from "../components/Footer.astro";
         time="Friday, 9:15-10:15pm"
       />
 
-      <div></div>
-      <div></div>
+      <div class="hidden md:block"></div>
+      <div class="hidden md:block"></div>
       <Album
         src={musician7}
         alt="Starcrush!"
@@ -124,12 +124,12 @@ import Footer from "../components/Footer.astro";
         time="Saturday, 12:00-1:00am"
         />
 
-      <div class="absolute w-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div class="hidden md:block absolute w-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <Image
           src={six}
           format="avif"
           alt="Six"
-          class="bg-transparent w-full"
+          class="bg-transparent lg:w-full"
         />
       </div>
   </div>
