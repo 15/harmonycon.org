@@ -185,10 +185,7 @@ const roomType = [
   }
 
   // Initialize on page load
-  document.addEventListener("astro:page-load", () => {
+  document.addEventListener("swup:enable", () => {
     initializeDialog(title);
   });
-
-  // Also initialize immediately in case astro:page-load doesn't fire
-  initializeDialog(title);
 </script>

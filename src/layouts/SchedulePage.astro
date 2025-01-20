@@ -414,9 +414,34 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
   }
 
   let timeout = false
-  document.addEventListener("astro:page-load", placeRedline);
+  document.addEventListener("swup:enable", placeRedline);
   window.addEventListener("resize", function() {
     clearTimeout(timeout)
     timeout = setTimeout(placeRedline, 100)
   });
+
+</script>
+
+<script>
+  import { gsap } from "gsap";
+  import ScrollToPlugin from "gsap/ScrollToPlugin";
+
+  gsap.registerPlugin(ScrollToPlugin);
+
+  document.addEventListener("swup:enable", () => {
+    const table = document.getElementById('table');
+    if (table) {
+      table.addEventListener('wheel', (event) => {
+        event.preventDefault();
+        gsap.to(table, {
+          scrollTo: {
+            x: table.scrollLeft + event.deltaY * 2, // Adjust multiplier for speed
+            autoKill: false
+          },
+          ease: "power2",
+          duration: 0.1
+        });
+      });
+    }
+  })
 </script>
