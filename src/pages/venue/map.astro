@@ -1,53 +1,56 @@
 ---
 import { Image, getImage } from "astro:assets";
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 
-import cocBackground from "../assets/2025/bg/stage3.png";
+import cocBackground from "../../assets/2025/bg/stage3.png";
 const optimizedCocBackground = await getImage({
   src: cocBackground,
   format: "avif",
   width: 2000,
 });
 
-import venue1 from "../assets/2025/venue/HarmonyConVenue1.png";
-import venue2 from "../assets/2025/venue/HarmonyConAssetsVenue2-2.png";
-import venue3 from "../assets/2025/venue/Hyatt-Regency-Dallas-P180-Pegasus-Ballroom-Theater.16x9.webp";
+import venue1 from "../../assets/2025/venue/Floor_layout.png";
+import venue2 from "../../assets/2025/venue/lower_level_2025_--_white_flooring_opacity.png";
+import venue3 from "../../assets/2025/venue/upper_level_2025_--_white_flooring_opacity.png";
 
-import Footer from "../components/Footer.astro";
+import Footer from "../../components/Footer.astro";
 ---
 
 <Layout title="HarmonyCon 2025 | Venue">
   <div id="bg" class="flex flex-col justify-between">
     <div class="flex flex-col items-center justify-center my-auto gap-y-12">
-      <div class="flex flex-col md:flex-row">
+      <div class="flex flex-col md:flex-row mx-8">
         <div
-          class="card1 p-1 bg-white border-8 border-black w-84 lg:w-120 xl:w-144 -rotate-3 rounded-lg drop-shadow-2xl"
+          class="card1 p-1 bg-neutral-400 border-8 border-black w-full lg:w-120 xl:w-144 -rotate-3 rounded-lg drop-shadow-2xl"
         >
           <Image
             src={venue3}
-            alt="Hyatt Regency Pegasus Ballroom"
+            alt=""
             width={800}
             format="avif"
             class="w-full"
           />
+          <div>
+            asdfas
+          </div>
         </div>
         <div
-          class="card2 p-1 bg-white border-8 border-black md:my-0 -my-16 sm:-my-12 mx-0 md:-mx-24 lg:-mx-48 w-84 lg:w-120 xl:w-144 rotate-6 rounded-lg drop-shadow-2xl"
+          class="card2 p-1 bg-neutral-400 border-8 border-black md:my-0  mx-0 w-full lg:w-120 xl:w-144 rotate-6 rounded-lg drop-shadow-2xl"
         >
           <Image
             src={venue2}
-            alt="Hyatt Regency Cumberland Hall"
+            alt=""
             width={800}
             format="avif"
             class="w-full"
           />
         </div>
         <div
-          class="card3 p-1 bg-white border-8 border-black w-84 lg:w-120 xl:w-144 rotate-1 rounded-lg drop-shadow-2xl"
+          class="card3 p-1 bg-neutral-400 border-8 border-black w-full lg:w-120 xl:w-144 rotate-1 rounded-lg drop-shadow-2xl"
         >
           <Image
             src={venue1}
-            alt="Hyatt Regency Cafe"
+            alt=""
             width={800}
             format="avif"
             class="w-full"
@@ -80,7 +83,7 @@ import Footer from "../components/Footer.astro";
             Book now
           </a>
           <a
-            href="/Floor_layout.png"
+            href="/venue/map"
             target="_blank"
             class="active bg-yellow-200 hover:bg-yellow-300 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl uppercase font-serif"
           >
