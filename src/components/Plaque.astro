@@ -3,25 +3,28 @@
 import { Image, getImage } from "astro:assets";
 const { src, name } = Astro.props;
 ---
+<div class="flex items-center justify-center">
+  
 <div
-  class="card1 p-8 bg-[url('/dark_wood.jpg')] border-8 border-[#c4a128] w-96 rounded-lg drop-shadow-xl transition-all cursor-pointer flex flex-col"
-  id="shannon"
+class="card1 p-8 bg-[url('/dark_wood.jpg')] border-8 border-[#c4a128] w-96 rounded-lg drop-shadow-xl transition-all cursor-pointer flex flex-col"
+id="shannon"
 >
-  <div class="bg-[#c4a128] p-1 rounded mb-3 w-3/5 mx-auto">
-    <div class="h-64 overflow-hidden rounded">
-      <Image
-        src={src}
-        alt="Shannon Chan-Kent"
-        width={400}
-        format="avif"
-        class="h-full object-cover select-none"
-        draggable="false"
-      />
-    </div>
+<div class="bg-[#c4a128] p-1 rounded mb-3 w-3/5 mx-auto">
+  <div class="aspect-square overflow-hidden rounded">
+    <Image
+      src={src}
+      alt={name}
+      width={400}
+      format="avif"
+      class="h-full object-cover select-none"
+      draggable="false"
+    />
   </div>
-  <div class="flex flex-col items-center justify-center gap-y-0 py-1 text-center bg-[#c4a128] rounded">
-    <p class="text-black text-lg font-semibold">Community Guest</p>
-    <p class="font-serif text-2xl text-black select-none">{name}</p>
-    <p class="text-black text-sm">HarmonyCon 2025</p>
-  </div>
+</div>
+<div class="flex flex-col items-center justify-center gap-y-0 py-1 text-center bg-[#c4a128] rounded">
+  <p class="text-black text-lg font-semibold">Community Guest</p>
+  <p class="font-serif text-2xl text-black select-none">{name}</p>
+  <p class="text-black text-sm">HarmonyCon 2025</p>
+</div>
+</div>
 </div>

@@ -9,12 +9,28 @@ const optimizedCocBackground = await getImage({
   width: 2000,
 });
 
-import guest1 from "../assets/2025/guests/ChanKent1.jpeg";
-import guest2 from "../assets/2025/guests/Jeremy_Whitley.jpg";
-import guest3 from "../assets/2025/guests/Kazumi Evams 2024.jpeg";
-import guest4 from "../assets/2025/guests/Rena Headshot.png";
-import guest5 from "../assets/2025/guests/Tony Headshot.png";
-
+import guest1 from "../assets/2025/guests/headshots/lightning_bliss.png";
+import guest2 from "../assets/2025/guests/headshots/taylor_bowe-mcardle.jpeg";
+import guest3 from "../assets/2025/guests/headshots/bobby_seas.png";
+import guest4 from "../assets/2025/playbill/temp.png";
+import guest5 from "../assets/2025/playbill/temp.png";
+import guest6 from "../assets/2025/guests/headshots/equestrian_wastelander.png";
+import guest7 from "../assets/2025/guests/headshots/pearmare_animation.jpg";
+import guest8 from "../assets/2025/guests/headshots/mad_munchkin.png";
+import guest10 from "../assets/2025/guests/headshots/riffponies.jpg";
+import guest11 from "../assets/2025/guests/headshots/friendship_is_content.png";
+import guest12 from "../assets/2025/guests/headshots/banquo0.png";
+import guest14 from "../assets/2025/guests/headshots/red_card.png";
+import guest15 from "../assets/2025/guests/headshots/minty_root.png";
+import guest17 from "../assets/2025/guests/headshots/zizzy.jpg";
+import guest18 from "../assets/2025/guests/headshots/fuzzy.png";
+import guest19 from "../assets/2025/guests/headshots/crackles_cousin_cosplay.jpg";
+import guest22 from "../assets/2025/guests/headshots/drwolf.png";
+import guest23 from "../assets/2025/guests/headshots/silver_quill.jpg";
+import guest24 from "../assets/2025/guests/headshots/step_2_harmony.png";
+import guest25 from "../assets/2025/guests/headshots/captainhoers.jpg";
+import guest26 from "../assets/2025/guests/headshots/cole_donnerstag.jpg";
+import guest27 from "../assets/2025/guests/headshots/jack_scootertrix.jpeg";
 import Footer from "../components/Footer.astro";
 import Plaque from "../components/Plaque.astro";
 ---
@@ -240,10 +256,34 @@ import Plaque from "../components/Plaque.astro";
     >
       OUR GUESTS
     </div> -->
-    <div class="flex flex-col items-center justify-center my-auto gap-y-12 py-12 2xl:mt-48">
-      <div class="hover:-rotate-1 hover:scale-105 duration-300 flex flex-col md:flex-row gap-4 2xl:gap-8 justify-center">
-        <Plaque src={guest1} name="Shannon Chan-Kent"/>
-      </div>
+    <div class="grid grid-cols-3 my-auto gap-y-12 w-full xl:w-[80rem] mx-auto">
+      <Plaque src={guest1} name="Lightning Bliss"/>
+      <Plaque src={guest2} name="Taylor Bowe-McArdle"/>
+      <Plaque src={guest3} name="Bobby Seas"/>
+      <Plaque src={guest4} name="Railershy"/>
+      <Plaque src={guest5} name="The Nameless One"/>
+      <Plaque src={guest6} name="Equestrian Wastelander"/>
+      <Plaque src={guest7} name="Pearmare Animation"/>
+      <Plaque src={guest8} name="Mad Munchkin"/>
+      <Plaque src={guest5} name="EzeBird & Butter"/>
+      <Plaque src={guest10} name="RiffPonies!"/>
+      <Plaque src={guest11} name="Friendship is Content"/>
+      <Plaque src={guest12} name="Banquo0"/>
+      <Plaque src={guest5} name="GatorGoatJohnny"/>
+      <Plaque src={guest14} name="Red Card"/>
+      <Plaque src={guest15} name="Minty Root"/>
+      <Plaque src={guest5} name="Fiaura The Tank Girl"/>
+      <Plaque src={guest17} name="Princess Cadance"/>
+      <Plaque src={guest18} name="Fuzzy"/>
+      <Plaque src={guest19} name="Crackle's Cousin Cosplay"/>
+      <Plaque src={guest5} name="Peruserofpieces"/>
+      <Plaque src={guest5} name="Kariana Keyes"/>
+      <Plaque src={guest22} name="DRWolf"/>
+      <Plaque src={guest23} name="Silver Quill"/>
+      <Plaque src={guest24} name="Step 2 Harmony"/>
+      <Plaque src={guest25} name="CaptainHoers"/>
+      <Plaque src={guest26} name="Cole Donnerstag"/>
+      <Plaque src={guest27} name="Jack (Scootertrix)"/>
     </div>
     <Footer />
   </div>
