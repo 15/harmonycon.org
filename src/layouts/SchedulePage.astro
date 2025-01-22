@@ -440,7 +440,6 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
    if (table) {
      table.addEventListener('wheel', (event) => {
      event.preventDefault();
-  console.log('aaaa')
      gsap.to(table, {
       scrollTo: {
        x: table.scrollLeft + event.deltaY * 2, // Adjust multiplier for speed
@@ -453,10 +452,10 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
     }
   }
 
-  scrollSideways()
+  scrollSideways();
   document.addEventListener("swup:enable", () => {
    window.swup.hooks.on("content:replace", () => {
-      scrollSideways()
+      scrollSideways();
     })
   });
 </script>
