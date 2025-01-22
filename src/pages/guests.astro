@@ -43,16 +43,19 @@ const bios = [
   {
     name: "Lightning Bliss",
     img: guest1,
+    twitter: "Lightning_Bliss",
     bio: "I represent Lightning Bliss, the spunky rainbow Alicorn in the Brony Analysis Community. When I'm not reviewing MLP or editing episodes for DRWolf's TF2 Analysis Anarchy show, I'm creating episodes for my Magic Lesson series or vending in the Vendor Hall! I also host in my series to a number of characters represened by my friends, such as the 'Rainbow Guards' Solar Flare and Chuggle, and the rainbow monster Twink. Whether at a con or through my content, I strive to remind others to look out for the rainbows, they will make you smile."
   },
   {
     name: "Taylor Bowe-McArdle",
     img: guest2,
+    twitter: "TaylorBMcardle",
     bio: "Taylor has been a part of the brony fandom since 2016 after a close friend told him about the show when he needed it the most. He is seen by the community as a positive influencer, friend to all, and is well recognized for supporting community artists and vendors. He hosts a podcast on Twitch called 'The Taylor & Co Hangout Podcast' every other Tuesday night that centers around fun topics he and his fellow co-hosts discuss about the fandom. He also does a variety of panels at cons such as 'Pony Life is Magic', 'Glimmer Gang Unleashed' and 'My Little Match Game' to name a few. As you can tell from his outfit, he is a huge fan of a certain character that, well…shows off the 'Glimmer Gang' pride. He also provides sports commentary for Crackles Cousin's Buckball tournaments. Whenever he isn't fantasizing about Starlight Glimmer, he is also heavily invested in auto racing and is a camera operator for Low Budget TV."
   },
   {
     name: "Bobby Seas",
     img: guest3,
+    twitter: "Bobby165324",
     bio: "A recognizable face in HarmonyCon, Bobby Seas has been the host of My Little Millionaire since 2013, making it the longest running brony game show in the fandom's history. A personality who loves to entertain his audience, Bobby can often be seen walking around in his signature suit and tie, or cosplaying as 'Stratus Skyline', a reporter for ZBS News. Bobby is a local Dallas resident, so he's contractually obligated to be here."
   },
   {
@@ -178,18 +181,8 @@ const bios = [
 ];
 ---
 
-<Layout title="HarmonyCon 2025 | Venue">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
-
+<Layout title="HarmonyCon 2025 | Community Guests">
   <div id="bg" class="relative flex flex-col h-screen pt-8 md:pt-16 gap-y-8">
-    <!-- <div
-      class="cursor-default font-serif uppercase text-center font-semibold text-6xl text-yellow-200 z-10"
-      style="text-shadow: 3px 3px 1px #000;"
-    >
-      OUR GUESTS
-    </div> -->
     <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 my-auto gap-6 md:gap-12 w-full lg:w-[56rem] xl:w-[80rem] mx-auto lg:mb-24 mb-8">
       { bios.map((b, idx)=> <Plaque src={b.img} name={b.name} idx={idx} bio={b.bio}/>)}
     </div>
