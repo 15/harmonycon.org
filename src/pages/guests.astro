@@ -42,110 +42,137 @@ import Plaque from "../components/Plaque.astro";
 const bios = [
   {
     name: "Lightning Bliss",
+    img: guest1,
     bio: "I represent Lightning Bliss, the spunky rainbow Alicorn in the Brony Analysis Community. When I'm not reviewing MLP or editing episodes for DRWolf's TF2 Analysis Anarchy show, I'm creating episodes for my Magic Lesson series or vending in the Vendor Hall! I also host in my series to a number of characters represened by my friends, such as the 'Rainbow Guards' Solar Flare and Chuggle, and the rainbow monster Twink. Whether at a con or through my content, I strive to remind others to look out for the rainbows, they will make you smile."
   },
   {
     name: "Taylor Bowe-McArdle",
+    img: guest2,
     bio: "Taylor has been a part of the brony fandom since 2016 after a close friend told him about the show when he needed it the most. He is seen by the community as a positive influencer, friend to all, and is well recognized for supporting community artists and vendors. He hosts a podcast on Twitch called 'The Taylor & Co Hangout Podcast' every other Tuesday night that centers around fun topics he and his fellow co-hosts discuss about the fandom. He also does a variety of panels at cons such as 'Pony Life is Magic', 'Glimmer Gang Unleashed' and 'My Little Match Game' to name a few. As you can tell from his outfit, he is a huge fan of a certain character that, well…shows off the 'Glimmer Gang' pride. He also provides sports commentary for Crackles Cousin's Buckball tournaments. Whenever he isn't fantasizing about Starlight Glimmer, he is also heavily invested in auto racing and is a camera operator for Low Budget TV."
   },
   {
     name: "Bobby Seas",
+    img: guest3,
     bio: "A recognizable face in HarmonyCon, Bobby Seas has been the host of My Little Millionaire since 2013, making it the longest running brony game show in the fandom's history. A personality who loves to entertain his audience, Bobby can often be seen walking around in his signature suit and tie, or cosplaying as 'Stratus Skyline', a reporter for ZBS News. Bobby is a local Dallas resident, so he's contractually obligated to be here."
   },
   {
     name: "Railershy",
+    img: guest4,
     bio: "Been attending pony cons mainly around the Chicago and Milwaukee area, recently starting bringing out generosity of money to charities in the past few years. Am also the one who was silly enough to bid $10,000 on a flag at another pony convention."
   },
   {
     name: "The Nameless One",
+    img: guest5,
     bio: "The Nameless One is creating D&D Livestreams, writing fanfics, running community focused podcasts and bringing creators in the fandom together!"
   },
   {
     name: "Equestrian Wastelander",
+    img: guest6,
     bio: "The Equestrian Wastelander is a voice actor, cosplayer, fanfic author, worldbuilder & Convention Veteran in the Brony/Furry/Gaming/Anime communities, having attended & staffed over 90+ cons! He knows ALL the Con Ins & Outs and is eager to help make your time at a convention one well spent!"
   },
   {
     name: "Pearmare Animation",
+    img: guest7,
     bio: "Pearmare has been a fandom animator sense 2014! He started out as a Source Filmmaker animator who has more recently begun their journey into 2D animations. Some of their more popular works in recent times being Twilight's Betrayal, or Ante Up."
   },
   {
     name: "Mad Munchkin",
+    img: guest8,
     bio: "Scottish Youtuber freelance Artist known as Mad Munchkin within the MLP Fandom. Part of the TFV2 Analysis Anarchy Crew."
   },
   {
     name: "EzeBird & Butter",
+    img: guest9,
     bio: "EzeBird and Butter are taking the stage! This fluffy duo is here to shine and dazzle the audience. With over a decade attending pony cons and years of fluffy antics to come you will be on the edge if your seat. No Bye Bye Birdie, say hi hi EzeBird and Butter!"
   },
   {
     name: "RiffPonies!",
+    img: guest10,
     bio: "The Riffers of Ponies, the Jackers of all Trades, the Creators of Convention Chaos - it's not your grandmother's ponies; it's RIFFPONIES! Straight from the armpit of the country known as 'New Jersey' comes the snarkiest pair of pony panelists in the fandom, led by Pony panelist extraordinaire Thoth Penswell & Pony fan-artist/animator Acesential! From making fun of bad pony cartoons, to alcoholic My Little Pony trivia games, to crowning the fandom's Next Top Artist & MUCH MUCH MORE, 11 out of 10 horse doctors STILL agree; RiffPonies are guaranteed to deliver you plenty of laughs and plenty of surprises all weekend long!"
   },
   {
     name: "Friendship is Content",
+    img: guest11,
     bio: "Two gay gals - Emily (Oomles), a decade-old brony and Echo (RazzPony), a new addition to the fandom - take a deep and comedic dive into My Little Pony: Friendship is Magic to think way too profoundly about this show for children. In their quickly growing podcast, they horse around, review, and rate every single episode from the very beginning. Emily is a full time artist who has been drawing cartoon critters for well over a decade, and ponies have played no small part in that journey. Echo is her cohost who writes novels, fanfiction, and is the official workhorse (pun intended) behind managing the show."
   },
   {
     name: "Banquo0",
+    img: guest12,
     bio: "Banquo0 is a MLP Youtuber, occasional artist, incoherent rambler, and, most predominantly, a dumb blue horse. He's been involved in many facets of content creation including voice acting, sketch comedy, and pseudo-analytical babbling. If you've ever heard of him, it's most likely for his 'What Is A' series on his Youtube channel, his amateur animated memes, or for his frequent collaborations within the community on all kinds of projects. If you haven't heard of him, it's probably for the better, he's kind of a doofus."
   },
   {
     name: "GatorGoatJohnny",
+    img: guest13,
     bio: "GatorGoatJohnny is a video essayist, filmmaker, songwriter, and Gummy Superfan. Since joining the fandom in 2020, he's done videos on everything, including pony parents, fan theories, song covers, ranking videos, character deep dives, retrospectives, and a three-hour video ranking every episode. He will also talk your ear off about reality TV if you let him."
   },
   {
     name: "Red Card",
+    img: guest14,
     bio: "Red Card is a sports brony and a certified soccer/football referee. He dresses up as a referee at conventions and knows pretty much everything there is to know about the rules of the most watched sports in the world. He also does convention vlogs on YouTube, and has been going to conventions since 2013. Red is also a huge cartoon enthusiast. He hosts a 'Cartoon Night' event in the BlepCon Discord server every Wednesday Night."
   },
   {
     name: "Minty Root",
+    img: guest15,
     bio: "From the magical land of Canada comes Minty Root, fan animator turned animation industry professional behind projects such as Bright Eyes in the Thunderclouds, Missing Out, The Beginning of Harmony and many more. Come join him as he discusses animation and the craft of filmmaking."
   },
   {
     name: "Fiaura The Tank Girl",
+    img: guest16,
     bio: "Fiaura is the writer of Fallout: Equestria Dead Tree, the current final of the Big Side Stories and is working on something new, an original work. In addition to this, she works tireless in the realm of science and understanding to look at things from the perspective of: 'How does that work if I do the math?' Fiaura has analyzed My Little Pony, Dozens of Anime, Fandoms as a whole instead of just the work they are apart of, Fan Fiction, and Sci-Fi TV shows all in the name of working towards understand the Why we like something and How to make it work within the bounds of our reality."
   },
   {
     name: "Princess Cadance",
+    img: guest17,
     bio: "ZizzyDizzyMC (Princess Cadence) is a cybersecurity engineer known for starting The Pony Archive. She specializes in hard drives, but when the time for a convention comes she dons her suit and it's time to Ca-DANCE! It's about the smiles, the entertainment, the hype. Living in the moment and making the best of it!"
   },
   {
     name: "Fuzzy",
+    img: guest18,
     bio: "Fuzzy is the author of one of Fallout Equestria's biggest and most successful stories: Murky Number Seven, now in print across the world. Even after 14 years in this community, he's still writing! Known for epic length tales, he now makes a second epic journey from Scotland back to the US for Harmonycon 2025!"
   },
   {
     name: "Crackle's Cousin Cosplay",
+    img: guest19,
     bio: "Crackle's Cousin Cosplay Team is comprised of Master Level award winning cosplayers who truly uphold the elementsof harmony in all they do. A true family at its core, you have seen them as various con mascots, cosplaying your fav. ponies, the creators of the irl buckball tournaments, sisterhooves social, method mares theater, dance hosts of galas, cosplay competition hosts & judges, and other special events. They are ready to roll out the red carpet and pull out all the stops with Amazing New Cosplays and Themed Events just for you! It's showtime!"
   },
   {
     name: "Peruserofpieces",
+    img: guest20,
     bio: "A self-taught plushie-maker and a brony since early 2011, I've been putting smiles on ponies' faces for over a decade now! A little bit of my heart and soul goes into every cuddly plushie I make. I suppose it's my way of spreading love through my art in the best way I know how. <3"
   },
   {
     name: "Kariana Keyes",
+    img: guest21,
     bio: "Illustrator, Sewist, and most notably known as a cosplayer, Kariana Keyes is prepped to have creativity unleased and share how we together can tell and share stories of our favorite pony characters, and beyond! Still coming right off of the Halloween spirit, I'm sure there will be many costume creativity in mind that we can workshop! Constantly crafting new and inspired outfits for the colorful horse characters and the colorful NOT HORSES (Equestria Girls), thanks to the help of coffee consumption and Jo-Ann Fabrics coupons, she's PINKIE PIE PUMPED to share with others how she cleverly composed her own art of getting creative with cosplay from years of her art student and convention going experience!"
   },
   {
     name: "DRWolf",
+    img: guest22,
     bio: "DRWolf is the Brony Therapist of the Brony Analysis Community and Owner/Director/Producer of the TF2 Analysis Anarchy Series"
   },
   {
     name: "Silver Quill",
+    img: guest23,
     bio: "Starting off with fan comics in 2012 and eventually gaining a YouTube following, Silver Quill is a long-time member of the fandom and the convention scene. Combining slapstick humor with classical story themes, he offers a perspective on episodes few would consider. This might be because he's a few feathers short of a wing, but it's a fun ride either way. At any convention he's a common sight as a vendor, MC, improv comedian, and presenter. Come check out his panels as he celebrates the storytelling device that is... 'CONTINUITY!'"
   },
   {
     name: "Step 2 Harmony",
+    img: guest24,
     bio: "Hey, Hey, Everbody! We're Step 2 Harmony! We're a DFW based cosplay and dance group, primarily focused in choreographing original choreography to MLP and Fandom music, but we also cover dances from various generes!"
   },
   {
     name: "CaptainHoers",
+    img: guest25,
     bio: "artist and animator who's been around since the cretaceous period and probably made that thing you remember from 2015 as well as four other things you didn't know was the same guy."
   },
   {
     name: "Cole Donnerstag",
+    img: guest26,
     bio: "Cole is a true friend of PMVs! He runs the YouTube channel Studio Cinemagic with the goal of creating high quality cinematic videos for all to enjoy. His work was awarded Best in Show at both the 2019 BronyCon and 2023 HarmonyCon PMV Contests. He is known for his PMV Series 'The Journey Once More,' and will soon debut a fanfic of the same name! Cole is also a part of Ponies the Anthology! He's usually up to some sort of shenanigans, so be on the lookout for him! And remember~ Believe in Memoria."
   },
   {
     name: "Jack (Scootertrix)",
+    img: guest27,
     bio: "After I was born, I became a YouTuber and created Scootertrix the Abridged and the G1 Abridged series! I also tend to play ponified Everdell at these horse cons. ;)"
   }
 ];
@@ -164,33 +191,7 @@ const bios = [
       OUR GUESTS
     </div> -->
     <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 my-auto gap-6 md:gap-12 w-full lg:w-[56rem] xl:w-[80rem] mx-auto lg:mb-24 mb-8">
-      <Plaque src={guest1} name="Lightning Bliss" idx={0} bio=`I represent Lightning Bliss, the spunky rainbow Alicorn in the Brony Analysis Community. When I'm not reviewing MLP or editing episodes for DRWolf’s TF2 Analysis Anarchy show, I'm creating episodes for my Magic Lesson series or vending in the Vendor Hall! I also host in my series to a number of characters represened by my friends, such as the "Rainbow Guards" Solar Flare and Chuggle, and the rainbow monster Twink. Whether at a con or through my content, I strive to remind others to look out for the rainbows, they will make you smile.`/>
-      <Plaque src={guest2} name="Taylor Bowe-McArdle" idx={1}/>
-      <Plaque src={guest3} name="Bobby Seas" idx={2}/>
-      <Plaque src={guest4} name="Railershy" idx={3}/>
-      <Plaque src={guest5} name="The Nameless One" idx={4}  />
-      <Plaque src={guest6} name="Equestrian Wastelander" idx={5}/>
-      <Plaque src={guest7} name="Pearmare Animation" idx={6}/>
-      <Plaque src={guest8} name="Mad Munchkin" idx={7}/>
-      <Plaque src={guest9} name="EzeBird & Butter" idx={8}/>
-      <Plaque src={guest10} name="RiffPonies!" idx={9}/>
-      <Plaque src={guest11} name="Friendship is Content" idx={10}/>
-      <Plaque src={guest12} name="Banquo0" idx={11}/>
-      <Plaque src={guest13} name="GatorGoatJohnny" idx={12}/>
-      <Plaque src={guest14} name="Red Card" idx={13}/>
-      <Plaque src={guest15} name="Minty Root" idx={14}/>
-      <Plaque src={guest16} name="Fiaura The Tank Girl" idx={15}/>
-      <Plaque src={guest17} name="Princess Cadance" idx={16}/>
-      <Plaque src={guest18} name="Fuzzy" idx={17}/>
-      <Plaque src={guest19} name="Crackle's Cousin Cosplay"/>
-      <Plaque src={guest20} name="Peruserofpieces" idx={19}/>
-      <Plaque src={guest21} name="Kariana Keyes" idx={20}/>
-      <Plaque src={guest22} name="DRWolf" idx={21}/>
-      <Plaque src={guest23} name="Silver Quill" idx={22}/>
-      <Plaque src={guest24} name="Step 2 Harmony" idx={23}/>
-      <Plaque src={guest25} name="CaptainHoers" idx={24}/>
-      <Plaque src={guest26} name="Cole Donnerstag" idx={25}/>
-      <Plaque src={guest27} name="Jack (Scootertrix)"/>
+      { bios.map((b, idx)=> <Plaque src={b.img} name={b.name} idx={idx} bio={b.bio}/>)}
     </div>
     <Footer />
   </div>
