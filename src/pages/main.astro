@@ -89,13 +89,7 @@ const optimizedMainBackground = await getImage({
         />
       </li>
       <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
-        <Playbill
-          src={img8}
-          href="/credits"
-          idx={8}
-          active={true}
-          title="Credits"
-        />
+        <Playbill src={img9} href="/vendors" idx={9} active={false} title="Vendors" />
       </li>
       <li class="xl:mb-8" style="filter: drop-shadow(0 5px 5px #000);">
         <Playbill
@@ -119,7 +113,13 @@ const optimizedMainBackground = await getImage({
         <Playbill src={img15} href="/guests" idx={9} active={true} title="Guests" />
       </li>
       <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
-        <Playbill src={img9} href="/vendors" idx={9} active={false} title="Vendors" />
+        <Playbill
+          src={img8}
+          href="/credits"
+          idx={8}
+          active={true}
+          title="Credits"
+        />
       </li>
     </ul>
     <div
