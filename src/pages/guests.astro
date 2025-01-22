@@ -338,32 +338,6 @@ const bios = [
       outline: none;
     }
 
-    /* Update the background colors of each guest's modal content div */
-    #dialog-shannon > div {
-      background: rgba(0, 0, 0, 0.85) !important;
-      backdrop-filter: blur(10px);
-    }
-
-    #dialog-jeremy > div {
-      background: rgba(0, 0, 0, 0.85) !important;
-      backdrop-filter: blur(10px);
-    }
-
-    #dialog-kazumi > div {
-      background: rgba(0, 0, 0, 0.85) !important;
-      backdrop-filter: blur(10px);
-    }
-
-    #dialog-rena > div {
-      background: rgba(0, 0, 0, 0.85) !important;
-      backdrop-filter: blur(10px);
-    }
-
-    #dialog-tony > div {
-      background: rgba(0, 0, 0, 0.85) !important;
-      backdrop-filter: blur(10px);
-    }
-
     /* Update text colors to white */
     dialog .text-black {
       color: white;
@@ -388,19 +362,10 @@ const bios = [
         transform: translateY(0);
       }
     }
-
-    /* Add specific styles for vertical format modals */
-    #dialog-shannon img,
-    #dialog-jeremy img,
-    #dialog-rena img,
-    #dialog-tony img {
-      max-height: 40vh;
-    }
   </style>
 
   <script>
     function setupDialogs() {
-      // Shannon
       for (let i = 0; i < 27; i++) {
         const guestDialog = document.getElementById(`dialog-${i}`);
         const guestImg = document.getElementById(`guest-${i}`);
@@ -415,15 +380,6 @@ const bios = [
           }
         });
       }
-      // const shannonClose = document.getElementById("close-shannon");
-      // if (shannonClose && shannonDialog instanceof HTMLDialogElement) {
-      //   shannonClose.addEventListener("click", () => {
-      //     shannonDialog.close();
-      //   });
-      // }
-
-
-      // Close all modals with Escape key
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
           document.querySelectorAll("dialog[open]").forEach((dialog) => {
