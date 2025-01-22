@@ -117,6 +117,15 @@
         "description": "Have you ever wanted a badge of your OC or wanted to add another one to your collection? Come to the DIY Badge Exchange where you'll be randomly assigned to draw an attendee's badge and exchange them at the end! Supplies will be provided and all art skill levels welcome."
     },
     {
+        "room": "Mane Events",
+        "startDate": "2025-02-02T12:30:00",
+        "day": "sunday",
+        "timeslots": 10,
+        "host": "HarmonyCon",
+        "title": "Charity Auction",
+        "description": "Come join the annual HarmonyCon charity auction as we raise money for our charity partner, Equality Texas! Check out and bid on unique and interesting items donated by guests and attendees. Any donations should be brought to con ops by 11:00 am on Sunday."
+    },
+    {
         "room": "Crystal Empire Theatre",
         "startDate": "2025-02-02T12:30:00",
         "day": "sunday",
@@ -186,7 +195,7 @@
         "timeslots": 4,
         "host": "HarmonyCon",
         "title": "Closing Ceremonies",
-        "description": "Final convention event"
+        "description": "All good things must come to an end. Come join us and all your friends from throughout the weekend as we say goodbye and wrap up HarmonyCon 2025!"
     },
     {
         "day": "sunday",
@@ -195,7 +204,7 @@
         "startDate": "2025-02-02T10:00:00",
         "timeslots": 8,
         "host": "Eliwood Sain",
-        "description": "PIck one of the above RPGs or another from The File Of Good Stuff"
+        "description": "Pick one of the above RPGs or another from The File Of Good Stuff"
     },
     {
         "day": "sunday",
