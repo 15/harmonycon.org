@@ -12,6 +12,49 @@ const optimizedRegisterBackground = await getImage({
 import Footer from "../components/Footer.astro";
 import hclogo from "../assets/2025/HarmonyCon 2025 Logo.png";
 import tiers from "../data/tiers.js";
+
+
+
+interface Sponsors {
+  badge_name: string;
+  answer: string;
+}
+
+import remoteSponsors from "@data/sponsors.json";
+
+/*
+const sponsors = await fetch(
+ "https://reg-2025.harmonycon.org/api/sponsors.php?credit=51&approval=52&sig=9db2f95140cab4d2e63e214dc9483f36585aba280276c739d290d70ea7c4addd"
+).then((res) => res.json());
+*/
+
+const sponsors = {
+  "Marey Poppins Sponsor Membership": remoteSponsors
+   .filter((a) => a.badge_name == "Marey Poppins Sponsor Membership")
+   .map((a) => a.answer),
+  "My Fair Lyra Sponsor Membership": remoteSponsors
+   .filter((a) => a.badge_name == "My Fair Lyra Sponsor Membership")
+   .map((a) => a.answer),
+  "The Prohoofers Sponsor Membership": remoteSponsors
+   .filter((a) => a.badge_name == "The Prohoofers Sponsor Membership")
+   .map((a) => a.answer),
+  "Into the Everfree": remoteSponsors
+   .filter((a) => a.badge_name == "Into the Everfree")
+   .map((a) => a.answer),
+  "A Gentlecolt's Guide to Love and Mares": remoteSponsors
+   .filter((a) => a.badge_name == "A Gentlecolt's Guide to Love and Mares")
+   .map((a) => a.answer),
+  "The Book of Harmony Sponsor Membership": remoteSponsors
+   .filter((a) => a.badge_name == "The Book of Harmony Sponsor Membership")
+   .map((a) => a.answer),
+  "Princess Celestia Superstar": remoteSponsors
+   .filter((a) => a.badge_name == "Princess Celestia Superstar")
+   .map((a) => a.answer),
+};
+
+
+console.log(sponsors["Marey Poppins Sponsor Membership"])
+
 ---
 
 <Layout title="HarmonyCon 2025 | Register">
