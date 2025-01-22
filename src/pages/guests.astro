@@ -12,19 +12,24 @@ const optimizedCocBackground = await getImage({
 import guest1 from "../assets/2025/guests/headshots/lightning_bliss.png";
 import guest2 from "../assets/2025/guests/headshots/taylor_bowe-mcardle.jpeg";
 import guest3 from "../assets/2025/guests/headshots/bobby_seas.png";
-import guest4 from "../assets/2025/playbill/temp.png";
-import guest5 from "../assets/2025/playbill/temp.png";
+import guest4 from "../assets/2025/guests/headshots/railershy.png";
+import guest5 from "../assets/2025/guests/headshots/the_nameless_one.png";
 import guest6 from "../assets/2025/guests/headshots/equestrian_wastelander.png";
 import guest7 from "../assets/2025/guests/headshots/pearmare_animation.jpg";
 import guest8 from "../assets/2025/guests/headshots/mad_munchkin.png";
+import guest9 from "../assets/2025/guests/headshots/ezebird.png";
 import guest10 from "../assets/2025/guests/headshots/riffponies.jpg";
 import guest11 from "../assets/2025/guests/headshots/friendship_is_content.png";
 import guest12 from "../assets/2025/guests/headshots/banquo0.png";
+import guest13 from "../assets/2025/guests/headshots/gatorgoatjohnny.png";
 import guest14 from "../assets/2025/guests/headshots/red_card.png";
 import guest15 from "../assets/2025/guests/headshots/minty_root.png";
+import guest16 from "../assets/2025/guests/headshots/fiaura_the_tank_girl.png";
 import guest17 from "../assets/2025/guests/headshots/zizzy.jpg";
 import guest18 from "../assets/2025/guests/headshots/fuzzy.png";
 import guest19 from "../assets/2025/guests/headshots/crackles_cousin_cosplay.jpg";
+import guest20 from "../assets/2025/guests/headshots/peruserofpieces.png";
+import guest21 from "../assets/2025/guests/headshots/kariana_keyes.png";
 import guest22 from "../assets/2025/guests/headshots/drwolf.png";
 import guest23 from "../assets/2025/guests/headshots/silver_quill.jpg";
 import guest24 from "../assets/2025/guests/headshots/step_2_harmony.png";
@@ -33,221 +38,123 @@ import guest26 from "../assets/2025/guests/headshots/cole_donnerstag.jpg";
 import guest27 from "../assets/2025/guests/headshots/jack_scootertrix.jpeg";
 import Footer from "../components/Footer.astro";
 import Plaque from "../components/Plaque.astro";
+
+const bios = [
+  {
+    name: "Lightning Bliss",
+    bio: "I represent Lightning Bliss, the spunky rainbow Alicorn in the Brony Analysis Community. When I'm not reviewing MLP or editing episodes for DRWolf's TF2 Analysis Anarchy show, I'm creating episodes for my Magic Lesson series or vending in the Vendor Hall! I also host in my series to a number of characters represened by my friends, such as the 'Rainbow Guards' Solar Flare and Chuggle, and the rainbow monster Twink. Whether at a con or through my content, I strive to remind others to look out for the rainbows, they will make you smile."
+  },
+  {
+    name: "Taylor Bowe-McArdle",
+    bio: "Taylor has been a part of the brony fandom since 2016 after a close friend told him about the show when he needed it the most. He is seen by the community as a positive influencer, friend to all, and is well recognized for supporting community artists and vendors. He hosts a podcast on Twitch called 'The Taylor & Co Hangout Podcast' every other Tuesday night that centers around fun topics he and his fellow co-hosts discuss about the fandom. He also does a variety of panels at cons such as 'Pony Life is Magic', 'Glimmer Gang Unleashed' and 'My Little Match Game' to name a few. As you can tell from his outfit, he is a huge fan of a certain character that, well…shows off the 'Glimmer Gang' pride. He also provides sports commentary for Crackles Cousin's Buckball tournaments. Whenever he isn't fantasizing about Starlight Glimmer, he is also heavily invested in auto racing and is a camera operator for Low Budget TV."
+  },
+  {
+    name: "Bobby Seas",
+    bio: "A recognizable face in HarmonyCon, Bobby Seas has been the host of My Little Millionaire since 2013, making it the longest running brony game show in the fandom's history. A personality who loves to entertain his audience, Bobby can often be seen walking around in his signature suit and tie, or cosplaying as 'Stratus Skyline', a reporter for ZBS News. Bobby is a local Dallas resident, so he's contractually obligated to be here."
+  },
+  {
+    name: "Railershy",
+    bio: "Been attending pony cons mainly around the Chicago and Milwaukee area, recently starting bringing out generosity of money to charities in the past few years. Am also the one who was silly enough to bid $10,000 on a flag at another pony convention."
+  },
+  {
+    name: "The Nameless One",
+    bio: "The Nameless One is creating D&D Livestreams, writing fanfics, running community focused podcasts and bringing creators in the fandom together!"
+  },
+  {
+    name: "Equestrian Wastelander",
+    bio: "The Equestrian Wastelander is a voice actor, cosplayer, fanfic author, worldbuilder & Convention Veteran in the Brony/Furry/Gaming/Anime communities, having attended & staffed over 90+ cons! He knows ALL the Con Ins & Outs and is eager to help make your time at a convention one well spent!"
+  },
+  {
+    name: "Pearmare Animation",
+    bio: "Pearmare has been a fandom animator sense 2014! He started out as a Source Filmmaker animator who has more recently begun their journey into 2D animations. Some of their more popular works in recent times being Twilight's Betrayal, or Ante Up."
+  },
+  {
+    name: "Mad Munchkin",
+    bio: "Scottish Youtuber freelance Artist known as Mad Munchkin within the MLP Fandom. Part of the TFV2 Analysis Anarchy Crew."
+  },
+  {
+    name: "EzeBird & Butter",
+    bio: "EzeBird and Butter are taking the stage! This fluffy duo is here to shine and dazzle the audience. With over a decade attending pony cons and years of fluffy antics to come you will be on the edge if your seat. No Bye Bye Birdie, say hi hi EzeBird and Butter!"
+  },
+  {
+    name: "RiffPonies!",
+    bio: "The Riffers of Ponies, the Jackers of all Trades, the Creators of Convention Chaos - it's not your grandmother's ponies; it's RIFFPONIES! Straight from the armpit of the country known as 'New Jersey' comes the snarkiest pair of pony panelists in the fandom, led by Pony panelist extraordinaire Thoth Penswell & Pony fan-artist/animator Acesential! From making fun of bad pony cartoons, to alcoholic My Little Pony trivia games, to crowning the fandom's Next Top Artist & MUCH MUCH MORE, 11 out of 10 horse doctors STILL agree; RiffPonies are guaranteed to deliver you plenty of laughs and plenty of surprises all weekend long!"
+  },
+  {
+    name: "Friendship is Content",
+    bio: "Two gay gals - Emily (Oomles), a decade-old brony and Echo (RazzPony), a new addition to the fandom - take a deep and comedic dive into My Little Pony: Friendship is Magic to think way too profoundly about this show for children. In their quickly growing podcast, they horse around, review, and rate every single episode from the very beginning. Emily is a full time artist who has been drawing cartoon critters for well over a decade, and ponies have played no small part in that journey. Echo is her cohost who writes novels, fanfiction, and is the official workhorse (pun intended) behind managing the show."
+  },
+  {
+    name: "Banquo0",
+    bio: "Banquo0 is a MLP Youtuber, occasional artist, incoherent rambler, and, most predominantly, a dumb blue horse. He's been involved in many facets of content creation including voice acting, sketch comedy, and pseudo-analytical babbling. If you've ever heard of him, it's most likely for his 'What Is A' series on his Youtube channel, his amateur animated memes, or for his frequent collaborations within the community on all kinds of projects. If you haven't heard of him, it's probably for the better, he's kind of a doofus."
+  },
+  {
+    name: "GatorGoatJohnny",
+    bio: "GatorGoatJohnny is a video essayist, filmmaker, songwriter, and Gummy Superfan. Since joining the fandom in 2020, he's done videos on everything, including pony parents, fan theories, song covers, ranking videos, character deep dives, retrospectives, and a three-hour video ranking every episode. He will also talk your ear off about reality TV if you let him."
+  },
+  {
+    name: "Red Card",
+    bio: "Red Card is a sports brony and a certified soccer/football referee. He dresses up as a referee at conventions and knows pretty much everything there is to know about the rules of the most watched sports in the world. He also does convention vlogs on YouTube, and has been going to conventions since 2013. Red is also a huge cartoon enthusiast. He hosts a 'Cartoon Night' event in the BlepCon Discord server every Wednesday Night."
+  },
+  {
+    name: "Minty Root",
+    bio: "From the magical land of Canada comes Minty Root, fan animator turned animation industry professional behind projects such as Bright Eyes in the Thunderclouds, Missing Out, The Beginning of Harmony and many more. Come join him as he discusses animation and the craft of filmmaking."
+  },
+  {
+    name: "Fiaura The Tank Girl",
+    bio: "Fiaura is the writer of Fallout: Equestria Dead Tree, the current final of the Big Side Stories and is working on something new, an original work. In addition to this, she works tireless in the realm of science and understanding to look at things from the perspective of: 'How does that work if I do the math?' Fiaura has analyzed My Little Pony, Dozens of Anime, Fandoms as a whole instead of just the work they are apart of, Fan Fiction, and Sci-Fi TV shows all in the name of working towards understand the Why we like something and How to make it work within the bounds of our reality."
+  },
+  {
+    name: "Princess Cadance",
+    bio: "ZizzyDizzyMC (Princess Cadence) is a cybersecurity engineer known for starting The Pony Archive. She specializes in hard drives, but when the time for a convention comes she dons her suit and it's time to Ca-DANCE! It's about the smiles, the entertainment, the hype. Living in the moment and making the best of it!"
+  },
+  {
+    name: "Fuzzy",
+    bio: "Fuzzy is the author of one of Fallout Equestria's biggest and most successful stories: Murky Number Seven, now in print across the world. Even after 14 years in this community, he's still writing! Known for epic length tales, he now makes a second epic journey from Scotland back to the US for Harmonycon 2025!"
+  },
+  {
+    name: "Crackle's Cousin Cosplay",
+    bio: "Crackle's Cousin Cosplay Team is comprised of Master Level award winning cosplayers who truly uphold the elementsof harmony in all they do. A true family at its core, you have seen them as various con mascots, cosplaying your fav. ponies, the creators of the irl buckball tournaments, sisterhooves social, method mares theater, dance hosts of galas, cosplay competition hosts & judges, and other special events. They are ready to roll out the red carpet and pull out all the stops with Amazing New Cosplays and Themed Events just for you! It's showtime!"
+  },
+  {
+    name: "Peruserofpieces",
+    bio: "A self-taught plushie-maker and a brony since early 2011, I've been putting smiles on ponies' faces for over a decade now! A little bit of my heart and soul goes into every cuddly plushie I make. I suppose it's my way of spreading love through my art in the best way I know how. <3"
+  },
+  {
+    name: "Kariana Keyes",
+    bio: "Illustrator, Sewist, and most notably known as a cosplayer, Kariana Keyes is prepped to have creativity unleased and share how we together can tell and share stories of our favorite pony characters, and beyond! Still coming right off of the Halloween spirit, I'm sure there will be many costume creativity in mind that we can workshop! Constantly crafting new and inspired outfits for the colorful horse characters and the colorful NOT HORSES (Equestria Girls), thanks to the help of coffee consumption and Jo-Ann Fabrics coupons, she's PINKIE PIE PUMPED to share with others how she cleverly composed her own art of getting creative with cosplay from years of her art student and convention going experience!"
+  },
+  {
+    name: "DRWolf",
+    bio: "DRWolf is the Brony Therapist of the Brony Analysis Community and Owner/Director/Producer of the TF2 Analysis Anarchy Series"
+  },
+  {
+    name: "Silver Quill",
+    bio: "Starting off with fan comics in 2012 and eventually gaining a YouTube following, Silver Quill is a long-time member of the fandom and the convention scene. Combining slapstick humor with classical story themes, he offers a perspective on episodes few would consider. This might be because he's a few feathers short of a wing, but it's a fun ride either way. At any convention he's a common sight as a vendor, MC, improv comedian, and presenter. Come check out his panels as he celebrates the storytelling device that is... 'CONTINUITY!'"
+  },
+  {
+    name: "Step 2 Harmony",
+    bio: "Hey, Hey, Everbody! We're Step 2 Harmony! We're a DFW based cosplay and dance group, primarily focused in choreographing original choreography to MLP and Fandom music, but we also cover dances from various generes!"
+  },
+  {
+    name: "CaptainHoers",
+    bio: "artist and animator who's been around since the cretaceous period and probably made that thing you remember from 2015 as well as four other things you didn't know was the same guy."
+  },
+  {
+    name: "Cole Donnerstag",
+    bio: "Cole is a true friend of PMVs! He runs the YouTube channel Studio Cinemagic with the goal of creating high quality cinematic videos for all to enjoy. His work was awarded Best in Show at both the 2019 BronyCon and 2023 HarmonyCon PMV Contests. He is known for his PMV Series 'The Journey Once More,' and will soon debut a fanfic of the same name! Cole is also a part of Ponies the Anthology! He's usually up to some sort of shenanigans, so be on the lookout for him! And remember~ Believe in Memoria."
+  },
+  {
+    name: "Jack (Scootertrix)",
+    bio: "After I was born, I became a YouTuber and created Scootertrix the Abridged and the G1 Abridged series! I also tend to play ponified Everdell at these horse cons. ;)"
+  }
+];
 ---
 
 <Layout title="HarmonyCon 2025 | Venue">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
-  
-  {/* Dialogs */}
-  <dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw]" id="dialog-shannon">
-    <div
-      class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
-      id="close-shannon"
-    >
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
-          fill="currentColor"></path>
-      </svg>
-    </div>
-    <div
-      class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-blue-50 flex flex-col items-center justify-start w-full h-auto sm:w-[640px] md:w-[768px] lg:w-[1024px] 2xl:w-[1280px] max-h-[90vh]"
-    >
-      <div class="w-full max-w-xl">
-        <Image
-          src={guest1}
-          format="avif"
-          height="800"
-          alt="Shannon Chan-Kent"
-          style="filter: drop-shadow(0 2px 2px #000);"
-          class="w-full h-auto max-h-[40vh] object-contain"
-        />
-      </div>
-      <div class="flex flex-col w-full items-center">
-        <div class="whitespace-nowrap py-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center tracking-wide font-semibold uppercase text-white">
-          Shannon Chan-Kent
-        </div>
-        <div class="max-w-3xl text-sm sm:text-base md:text-lg 2xl:text-lg leading-snug sm:leading-normal text-white text-left">
-          Shannon has been in the film/tv/voice over industry for nearly 20 years. She is a trained opera singer holding a BMUS and MMUS in Opera Performance from the University of British Columbia. A few of Shannon's VO credits include <i>My Little Pony: Friendship is Magic</i> (series and feature), <i>Gigantosaurus</i>, <i>Polly Pocket</i>, <i>Corner Gas: The Animated Series</i>, <i>Slugterra</i>, <i>DeathNote</i>, <i>16 Hudson</i>, <i>The Bravest Knight</i>, <i>Mega Man</i> and <i>Hello Ninja</i>. Film and tv credits include <i>Life Sentence</i> (CW), <i>Another Life</i> (Netflix), <i>Good Trouble</i> (Hulu/Freeform) and <i>You</i> (Netflix). Shannon is also no stranger to the live stage. She has been in productions such as <i>Beauty And The Beast</i> (Belle), <i>Avenue Q</i>, <i>Evita</i>, <i>The Magic Flute</i> and <i>The Flick</i>.
-        </div>
-      </div>
-    </div>
-  </dialog>
-
-  <dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw]" id="dialog-jeremy">
-    <div
-      class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
-      id="close-jeremy"
-    >
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
-          fill="currentColor"></path>
-      </svg>
-    </div>
-    <div
-      class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-orange-50 flex flex-col items-center justify-start w-full h-auto sm:w-[640px] md:w-[768px] lg:w-[1024px] 2xl:w-[1280px] max-h-[90vh]"
-    >
-      <div class="w-full max-w-xl">
-        <Image
-          src={guest2}
-          format="avif"
-          height="800"
-          alt="Jeremy Whitley"
-          style="filter: drop-shadow(0 2px 2px #000);"
-          class="w-full h-auto max-h-[40vh] object-contain"
-        />
-      </div>
-      <div class="flex flex-col w-full items-center">
-        <div class="whitespace-nowrap py-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center tracking-wide font-semibold uppercase text-white">
-          Jeremy Whitley
-        </div>
-        <div class="max-w-3xl text-sm sm:text-base md:text-lg 2xl:text-lg leading-snug sm:leading-normal text-white text-left">
-          Jeremy Whitley is a writer from Durham, NC. He is the writer/creator of <i>The Dog Knight</i>, <i>Princeless</i>, <i>The School for Extraterrestrial Girls</i>, and <i>Navigating with You</i>. He is also the writer of over fifty issues of <i>My Little Pony</i> comics including <i>Nightmare Knights</i>, <i>Siege of the Crystal Empire</i>, and Season 10. He was once bitten by a radioactive pegasus.
-        </div>
-      </div>
-    </div>
-  </dialog>
-
-  <dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw]" id="dialog-kazumi">
-    <div
-      class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
-      id="close-kazumi"
-    >
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
-          fill="currentColor"></path>
-      </svg>
-    </div>
-    <div
-      class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-amber-50 flex flex-col lg:flex-row items-center justify-start w-full h-auto sm:w-[640px] md:w-[768px] lg:w-[1024px] 2xl:w-[1280px] max-h-[90vh]"
-    >
-      <div class="w-full max-w-xl lg:w-1/3 lg:sticky lg:top-0">
-        <Image
-          src={guest3}
-          format="avif"
-          height="800"
-          alt="Kazumi Evans"
-          style="filter: drop-shadow(0 2px 2px #000);"
-          class="w-full h-auto max-h-[40vh] lg:max-h-none lg:max-w-sm object-contain"
-        />
-      </div>
-      <div class="flex flex-col w-full lg:w-2/3 lg:pl-8">
-        <div class="whitespace-nowrap py-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center lg:text-left tracking-wide font-semibold uppercase text-white">
-          Kazumi Evans
-        </div>
-        <div class="py-1 md:py-2 text-sm sm:text-base md:text-lg 2xl:text-lg leading-snug sm:leading-normal text-white text-left">
-          Kazumi Evans is a singer/actor born and raised in Vancouver BC, where she has performed professionally onstage with companies such as the Vancouver Opera, Vancouver Playhouse and The Arts Club.<br/><br/>
-          As a voice actor, she has had roles on numerous animated TV series and movies such as Nisha in <i>The Hollow</i>, Queen Sarai in <i>The Dragon Prince</i>, Jewel Sparkles in <i>We're Lalaloopsy</i>, Iris in <i>Lolirock</i>, Skipper in the <i>Barbie and Her Sisters</i> series, Rouge in <i>Sonic Prime</i>, Wyldfyre in <i>Ninjago: Dragons Rising</i> and nine seasons as the singing voice of Rarity in <i>My Little Pony Friendship is Magic</i>.<br/><br/>
-          On camera, she has appeared in productions such as <i>Mech X-4</i> (Disney XD) <i>The Bridge</i>, <i>With Love Christmas</i> & <i>The Mistletoe Secret</i> for the Hallmark Channel.<br/><br/>
-          When not acting, she enjoys writing and photography. She lives in Vancouver with her husband, two sons, and their cat & dog.
-        </div>
-      </div>
-    </div>
-  </dialog>
-
-  <dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw]" id="dialog-rena">
-    <div
-      class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
-      id="close-rena"
-    >
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
-          fill="currentColor"></path>
-      </svg>
-    </div>
-    <div
-      class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-rose-50 flex flex-col items-center justify-start w-full h-auto sm:w-[640px] md:w-[768px] lg:w-[1024px] 2xl:w-[1280px] max-h-[90vh]"
-    >
-      <div class="w-full max-w-xl">
-        <Image
-          src={guest4}
-          format="avif"
-          height="800"
-          alt="Rena Anakwe"
-          style="filter: drop-shadow(0 2px 2px #000);"
-          class="w-full h-auto max-h-[40vh] object-contain"
-        />
-      </div>
-      <div class="flex flex-col w-full items-center">
-        <div class="whitespace-nowrap py-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center tracking-wide font-semibold uppercase text-white">
-          Rena Anakwe
-        </div>
-        <div class="max-w-3xl text-sm sm:text-base md:text-lg 2xl:text-lg leading-snug sm:leading-normal text-white text-left">
-          Rena Anakwe is a Nigerian-Canadian-American voice actor, interdisciplinary artist and performer based in Brooklyn, New York. She is best known as the voice of Sapphire Shores on <i>My Little Pony: Friendship is Magic</i> and Janai on <i>The Dragon Prince</i>.
-        </div>
-      </div>
-    </div>
-  </dialog>
-
-  <dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw]" id="dialog-tony">
-    <div
-      class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
-      id="close-tony"
-    >
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
-          fill="currentColor"></path>
-      </svg>
-    </div>
-    <div
-      class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-purple-50 flex flex-col items-center justify-start w-full h-auto sm:w-[640px] md:w-[768px] lg:w-[1024px] 2xl:w-[1280px] max-h-[90vh]"
-    >
-      <div class="w-full max-w-xl">
-        <Image
-          src={guest5}
-          format="avif"
-          height="800"
-          alt="Tony Fleecs"
-          style="filter: drop-shadow(0 2px 2px #000);"
-          class="w-full h-auto max-h-[40vh] object-contain"
-        />
-      </div>
-      <div class="flex flex-col w-full items-center">
-        <div class="whitespace-nowrap py-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center tracking-wide font-semibold uppercase text-white">
-          Tony Fleecs
-        </div>
-        <div class="max-w-3xl text-sm sm:text-base md:text-lg 2xl:text-lg leading-snug sm:leading-normal text-white text-left">
-          Tony Fleecs is a prolific and critically acclaimed comic book creator and TV writer. His comics have sold millions of copies in the United States and have been translated and reprinted all over the world. Tony's creator owned books include <i>STRAY DOGS</i> (2021,) <i>FERAL</i> (2024,) <i>UNCANNY VALLEY</i> (2024,) <i>LOCAL MAN</i> (2023) and <i>TIME SHOPPER</i> (2022.) His work has been nominated for multiple Eisner Awards and the Ringo Award. Tony has worked for every major U.S. comics publisher. You've seen his name on some of your favorite comic book titles like <i>Star Wars</i>, <i>Rick & Morty</i>, <i>Avengers</i>, <i>Spider-Man</i>, <i>Wolverine</i>, <i>Batman</i>, <i>TMNT</i>, <i>Transformers</i>, <i>Army of Darkness</i> and a literal TON of <i>My Little Pony</i>. He also wrote on the wildly popular Netflix show <i>My Little Pony: Make Your Mark</i>.
-        </div>
-      </div>
-    </div>
-  </dialog>
 
   <div id="bg" class="relative flex flex-col h-screen pt-8 md:pt-16 gap-y-8">
     <!-- <div
@@ -257,7 +164,7 @@ import Plaque from "../components/Plaque.astro";
       OUR GUESTS
     </div> -->
     <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 my-auto gap-6 md:gap-12 w-full lg:w-[56rem] xl:w-[80rem] mx-auto lg:mb-24 mb-8">
-      <Plaque src={guest1} name="Lightning Bliss" idx={0}/>
+      <Plaque src={guest1} name="Lightning Bliss" idx={0} bio=`I represent Lightning Bliss, the spunky rainbow Alicorn in the Brony Analysis Community. When I'm not reviewing MLP or editing episodes for DRWolf’s TF2 Analysis Anarchy show, I'm creating episodes for my Magic Lesson series or vending in the Vendor Hall! I also host in my series to a number of characters represened by my friends, such as the "Rainbow Guards" Solar Flare and Chuggle, and the rainbow monster Twink. Whether at a con or through my content, I strive to remind others to look out for the rainbows, they will make you smile.`/>
       <Plaque src={guest2} name="Taylor Bowe-McArdle" idx={1}/>
       <Plaque src={guest3} name="Bobby Seas" idx={2}/>
       <Plaque src={guest4} name="Railershy" idx={3}/>
@@ -265,19 +172,19 @@ import Plaque from "../components/Plaque.astro";
       <Plaque src={guest6} name="Equestrian Wastelander" idx={5}/>
       <Plaque src={guest7} name="Pearmare Animation" idx={6}/>
       <Plaque src={guest8} name="Mad Munchkin" idx={7}/>
-      <Plaque src={guest5} name="EzeBird & Butter" idx={8}/>
+      <Plaque src={guest9} name="EzeBird & Butter" idx={8}/>
       <Plaque src={guest10} name="RiffPonies!" idx={9}/>
       <Plaque src={guest11} name="Friendship is Content" idx={10}/>
       <Plaque src={guest12} name="Banquo0" idx={11}/>
-      <Plaque src={guest5} name="GatorGoatJohnny" idx={12}/>
+      <Plaque src={guest13} name="GatorGoatJohnny" idx={12}/>
       <Plaque src={guest14} name="Red Card" idx={13}/>
       <Plaque src={guest15} name="Minty Root" idx={14}/>
-      <Plaque src={guest5} name="Fiaura The Tank Girl" idx={15}/>
+      <Plaque src={guest16} name="Fiaura The Tank Girl" idx={15}/>
       <Plaque src={guest17} name="Princess Cadance" idx={16}/>
       <Plaque src={guest18} name="Fuzzy" idx={17}/>
       <Plaque src={guest19} name="Crackle's Cousin Cosplay"/>
-      <Plaque src={guest5} name="Peruserofpieces" idx={19}/>
-      <Plaque src={guest5} name="Kariana Keyes" idx={20}/>
+      <Plaque src={guest20} name="Peruserofpieces" idx={19}/>
+      <Plaque src={guest21} name="Kariana Keyes" idx={20}/>
       <Plaque src={guest22} name="DRWolf" idx={21}/>
       <Plaque src={guest23} name="Silver Quill" idx={22}/>
       <Plaque src={guest24} name="Step 2 Harmony" idx={23}/>
@@ -500,120 +407,27 @@ import Plaque from "../components/Plaque.astro";
   <script>
     function setupDialogs() {
       // Shannon
-      const shannonDialog = document.getElementById("dialog-shannon");
-      const shannonImg = document.getElementById("shannon");
-      if (shannonDialog instanceof HTMLDialogElement && shannonImg) {
-        shannonImg.addEventListener("click", () => {
-          shannonDialog.showModal();
-        });
-        shannonDialog.addEventListener("click", (e) => {
-          if (e.target === shannonDialog) {
-            shannonDialog.close();
-          }
-        });
-      }
-      const shannonClose = document.getElementById("close-shannon");
-      if (shannonClose && shannonDialog instanceof HTMLDialogElement) {
-        shannonClose.addEventListener("click", () => {
-          shannonDialog.close();
-        });
-      }
-
-      // Jeremy
-      const jeremyDialog = document.getElementById("dialog-jeremy");
-      const jeremyImg = document.getElementById("jeremy");
-      if (jeremyDialog instanceof HTMLDialogElement && jeremyImg) {
-        jeremyImg.addEventListener("click", () => {
-          jeremyDialog.showModal();
-        });
-        jeremyDialog.addEventListener("click", (e) => {
-          if (e.target === jeremyDialog) {
-            jeremyDialog.close();
-          }
-        });
-      }
-      const jeremyClose = document.getElementById("close-jeremy");
-      if (jeremyClose && jeremyDialog instanceof HTMLDialogElement) {
-        jeremyClose.addEventListener("click", () => {
-          jeremyDialog.close();
-        });
-      }
-
-      // Kazumi
-      const kazumiDialog = document.getElementById("dialog-kazumi");
-      const kazumiImg = document.getElementById("kazumi");
-      if (kazumiDialog instanceof HTMLDialogElement && kazumiImg) {
-        kazumiImg.addEventListener("click", () => {
-          kazumiDialog.showModal();
-        });
-        kazumiDialog.addEventListener("click", (e) => {
-          if (e.target === kazumiDialog) {
-            kazumiDialog.close();
-          }
-        });
-      }
-      const kazumiClose = document.getElementById("close-kazumi");
-      if (kazumiClose && kazumiDialog instanceof HTMLDialogElement) {
-        kazumiClose.addEventListener("click", () => {
-          kazumiDialog.close();
-        });
-      }
-
-      // Rena
-      const renaDialog = document.getElementById("dialog-rena");
-      const renaImg = document.getElementById("rena");
-      const renaMdImg = document.getElementById("rena-md");
-      if (renaDialog instanceof HTMLDialogElement) {
-        if (renaImg) {
-          renaImg.addEventListener("click", () => {
-            renaDialog.showModal();
+      for (let i = 0; i < 26; i++) {
+        const guestDialog = document.getElementById(`dialog-${i}`);
+        const guestImg = document.getElementById(`guest-${i}`);
+        if (guestDialog instanceof HTMLDialogElement && guestImg) {
+          guestImg.addEventListener("click", () => {
+            guestDialog.showModal();
           });
         }
-        if (renaMdImg) {
-          renaMdImg.addEventListener("click", () => {
-            renaDialog.showModal();
-          });
-        }
-        renaDialog.addEventListener("click", (e) => {
-          if (e.target === renaDialog) {
-            renaDialog.close();
+        guestDialog.addEventListener("click", (e) => {
+          if (e.target === guestDialog) {
+            guestDialog.close();
           }
         });
       }
-      const renaClose = document.getElementById("close-rena");
-      if (renaClose && renaDialog instanceof HTMLDialogElement) {
-        renaClose.addEventListener("click", () => {
-          renaDialog.close();
-        });
-      }
+      // const shannonClose = document.getElementById("close-shannon");
+      // if (shannonClose && shannonDialog instanceof HTMLDialogElement) {
+      //   shannonClose.addEventListener("click", () => {
+      //     shannonDialog.close();
+      //   });
+      // }
 
-      // Tony
-      const tonyDialog = document.getElementById("dialog-tony");
-      const tonyImg = document.getElementById("tony");
-      const tonyMdImg = document.getElementById("tony-md");
-      if (tonyDialog instanceof HTMLDialogElement) {
-        if (tonyImg) {
-          tonyImg.addEventListener("click", () => {
-            tonyDialog.showModal();
-          });
-        }
-        if (tonyMdImg) {
-          tonyMdImg.addEventListener("click", () => {
-            tonyDialog.showModal();
-          });
-        }
-        tonyDialog.addEventListener("click", (e) => {
-          if (e.target === tonyDialog) {
-            tonyDialog.close();
-          }
-        });
-      }
-      const tonyClose = document.getElementById("close-tony");
-      if (tonyClose && tonyDialog instanceof HTMLDialogElement) {
-        tonyClose.addEventListener("click", () => {
-          tonyDialog.close();
-        });
-      }
 
       // Close all modals with Escape key
       document.addEventListener("keydown", (e) => {

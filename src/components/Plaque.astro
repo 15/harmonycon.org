@@ -1,13 +1,13 @@
 ---
 
 import { Image, getImage } from "astro:assets";
-const { src, name, idx = 0} = Astro.props;
+const { src, name, idx = 0, bio=""} = Astro.props;
 ---
 <div class="flex items-center justify-center">
   <div
-  style="filter: drop-shadow(0 25px 25px #000);"
-    class={`hover:scale-105 ${idx % 2 ? 'hover:rotate-1' : 'hover:-rotate-1'} card1 p-8 bg-[url('/dark_wood.jpg')] border-8 border-[#c4a128] w-96 rounded-lg drop-shadow-xl transition-all cursor-pointer flex flex-col`}
-    id="shannon"
+    style="filter: drop-shadow(0 25px 25px #000);"
+    class={`hover:scale-105 ${idx % 2 ? `hover:rotate-${idx}` : `hover:-rotate-${idx}`} card1 p-8 bg-[url('/dark_wood.jpg')] border-8 border-[#c4a128] w-96 rounded-lg drop-shadow-xl transition-all cursor-pointer flex flex-col`}
+    id={`guest-${idx}`}
   >
     <div class="bg-[#c4a128] p-1 rounded mb-3 w-3/5 mx-auto">
       <div class="aspect-square overflow-hidden rounded">
@@ -28,3 +28,89 @@ const { src, name, idx = 0} = Astro.props;
     </div>
   </div>
 </div>
+<dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw] bg-black" id={`dialog-${idx}`}>
+  <div
+    class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
+    id={`close-${idx}`}
+  >
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+        fill="currentColor"></path>
+    </svg>
+  </div>
+  <div
+    class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-blue-50 flex flex-col items-center justify-start w-full h-auto sm:w-[640px] md:w-[768px] lg:w-[1024px] 2xl:w-[1280px] max-h-[90vh]"
+  >
+    <div class="w-full max-w-xl">
+      <Image
+        src={src}
+        format="avif"
+        height="800"
+        alt="Shannon Chan-Kent"
+        style="filter: drop-shadow(0 2px 2px #000);"
+        class="w-full h-auto max-h-[40vh] object-contain"
+      />
+    </div>
+    <div class="flex flex-col w-full items-center">
+      <div class="whitespace-nowrap py-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center tracking-wide font-semibold uppercase text-white">
+        {name}
+      </div>
+      <div class="max-w-3xl text-sm sm:text-base md:text-lg 2xl:text-lg leading-snug sm:leading-normal text-white text-left">
+        {bio}
+      </div>
+    </div>
+  </div>
+</dialog>
+
+
+<style>
+  dialog {
+      font-family: Poppins, Arial, sans-serif;
+      @apply rounded-xl;
+      filter: drop-shadow(0 50px 50px #000);
+      outline: none;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      max-height: 90vh;
+      max-width: 90vw;
+    }
+
+    dialog > div {
+      max-height: calc(90vh - 2rem);
+      overflow-y: auto;
+      scrollbar-gutter: stable;
+    }
+
+    dialog img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    dialog[open] {
+      animation: fade 0.3s ease-in-out normal;
+    }
+
+    dialog::backdrop {
+      background-image: linear-gradient(45deg, #000, #000);
+      opacity: 0.5;
+      backdrop-filter: blur(5px);
+    }
+
+    dialog:focus {
+      outline: none;
+    }
+
+dialog > div {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(10px);
+}
+</style>
