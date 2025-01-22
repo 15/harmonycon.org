@@ -6,10 +6,10 @@ const { src, name, idx = 0, bio=""} = Astro.props;
 <div class="flex items-center justify-center">
   <div
     style="filter: drop-shadow(0 25px 25px #000);"
-    class={`hover:scale-105 ${idx % 2 ? `hover:rotate-${idx}` : `hover:-rotate-${idx}`} card1 p-8 bg-[url('/dark_wood.jpg')] border-8 border-[#c4a128] w-96 rounded-lg drop-shadow-xl transition-all cursor-pointer flex flex-col`}
+    class={`hover:scale-105 ${idx % 2 ? `hover:rotate-1` : `hover:-rotate-1`} card1 p-8 bg-[url('/dark_wood.jpg')] border-8 border-[#c4a128] w-96 rounded-lg drop-shadow-xl transition-all cursor-pointer flex flex-col`}
     id={`guest-${idx}`}
   >
-    <div class="bg-[#c4a128] p-1 rounded mb-3 w-3/5 mx-auto">
+    <div class="gold-plaque p-1 rounded mb-3 w-3/5 mx-auto">
       <div class="aspect-square overflow-hidden rounded">
         <Image
           src={src}
@@ -21,7 +21,7 @@ const { src, name, idx = 0, bio=""} = Astro.props;
         />
       </div>
     </div>
-    <div class="flex flex-col items-center justify-center gap-y-0 py-1 text-center bg-[#c4a128] rounded">
+    <div class="flex flex-col items-center justify-center gap-y-0 py-1 text-center gold-plaque rounded">
       <p class="text-black text-lg font-semibold">Community Guest</p>
       <p class="font-serif text-2xl text-black select-none">{name}</p>
       <p class="text-black text-sm">HarmonyCon 2025</p>
@@ -71,6 +71,38 @@ const { src, name, idx = 0, bio=""} = Astro.props;
 
 
 <style>
+  .gold-plaque {
+    background: linear-gradient(
+        45deg,
+        #b8860b 0%,
+        #ffd700 25%,
+        #daa520 50%,
+        #ffd700 75%,
+        #b8860b 100%
+    );
+    box-shadow: 
+        inset 0 0 10px rgba(0,0,0,0.3),
+        0 4px 8px rgba(0,0,0,0.2);
+    border: 2px solid #996515;
+    position: relative;
+}
+
+/* Add a subtle texture overlay */
+.gold-plaque::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.1) 0%,
+        rgba(255,255,255,0) 50%,
+        rgba(0,0,0,0.1) 100%
+    );
+    pointer-events: none;
+}
   dialog {
     font-family: Poppins, Arial, sans-serif;
     @apply rounded-xl;
