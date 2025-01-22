@@ -111,35 +111,5 @@ export default [
       "Concierge to get your Whataburger for you",
     ],
     price: "<span class='text-xl sm:text-3.5xl xl:text-4.5xl'>$5,000</span>",
-  },
-  {
-    name: `<div class="text-xl sm:text-4xl xl:text-5xl"><span class="italic">Princess Celestia Superstar</span></div>`,
-    limit: 1,
-    remaining: 0,
-    perks: [
-      "<span class='text-sm sm:text-2xl'>Limited to 1 spot</span>",
-      `All <span class="italic">The Book of Harmony</span> perks (except suite)`,
-      "VIP suite (check in Thursday, check out Monday)",
-      "Super special superstar sponsor badge",
-      "Superbly specialized mention in the Con Book",
-      "Customized Cardboard Cutout of your OC/Choice",
-      "Custom HarmonyCon Blazer*",
-      "Choice to Shave Pepper's beard OR Dye Luck Rock's hair at Closing Ceremonies",
-      "Voice call with chairs to discuss what you'd like for the con",
-      "Singular Exclusive Badge Ribbon",
-      "A personalized stock of your favorite snacks for your room (re-stocked within reason)",
-      `Up to five (5) <span class="italic">Marey Poppins</span> badges for your friends`,
-      `Travel comped for you and your friends (restrictions apply)`,
-      "Popcorn and a diet coke for major Mane Hall panels at your service (Popcorn and diet coke may be substituted based on availability at the Coffee Post)",
-      "Invitation to come on stage to speak briefly during the opening and closing ceremonies (optional)",
-      "Up to six VIP Velvet Rope Seats in Mane Events (Personally Reserved)",
-      `Get a sponsor lounge for <span class="italic">My Fair Lyra</span> sponsors and above dedicated in your name (Friday and Saturday)`,
-      "Have an extra special page on the HarmonyCon website just for (you)! (discuss with 15 for details, subject to chair approval)",
-      "Pepper will send you a picture of his expression when he realizes someone actually bought this",
-    ],
-    price: "<span class='text-xl sm:text-4xl xl:text-5xl'>$20,000</span>",
-    style: `  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent; text-shadow: 1px 1px 1px #ffffff55;`,
-  },
+  }
 ];
