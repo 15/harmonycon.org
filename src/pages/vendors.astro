@@ -52,6 +52,19 @@ import table27 from "../assets/2025/vendors/dealers_room/26.png";
 import table28 from "../assets/2025/vendors/dealers_room/27.png";
 import table29 from "../assets/2025/vendors/dealers_room/28.png";
 import table30 from "../assets/2025/vendors/dealers_room/29.png";
+import table31 from "../assets/2025/vendors/dealers_room/30.png";
+import table32 from "../assets/2025/vendors/dealers_room/31.png";
+import table33 from "../assets/2025/vendors/dealers_room/32.png";
+import table34 from "../assets/2025/vendors/dealers_room/33.png";
+import table35 from "../assets/2025/vendors/dealers_room/34.png";
+import table36 from "../assets/2025/vendors/dealers_room/35.png";
+import table37 from "../assets/2025/vendors/dealers_room/36.png";
+import table38 from "../assets/2025/vendors/dealers_room/37.png";
+import table39 from "../assets/2025/vendors/dealers_room/38.png";
+import table40 from "../assets/2025/vendors/dealers_room/39.png";
+import table41 from "../assets/2025/vendors/dealers_room/40.png";
+import table42 from "../assets/2025/vendors/dealers_room/41.png";
+import table43 from "../assets/2025/vendors/dealers_room/42.png";
 
 const tables = [
   table1,
@@ -83,7 +96,20 @@ const tables = [
   table27,
   table28,
   table29,
-  table30
+  table30,
+  table31,
+  table32,
+  table33,
+  table34,
+  table35,
+  table36,
+  table37,
+  table38,
+  table39,
+  table40,
+  table41,
+  table42,
+  table43
 ]
 
 import Footer from "../components/Footer.astro";
@@ -92,7 +118,7 @@ import Footer from "../components/Footer.astro";
 <Layout title="HarmonyCon 2025 | Vendors">
   <div id="bg" class="flex md:flex-row flex-col justify-center items-center">
     <div
-      class="text-black bg-white flex flex-col lg:flex-row items-center rotate-0 rounded w-[95%] md:w-[95%] lg:w-[95%] xl:w-[95%] 2xl:w-[40%] lg:aspect-[0.829] h-auto"
+      class="text-black bg-white flex flex-col lg:flex-row items-center rotate-0 rounded w-[95%] md:w-[95%] lg:w-[95%] xl:w-[95%] 2xl:w-[50%] lg:aspect-[0.829] h-auto"
       style={`filter: drop-shadow(0 5px 5px #000); background-image: url(${optimizedVendor.src}); background-size: contain; 
       background-repeat: no-repeat;`}
     >
@@ -102,7 +128,7 @@ import Footer from "../components/Footer.astro";
               <div
                 id={`regular-${id}`}
                 style={`left: ${left}%; top: ${top}%; width: ${width}%; height: ${height}%;`}
-                class={`bg-red-400 table z-50`}
+                class={`bg-transparent opacity-50 table z-50`}
               >
                 
               </div>
@@ -312,58 +338,7 @@ import Footer from "../components/Footer.astro";
 
 
 
-<script>
-  const vendors = [
-  {
-    id: "1",
-    left: 27.5,
-    top: 81,
-    width: 5,
-    height: 6,
-    name: "SigilPonies",
-    src: "sigil.png",
-    desc: "Handmade crafts, plush accessories, apparel and on demand laser engravings!",
-    selling: [
-      "Art Prints/Posters",
-      "Art Commissions",
-      "Apparel (Clothing, shirts, etc)",
-      "Wood Burnings/Carvings",
-      "Drinkware/Glassware (Flasks, Glasses, shot glasses, etc)",
-      "Card games",
-      "Stationery (Pens, notebooks, etc)",
-      "Pins",
-      "Plush accessories (clothes, bags, hats, etc for plushies)",
-      "Chryssi horn shaped bottle openers",
-    ],
-    twitter: "sigilponies",
-  },
-  {
-    id: "2",
-    left: 0,
-    top: 0,
-    width: 5,
-    height: 6,
-    name: "SigilPonies",
-    src: "sigil.png",
-    desc: "Handmade crafts, plush accessories, apparel and on demand laser engravings!",
-    selling: [
-      "Art Prints/Posters",
-      "Art Commissions",
-      "Apparel (Clothing, shirts, etc)",
-      "Wood Burnings/Carvings",
-      "Drinkware/Glassware (Flasks, Glasses, shot glasses, etc)",
-      "Card games",
-      "Stationery (Pens, notebooks, etc)",
-      "Pins",
-      "Plush accessories (clothes, bags, hats, etc for plushies)",
-      "Chryssi horn shaped bottle openers",
-    ],
-    twitter: "sigilponies",
-  },
-];
-
-  
-  
+<script define:vars={{ vendors }}>
   const trigger = () => {
     const ad = document.getElementById("ad");
     if (window.innerWidth <= 1280 && ad) {
@@ -381,25 +356,27 @@ import Footer from "../components/Footer.astro";
       });
     }
 
-    let activeID;
-    vendors.forEach(({id, left, top, width, height, name, src, desc, selling, small=false}) => {
+    let activeID = '';
+    vendors.forEach(({id}) => {
       if (document.getElementById(`regular-${id}`)) {
-  
         const highlight = () => {
           if (activeID) {
-            document.getElementById(`table-${activeID}`).style.opacity = 0;
+            const prevTable = document.getElementById(`table-${activeID}`);
+            if (prevTable) {
+              prevTable.style.opacity = '0';
+            }
           }
-          document.getElementById(`table-${id}`).style.opacity = 1;
+          const currentTable = document.getElementById(`table-${id}`);
+          if (currentTable) {
+            currentTable.style.opacity = '1';
+          }
           activeID = id;
         };
         
-        document.getElementById(`regular-${id}`).addEventListener("mouseenter", () => {
-          highlight();
-        });
+        document.getElementById(`regular-${id}`)?.addEventListener("mouseenter", highlight);
       }
     });
   };
 
   trigger();
-
-  </script>
+</script>
