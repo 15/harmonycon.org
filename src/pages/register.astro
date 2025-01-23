@@ -28,33 +28,15 @@ const sponsors = await fetch(
 ).then((res) => res.json());
 */
 
-const sponsors = {
-  "Marey Poppins Sponsor Membership": remoteSponsors
-   .filter((a) => a.badge_name == "Marey Poppins Sponsor Membership")
-   .map((a) => a.answer),
-  "My Fair Lyra Sponsor Membership": remoteSponsors
-   .filter((a) => a.badge_name == "My Fair Lyra Sponsor Membership")
-   .map((a) => a.answer),
-  "The Prohoofers Sponsor Membership": remoteSponsors
-   .filter((a) => a.badge_name == "The Prohoofers Sponsor Membership")
-   .map((a) => a.answer),
-  "Into the Everfree": remoteSponsors
-   .filter((a) => a.badge_name == "Into the Everfree")
-   .map((a) => a.answer),
-  "A Gentlecolt's Guide to Love and Mares": remoteSponsors
-   .filter((a) => a.badge_name == "A Gentlecolt's Guide to Love and Mares")
-   .map((a) => a.answer),
-  "The Book of Harmony Sponsor Membership": remoteSponsors
-   .filter((a) => a.badge_name == "The Book of Harmony Sponsor Membership")
-   .map((a) => a.answer),
-  "Princess Celestia Superstar": remoteSponsors
-   .filter((a) => a.badge_name == "Princess Celestia Superstar")
-   .map((a) => a.answer),
-};
+const sponsors = remoteSponsors.reduce((acc, { badge_name, answer }) => {
+  if (!acc[badge_name]) {
+    acc[badge_name] = [];
+  }
+  acc[badge_name].push(answer);
+  return acc;
+}, {});
 
-
-console.log(sponsors["Marey Poppins Sponsor Membership"])
-
+console.log(sponsors);
 ---
 
 <Layout title="HarmonyCon 2025 | Register">
@@ -155,6 +137,9 @@ console.log(sponsors["Marey Poppins Sponsor Membership"])
                   </div>
                 </a>
               </div>
+              // <div class="text-2xl pl-4 md:pl-6 xl:pl-8">
+              //   { name.includes("The Book of Harmony") ? sponsors["The Book of Harmony Sponsor Membership"].map((x, i) => (<span>{x}{i < sponsors["The Book of Harmony Sponsor Membership"].length - 1 ? ', ' : ''}</span>)): ''}
+              // </div>
             )
           )
         }
