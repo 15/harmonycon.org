@@ -12,31 +12,6 @@ const optimizedRegisterBackground = await getImage({
 import Footer from "../components/Footer.astro";
 import hclogo from "../assets/2025/HarmonyCon 2025 Logo.png";
 import tiers from "../data/tiers.js";
-
-
-
-interface Sponsors {
-  badge_name: string;
-  answer: string;
-}
-
-import remoteSponsors from "@data/sponsors.json";
-
-/*
-const sponsors = await fetch(
- "https://reg-2025.harmonycon.org/api/sponsors.php?credit=51&approval=52&sig=9db2f95140cab4d2e63e214dc9483f36585aba280276c739d290d70ea7c4addd"
-).then((res) => res.json());
-*/
-
-const sponsors = remoteSponsors.reduce((acc, { badge_name, answer }) => {
-  if (!acc[badge_name]) {
-    acc[badge_name] = [];
-  }
-  acc[badge_name].push(answer);
-  return acc;
-}, {});
-
-console.log(sponsors);
 ---
 
 <Layout title="HarmonyCon 2025 | Register">
