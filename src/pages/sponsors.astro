@@ -43,7 +43,7 @@ import Footer from "../components/Footer.astro";
     >
         Sponsors
     </div>
-    <div class="w-full xl:w-[80rem] mx-auto flex flex-col glass p-8">
+    <div class="w-full xl:w-[80rem] mx-auto flex flex-col glass p-8 mb-16">
 
       <div class="mx-auto flex flex-col gap-y-4 mb-16">
         <div class="italic font-serif uppercase text-center text-5xl text-white" 
@@ -73,7 +73,7 @@ import Footer from "../components/Footer.astro";
           {sponsors["Into the Everfree"].map((x, i) => (<span>{x}{i < sponsors["Into the Everfree"].length - 1 ? ', ' : ''}</span>))}
         </div>
       </div>
-      <div class="mx-auto flex flex-col gap-y-4 mb-8">
+      <div class="mx-auto flex flex-col gap-y-4 mb-12">
         <div class="italic font-serif uppercase text-center text-2xl text-white" 
         style="text-shadow: 3px 3px 1px #000;">
           The Prohoofers
@@ -82,13 +82,22 @@ import Footer from "../components/Footer.astro";
           {sponsors["The Prohoofers Sponsor Membership"].map((x, i) => (<span>{x}{i < sponsors["The Prohoofers Sponsor Membership"].length - 1 ? ', ' : ''}</span>))}
         </div>
       </div>
-      <div class="mx-auto flex flex-col gap-y-4 mb-8">
+      <div class="mx-auto flex flex-col gap-y-4 mb-12">
         <div class="italic font-serif uppercase text-center text-2xl text-white" 
         style="text-shadow: 3px 3px 1px #000;">
           My Fair Lyra
         </div>
         <div class="font-sans text-center text-xl text-white" style="text-shadow: 2px 2px 1px #000;">
           {sponsors["My Fair Lyra Sponsor Membership"].map((x, i) => (<span>{x}{i < sponsors["My Fair Lyra Sponsor Membership"].length - 1 ? ', ' : ''}</span>))}
+        </div>
+      </div>
+      <div class="mx-auto flex flex-col gap-y-4 mb-0">
+        <div class="italic font-serif uppercase text-center text-2xl text-white" 
+        style="text-shadow: 3px 3px 1px #000;">
+          Marey Poppins
+        </div>
+        <div class="font-sans text-center text-lg text-white" style="text-shadow: 2px 2px 1px #000;">
+          {sponsors["Marey Poppins Sponsor Membership"].map((x, i) => (<span>{x}{i < sponsors["Marey Poppins Sponsor Membership"].length - 1 ? ', ' : ''}</span>))}
         </div>
       </div>
     </div>
