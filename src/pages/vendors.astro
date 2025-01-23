@@ -90,9 +90,9 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="HarmonyCon 2025 | Vendors">
-  <div id="bg" class="flex flex-col justify-between items-center">
+  <div id="bg" class="relative flex flex-col h-screen">
     <div
-      class="text-black mt-12 bg-[#fcf1e0] flex flex-col lg:flex-row items-center rotate-0 lg:rotate-3 rounded w-[95%] md:w-[95%] lg:w-[95%] xl:w-[95%] 2xl:w-[80%] lg:aspect-[0.829] h-auto"
+      class="text-black mt-12 bg-[#fcf1e0] flex flex-col lg:flex-row items-center rotate-0 rounded w-[95%] md:w-[95%] lg:w-[95%] xl:w-[95%] 2xl:w-[40%] lg:aspect-[0.829] h-auto"
       style={`filter: drop-shadow(0 5px 5px #000); background-image: url(${optimizedVendor.src}); background-size: contain; 
       background-repeat: no-repeat;`}
     >
@@ -139,6 +139,7 @@ import Footer from "../components/Footer.astro";
         )
       }
     </div> -->
+    </div>
     <Footer />
   </div>
 
