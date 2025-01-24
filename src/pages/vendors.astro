@@ -129,11 +129,11 @@ import Footer from "../components/Footer.astro";
       >
         {
           vendors.map(({ id, left, top, width, height }, i) => (
-              <Image id={`table-${i+1}`} format="avif" src={tables[i]} width={800} alt={`Table #${i+1}`} class={`w-full absolute highlight-orange z-0 opacity-0 duration-300`}/> 
+              <Image id={`table-${id}`} format="avif" src={tables[id === "0" ? tables.length - 1 : parseInt(id) - 1]} width={800} alt={`Table #${i+1}`} class={`w-full absolute highlight-orange z-0 opacity-0 duration-300`}/> 
               <div
                 id={`regular-${id}`}
                 style={`left: ${left}%; top: ${top}%; width: ${width}%; height: ${height}%;`}
-                class={`bg-white opacity-50 table z-50`}
+                class={`bg-transparent opacity-50 table z-50`}
               >
                 
               </div>
@@ -424,15 +424,6 @@ import Footer from "../components/Footer.astro";
       const vendorItem = document.getElementById(`vendor-item-${id}`);
       if (vendorItem) {
         vendorItem.addEventListener("mouseenter", () => highlight(id));
-        vendorItem.addEventListener("mouseleave", () => {
-          vendorItem.style.backgroundColor = '';
-          vendorItem.style.color = '';
-          const table = document.getElementById(`table-${id}`);
-          if (table) {
-            table.style.opacity = '0';
-          }
-          activeID = '';
-        });
       }
     });
 
@@ -461,19 +452,15 @@ import Footer from "../components/Footer.astro";
       // Dragging functionality
       vendorsList.addEventListener('mousedown', (e) => {
         isDragging = false;
-        const startX = e.clientX;
-        const startY = e.clientY;
-        const initialLeft = parseInt(window.getComputedStyle(vendorsList).left) || vendorsList.offsetLeft;
-        const initialTop = parseInt(window.getComputedStyle(vendorsList).top) || vendorsList.offsetTop;
+        const startX = e.clientX - vendorsList.offsetLeft;
+        const startY = e.clientY - vendorsList.offsetTop;
 
         function onMouseMove(e) {
           isDragging = true;
           vendorsList.style.backgroundColor = '#ffffff';
           vendorsList.style.opacity = '0.5'; // 50% opacity while dragging
-          const newLeft = initialLeft + (e.clientX - startX);
-          const newTop = initialTop + (e.clientY - startY);
-          vendorsList.style.left = `${newLeft}px`;
-          vendorsList.style.top = `${newTop}px`;
+          vendorsList.style.left = e.clientX - startX + 'px';
+          vendorsList.style.top = e.clientY - startY + 'px';
         }
 
         function onMouseUp() {
