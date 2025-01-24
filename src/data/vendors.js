@@ -1,5 +1,16 @@
 export default [
   {
+    id: "0",
+    left: 12,
+    top: 72,
+    width: 8,
+    height: 17,
+    name: "Con Store",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
     id: "1",
     left: 27.5,
     top: 81,

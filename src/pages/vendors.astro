@@ -65,6 +65,7 @@ import table40 from "../assets/2025/vendors/dealers_room/39 glow.png";
 import table41 from "../assets/2025/vendors/dealers_room/40 glow.png";
 import table42 from "../assets/2025/vendors/dealers_room/41 glow.png";
 import table43 from "../assets/2025/vendors/dealers_room/42 glow.png";
+import table44 from "../assets/2025/vendors/dealers_room/Constore glow.png";
 
 import pepper from "../assets/2025/staff/pepper.png";
 
@@ -111,7 +112,8 @@ const tables = [
   table40,
   table41,
   table42,
-  table43
+  table43,
+  table44
 ]
 
 import Footer from "../components/Footer.astro";
@@ -131,7 +133,7 @@ import Footer from "../components/Footer.astro";
               <div
                 id={`regular-${id}`}
                 style={`left: ${left}%; top: ${top}%; width: ${width}%; height: ${height}%;`}
-                class={`bg-transparent opacity-50 table z-50`}
+                class={`bg-white opacity-50 table z-50`}
               >
                 
               </div>
@@ -171,7 +173,7 @@ import Footer from "../components/Footer.astro";
         <div class="columns-1">
           {vendors.map(({ id, name, left, top, width, height }) => (
           <div id={`vendor-item-${id}`} class="flex flex-row gap-x-2 px-1 py-0 items-center hover:bg-black hover:text-white duration-300 cursor-move rounded">
-            <div class="w-8 text-sm text-right font-mono">{id - 1}</div>
+            <div class="w-8 text-sm text-right font-mono">{['69', '1'].includes(id) ? 'HC' : (+id) - 1}</div>
             <Image src={pepper} alt={name} width={32} format="avif" class="w-4 h-4 rounded"/>
             <div class="text-center text-sm whitespace-nowrap">
               {name}
