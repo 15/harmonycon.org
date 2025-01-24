@@ -121,7 +121,7 @@ import Footer from "../components/Footer.astro";
   <div id="bg" class="flex flex-col pt-8 md:pt-16 gap-y-8 px-4 md:px-0">
     <div class="relative flex flex-row justify-center items-center">
       <div
-        class="text-black bg-white flex flex-col lg:flex-row items-center rotate-0 rounded w-[95%] md:w-[95%] lg:w-[95%] xl:w-[95%] 2xl:w-[40%] lg:aspect-[0.829] h-auto"
+        class="text-black bg-white flex flex-col lg:flex-row items-center -rotate-1 rounded w-[95%] md:w-[95%] lg:w-[95%] xl:w-[95%] 2xl:w-[40%] lg:aspect-[0.829] h-auto"
         style={`filter: drop-shadow(0 5px 5px #000); background-image: url(${optimizedVendor.src}); background-size: contain; background-repeat: no-repeat;`}
       >
         {
@@ -166,14 +166,15 @@ import Footer from "../components/Footer.astro";
       }
     </div> -->
       </div>
-      <div id="vendors-list" class="cursor-move absolute right-0 top-0 w-fit p-4 font-sans font-medium text-black bg-white flex flex-col lg:flex-row items-center rotate-3 rounded-xl"  style={`filter: drop-shadow(0 5px 5px #000); `}>
-        <div class="columns-2">
+      <div id="vendors-list" class="cursor-move absolute right-[10%] top-0 w-fit p-4 font-sans font-medium text-black bg-white flex flex-col lg:flex-row items-center rotate-3 rounded-xl"  style={`filter: drop-shadow(0 5px 5px #000); `}>
+        <div class="columns-1">
           {vendors.map(({ id, name, left, top, width, height }) => (
-          <div class="flex flex-row gap-x-2 px-1 py-0 items-center hover:bg-black hover:text-white duration-300 cursor-move rounded">
+          <div id={`vendor-item-${id}`} class="flex flex-row gap-x-2 px-1 py-0 items-center hover:bg-black hover:text-white duration-300 cursor-move rounded">
+            <div class="w-8 text-sm text-right font-mono">{id - 1}</div>
             <Image src={pepper} alt={name} width={32} format="avif" class="w-4 h-4 rounded"/>
             <div class="text-center text-sm whitespace-nowrap">
               {name}
-              </div>
+            </div>
           </div>
           ))}
         </div>
@@ -372,23 +373,30 @@ import Footer from "../components/Footer.astro";
     }
 
     let activeID = '';
+    const highlight = (id) => {
+      if (activeID) {
+        const prevTable = document.getElementById(`table-${activeID}`);
+        if (prevTable) {
+          prevTable.style.opacity = '0';
+        }
+      }
+      const currentTable = document.getElementById(`table-${id}`);
+      if (currentTable) {
+        currentTable.style.opacity = '1';
+      }
+      activeID = id;
+    };
+
     vendors.forEach(({id}) => {
+      // Table hover highlight
       if (document.getElementById(`regular-${id}`)) {
-        const highlight = () => {
-          if (activeID) {
-            const prevTable = document.getElementById(`table-${activeID}`);
-            if (prevTable) {
-              prevTable.style.opacity = '0';
-            }
-          }
-          const currentTable = document.getElementById(`table-${id}`);
-          if (currentTable) {
-            currentTable.style.opacity = '1';
-          }
-          activeID = id;
-        };
-        
-        document.getElementById(`regular-${id}`)?.addEventListener("mouseenter", highlight);
+        document.getElementById(`regular-${id}`)?.addEventListener("mouseenter", () => highlight(id));
+      }
+      
+      // Vendor list item hover highlight
+      const vendorItem = document.getElementById(`vendor-item-${id}`);
+      if (vendorItem) {
+        vendorItem.addEventListener("mouseenter", () => highlight(id));
       }
     });
 
