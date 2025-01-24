@@ -16,13 +16,24 @@ export default [
     top: 81,
     width: 6, 
     height: 6,
-    name: "Tony",
+    name: "15",
     src: "sigil.png",
     desc: ``,
     twitter: ""
   },
   {
     id: "2",
+    left: 27.5,
+    top: 81,
+    width: 6, 
+    height: 6,
+    name: "Tony",
+    src: "sigil.png",
+    desc: ``,
+    twitter: ""
+  },
+  {
+    id: "3",
     left: 12,
     top: 63.5,
     width: 8,
@@ -33,18 +44,18 @@ export default [
     twitter: ""
   },
   {
-    id: "3",
+    id: "4",
     left: 12,
     top: 57.5,
     width: 8,
     height: 6,
     name: "LBRCloud",
     src: "sigil.png",
-    desc: ``,
+    desc: `Hi! My name is Brittney, and I make cute pony art! I have a large variety of items, including prints, stickers, charms, mugs, pins, friendship bracelets and even one-of-a-kind traditional pieces! All these things have one thing in common— They were created to make you smile!`,
     twitter: ""
   },
   {
-    id: "4",
+    id: "5",
     left: 12,
     top: 51.5,
     width: 8,
@@ -55,7 +66,7 @@ export default [
     twitter: ""
   },
   {
-    id: "5",
+    id: "6",
     left: 12,
     top: 45.5,
     width: 8,
@@ -66,7 +77,7 @@ export default [
     twitter: ""
   },
   {
-    id: "6",
+    id: "7",
     left: 12,
     top: 39.5,
     width: 8,
@@ -77,7 +88,7 @@ export default [
     twitter: ""
   },
   {
-    id: "7",
+    id: "8",
     left: 12,
     top: 33.5,
     width: 8,
@@ -88,7 +99,7 @@ export default [
     twitter: ""
   },
   {
-    id: "8",
+    id: "9",
     left: 12,
     top: 27.5,
     width: 8,
@@ -99,7 +110,7 @@ export default [
     twitter: ""
   },
   {
-    id: "9",
+    id: "10",
     left: 12,
     top: 21.5,
     width: 8,
@@ -110,7 +121,7 @@ export default [
     twitter: ""
   },
   {
-    id: "10",
+    id: "11",
     left: 12,
     top: 13.5,
     width: 11,
@@ -121,7 +132,7 @@ export default [
     twitter: ""
   },
   {
-    id: "11",
+    id: "12",
     left: 23,
     top: 13.5,
     width: 8,
@@ -138,7 +149,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "12",
+    id: "13",
     left: 31,
     top: 13.5,
     width: 7.5,
@@ -149,7 +160,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "13",
+    id: "14",
     left: 38.5,
     top: 13.5,
     width: 7.5,
@@ -160,7 +171,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "14",
+    id: "15",
     left: 46,
     top: 13.5,
     width: 7,
@@ -171,7 +182,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "15",
+    id: "16",
     left: 53,
     top: 13.5,
     width: 7,
@@ -182,7 +193,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "16",
+    id: "17",
     left: 60,
     top: 13.5,
     width: 7.5,
@@ -193,7 +204,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "17",
+    id: "18",
     left: 67.5,
     top: 13.5,
     width: 7,
@@ -204,7 +215,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "18",
+    id: "19",
     left: 74.5,
     top: 13.5,
     width: 9,
@@ -215,7 +226,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: `I am a plushmaker who has been putting smiles on ponies' faces since 2013! I make and sell all manner and sizes of cuddly ponies crafted entirely by hand using my own patterns.`
   },
   {
-    id: "19",
+    id: "20",
     left: 74.5,
     top: 23.5,
     width: 9,
@@ -226,7 +237,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "20",
+    id: "21",
     left: 74.5,
     top: 29.5,
     width: 9,
@@ -237,7 +248,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "21",
+    id: "22",
     left: 74.5,
     top: 35.5,
     width: 9,
@@ -248,7 +259,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "22",
+    id: "23",
     left: 74.5,
     top: 41.5,
     width: 9,
@@ -259,7 +270,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "23",
+    id: "24",
     left: 74.5,
     top: 47.5,
     width: 9,
@@ -270,7 +281,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "24",
+    id: "25",
     left: 71.5,
     top: 53.5,
     width: 12,
@@ -281,7 +292,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "25",
+    id: "26",
     left: 64.5,
     top: 53.5,
     width: 7,
@@ -292,7 +303,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "26",
+    id: "27",
     left: 57.5,
     top: 53.5,
     width: 7,
@@ -303,7 +314,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "27",
+    id: "28",
     left: 50,
     top: 53.5,
     width: 7.5,
@@ -314,7 +325,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "28",
+    id: "29",
     left: 43,
     top: 53.5,
     width: 7,
@@ -325,7 +336,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "29",
+    id: "30",
     left: 35.5,
     top: 53.5,
     width: 7.5,
@@ -336,7 +347,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "30",
+    id: "31",
     left: 24.5,
     top: 37,
     width: 7.5,
@@ -347,7 +358,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "31",
+    id: "32",
     left: 24.5,
     top: 30.5,
     width: 7.5,
@@ -358,7 +369,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "32",
+    id: "33",
     left: 29,
     top: 25,
     width: 8,
@@ -369,7 +380,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "33",
+    id: "34",
     left: 37,
     top: 25,
     width: 7,
@@ -380,7 +391,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "34",
+    id: "35",
     left: 44,
     top: 25,
     width: 7,
@@ -391,7 +402,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
     twitter: ""
   },
   {
-    id: "35",
+    id: "36",
     left: 51,
     top: 25,
     width: 7.5,
@@ -404,7 +415,7 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
     twitter: ""
   },
   {
-    id: "36",
+    id: "37",
     left: 58.5,
     top: 25,
     width: 7.5,
@@ -415,7 +426,7 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
     twitter: ""
   },
   {
-    id: "37",
+    id: "38",
     left: 63,
     top: 31,
     width: 7.5,
@@ -426,7 +437,7 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
     twitter: ""
   },
   {
-    id: "38",
+    id: "39",
     left: 63,
     top: 37,
     width: 7.5,
@@ -437,7 +448,7 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
     twitter: ""
   },
   {
-    id: "39",
+    id: "40",
     left: 58.5,
     top: 43.5,
     width: 7.5,
@@ -448,7 +459,7 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
     twitter: ""
   },
   {
-    id: "40",
+    id: "41",
     left: 51,
     top: 43.5,
     width: 7.5,
@@ -459,7 +470,7 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
     twitter: ""
   },
   {
-    id: "41",
+    id: "42",
     left: 44,
     top: 43.5,
     width: 7,
@@ -470,7 +481,7 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
     twitter: ""
   },
   {
-    id: "42",
+    id: "43",
     left: 37,
     top: 43.5,
     width: 7,
