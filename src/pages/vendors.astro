@@ -436,6 +436,8 @@ import Footer from "../components/Footer.astro";
     }
 
     let activeID = '';
+    let isDragging = false;
+
     const highlight = (id) => {
       // Handle table highlight
       if (activeID) {
@@ -465,6 +467,8 @@ import Footer from "../components/Footer.astro";
       // Table hover highlight
       if (document.getElementById(`regular-${id}`)) {
         const tableElement = document.getElementById(`regular-${id}`);
+        const vendorDialog = document.getElementById(`dialog-${id}`);
+        
         tableElement?.addEventListener("mouseenter", () => highlight(id));
         tableElement?.addEventListener("mouseleave", () => {
           const vendorItem = document.getElementById(`vendor-item-${id}`);
@@ -478,6 +482,13 @@ import Footer from "../components/Footer.astro";
           }
           activeID = '';
         });
+        
+        // Add click handler for table
+        if (vendorDialog instanceof HTMLDialogElement) {
+          tableElement?.addEventListener("click", () => {
+            vendorDialog.showModal();
+          });
+        }
       }
       
       // Vendor list item hover highlight
@@ -487,26 +498,41 @@ import Footer from "../components/Footer.astro";
       }
     });
 
+    // Setup vendor modals first
+    vendors.forEach(({id}) => {
+      const vendorDialog = document.getElementById(`dialog-${id}`);
+      const vendorItem = document.getElementById(`vendor-item-${id}`);
+      if (vendorDialog instanceof HTMLDialogElement && vendorItem) {
+        vendorItem.addEventListener("click", (e) => {
+          if (!isDragging) {
+            vendorDialog.showModal();
+          }
+        });
+        vendorDialog.addEventListener("click", (e) => {
+          if (e.target === vendorDialog) {
+            vendorDialog.close();
+          }
+        });
+      }
+    });
+
     // Add click and drag interactions for vendors list
     const vendorsList = document.getElementById('vendors-list');
     if (vendorsList) {
-      let isDragging = false;
-
-      // Add transition property for smooth background color changes
       vendorsList.style.transition = 'background-color 300ms ease, opacity 300ms ease';
 
       vendorsList.addEventListener('mousedown', () => {
-        vendorsList.style.backgroundColor = '#fff9e6'; // Slightly yellow background on click
+        vendorsList.style.backgroundColor = '#fff9e6';
       });
 
       vendorsList.addEventListener('mouseup', () => {
         if (!isDragging) {
-          vendorsList.style.backgroundColor = '#ffffff'; // Reset to white when not dragging
+          vendorsList.style.backgroundColor = '#ffffff';
         }
       });
 
       vendorsList.addEventListener('mouseleave', () => {
-        vendorsList.style.backgroundColor = '#ffffff'; // Reset to white when mouse leaves
+        vendorsList.style.backgroundColor = '#ffffff';
       });
 
       // Dragging functionality
@@ -518,7 +544,7 @@ import Footer from "../components/Footer.astro";
         function onMouseMove(e) {
           isDragging = true;
           vendorsList.style.backgroundColor = '#ffffff';
-          vendorsList.style.opacity = '0.5'; // 50% opacity while dragging
+          vendorsList.style.opacity = '0.5';
           vendorsList.style.left = e.clientX - startX + 'px';
           vendorsList.style.top = e.clientY - startY + 'px';
         }
@@ -527,31 +553,19 @@ import Footer from "../components/Footer.astro";
           document.removeEventListener('mousemove', onMouseMove);
           document.removeEventListener('mouseup', onMouseUp);
           if (isDragging) {
-            vendorsList.style.backgroundColor = '#ffffff'; // Reset to white after drag
-            vendorsList.style.opacity = '1'; // Reset opacity
+            vendorsList.style.backgroundColor = '#ffffff';
+            vendorsList.style.opacity = '1';
           }
+          // Reset isDragging after a short delay to allow click events to fire
+          setTimeout(() => {
+            isDragging = false;
+          }, 0);
         }
 
         document.addEventListener('mousemove', onMouseMove);
         document.addEventListener('mouseup', onMouseUp);
       });
     }
-
-    // Setup vendor modals
-    vendors.forEach(({id}) => {
-      const vendorDialog = document.getElementById(`dialog-${id}`);
-      const vendorItem = document.getElementById(`vendor-item-${id}`);
-      if (vendorDialog instanceof HTMLDialogElement && vendorItem) {
-        vendorItem.addEventListener("click", () => {
-          vendorDialog.showModal();
-        });
-        vendorDialog.addEventListener("click", (e) => {
-          if (e.target === vendorDialog) {
-            vendorDialog.close();
-          }
-        });
-      }
-    });
 
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
