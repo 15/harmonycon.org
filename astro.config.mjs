@@ -25,5 +25,8 @@ export default defineConfig({
     globalInstance: true,
     smoothScrolling: false
     // animateHistoryBrowsing: true,
-  }), icon(), partytown(), sitemap()]
+  }), icon(), partytown(), sitemap()],
+  redirects: {
+    '/schedule': '/schedule/friday',
+  }
 });
