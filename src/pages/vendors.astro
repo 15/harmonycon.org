@@ -1131,4 +1131,9 @@ Come on by for aesthetic prints, silly stickers, bookmarks, super ✨EXTRA✨ ch
   };
 
   trigger();
+
+  document.addEventListener("swup:enable", () => {
+    window.swup.hooks.on("content:replace", () => {
+      trigger();
+    })});
 </script>
