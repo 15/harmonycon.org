@@ -21,6 +21,7 @@ export default [
   },
   {
     name: `<div class="text-xl sm:text-2xl xl:text-3xl"><span class="italic">Marey Poppins</span></div>`,
+    remaining: 0,
     perks: [
       "Sponsor Badge",
       "Conbook",
