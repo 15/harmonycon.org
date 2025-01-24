@@ -18,7 +18,7 @@ export default [
     height: 6,
     name: "15",
     src: "sigil.png",
-    desc: ``,
+    desc: `idk`,
     twitter: ""
   },
   {

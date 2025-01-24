@@ -120,11 +120,11 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="HarmonyCon 2025 | Vendors">
-  <div id="bg" class="flex flex-col pt-8 md:pt-16 gap-y-8 px-4 md:px-0">
+  <div id="bg" class="flex flex-col pt-8 md:pt-16 gap-y-8 px-4 md:px-0 overflow-hidden">
     <div class="relative flex flex-row justify-center items-center">
       <div
       id="vendors-map"
-        class="text-black bg-white flex flex-col lg:flex-row items-center -rotate-1 rounded w-[95%] md:w-[95%] lg:w-[95%] xl:w-[95%] 2xl:w-[40%] lg:aspect-[0.829] h-auto"
+        class="-ml-64 text-black bg-white flex flex-col lg:flex-row items-center -rotate-1 rounded w-[100%] md:w-[70%] lg:w-[58%] xl:w-[50%] 2xl:w-[43%] aspect-[0.829] h-auto"
         style={`filter: drop-shadow(0 5px 5px #000); background-image: url(${optimizedVendor.src}); background-size: contain; background-repeat: no-repeat;`}
       >
         {
@@ -139,37 +139,11 @@ import Footer from "../components/Footer.astro";
             </div>
           ))
         }
-    <!-- <div class="my-8 lg:mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 justify-center w-full xl:px-0 px-2 xl:w-5/6 2xl:w-4/5 gap-8 ">
-      {
-        vendors.map(({id, name, src, desc, selling }) =>
-          <div id={`card-${id}`} class="relative cursor-pointer group hover:bg-orange-500 hover:text-white duration-300 w-full bg-[#fcf1e0] rounded p-8 flex flex-col" style="filter: drop-shadow(0 10px 10px #000); ">
-            <div class="flex justify-between mb-4 items-center">
-              <div class="text-3xl md:text-3xl lg:text-4xl font-bold uppercase ">{name}</div>
-              <div id="vendor-pfp" style={`background-image: url(/pfp/${src});`} class="bg-cover bg-center aspect-square h-14 md:h-14 lg:h-14 xl:h-16 2xl:h-20 border border-black bg-transparent">
-
-              </div>
-            </div>
-            
-            <hr class="border-2 border-black group-hover:border-white duration-300 mb-4"/>
-            
-            <div class="italic leading-snug text-sm md:text-sm lg:text-base mb-4" set:html={desc}> 
-            </div>
-
-            <div class="px-0 text-xs md:text-xs lg:text-sm italic mb-1">This vendor will be selling:</div>
-            <ul class='px-4 text-base mb-12'>
-              {
-                selling.map(item => <li class='my-0.5 text-xs md:text-xs lg:text-sm uppercase font-medium px-2 border-b-2 block border-black group-hover:border-white '>{item}</li>)
-              }
-            </ul>
-            <div class="font-semibold absolute bottom-0 text-center left-0 right-0 mx-auto w-full mb-8 lg:mb-4 text-sm">
-              Click this card see this vendor's location!
-            </div>
-          </div>
-        )
-      }
-    </div> -->
       </div>
-      <div id="vendors-list" class="cursor-move absolute right-[10%] top-0 w-fit p-4 font-sans font-medium text-black bg-white flex flex-col lg:flex-row items-center rotate-3 rounded-xl"  style={`filter: drop-shadow(0 5px 5px #000); `}>
+      <div id="vendors-list" class="cursor-move absolute right-[0%] xl:right-[5%] 2xl:right-[10%] top-[-5%] 2xl:top-[-2%] w-fit p-4 font-sans font-medium text-black bg-white flex flex-col items-center rotate-3 rounded-xl"  style={`filter: drop-shadow(0 5px 5px #000); `}>
+        <div class="text-xl text-center mb-4 font-semibold">
+          Click to see vendor info!
+        </div>
         <div class="columns-1">
           {vendors.map(({ id, name, desc }) => (
           <>
