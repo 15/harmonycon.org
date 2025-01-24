@@ -173,7 +173,7 @@ import Footer from "../components/Footer.astro";
         <div class="columns-1">
           {vendors.map(({ id, name, left, top, width, height }) => (
           <div id={`vendor-item-${id}`} class="flex flex-row gap-x-2 px-1 py-0 items-center hover:bg-black hover:text-white duration-300 cursor-move rounded">
-            <div class="w-8 text-sm text-right font-mono">{['69', '1'].includes(id) ? 'HC' : (+id) - 1}</div>
+            <div class="w-8 text-sm text-right font-mono">{['69', '1', '0'].includes(id) ? 'HC' : (+id) - 1}</div>
             <Image src={pepper} alt={name} width={32} format="avif" class="w-4 h-4 rounded"/>
             <div class="text-center text-sm whitespace-nowrap">
               {name}
