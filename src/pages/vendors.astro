@@ -166,13 +166,13 @@ import Footer from "../components/Footer.astro";
       }
     </div> -->
       </div>
-      <div class="absolute right-0 top-0 w-auto p-4 font-sans font-medium text-black bg-white flex flex-col lg:flex-row items-center rotate-3 rounded"  style={`filter: drop-shadow(0 5px 5px #000); `}>
-        <div class="min-w-120 columns-2">
-          {vendors.map(x => (
-          <div class="flex flex-row gap-x-2 px-1 py-0 items-center hover:bg-black hover:text-white duration-300 cursor-pointer rounded">
-            <Image src={pepper} alt={x.name} width={32} format="avif" class="w-4 h-4 rounded"/>
+      <div id="vendors-list" class="cursor-move absolute right-0 top-0 w-fit p-4 font-sans font-medium text-black bg-white flex flex-col lg:flex-row items-center rotate-3 rounded-xl"  style={`filter: drop-shadow(0 5px 5px #000); `}>
+        <div class="columns-2">
+          {vendors.map(({ id, name, left, top, width, height }) => (
+          <div class="flex flex-row gap-x-2 px-1 py-0 items-center hover:bg-black hover:text-white duration-300 cursor-move rounded">
+            <Image src={pepper} alt={name} width={32} format="avif" class="w-4 h-4 rounded"/>
             <div class="text-center text-sm whitespace-nowrap">
-              {x.name}
+              {name}
               </div>
           </div>
           ))}
@@ -391,6 +391,56 @@ import Footer from "../components/Footer.astro";
         document.getElementById(`regular-${id}`)?.addEventListener("mouseenter", highlight);
       }
     });
+
+    // Add click and drag interactions for vendors list
+    const vendorsList = document.getElementById('vendors-list');
+    if (vendorsList) {
+      let isDragging = false;
+
+      // Add transition property for smooth background color changes
+      vendorsList.style.transition = 'background-color 300ms ease, opacity 300ms ease';
+
+      vendorsList.addEventListener('mousedown', () => {
+        vendorsList.style.backgroundColor = '#fff9e6'; // Slightly yellow background on click
+      });
+
+      vendorsList.addEventListener('mouseup', () => {
+        if (!isDragging) {
+          vendorsList.style.backgroundColor = '#ffffff'; // Reset to white when not dragging
+        }
+      });
+
+      vendorsList.addEventListener('mouseleave', () => {
+        vendorsList.style.backgroundColor = '#ffffff'; // Reset to white when mouse leaves
+      });
+
+      // Dragging functionality
+      vendorsList.addEventListener('mousedown', (e) => {
+        isDragging = false;
+        const startX = e.clientX - vendorsList.offsetLeft;
+        const startY = e.clientY - vendorsList.offsetTop;
+
+        function onMouseMove(e) {
+          isDragging = true;
+          vendorsList.style.backgroundColor = '#ffffff';
+          vendorsList.style.opacity = '0.5'; // 50% opacity while dragging
+          vendorsList.style.left = e.clientX - startX + 'px';
+          vendorsList.style.top = e.clientY - startY + 'px';
+        }
+
+        function onMouseUp() {
+          document.removeEventListener('mousemove', onMouseMove);
+          document.removeEventListener('mouseup', onMouseUp);
+          if (isDragging) {
+            vendorsList.style.backgroundColor = '#ffffff'; // Reset to white after drag
+            vendorsList.style.opacity = '1'; // Reset opacity
+          }
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+      });
+    }
   };
 
   trigger();
