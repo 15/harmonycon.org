@@ -171,7 +171,7 @@ import Footer from "../components/Footer.astro";
       </div>
       <div id="vendors-list" class="cursor-move absolute right-[10%] top-0 w-fit p-4 font-sans font-medium text-black bg-white flex flex-col lg:flex-row items-center rotate-3 rounded-xl"  style={`filter: drop-shadow(0 5px 5px #000); `}>
         <div class="columns-1">
-          {vendors.map(({ id, name, left, top, width, height }) => (
+          {vendors.map(({ id, name, desc }) => (
           <>
             <div id={`vendor-item-${id}`} class="flex flex-row gap-x-2 px-1 py-0 items-center hover:bg-black hover:text-white duration-300 cursor-pointer rounded">
               <div class="w-8 text-sm text-right font-mono">{['1', '0'].includes(id) ? 'HC' : (+id) - 1}</div>
@@ -180,18 +180,43 @@ import Footer from "../components/Footer.astro";
                 {name}
               </div>
             </div>
-            <dialog id={`dialog-${id}`} class="p-4 rounded-xl">
-              <div class="relative flex flex-col gap-y-4">
-                <div class="flex justify-between items-center">
-                  <div class="text-2xl font-bold text-white">{name}</div>
-                  <button class="text-white hover:bg-red-200 rounded-full p-1" onclick={`document.getElementById('dialog-${id}').close()`}>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
+            <dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw] bg-black" id={`dialog-${id}`}>
+              <div
+                class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
+                onclick={`document.getElementById('dialog-${id}').close()`}
+              >
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                    fill="currentColor"></path>
+                </svg>
+              </div>
+              <div
+                class="overflow-y-auto overflow-x-hidden p-4 md:p-8 bg-blue-50 flex flex-col items-center justify-start w-full h-auto sm:w-[640px] md:w-[768px] lg:w-[1024px] 2xl:w-[1280px] max-h-[90vh]"
+              >
+                <div class="w-full max-w-xl">
+                  <Image
+                    src={pepper}
+                    format="avif"
+                    height="800"
+                    alt={name}
+                    style="filter: drop-shadow(0 2px 2px #000);"
+                    class="w-full h-auto max-h-[40vh] object-contain"
+                  />
                 </div>
-                <div class="text-white">
-                  Table {['69', '1', '0'].includes(id) ? 'HC' : (+id) - 1}
+                <div class="flex flex-col w-full items-center">
+                  <div class="whitespace-nowrap py-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center tracking-wide font-semibold uppercase text-yellow-400">
+                    {name}
+                  </div>
+                  <div class="max-w-3xl text-sm sm:text-base md:text-lg 2xl:text-lg leading-snug sm:leading-normal text-yellow-400 text-left">
+                    {desc}
+                  </div>
                 </div>
               </div>
             </dialog>
@@ -388,6 +413,12 @@ import Footer from "../components/Footer.astro";
       scrollbar-gutter: stable;
     }
 
+    dialog img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
     dialog[open] {
       animation: fade 0.3s ease-in-out normal;
     }
@@ -400,6 +431,20 @@ import Footer from "../components/Footer.astro";
 
     dialog:focus {
       outline: none;
+    }
+
+    /* Update text colors to white */
+    dialog .text-black {
+      color: white;
+    }
+
+    /* Update close button color */
+    dialog .text-stone-600 {
+      color: white;
+    }
+    
+    dialog .hover\:bg-red-200:hover {
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
     @keyframes fade {
@@ -421,7 +466,7 @@ import Footer from "../components/Footer.astro";
   import "tippy.js/dist/tippy.css";
   import "tippy.js/animations/shift-away-extreme.css";
 
-  const vendors =  [
+  const vendors = [
   {
     id: "0",
     left: 12,
@@ -446,9 +491,9 @@ import Footer from "../components/Footer.astro";
   },
   {
     id: "2",
-    left: 27.5,
-    top: 81,
-    width: 6, 
+    left: 12,
+    top: 63.5,
+    width: 8,
     height: 6,
     name: "Tony",
     src: "sigil.png",
@@ -458,7 +503,7 @@ import Footer from "../components/Footer.astro";
   {
     id: "3",
     left: 12,
-    top: 63.5,
+    top: 57.5,
     width: 8,
     height: 6,
     name: "Jeremy",
@@ -469,7 +514,7 @@ import Footer from "../components/Footer.astro";
   {
     id: "4",
     left: 12,
-    top: 57.5,
+    top: 51.5,
     width: 8,
     height: 6,
     name: "LBRCloud",
@@ -480,7 +525,7 @@ import Footer from "../components/Footer.astro";
   {
     id: "5",
     left: 12,
-    top: 51.5,
+    top: 45.5,
     width: 8,
     height: 6,
     name: "Saphy Moon",
@@ -491,7 +536,7 @@ import Footer from "../components/Footer.astro";
   {
     id: "6",
     left: 12,
-    top: 45.5,
+    top: 39.5,
     width: 8,
     height: 6,
     name: "Jane Gumball",
@@ -502,7 +547,7 @@ import Footer from "../components/Footer.astro";
   {
     id: "7",
     left: 12,
-    top: 39.5,
+    top: 33.5,
     width: 8,
     height: 6,
     name: "Halley & Sweetcreamarts",
@@ -513,7 +558,7 @@ import Footer from "../components/Footer.astro";
   {
     id: "8",
     left: 12,
-    top: 33.5,
+    top: 27.5,
     width: 8,
     height: 6,
     name: "Fiaura The Tank Girl",
@@ -524,7 +569,7 @@ import Footer from "../components/Footer.astro";
   {
     id: "9",
     left: 12,
-    top: 27.5,
+    top: 21.5,
     width: 8,
     height: 6,
     name: "Rimi Plushies",
@@ -535,9 +580,9 @@ import Footer from "../components/Footer.astro";
   {
     id: "10",
     left: 12,
-    top: 21.5,
-    width: 8,
-    height: 6,
+    top: 13.5,
+    width: 11,
+    height: 8,
     name: "Techycutie",
     src: "sigil.png",
     desc: `Keychains, Skate Decks, Lanyards, Enamel pins, Apparel, Drink Tumblers`,
@@ -545,10 +590,10 @@ import Footer from "../components/Footer.astro";
   },
   {
     id: "11",
-    left: 12,
+    left: 23,
     top: 13.5,
-    width: 11,
-    height: 8,
+    width: 8,
+    height: 6,
     name: "Bluefeathercat",
     src: "sigil.png",
     desc: `I am a digital artist. I sell prints, stickers, keychains, and buttons! I might offer commissions and/or traditional art as well.`,
@@ -556,9 +601,9 @@ import Footer from "../components/Footer.astro";
   },
   {
     id: "12",
-    left: 23,
+    left: 31,
     top: 13.5,
-    width: 8,
+    width: 7.5,
     height: 6,
     name: "Sky Railroad",
     src: "sigil.png",
@@ -573,7 +618,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "13",
-    left: 31,
+    left: 38.5,
     top: 13.5,
     width: 7.5,
     height: 6,
@@ -584,9 +629,9 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "14",
-    left: 38.5,
+    left: 46,
     top: 13.5,
-    width: 7.5,
+    width: 7,
     height: 6,
     name: "Gobiraptor",
     src: "sigil.png",
@@ -595,7 +640,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "15",
-    left: 46,
+    left: 53,
     top: 13.5,
     width: 7,
     height: 6,
@@ -606,9 +651,9 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "16",
-    left: 53,
+    left: 60,
     top: 13.5,
-    width: 7,
+    width: 7.5,
     height: 6,
     name: "BefishProductions",
     src: "sigil.png",
@@ -617,9 +662,9 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "17",
-    left: 60,
+    left: 67.5,
     top: 13.5,
-    width: 7.5,
+    width: 7,
     height: 6,
     name: "Rabbitasaur Creatives",
     src: "sigil.png",
@@ -628,10 +673,10 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "18",
-    left: 67.5,
+    left: 74.5,
     top: 13.5,
-    width: 7,
-    height: 6,
+    width: 9,
+    height: 10,
     name: "Choco Pony Flags and Swag",
     src: "sigil.png",
     desc: `Flags, shirts, badges, lanyards, and more Choco Pony has it all. Stop by for all sweets and treats and pony needs. Perfect holiday gifts.`,
@@ -640,9 +685,9 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   {
     id: "19",
     left: 74.5,
-    top: 13.5,
+    top: 23.5,
     width: 9,
-    height: 10,
+    height: 6,
     name: "Peruser's Plushies",
     src: "sigil.png",
     desc: `Flags, shirts, badges, lanyards, and more Choco Pony has it all. Stop by for all sweets and treats and pony needs. Perfect holiday gifts.`,
@@ -651,7 +696,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   {
     id: "20",
     left: 74.5,
-    top: 23.5,
+    top: 29.5,
     width: 9,
     height: 6,
     name: "The Haywaiian Horse",
@@ -662,7 +707,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   {
     id: "21",
     left: 74.5,
-    top: 29.5,
+    top: 35.5,
     width: 9,
     height: 6,
     name: "Ponies by RubioWolf",
@@ -673,7 +718,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   {
     id: "22",
     left: 74.5,
-    top: 35.5,
+    top: 41.5,
     width: 9,
     height: 6,
     name: "The Rainbow Table",
@@ -684,7 +729,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   {
     id: "23",
     left: 74.5,
-    top: 41.5,
+    top: 47.5,
     width: 9,
     height: 6,
     name: "Way2Weird Productions",
@@ -694,10 +739,10 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "24",
-    left: 74.5,
-    top: 47.5,
-    width: 9,
-    height: 6,
+    left: 71.5,
+    top: 53.5,
+    width: 12,
+    height: 8,
     name: "Black Dog Enterprises",
     src: "sigil.png",
     desc: `Figures, posters, beach towels, TCG, games`,
@@ -705,9 +750,9 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "25",
-    left: 71.5,
+    left: 64.5,
     top: 53.5,
-    width: 12,
+    width: 7,
     height: 8,
     name: "Outlaw Works",
     src: "sigil.png",
@@ -716,7 +761,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "26",
-    left: 64.5,
+    left: 57.5,
     top: 53.5,
     width: 7,
     height: 8,
@@ -727,9 +772,9 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "27",
-    left: 57.5,
+    left: 50,
     top: 53.5,
-    width: 7,
+    width: 7.5,
     height: 8,
     name: "Bakufoon Creations",
     src: "sigil.png",
@@ -738,9 +783,9 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "28",
-    left: 50,
+    left: 43,
     top: 53.5,
-    width: 7.5,
+    width: 7,
     height: 8,
     name: "ShadowKrafts",
     src: "sigil.png",
@@ -749,9 +794,9 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "29",
-    left: 43,
+    left: 35.5,
     top: 53.5,
-    width: 7,
+    width: 7.5,
     height: 8,
     name: "Waffle Wishes",
     src: "sigil.png",
@@ -760,10 +805,10 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "30",
-    left: 35.5,
-    top: 53.5,
+    left: 24.5,
+    top: 37,
     width: 7.5,
-    height: 8,
+    height: 6.5,
     name: "KuriNpony",
     src: "sigil.png",
     desc: `I am a plush maker and an artist. I will be bringing my handmade plush to the con and other pony products that I involved in. All of my products are sold only by me, include handmade products (plush, figures, artwork) and other products (pins, buttons, charms, prints, tote bags.)`,
@@ -772,7 +817,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   {
     id: "31",
     left: 24.5,
-    top: 37,
+    top: 30.5,
     width: 7.5,
     height: 6.5,
     name: "Heavenly Blue",
@@ -782,10 +827,10 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "32",
-    left: 24.5,
-    top: 30.5,
-    width: 7.5,
-    height: 6.5,
+    left: 29,
+    top: 25,
+    width: 8,
+    height: 6,
     name: "Shibabitz Art",
     src: "sigil.png",
     desc: `I sell my art (original art and fanart of anime, video games and pop culture) as prints, acrylic charms, and stickers. I also sell handmade fabric goods/accessories such as tote bags, dice bags, bucket hats, and scrunchies.`,
@@ -793,9 +838,9 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "33",
-    left: 29,
+    left: 37,
     top: 25,
-    width: 8,
+    width: 7,
     height: 6,
     name: "Glacier and TwiPie!",
     src: "sigil.png",
@@ -804,7 +849,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "34",
-    left: 37,
+    left: 44,
     top: 25,
     width: 7,
     height: 6,
@@ -815,9 +860,9 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "35",
-    left: 44,
+    left: 51,
     top: 25,
-    width: 7,
+    width: 7.5,
     height: 6,
     name: "fannytastical",
     src: "sigil.png",
@@ -826,7 +871,7 @@ Sure we have daki, wall scrolls, keychains. acrylics etc. but these things just 
   },
   {
     id: "36",
-    left: 51,
+    left: 58.5,
     top: 25,
     width: 7.5,
     height: 6,
@@ -839,21 +884,21 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
   },
   {
     id: "37",
-    left: 58.5,
-    top: 25,
+    left: 63,
+    top: 31,
     width: 7.5,
     height: 6,
     name: "MADSHYARTS",
     src: "sigil.png",
-    desc: `Bring out your inner nerd with a big selection of goods from professional artist, Madshy! MadshyArts has been doing illustration, character design, and original merchandise for the fandom for over five years, and her many different products are sure to bring a smile to your face. Madshy’s fun, storybook-style characters dance across a range of enamel pins, shirts, stickers, patches, handmade bow ties, plush creations and more. Her huge variety of premade “Nerd” badges are there to rep your unique species and fandoms in the cutest way possible! Be sure to stop by for a daily dose of “awwh!”`,
+    desc: `Bring out your inner nerd with a big selection of goods from professional artist, Madshy! MadshyArts has been doing illustration, character design, and original merchandise for the fandom for over five years, and her many different products are sure to bring a smile to your face. Madshy's fun, storybook-style characters dance across a range of enamel pins, shirts, stickers, patches, handmade bow ties, plush creations and more. Her huge variety of premade "Nerd" badges are there to rep your unique species and fandoms in the cutest way possible! Be sure to stop by for a daily dose of "awwh!"`,
     twitter: ""
   },
   {
     id: "38",
     left: 63,
-    top: 31,
+    top: 37,
     width: 7.5,
-    height: 6,
+    height: 6.5,
     name: "Mad Munchkin Art and Illustration",
     src: "sigil.png",
     desc: `Art Prints, Keychains, Pins, Badges Flags`,
@@ -861,8 +906,8 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
   },
   {
     id: "39",
-    left: 63,
-    top: 37,
+    left: 58.5,
+    top: 43.5,
     width: 7.5,
     height: 6.5,
     name: "LytletheLemur",
@@ -872,7 +917,7 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
   },
   {
     id: "40",
-    left: 58.5,
+    left: 51,
     top: 43.5,
     width: 7.5,
     height: 6.5,
@@ -883,9 +928,9 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
   },
   {
     id: "41",
-    left: 51,
+    left: 44,
     top: 43.5,
-    width: 7.5,
+    width: 7,
     height: 6.5,
     name: "Limeythecheeta",
     src: "sigil.png",
@@ -894,7 +939,7 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
   },
   {
     id: "42",
-    left: 44,
+    left: 37,
     top: 43.5,
     width: 7,
     height: 6.5,
@@ -905,13 +950,13 @@ I make stickers, prints, pinback buttons, enamel pins, acrylic standees, keychai
   },
   {
     id: "43",
-    left: 37,
+    left: 30,
     top: 43.5,
     width: 7,
     height: 6.5,
     name: "JustaSuta Art + Design",
     src: "sigil.png",
-    desc: `Cool, colorful, beautiful and slightly esoteric artwork by Suta JustaSuta — Illustrator, Artist, Animal Person. I draw any and all animals and it’s pretty sick — I do art for IDW’s My Little Pony Comics and maybe others ¯\_(ツ)_/¯ 
+    desc: `Cool, colorful, beautiful and slightly esoteric artwork by Suta JustaSuta — Illustrator, Artist, Animal Person. I draw any and all animals and it's pretty sick — I do art for IDW's My Little Pony Comics and maybe others ¯\_(ツ)_/¯ 
 
 Come on by for aesthetic prints, silly stickers, bookmarks, super ✨EXTRA✨ charms and maybe even some comics~ among other neat things that we may have. Doing my best — that's the dream.`,
     twitter: ""
