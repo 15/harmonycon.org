@@ -124,7 +124,7 @@ import Footer from "../components/Footer.astro";
     <div class="relative flex flex-col md:flex-row justify-center items-center">
       <div
         id="vendors-map"
-        class="ml-0 md:-ml-64 text-black bg-white flex flex-col lg:flex-row items-center md:-rotate-1 rounded w-[100%] md:w-[70%] lg:w-[58%] xl:w-[50%] 2xl:w-[43%] aspect-[0.829] h-auto animate-float-1"
+        class="ml-0 md:-ml-64 md:mb-0 mb-8 text-black bg-white flex flex-col lg:flex-row items-center md:-rotate-1 rounded w-[100%] md:w-[70%] lg:w-[58%] xl:w-[50%] 2xl:w-[43%] aspect-[0.829] h-auto md:animate-float-1"
         style={`filter: drop-shadow(0 5px 5px #000); background-image: url(${optimizedVendor.src}); background-size: contain; background-repeat: no-repeat;`}
       >
         {
@@ -140,22 +140,22 @@ import Footer from "../components/Footer.astro";
           ))
         }
       </div>
-      <div id="vendors-list" class="cursor-move md:absolute right-[0%] xl:right-[5%] 2xl:right-[10%] top-[-5%] 2xl:top-[-2%] w-fit p-4 font-sans font-medium text-black bg-white flex flex-col items-center md:rotate-3 rounded-xl animate-float-2"  style={`filter: drop-shadow(0 5px 5px #000); `}>
-        <div class="text-xl text-center mb-4 font-semibold">
+      <div id="vendors-list" class="cursor-move md:absolute right-[0%] xl:right-[5%] 2xl:right-[10%] top-[-5%] 2xl:top-[-2%] w-full md:w-fit p-4 md:p-4 font-sans font-medium text-black bg-white flex flex-col items-center md:rotate-3 rounded-xl md:animate-float-2"  style={`filter: drop-shadow(0 5px 5px #000); `}>
+        <div class="text-4xl md:text-xl text-center mb-8 mt-8 md:mt-0 md:mb-4 font-semibold">
           Click to see vendor info!
         </div>
-        <div class="columns-1">
+        <div class="columns-1 md:mb-0 mb-8">
           {vendors.map(({ id, name, desc }) => (
           <>
             <div id={`vendor-item-${id}`} class="flex flex-row gap-x-2 px-1 py-0 items-center hover:bg-black hover:text-white duration-300 cursor-pointer rounded">
-              <div class="w-8 text-sm text-right font-mono">{['1', '0'].includes(id) ? 'HC' : (+id) - 1}</div>
-              <Image src={pepper} alt={name} width={32} format="avif" class="w-4 h-4 rounded"/>
-              <div class="text-center text-sm whitespace-nowrap">
+              <div class="w-8 text-xl md:text-sm text-right font-mono">{['1', '0'].includes(id) ? 'HC' : (+id) - 1}</div>
+              <Image src={pepper} alt={name} width={32} format="avif" class="w-6 h-6 md:w-4 md:h-4 rounded"/>
+              <div class="text-center text-xl md:text-sm whitespace-nowrap">
                 {name}
               </div>
             </div>
             <dialog class="p-0 cursor-default max-h-[90vh] max-w-[90vw] bg-black" id={`dialog-${id}`}>
-              <div
+              {/* <div
                 class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
                 onclick={`document.getElementById('dialog-${id}').close()`}
               >
@@ -170,7 +170,7 @@ import Footer from "../components/Footer.astro";
                     d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
                     fill="currentColor"></path>
                 </svg>
-              </div>
+              </div> */}
               <div
                 class="overflow-y-auto overflow-x-hidden p-4 md:p-8 flex flex-col items-center justify-start w-full h-auto sm:w-[640px] md:w-[768px] lg:w-[1024px] 2xl:w-[1280px] max-h-[90vh]"
               >
