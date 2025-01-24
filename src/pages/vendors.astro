@@ -967,7 +967,7 @@ Come on by for aesthetic prints, silly stickers, bookmarks, super ✨EXTRA✨ ch
     vendors.forEach(({id, name }) => {
       // Table hover highlight
       if (document.getElementById(`regular-${id}`)) {
-        const tooltip = tippy(document.getElementById(`regular-${id === "0" ? id : +id+1}`), {
+        const tooltip = tippy(document.getElementById(`regular-${id}`), {
           content: `<span class='font-medium font-serif tracking-wide text-sm'>${name}</span>`,
           placement: "top",
           animation: "shift-away-extreme",
@@ -975,16 +975,16 @@ Come on by for aesthetic prints, silly stickers, bookmarks, super ✨EXTRA✨ ch
         });
 
         const tableElement = document.getElementById(`regular-${id}`);
-        const vendorDialog = document.getElementById(`dialog-${+id - 1}`);
+        const vendorDialog = document.getElementById(`dialog-${id}`);
         
-        tableElement?.addEventListener("mouseenter", () => highlight(id === '0' ? '0' : +id - 1));
+        tableElement?.addEventListener("mouseenter", () => highlight(id));
         tableElement?.addEventListener("mouseleave", () => {
-          const vendorItem = document.getElementById(`vendor-item-${id === '0' ? '0' : +id - 1}`);
+          const vendorItem = document.getElementById(`vendor-item-${id}`);
           if (vendorItem) {
             vendorItem.style.backgroundColor = '';
             vendorItem.style.color = '';
           }
-          const table = document.getElementById(`table-${id === '0' ? '0' : +id - 1}`);
+          const table = document.getElementById(`table-${id}`);
           if (table) {
             table.style.opacity = '0';
           }
