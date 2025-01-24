@@ -129,14 +129,14 @@ import Footer from "../components/Footer.astro";
       >
         {
           vendors.map(({ id, left, top, width, height }, i) => (
-              <Image id={`table-${id}`} format="avif" src={tables[id === "0" ? tables.length - 1 : parseInt(id) - 1]} width={800} alt={`Table #${i+1}`} class={`w-full absolute highlight-orange z-0 opacity-0 duration-300`}/> 
-              <div
-                id={`regular-${id}`}
-                style={`left: ${left}%; top: ${top}%; width: ${width}%; height: ${height}%;`}
-                class={`bg-transparent opacity-50 table z-50`}
-              >
-                
-              </div>
+            <Image id={`table-${id}`} format="avif" src={tables[id === "0" ? tables.length - 1 : parseInt(id) - 1]} width={800} alt={`Table #${i+1}`} class={`w-full absolute highlight-orange z-0 opacity-0 duration-300`}/> 
+            <div
+              id={`regular-${id}`}
+              style={`left: ${left}%; top: ${top}%; width: ${width}%; height: ${height}%;`}
+              class={`bg-transparent opacity-50 table z-50`}
+            >
+              
+            </div>
           ))
         }
     <!-- <div class="my-8 lg:mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 justify-center w-full xl:px-0 px-2 xl:w-5/6 2xl:w-4/5 gap-8 ">
@@ -967,7 +967,7 @@ Come on by for aesthetic prints, silly stickers, bookmarks, super ✨EXTRA✨ ch
     vendors.forEach(({id, name }) => {
       // Table hover highlight
       if (document.getElementById(`regular-${id}`)) {
-        const tooltip = tippy(document.getElementById(`regular-${id}`), {
+        const tooltip = tippy(document.getElementById(`regular-${id === "0" ? id : +id+1}`), {
           content: `<span class='font-medium font-serif tracking-wide text-sm'>${name}</span>`,
           placement: "top",
           animation: "shift-away-extreme",
@@ -977,14 +977,14 @@ Come on by for aesthetic prints, silly stickers, bookmarks, super ✨EXTRA✨ ch
         const tableElement = document.getElementById(`regular-${id}`);
         const vendorDialog = document.getElementById(`dialog-${id}`);
         
-        tableElement?.addEventListener("mouseenter", () => highlight(id));
+        tableElement?.addEventListener("mouseenter", () => highlight(id === '0' ? '0' : +id - 1));
         tableElement?.addEventListener("mouseleave", () => {
-          const vendorItem = document.getElementById(`vendor-item-${id}`);
+          const vendorItem = document.getElementById(`vendor-item-${id === '0' ? '0' : +id - 1}`);
           if (vendorItem) {
             vendorItem.style.backgroundColor = '';
             vendorItem.style.color = '';
           }
-          const table = document.getElementById(`table-${id}`);
+          const table = document.getElementById(`table-${id === '0' ? '0' : +id - 1}`);
           if (table) {
             table.style.opacity = '0';
           }
