@@ -150,7 +150,7 @@ import Footer from "../components/Footer.astro";
             <div id={`vendor-item-${id}`} class="flex flex-row gap-x-2 px-1 py-0 items-center hover:bg-black hover:text-white duration-300 cursor-pointer rounded">
               <div class="w-8 text-xl md:text-sm text-right font-mono">{['1', '0'].includes(id) ? 'HC' : (+id) - 1}</div>
               <Image src={pepper} alt={name} width={32} format="avif" class="w-6 h-6 md:w-4 md:h-4 rounded"/>
-              <div class="text-center text-xl md:text-sm whitespace-nowrap">
+              <div class="text-center text-base md:text-sm whitespace-nowrap">
                 {name}
               </div>
             </div>
