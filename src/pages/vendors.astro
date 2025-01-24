@@ -172,13 +172,30 @@ import Footer from "../components/Footer.astro";
       <div id="vendors-list" class="cursor-move absolute right-[10%] top-0 w-fit p-4 font-sans font-medium text-black bg-white flex flex-col lg:flex-row items-center rotate-3 rounded-xl"  style={`filter: drop-shadow(0 5px 5px #000); `}>
         <div class="columns-1">
           {vendors.map(({ id, name, left, top, width, height }) => (
-          <div id={`vendor-item-${id}`} class="flex flex-row gap-x-2 px-1 py-0 items-center hover:bg-black hover:text-white duration-300 cursor-move rounded">
-            <div class="w-8 text-sm text-right font-mono">{['69', '1', '0'].includes(id) ? 'HC' : (+id) - 1}</div>
-            <Image src={pepper} alt={name} width={32} format="avif" class="w-4 h-4 rounded"/>
-            <div class="text-center text-sm whitespace-nowrap">
-              {name}
+          <>
+            <div id={`vendor-item-${id}`} class="flex flex-row gap-x-2 px-1 py-0 items-center hover:bg-black hover:text-white duration-300 cursor-pointer rounded">
+              <div class="w-8 text-sm text-right font-mono">{['69', '1', '0'].includes(id) ? 'HC' : (+id) - 1}</div>
+              <Image src={pepper} alt={name} width={32} format="avif" class="w-4 h-4 rounded"/>
+              <div class="text-center text-sm whitespace-nowrap">
+                {name}
+              </div>
             </div>
-          </div>
+            <dialog id={`dialog-${id}`} class="p-4 rounded-xl">
+              <div class="relative flex flex-col gap-y-4">
+                <div class="flex justify-between items-center">
+                  <div class="text-2xl font-bold text-white">{name}</div>
+                  <button class="text-white hover:bg-red-200 rounded-full p-1" onclick={`document.getElementById('dialog-${id}').close()`}>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="text-white">
+                  Table {['69', '1', '0'].includes(id) ? 'HC' : (+id) - 1}
+                </div>
+              </div>
+            </dialog>
+          </>
           ))}
         </div>
       </div>
@@ -352,6 +369,49 @@ import Footer from "../components/Footer.astro";
         translate: 0px 0px;
       }
     }
+
+    dialog {
+      font-family: Poppins, Arial, sans-serif;
+      @apply rounded-xl;
+      filter: drop-shadow(0 50px 50px #000);
+      outline: none;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      max-height: 90vh;
+      max-width: 90vw;
+    }
+
+    dialog > div {
+      max-height: calc(90vh - 2rem);
+      overflow-y: auto;
+      scrollbar-gutter: stable;
+    }
+
+    dialog[open] {
+      animation: fade 0.3s ease-in-out normal;
+    }
+
+    dialog::backdrop {
+      background-image: linear-gradient(45deg, #000, #000);
+      opacity: 0.5;
+      backdrop-filter: blur(5px);
+    }
+
+    dialog:focus {
+      outline: none;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </Layout>
 
@@ -476,6 +536,32 @@ import Footer from "../components/Footer.astro";
         document.addEventListener('mouseup', onMouseUp);
       });
     }
+
+    // Setup vendor modals
+    vendors.forEach(({id}) => {
+      const vendorDialog = document.getElementById(`dialog-${id}`);
+      const vendorItem = document.getElementById(`vendor-item-${id}`);
+      if (vendorDialog instanceof HTMLDialogElement && vendorItem) {
+        vendorItem.addEventListener("click", () => {
+          vendorDialog.showModal();
+        });
+        vendorDialog.addEventListener("click", (e) => {
+          if (e.target === vendorDialog) {
+            vendorDialog.close();
+          }
+        });
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        document.querySelectorAll("dialog[open]").forEach((dialog) => {
+          if (dialog instanceof HTMLDialogElement) {
+            dialog.close();
+          }
+        });
+      }
+    });
   };
 
   trigger();
