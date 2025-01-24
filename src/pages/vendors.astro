@@ -975,7 +975,7 @@ Come on by for aesthetic prints, silly stickers, bookmarks, super ✨EXTRA✨ ch
         });
 
         const tableElement = document.getElementById(`regular-${id}`);
-        const vendorDialog = document.getElementById(`dialog-${id}`);
+        const vendorDialog = document.getElementById(`dialog-${+id - 1}`);
         
         tableElement?.addEventListener("mouseenter", () => highlight(id === '0' ? '0' : +id - 1));
         tableElement?.addEventListener("mouseleave", () => {
