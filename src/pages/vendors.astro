@@ -121,10 +121,10 @@ import Footer from "../components/Footer.astro";
 
 <Layout title="HarmonyCon 2025 | Vendors">
   <div id="bg" class="flex flex-col pt-8 md:pt-16 gap-y-8 px-4 md:px-0 overflow-hidden">
-    <div class="relative flex flex-row justify-center items-center">
+    <div class="relative flex flex-col md:flex-row justify-center items-center">
       <div
         id="vendors-map"
-        class="-ml-64 text-black bg-white flex flex-col lg:flex-row items-center md:-rotate-1 rounded w-[100%] md:w-[70%] lg:w-[58%] xl:w-[50%] 2xl:w-[43%] aspect-[0.829] h-auto animate-float-1"
+        class="ml-0 md:-ml-64 text-black bg-white flex flex-col lg:flex-row items-center md:-rotate-1 rounded w-[100%] md:w-[70%] lg:w-[58%] xl:w-[50%] 2xl:w-[43%] aspect-[0.829] h-auto animate-float-1"
         style={`filter: drop-shadow(0 5px 5px #000); background-image: url(${optimizedVendor.src}); background-size: contain; background-repeat: no-repeat;`}
       >
         {
@@ -140,7 +140,7 @@ import Footer from "../components/Footer.astro";
           ))
         }
       </div>
-      <div id="vendors-list" class="cursor-move absolute right-[0%] xl:right-[5%] 2xl:right-[10%] top-[-5%] 2xl:top-[-2%] w-fit p-4 font-sans font-medium text-black bg-white flex flex-col items-center md:rotate-3 rounded-xl animate-float-2"  style={`filter: drop-shadow(0 5px 5px #000); `}>
+      <div id="vendors-list" class="cursor-move md:absolute right-[0%] xl:right-[5%] 2xl:right-[10%] top-[-5%] 2xl:top-[-2%] w-fit p-4 font-sans font-medium text-black bg-white flex flex-col items-center md:rotate-3 rounded-xl animate-float-2"  style={`filter: drop-shadow(0 5px 5px #000); `}>
         <div class="text-xl text-center mb-4 font-semibold">
           Click to see vendor info!
         </div>
