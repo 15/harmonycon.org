@@ -18,7 +18,7 @@ export default [
     height: 6,
     name: "15",
     src: "sigil.png",
-    desc: `idk`,
+    desc: `This table had no name on it so I took it`,
     twitter: ""
   },
   {
@@ -27,9 +27,9 @@ export default [
     top: 63.5,
     width: 8,
     height: 6,
-    name: "Tony",
+    name: "Tony Fleecs",
     src: "sigil.png",
-    desc: ``,
+    desc: `Tony Fleecs is a prolific and critically acclaimed comic book creator and TV writer. His comics have sold millions of copies in the United States and have been translated and reprinted all over the world. Tony's creator owned books include <i>STRAY DOGS</i> (2021,) <i>FERAL</i> (2024,) <i>UNCANNY VALLEY</i> (2024,) <i>LOCAL MAN</i> (2023) and <i>TIME SHOPPER</i> (2022.) His work has been nominated for multiple Eisner Awards and the Ringo Award. Tony has worked for every major U.S. comics publisher. You've seen his name on some of your favorite comic book titles like <i>Star Wars</i>, <i>Rick & Morty</i>, <i>Avengers</i>, <i>Spider-Man</i>, <i>Wolverine</i>, <i>Batman</i>, <i>TMNT</i>, <i>Transformers</i>, <i>Army of Darkness</i> and a literal TON of <i>My Little Pony</i>. He also wrote on the wildly popular Netflix show <i>My Little Pony: Make Your Mark</i>.`,
     twitter: ""
   },
   {
@@ -38,9 +38,9 @@ export default [
     top: 57.5,
     width: 8,
     height: 6,
-    name: "Jeremy",
+    name: "Jeremy Whitley",
     src: "sigil.png",
-    desc: ``,
+    desc: `Jeremy Whitley is a writer from Durham, NC. He is the writer/creator of <i>The Dog Knight</i>, <i>Princeless</i>, <i>The School for Extraterrestrial Girls</i>, and <i>Navigating with You</i>. He is also the writer of over fifty issues of <i>My Little Pony</i> comics including <i>Nightmare Knights</i>, <i>Siege of the Crystal Empire</i>, and Season 10. He was once bitten by a radioactive pegasus.`,
     twitter: ""
   },
   {
@@ -95,7 +95,7 @@ export default [
     height: 6,
     name: "Fiaura The Tank Girl",
     src: "sigil.png",
-    desc: `Fiaura is here with all your Fallout Equestria needs. Do you need Bottles? Glassware? Books? Prints? Pins? Scarves perhaps? Well if it is from the Wasteland, Fiaura has it! On top of that, she is bringing a whole line of 3D prints and quite possibly will have live painting and 3D printing available to anyone who asks.`,
+    desc: `Fiaura is here with all your <i>Fallout Equestria</i> needs. Do you need Bottles? Glassware? Books? Prints? Pins? Scarves perhaps? Well if it is from the Wasteland, Fiaura has it! On top of that, she is bringing a whole line of 3D prints and quite possibly will have live painting and 3D printing available to anyone who asks.`,
     twitter: ""
   },
   {

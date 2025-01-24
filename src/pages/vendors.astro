@@ -188,8 +188,8 @@ import Footer from "../components/Footer.astro";
                   <div class="font-sans whitespace-nowrap py-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center tracking-wide font-semibold uppercase text-white">
                     {name}
                   </div>
-                  <div class="font-sans max-w-3xl text-sm sm:text-base md:text-lg 2xl:text-lg leading-snug sm:leading-normal text-white text-left">
-                    {desc}
+                  <div class="font-sans max-w-3xl text-sm sm:text-base md:text-lg 2xl:text-lg leading-snug sm:leading-normal text-white text-left" set:html={desc}>
+
                   </div>
                 </div>
               </div>
