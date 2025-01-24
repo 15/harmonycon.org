@@ -41,62 +41,62 @@ import Footer from "../components/Footer.astro";
     class="cursor-default font-serif uppercase text-center font-semibold text-6xl text-white z-10"
     style="text-shadow: 3px 3px 1px #000;"
     >
-        Sponsors
+        Our Sponsors
     </div>
     <div class="w-full xl:w-[80rem] mx-auto flex flex-col glass py-8 px-4 md:px-8 md:py-8 mb-16">
 
       <div class="mx-auto flex flex-col gap-y-4 mb-16">
-        <div class="italic font-serif uppercase text-center text-5xl text-white" 
+        <div class="italic font-serif uppercase text-center text-5xl text-yellow-400" 
         style="text-shadow: 3px 3px 1px #000;">
           The Book of Harmony
         </div>
-        <div class="font-sans text-center text-4xl text-white" style="text-shadow: 2px 2px 1px #000;">
+        <div class="font-sans text-center text-4xl text-yellow-400 font-semibold" style="text-shadow: 2px 2px 1px #000;">
           {sponsors["The Book of Harmony Sponsor Membership"].map((x, i) => (<span>{x}{i < sponsors["The Book of Harmony Sponsor Membership"].length - 1 ? ', ' : ''}</span>))}
         </div>
       </div>
       <!-- <div class="w-3/4 xl:w-[60rem] mx-auto border-t border-[3px] border-white/70"></div> -->
       <div class="mx-auto flex flex-col gap-y-4 mb-12">
-        <div class="italic font-serif uppercase text-center text-4xl text-white" 
-        style="text-shadow: 3px 3px 1px #000;">
+        <div class="italic font-serif uppercase text-center text-4xl text-blue-600" 
+        style="text-shadow: 2px 2px 1px #000;">
           A Gentlecolt's Guide to Love and Mares
         </div>
-        <div class="font-sans text-center text-3xl text-white" style="text-shadow: 2px 2px 1px #000;">
+        <div class="font-sans text-center text-3xl text-blue-600 font-semibold" style="text-shadow: 1px 1px 1px #000;">
           {sponsors["A Gentlecolt's Guide to Love and Mares"].map((x, i) => (<span>{x}{i < sponsors["A Gentlecolt's Guide to Love and Mares"].length - 1 ? ', ' : ''}</span>))}
         </div>
       </div>
       <div class="mx-auto flex flex-col gap-y-4 mb-12">
-        <div class="italic font-serif uppercase text-center text-3xl text-white" 
-        style="text-shadow: 3px 3px 1px #000;">
+        <div class="italic font-serif uppercase text-center text-3xl text-green-600" 
+        style="text-shadow: 2px 2px 1px #000;">
           Into the Everfree
         </div>
-        <div class="font-sans text-center text-2xl text-white" style="text-shadow: 2px 2px 1px #000;">
+        <div class="font-sans text-center text-2xl text-green-600 font-semibold" style="text-shadow: 1px 1px 1px #000;">
           {sponsors["Into the Everfree"].map((x, i) => (<span>{x}{i < sponsors["Into the Everfree"].length - 1 ? ', ' : ''}</span>))}
         </div>
       </div>
       <div class="mx-auto flex flex-col gap-y-4 mb-12">
-        <div class="italic font-serif uppercase text-center text-2xl text-white" 
-        style="text-shadow: 3px 3px 1px #000;">
+        <div class="italic font-serif uppercase text-center text-2xl text-red-400" 
+        style="text-shadow: 2px 2px 1px #000;">
           The Prohoofers
         </div>
-        <div class="font-sans text-center text-xl text-white" style="text-shadow: 2px 2px 1px #000;">
+        <div class="font-sans text-center text-xl text-red-400 font-semibold" style="text-shadow: 1px 1px 1px #000;">
           {sponsors["The Prohoofers Sponsor Membership"].map((x, i) => (<span>{x}{i < sponsors["The Prohoofers Sponsor Membership"].length - 1 ? ', ' : ''}</span>))}
         </div>
       </div>
       <div class="mx-auto flex flex-col gap-y-4 mb-12">
-        <div class="italic font-serif uppercase text-center text-2xl text-white" 
-        style="text-shadow: 3px 3px 1px #000;">
+        <div class="italic font-serif uppercase text-center text-2xl text-emerald-300" 
+        style="text-shadow: 2px 2px 1px #000;">
           My Fair Lyra
         </div>
-        <div class="font-sans text-center text-xl text-white" style="text-shadow: 2px 2px 1px #000;">
+        <div class="font-sans text-center text-xl text-emerald-300 font-semibold" style="text-shadow: 1px 1px 1px #000;">
           {sponsors["My Fair Lyra Sponsor Membership"].map((x, i) => (<span>{x}{i < sponsors["My Fair Lyra Sponsor Membership"].length - 1 ? ', ' : ''}</span>))}
         </div>
       </div>
       <div class="mx-auto flex flex-col gap-y-4 mb-0">
         <div class="italic font-serif uppercase text-center text-2xl text-white" 
-        style="text-shadow: 3px 3px 1px #000;">
+        style="text-shadow: 2px 2px 1px #000;">
           Marey Poppins
         </div>
-        <div class="font-sans text-center text-lg text-white" style="text-shadow: 2px 2px 1px #000;">
+        <div class="font-sans text-center text-lg text-white font-semibold" style="text-shadow: 1px 1px 1px #000;">
           {sponsors["Marey Poppins Sponsor Membership"].map((x, i) => (<span>{x}{i < sponsors["Marey Poppins Sponsor Membership"].length - 1 ? ', ' : ''}</span>))}
         </div>
       </div>
@@ -271,7 +271,7 @@ import Footer from "../components/Footer.astro";
 
     .glass {
         /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.5);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
