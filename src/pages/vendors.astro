@@ -416,8 +416,499 @@ import Footer from "../components/Footer.astro";
 </Layout>
 
 
+<script>
+  import tippy from "tippy.js";
+  import "tippy.js/dist/tippy.css";
+  import "tippy.js/animations/shift-away-extreme.css";
 
-<script define:vars={{ vendors }}>
+  const vendors = [
+  {
+    id: "0",
+    left: 12,
+    top: 72,
+    width: 8,
+    height: 17,
+    name: "Con Store",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "1",
+    left: 27.5,
+    top: 81,
+    width: 6, 
+    height: 6,
+    name: "Tony",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "2",
+    left: 12,
+    top: 63.5,
+    width: 8,
+    height: 6,
+    name: "Jeremy",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "3",
+    left: 12,
+    top: 57.5,
+    width: 8,
+    height: 6,
+    name: "LBRCloud",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "4",
+    left: 12,
+    top: 51.5,
+    width: 8,
+    height: 6,
+    name: "Saphy Moon",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "5",
+    left: 12,
+    top: 45.5,
+    width: 8,
+    height: 6,
+    name: "Jane Gumball",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "6",
+    left: 12,
+    top: 39.5,
+    width: 8,
+    height: 6,
+    name: "Halley & Sweetcreamarts",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "7",
+    left: 12,
+    top: 33.5,
+    width: 8,
+    height: 6,
+    name: "Fiaura The Tank Girl",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "8",
+    left: 12,
+    top: 27.5,
+    width: 8,
+    height: 6,
+    name: "Rimi Plushies",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "9",
+    left: 12,
+    top: 21.5,
+    width: 8,
+    height: 6,
+    name: "Techycutie",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "10",
+    left: 12,
+    top: 13.5,
+    width: 11,
+    height: 8,
+    name: "Bluefeathercat",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "11",
+    left: 23,
+    top: 13.5,
+    width: 8,
+    height: 6,
+    name: "Sky Railroad",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "12",
+    left: 31,
+    top: 13.5,
+    width: 7.5,
+    height: 6,
+    name: "My Little Ties",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "13",
+    left: 38.5,
+    top: 13.5,
+    width: 7.5,
+    height: 6,
+    name: "Gobiraptor",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "14",
+    left: 46,
+    top: 13.5,
+    width: 7,
+    height: 6,
+    name: "Moozua Art",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "15",
+    left: 53,
+    top: 13.5,
+    width: 7,
+    height: 6,
+    name: "BefishProductions",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "16",
+    left: 60,
+    top: 13.5,
+    width: 7.5,
+    height: 6,
+    name: "Rabbitasaur Creatives",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "17",
+    left: 67.5,
+    top: 13.5,
+    width: 7,
+    height: 6,
+    name: "Choco Pony Flags and Swag",
+    src: "sigil.png",
+    desc: `Flags, shirts, badges, lanyards, and more Choco Pony has it all. Stop by for all sweets and treats and pony needs. Perfect holiday gifts.`,
+    twitter: ""
+  },
+  {
+    id: "18",
+    left: 74.5,
+    top: 13.5,
+    width: 9,
+    height: 10,
+    name: "Peruser's Plushies",
+    src: "sigil.png",
+    desc: "",
+    twitter: `I am a plushmaker who has been putting smiles on ponies' faces since 2013! I make and sell all manner and sizes of cuddly ponies crafted entirely by hand using my own patterns.`
+  },
+  {
+    id: "19",
+    left: 74.5,
+    top: 23.5,
+    width: 9,
+    height: 6,
+    name: "The Haywaiian Horse",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "20",
+    left: 74.5,
+    top: 29.5,
+    width: 9,
+    height: 6,
+    name: "Ponies by RubioWolf",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "21",
+    left: 74.5,
+    top: 35.5,
+    width: 9,
+    height: 6,
+    name: "The Rainbow Table",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "22",
+    left: 74.5,
+    top: 41.5,
+    width: 9,
+    height: 6,
+    name: "Way2Weird Productions",
+    src: "sigil.png",
+    desc: `I produce a variety of products based on MLP, my own "After the Fact Videos", and products that encourage creativity. These include journals, quill pens, hackey sacks, keychains, flags, charms, pendants, spinner rings, and a variety of buttons.`,
+    twitter: ""
+  },
+  {
+    id: "23",
+    left: 74.5,
+    top: 47.5,
+    width: 9,
+    height: 6,
+    name: "Black Dog Enterprises",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "24",
+    left: 71.5,
+    top: 53.5,
+    width: 12,
+    height: 8,
+    name: "Outlaw Works",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "25",
+    left: 64.5,
+    top: 53.5,
+    width: 7,
+    height: 8,
+    name: "1st Awesome Platoon",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "26",
+    left: 57.5,
+    top: 53.5,
+    width: 7,
+    height: 8,
+    name: "Bakufoon Creations",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "27",
+    left: 50,
+    top: 53.5,
+    width: 7.5,
+    height: 8,
+    name: "ShadowKrafts",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "28",
+    left: 43,
+    top: 53.5,
+    width: 7,
+    height: 8,
+    name: "Waffle Wishes",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "29",
+    left: 35.5,
+    top: 53.5,
+    width: 7.5,
+    height: 8,
+    name: "KuriNpony",
+    src: "sigil.png",
+    desc: `I am a plush maker and an artist. I will be bringing my handmade plush to the con and other pony products that I involved in. All of my products are sold only by me, include handmade products (plush, figures, artwork) and other products (pins, buttons, charms, prints, tote bags.)`,
+    twitter: ""
+  },
+  {
+    id: "30",
+    left: 24.5,
+    top: 37,
+    width: 7.5,
+    height: 6.5,
+    name: "Heavenly Blue",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "31",
+    left: 24.5,
+    top: 30.5,
+    width: 7.5,
+    height: 6.5,
+    name: "Shibabitz Art",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "32",
+    left: 29,
+    top: 25,
+    width: 8,
+    height: 6,
+    name: "Glacier and TwiPie!",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "33",
+    left: 37,
+    top: 25,
+    width: 7,
+    height: 6,
+    name: "Hibiscus Stitch",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "34",
+    left: 44,
+    top: 25,
+    width: 7,
+    height: 6,
+    name: "fannytastical",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "35",
+    left: 51,
+    top: 25,
+    width: 7.5,
+    height: 6,
+    name: "Art by Oomles",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "36",
+    left: 58.5,
+    top: 25,
+    width: 7.5,
+    height: 6,
+    name: "MADSHYARTS",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "37",
+    left: 63,
+    top: 31,
+    width: 7.5,
+    height: 6,
+    name: "Mad Munchkin Art and Illustration",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "38",
+    left: 63,
+    top: 37,
+    width: 7.5,
+    height: 6.5,
+    name: "LytletheLemur",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "39",
+    left: 58.5,
+    top: 43.5,
+    width: 7.5,
+    height: 6.5,
+    name: "Orkid",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "40",
+    left: 51,
+    top: 43.5,
+    width: 7.5,
+    height: 6.5,
+    name: "Limeythecheeta",
+    src: "sigil.png",
+    desc: `Pony based collars, blankets, original plushies, and other accessories and clothing!`,
+    twitter: ""
+  },
+  {
+    id: "41",
+    left: 44,
+    top: 43.5,
+    width: 7,
+    height: 6.5,
+    name: "Dawnfire's Art",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "42",
+    left: 37,
+    top: 43.5,
+    width: 7,
+    height: 6.5,
+    name: "JustaSuta Art + Design",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  },
+  {
+    id: "43",
+    left: 29,
+    top: 43.5,
+    width: 8,
+    height: 6.5,
+    name: "SigilPonies",
+    src: "sigil.png",
+    desc: "",
+    twitter: ""
+  }
+];
+
+
   const trigger = () => {
     const ad = document.getElementById("ad");
     if (window.innerWidth <= 1280 && ad) {
@@ -463,9 +954,16 @@ import Footer from "../components/Footer.astro";
       activeID = id;
     };
 
-    vendors.forEach(({id}) => {
+    vendors.forEach(({id, name }) => {
       // Table hover highlight
       if (document.getElementById(`regular-${id}`)) {
+        const tooltip = tippy(document.getElementById(`regular-${id}`), {
+          content: `<span class='font-medium font-serif tracking-wide text-sm'>${name}</span>`,
+          placement: "top",
+          animation: "shift-away-extreme",
+          allowHTML: true,
+        });
+
         const tableElement = document.getElementById(`regular-${id}`);
         const vendorDialog = document.getElementById(`dialog-${id}`);
         
