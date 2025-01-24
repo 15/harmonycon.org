@@ -997,13 +997,20 @@ Come on by for aesthetic prints, silly stickers, bookmarks, super ✨EXTRA✨ ch
             vendorDialog.showModal();
           });
         }
+
+        // Vendor list item hover highlight
+        const vendorItem = document.getElementById(`vendor-item-${id}`);
+        if (vendorItem) {
+          vendorItem.addEventListener("mouseenter", () => {
+            highlight(id)
+            tooltip.show();
+          });
+          vendorItem.addEventListener("mouseleave", () => {
+            tooltip.hide();
+          });
+        }
       }
       
-      // Vendor list item hover highlight
-      const vendorItem = document.getElementById(`vendor-item-${id}`);
-      if (vendorItem) {
-        vendorItem.addEventListener("mouseenter", () => highlight(id));
-      }
     });
 
     // Setup vendor modals first
