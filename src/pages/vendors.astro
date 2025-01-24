@@ -172,7 +172,7 @@ import Footer from "../components/Footer.astro";
                 </svg>
               </div> */}
               <div
-                class="overflow-y-auto overflow-x-hidden p-4 md:p-8 flex flex-col items-center justify-start w-full h-auto sm:w-[640px] md:w-[768px] lg:w-[1024px] 2xl:w-[1280px] max-h-[90vh]"
+                class="overflow-y-auto overflow-x-hidden p-4 md:p-8 flex flex-col items-center justify-center h-auto"
               >
                 {/* <div class="w-full max-w-xl">
                   <Image
@@ -185,7 +185,7 @@ import Footer from "../components/Footer.astro";
                   />
                 </div> */}
                 <div class="flex flex-col w-full items-center">
-                  <div class="font-sans whitespace-nowrap py-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center tracking-wide font-semibold uppercase text-white">
+                  <div class="font-sans py-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-center tracking-wide font-semibold uppercase text-white">
                     {name}
                   </div>
                   <div class="font-sans max-w-3xl text-sm sm:text-base md:text-lg 2xl:text-lg leading-snug sm:leading-normal text-white text-left" set:html={desc}>
@@ -1041,6 +1041,9 @@ Come on by for aesthetic prints, silly stickers, bookmarks, super ✨EXTRA✨ ch
           vendorItem.addEventListener("mouseenter", () => {
             highlight(id)
             tooltip.show();
+          });
+          vendorItem.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: 'smooth'});
           });
           vendorItem.addEventListener("mouseleave", () => {
             tooltip.hide();
