@@ -18,7 +18,7 @@ export default [
     height: 6,
     name: "15",
     src: "sigil.png",
-    desc: `Find me and say the magic words and win a prize! :3`,
+    desc: `Find me and say the magic words to win a prize! :3`,
     twitter: ""
   },
   {
