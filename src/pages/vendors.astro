@@ -129,13 +129,13 @@ import Footer from "../components/Footer.astro";
       >
         {
           vendors.map(({ id, left, top, width, height }, i) => (
-            <Image id={`table-${id}`} format="avif" src={tables[id === "0" ? tables.length - 1 : parseInt(id) - 1]} width={800} alt={`Table #${i+1}`} class={`w-full absolute highlight-orange z-0 opacity-0 duration-300`}/> 
+            <Image id={`table-${id}`} format="avif" src={tables[id === "0" ? tables.length - 1 : parseInt(id) - 1]} width={800} alt={`Table #${i+1}`} class={`w-full absolute highlight-orange z-0 opacity-0 duration-300`}/>
             <div
               id={`regular-${id}`}
               style={`left: ${left}%; top: ${top}%; width: ${width}%; height: ${height}%;`}
               class={`bg-transparent opacity-50 table z-50`}
             >
-              
+
             </div>
           ))
         }
@@ -416,7 +416,7 @@ import Footer from "../components/Footer.astro";
     dialog .text-stone-600 {
       color: white;
     }
-    
+
     dialog .hover\:bg-red-200:hover {
       background-color: rgba(255, 255, 255, 0.1);
     }
@@ -471,11 +471,11 @@ import Footer from "../components/Footer.astro";
     id: "1",
     left: 27.5,
     top: 81,
-    width: 6, 
+    width: 6,
     height: 6,
-    name: "15",
+    name: "Vendor Hall Ops",
     src: "sigil.png",
-    desc: `Find me and say the magic words and win a prize! :3`,
+    desc: `HarmonyCon vendor hall operations table`,
     twitter: ""
   },
   {
@@ -1013,7 +1013,7 @@ Come on by for aesthetic prints, silly stickers, bookmarks, super ✨EXTRA✨ ch
 
         const tableElement = document.getElementById(`regular-${id}`);
         const vendorDialog = document.getElementById(`dialog-${id}`);
-        
+
         tableElement?.addEventListener("mouseenter", () => highlight(id));
         tableElement?.addEventListener("mouseleave", () => {
           const vendorItem = document.getElementById(`vendor-item-${id}`);
@@ -1027,7 +1027,7 @@ Come on by for aesthetic prints, silly stickers, bookmarks, super ✨EXTRA✨ ch
           }
           activeID = '';
         });
-        
+
         // Add click handler for table
         if (vendorDialog instanceof HTMLDialogElement) {
           tableElement?.addEventListener("click", () => {
@@ -1050,7 +1050,7 @@ Come on by for aesthetic prints, silly stickers, bookmarks, super ✨EXTRA✨ ch
           });
         }
       }
-      
+
     });
 
     // Setup vendor modals first

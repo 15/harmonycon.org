@@ -14,11 +14,11 @@ export default [
     id: "1",
     left: 27.5,
     top: 81,
-    width: 6, 
+    width: 6,
     height: 6,
-    name: "15",
+    name: "Vendor Hall Ops",
     src: "sigil.png",
-    desc: `Find me and say the magic words to win a prize! :3`,
+    desc: `HarmonyCon vendor hall operations table`,
     twitter: ""
   },
   {
