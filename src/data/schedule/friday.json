@@ -186,6 +186,16 @@
     {
         "room": "Mane Events",
         "isConcert": true,
+        "startDate": "2025-01-31T22:15:00",
+        "day": "friday",
+        "timeslots": 1,
+        "host": "HarmonyCon",
+        "title": "Step2Harmony",
+        "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+    },
+    {
+        "room": "Mane Events",
+        "isConcert": true,
         "startDate": "2025-01-31T22:30:00",
         "day": "friday",
         "timeslots": 3,

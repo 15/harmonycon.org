@@ -242,7 +242,7 @@
       "day": "saturday",
       "timeslots": 2,
       "host": "HarmonyCon",
-      "title": "DBPony",
+      "title": "dBPony",
       "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
   },
   {
@@ -262,7 +262,7 @@
       "day": "saturday",
       "timeslots": 3,
       "host": "HarmonyCon",
-      "title": "Color By Number",
+      "title": "Color by Number",
       "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
   },
   {
