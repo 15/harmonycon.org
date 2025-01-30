@@ -402,7 +402,7 @@
         "startDate": "2025-01-31T13:00:00",
         "timeslots": 11,
         "host": "Winds Requiem",
-        "description": "Race across different realms within different Nintendo Games Univurses, playing as and against your favorite Nintendo characters!<br/><a target='_blank' href='https://challonge.com/HCKart2025' class='flex justify-center text-3xl md:text-4xl xl:text-5xl mt-8 font-semibold whitespace-nowrap text-yellow-400 hover:underline underline-offset-4'>🏎️ CHALLONGE BRACKET (w/PRIZE for winner!)🏎️</a>"
+        "description": "Race across different realms within different Nintendo Games Univurses, playing as and against your favorite Nintendo characters!<br/><a target='_blank' href='https://challonge.com/HCKart2025' class='flex justify-center text-3xl md:text-4xl xl:text-5xl mt-8 font-semibold text-yellow-400 hover:underline underline-offset-4'>🏎️ CHALLONGE BRACKET (w/PRIZE for winner!)🏎️</a>"
     },
     {
         "day": "friday",
@@ -429,7 +429,7 @@
         "startDate": "2025-01-31T16:00:00",
         "timeslots": 4,
         "host": "Winds Requiem",
-        "description": "A traditional 2d fighter, one on one with your favorite Street Fighter Characters!<br/><a target='_blank' href='https://challonge.com/HCSF52025' class='flex justify-center text-3xl md:text-4xl xl:text-5xl mt-8 font-semibold whitespace-nowrap text-yellow-400 hover:underline underline-offset-4'>🥊 CHALLONGE BRACKET 🥊</a>"
+        "description": "A traditional 2d fighter, one on one with your favorite Street Fighter Characters!<br/><a target='_blank' href='https://challonge.com/HCSF52025' class='flex justify-center text-3xl md:text-4xl xl:text-5xl mt-8 font-semibold text-yellow-400 hover:underline underline-offset-4'>🥊 CHALLONGE BRACKET 🥊</a>"
     },
     {
         "day": "friday",
@@ -492,7 +492,7 @@
         "startDate": "2025-01-31T22:00:00",
         "timeslots": 6,
         "host": "Winds Requiem",
-        "description": "The N64 Classic! A multiplayer FPS fun time on 4 player split screen!<br/><a target='_blank' href='https://challonge.com/HCGE642025' class='flex justify-center text-3xl md:text-4xl xl:text-5xl mt-8 font-semibold whitespace-nowrap text-yellow-400 hover:underline underline-offset-4'>🔫 CHALLONGE BRACKET 🔫</a>"
+        "description": "The N64 Classic! A multiplayer FPS fun time on 4 player split screen!<br/><a target='_blank' href='https://challonge.com/HCGE642025' class='flex justify-center text-3xl md:text-4xl xl:text-5xl mt-8 font-semibold text-yellow-400 hover:underline underline-offset-4'>🔫 CHALLONGE BRACKET 🔫</a>"
     },
     {
         "day": "friday",

@@ -537,7 +537,7 @@
         "startDate": "2025-02-01T10:00:00",
         "timeslots": 8,
         "host": "Winds Requiem",
-        "description": "FPS team based shooter with objectives in the Halo universe.<br/><a target='_blank' href='https://challonge.com/HCHalo32025' class='flex justify-center text-3xl md:text-4xl xl:text-5xl mt-8 font-semibold whitespace-nowrap text-yellow-400 hover:underline underline-offset-4'>👾 CHALLONGE BRACKET 👾</a>"
+        "description": "FPS team based shooter with objectives in the Halo universe.<br/><a target='_blank' href='https://challonge.com/HCHalo32025' class='flex justify-center text-3xl md:text-4xl xl:text-5xl mt-8 font-semibold text-yellow-400 hover:underline underline-offset-4'>👾 CHALLONGE BRACKET 👾</a>"
     },
     {
         "day": "saturday",
@@ -619,7 +619,7 @@
         "startDate": "2025-02-01T21:00:00",
         "timeslots": 8,
         "host": "Winds Requiem",
-        "description": "Within the brutal world of mortal kombat, fight to the death in this 1 on 1 fighting game!<br/><a target='_blank' href='https://challonge.com/HCMK112025' class='flex justify-center text-3xl md:text-4xl xl:text-5xl mt-8 font-semibold whitespace-nowrap text-yellow-400 hover:underline underline-offset-4'>🦂 CHALLONGE BRACKET 🦂</a>"
+        "description": "Within the brutal world of mortal kombat, fight to the death in this 1 on 1 fighting game!<br/><a target='_blank' href='https://challonge.com/HCMK112025' class='flex justify-center text-3xl md:text-4xl xl:text-5xl mt-8 font-semibold text-yellow-400 hover:underline underline-offset-4'>🦂 CHALLONGE BRACKET 🦂</a>"
     },
     {
         "day": "saturday",
