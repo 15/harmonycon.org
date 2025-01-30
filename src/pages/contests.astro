@@ -28,16 +28,16 @@ const gameFormMortalkombat = "https://challonge.com/HCMK112025";
 <Layout title="HarmonyCon 2025 | Talents Show">
   <div id="bg" class="flex flex-col justify-between">
     <div class="flex flex-col items-center justify-center my-auto gap-y-12">
-      <div class="flex flex-col">
+      <div class="flex flex-col mt-16">
         <h2 class="text-yellow-200 text-4xl sm:text-5xl md:text-6xl uppercase font-serif text-center">Talents and Cosplay</h2>
-        <div class="flex flex-col md:flex-row mt-8">
+        <div class="flex flex-col md:flex-row mt-8 items-center">
           <div
             class="p-1 bg-white border-8 border-black w-84 lg:w-120 xl:w-144 -rotate-3 rounded-lg drop-shadow-2xl hover:z-10"
           >
-            <a href={talentsForm} target="_blank" rel="noopener noreferrer">
+            <a href={talentsForm} title="Sign up for Talent Show" target="_blank" rel="noopener noreferrer">
               <Image
                 src={posterTalents}
-                alt="Hyatt Regency Pegasus Ballroom"
+                alt="Talent Show, Feb 1st & 2nd at 11am"
                 width={800}
                 format="avif"
                 class="w-full"
@@ -47,10 +47,10 @@ const gameFormMortalkombat = "https://challonge.com/HCMK112025";
           <div
             class="p-1 bg-white border-8 border-black md:my-0 -my-16 sm:-my-12 mx-0 w-84 lg:w-120 xl:w-144 rotate-6 rounded-lg drop-shadow-2xl hover:z-10"
           >
-            <a href={cosplayForm} target="_blank" rel="noopener noreferrer">
+            <a href={cosplayForm} title="Sign up for Cosplay contest" target="_blank" rel="noopener noreferrer">
               <Image
                 src={posterCosplay}
-                alt="Hyatt Regency Cumberland Hall"
+                alt="Cosplay Contest, Feb 1st at 3pm"
                 width={800}
                 format="avif"
                 class="w-full"
@@ -62,35 +62,35 @@ const gameFormMortalkombat = "https://challonge.com/HCMK112025";
       <div class="mt-12">
         <h2 class="text-yellow-200 text-4xl my-4 sm:text-5xl md:text-6xl uppercase font-serif text-center">Game Tournaments</h2>
         <div class="flex flex-col items-center gap-y-4 mt-6">
-          <a href={gameFormSmash} target="_blank" rel="noopener noreferrer"
-             class="active bg-yellow-200 hover:bg-yellow-300 border-amber-500 border-4 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl font-serif"
+          <a href={gameFormSmash} title="Sign up for tournament, super smash bros ultimate" target="_blank" rel="noopener noreferrer"
+             class="text-center active bg-yellow-200 hover:bg-yellow-300 border-amber-500 border-4 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl font-serif"
           >
             💥 SUPER SMASH BROS ULTIMATE
             <span class="bg-yellow-500 rounded p-1">🏆</span>
           </a>
-          <a href={gameFormMariokart} target="_blank" rel="noopener noreferrer"
-             class="active bg-yellow-200 hover:bg-yellow-300  border-amber-500 border-4 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl font-serif"
+          <a href={gameFormMariokart} title="Sign up for tournament, mario kart" target="_blank" rel="noopener noreferrer"
+             class="text-center active bg-yellow-200 hover:bg-yellow-300  border-amber-500 border-4 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl font-serif"
           >
             🏎️ MARIO KART
             <span class="bg-yellow-500 rounded p-1">🏆</span>
           </a>
-          <a href={gameFormStreetfighter} target="_blank" rel="noopener noreferrer"
-             class="active bg-yellow-200 hover:bg-yellow-300 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl font-serif"
+          <a href={gameFormStreetfighter} title="Sign up for tournament, street fighter 5" target="_blank" rel="noopener noreferrer"
+             class="text-center active bg-yellow-200 hover:bg-yellow-300 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl font-serif"
           >
             🥊 STREET FIGHTER 5
           </a>
-          <a href={gameFormGoldeneye} target="_blank" rel="noopener noreferrer"
-             class="active bg-yellow-200 hover:bg-yellow-300 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl font-serif"
+          <a href={gameFormGoldeneye} title="Sign up for tournament, goldeneye 64" target="_blank" rel="noopener noreferrer"
+             class="text-center active bg-yellow-200 hover:bg-yellow-300 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl font-serif"
           >
             🔫 GOLDENEYE 64
           </a>
-          <a href={gameFormHalo} target="_blank" rel="noopener noreferrer"
-             class="active bg-yellow-200 hover:bg-yellow-300 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl font-serif"
+          <a href={gameFormHalo} title="Sign up for tournament, halo 3" target="_blank" rel="noopener noreferrer"
+             class="text-center active bg-yellow-200 hover:bg-yellow-300 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl font-serif"
           >
             👾 HALO 3
           </a>
-          <a href={gameFormMortalkombat} target="_blank" rel="noopener noreferrer"
-             class="active bg-yellow-200 hover:bg-yellow-300 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl font-serif"
+          <a href={gameFormMortalkombat} title="Sign up for tournament, mortal kombat 11" target="_blank" rel="noopener noreferrer"
+             class="text-center active bg-yellow-200 hover:bg-yellow-300 duration-300 md:py-2 md:px-8 py-1 px-4 rounded text-black w-auto text-2xl md:text-3xl font-serif"
           >
             🦂 MORTAL KOMBAT 11
           </a>
