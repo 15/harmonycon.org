@@ -24,7 +24,7 @@ import Footer from "../components/Footer.astro";
 
 import sign from "../assets/2025/scroll_sign2.png";
 
-import mainBackground from "../assets/2025/bg/bricks.jpg";
+import mainBackground from "../assets/2025/schedule/HC25_Tile_Sepia.png";
 const optimizedMainBackground = await getImage({
   src: mainBackground,
   format: "avif",
@@ -195,8 +195,28 @@ const optimizedMainBackground = await getImage({
 
       background-image: var(--optimizedMainBackground);
       background-repeat: repeat;
-      background-size: 40%;
-      background-position: 0px 0px;
+      background-size: 25%;
+      background-position: center;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    
+    #bg {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      /* height: auto; */
+
+      background-image: var(--optimizedMainBackground);
+      background-repeat: repeat;
+      background-size: 50%;
+      background-position: center;
       opacity: 1;
     }
   }
@@ -214,8 +234,8 @@ const optimizedMainBackground = await getImage({
 
       background-image: var(--optimizedMainBackground);
       background-repeat: repeat;
-      background-size: 150%;
-      background-position: 0px 0px;
+      background-size: 80%;
+      background-position: center;
       opacity: 1;
     }
     .playbills {
@@ -240,7 +260,7 @@ const optimizedMainBackground = await getImage({
 
       background-image: var(--optimizedMainBackground);
       background-repeat: repeat;
-      background-size: 150%;
+      background-size: 100%;
       background-position: 0px 0px;
       opacity: 1;
     }
