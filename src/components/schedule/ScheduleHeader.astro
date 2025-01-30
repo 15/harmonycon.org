@@ -6,19 +6,19 @@ const { pathname, origin } = Astro.url;
   class="font-serif uppercase flex flex-row justify-center flex-wrap gap-4 sm:gap-6 lg:gap-x-12 xl:gap-x-24 mb-4 sm:mb-8 lg:mb-16 text-base sm:text-lg md:text-2xl lg:text-5xl text-[#fde300]"
   style="text-shadow: 2px 2px 1px black;"
 >
-  <a href="/schedule/friday" class="schedule-card glass">
+  <a href="/schedule/friday" class:list={["glass", { "schedule-card": !pathname.includes("/schedule/friday"), "cursor-default": pathname.includes("/schedule/friday") }]}>
     <div class="flex flex-col items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-xl">
       <div>FRIDAY</div>
       <div class="text-base sm:text-xl lg:text-2xl">JAN 31</div>
     </div>
   </a>
-  <a href="/schedule/saturday" class="schedule-card glass">
+  <a href="/schedule/saturday" class:list={["glass", { "schedule-card": !pathname.includes("/schedule/saturday"), "cursor-default": pathname.includes("/schedule/saturday") }]}>
     <div class="flex flex-col items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-xl">
       <div>SATURDAY</div>
       <div class="text-base sm:text-xl lg:text-2xl">FEB 1</div>
     </div>
   </a>
-  <a href="/schedule/sunday" class="schedule-card glass">
+  <a href="/schedule/sunday" class:list={["glass", { "schedule-card": !pathname.includes("/schedule/sunday"), "cursor-default": pathname.includes("/schedule/sunday") }]}>
     <div class="flex flex-col items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-xl">
       <div>SUNDAY</div>
       <div class="text-base sm:text-xl lg:text-2xl">FEB 2</div>
@@ -43,6 +43,7 @@ const { pathname, origin } = Astro.url;
         -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100%/250% 250%;
         transition: all 0.3s;
         z-index: 50;
+        cursor: pointer;
     }
 
     .schedule-card:hover {
