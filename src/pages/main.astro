@@ -17,6 +17,8 @@ import img15 from "../assets/2025/playbill/badcrop4.png";
 import img16 from "../assets/2025/playbill/badcrop5.png";
 import img17 from "../assets/2025/playbill/badcrop6.png";
 import img18 from "../assets/2025/playbill/badcrop7.png";
+import img19 from "@assets/2025/talents/talents-show.jpg";
+import img20 from "@assets/2025/talents/cosplay-contest.jpg";
 import Playbill from "../components/Playbill.astro";
 import Footer from "../components/Footer.astro";
 
@@ -54,8 +56,11 @@ const optimizedMainBackground = await getImage({
       <li class="xl:mb-8" style="filter: drop-shadow(0 5px 5px #000);">
         <Playbill src={img10} href="/schedule/friday" idx={8} active={true} title="Schedule" />
       </li>
+      <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
+        <Playbill special={true} src={img19} href="https://docs.google.com/forms/d/e/1FAIpQLSf3bq1NrvIJzASghVQUabq8yM1YV8MCzEeyAHvzTOfv1lMnVQ/viewform" idx={8} active={true} title="Talent Show" />
+      </li>
       <li class="xl:mb-8" style="filter: drop-shadow(0 5px 5px #000);">
-        <Playbill src={img9} href="/contests" idx={8} active={true} title="Contests" />
+        <Playbill special={true} src={img20} href="https://docs.google.com/forms/d/e/1FAIpQLSdXJ5kz5v_TAeqCR-aUmpDGnRN9VaOL2WVINuH_75atpinuBA/viewform" idx={8} active={true} title="Cosplay Contest" small={true}/>
       </li>
       <!-- <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
         <Playbill src={img9} href="/" idx={9} active={false} title="Mascots" />
