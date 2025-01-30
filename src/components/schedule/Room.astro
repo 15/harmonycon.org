@@ -41,6 +41,7 @@ import fridaySchedule from "@data/schedule/friday.json";
           day={event.day}
           type={event.isConcert ? ROOM.Concert : event.room}
           description={event.description}
+          isConcert={event.isConcert}
         />
       )
     )

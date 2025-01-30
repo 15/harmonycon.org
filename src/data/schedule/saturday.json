@@ -217,12 +217,73 @@
   },
   {
       "room": "Mane Events",
+      "isConcert": true,
       "startDate": "2025-02-01T19:00:00",
       "day": "saturday",
-      "timeslots": 12,
+      "timeslots": 3,
       "host": "HarmonyCon",
-      "title": "Concert",
-      "description": "<a href='https://harmonycon.org/musicians' class='underline underline-offset-2 font-bold' target='_blank'>Coltchella 6 Musicians</a>"
+      "title": "Manehattan Jazz Quartet",
+      "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+  },
+  {
+      "room": "Mane Events",
+      "isConcert": true,
+      "startDate": "2025-02-01T19:45:00",
+      "day": "saturday",
+      "timeslots": 3,
+      "host": "HarmonyCon",
+      "title": "Metajoker",
+      "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+  },
+  {
+      "room": "Mane Events",
+      "isConcert": true,
+      "startDate": "2025-02-01T20:30:00",
+      "day": "saturday",
+      "timeslots": 2,
+      "host": "HarmonyCon",
+      "title": "DBPony",
+      "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+  },
+  {
+      "room": "Mane Events",
+      "isConcert": true,
+      "startDate": "2025-02-01T21:00:00",
+      "day": "saturday",
+      "timeslots": 4,
+      "host": "HarmonyCon",
+      "title": "The Wonderbolts",
+      "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+  },
+  {
+      "room": "Mane Events",
+      "isConcert": true,
+      "startDate": "2025-02-01T22:30:00",
+      "day": "saturday",
+      "timeslots": 3,
+      "host": "HarmonyCon",
+      "title": "Color By Number",
+      "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+  },
+  {
+      "room": "Mane Events",
+      "isConcert": true,
+      "startDate": "2025-02-01T23:15:00",
+      "day": "saturday",
+      "timeslots": 3,
+      "host": "HarmonyCon",
+      "title": "Starcrush!",
+      "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+  },
+  {
+      "room": "Mane Events",
+      "isConcert": true,
+      "startDate": "2025-02-02T00:00:00",
+      "day": "saturday",
+      "timeslots": 4,
+      "host": "HarmonyCon",
+      "title": "Faulty x Kenza Koa",
+      "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
   },
   {
       "room": "Mane Events",
@@ -232,15 +293,6 @@
       "host": "HarmonyCon",
       "title": "PONY AWARDS SHOW!",
       "description": "Pony awards show"
-  },
-  {
-      "room": "Mane Events",
-      "startDate": "2025-02-01T22:30:00",
-      "day": "saturday",
-      "timeslots": 14,
-      "host": "HarmonyCon",
-      "title": "Concert (cont.)",
-      "description": "<a href='https://harmonycon.org/musicians' class='underline underline-offset-2 font-bold' target='_blank'>Coltchella 6 Musicians</a>"
   },
   {
       "room": "Autograph Room",

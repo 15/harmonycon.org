@@ -10,7 +10,8 @@ const {
   colspan,
   type = 0,
   day = "Friday",
-  rating = "Not Rated"
+  rating = "Not Rated",
+  isConcert = false
 } = Astro.props;
 
 // Format start time and calculate end time
@@ -41,7 +42,7 @@ const roomType = [
 ---
 
 <td
-  class={`border-2 border-black align-top duration-300 cursor-pointer`}
+  class={`border-2 border-black align-top duration-300 cursor-pointer ${isConcert ? '!bg-black !text-white hover:!bg-white hover:!text-black' : null}`}
   colspan={colspan}
   id={`item-${title}`}
 >

@@ -145,12 +145,73 @@
     },
     {
         "room": "Mane Events",
+        "isConcert": true,
         "startDate": "2025-01-31T19:00:00",
         "day": "friday",
-        "timeslots": 24,
+        "timeslots": 2,
         "host": "HarmonyCon",
-        "title": "Concert",
-        "description": "<a href='https://harmonycon.org/musicians' class='underline underline-offset-2 font-bold' target='_blank'>Coltchella 6 Musicians</a>"
+        "title": "Pit Crew",
+        "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+    },
+    {
+        "room": "Mane Events",
+        "isConcert": true,
+        "startDate": "2025-01-31T19:30:00",
+        "day": "friday",
+        "timeslots": 4,
+        "host": "HarmonyCon",
+        "title": "Maerstrom",
+        "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+    },
+    {
+        "room": "Mane Events",
+        "isConcert": true,
+        "startDate": "2025-01-31T20:30:00",
+        "day": "friday",
+        "timeslots": 3,
+        "host": "HarmonyCon",
+        "title": "4everfreebrony x Luna Jax",
+        "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+    },
+    {
+        "room": "Mane Events",
+        "isConcert": true,
+        "startDate": "2025-01-31T21:15:00",
+        "day": "friday",
+        "timeslots": 4,
+        "host": "HarmonyCon",
+        "title": "My Little Romance",
+        "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+    },
+    {
+        "room": "Mane Events",
+        "isConcert": true,
+        "startDate": "2025-01-31T22:30:00",
+        "day": "friday",
+        "timeslots": 3,
+        "host": "HarmonyCon",
+        "title": "Azure Comet",
+        "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+    },
+    {
+        "room": "Mane Events",
+        "isConcert": true,
+        "startDate": "2025-01-31T23:15:00",
+        "day": "friday",
+        "timeslots": 4,
+        "host": "HarmonyCon",
+        "title": "Pony House Mafia",
+        "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
+    },
+    {
+        "room": "Mane Events",
+        "isConcert": true,
+        "startDate": "2025-02-01T00:15:00",
+        "day": "friday",
+        "timeslots": 2,
+        "host": "HarmonyCon",
+        "title": "loophoof",
+        "description": "<a href='https://harmonycon.org/musicians' class='text-yellow-400 hover:underline underline-offset-2 font-bold text-3xl md:text-4xl xl:text-5xl flex justify-center' target='_blank'>COLTCHELLA VI MUSICIANS</a>"
     },
     {
         "room": "Autograph Room",
