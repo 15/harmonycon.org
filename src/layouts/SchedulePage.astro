@@ -440,9 +440,11 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
    if (table) {
      table.addEventListener('wheel', (event) => {
      event.preventDefault();
+     // Use the larger of deltaX or deltaY for consistent scroll speed
+     const scrollDelta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
      gsap.to(table, {
       scrollTo: {
-       x: table.scrollLeft + event.deltaY * 2, // Adjust multiplier for speed
+       x: table.scrollLeft + scrollDelta * 2,
                 autoKill: false
        },
       ease: "power2",
