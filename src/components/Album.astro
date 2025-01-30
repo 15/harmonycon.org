@@ -1,22 +1,26 @@
 ---
 import { Image } from "astro:assets";
-const { src, alt, time="" } = Astro.props;
+const { src, alt, href, desc, time="" } = Astro.props;
 ---
 
-<div class="text-center flex flex-col items-center relative">
-  <Image src={src}
-    format="avif"
-    height={400}
-    alt={alt}
-    class="object-cover bg-white rounded-none border-4 border-[#EFBF04] w-full lg:w-40 xl:w-64 aspect-square z-0"
-  >
-  </Image>
+<a class="text-center flex flex-col items-center relative group z-50 cursor-pointer" href={href} target="_blank">
+  <div class="relative border-4 border-[#EFBF04] w-full lg:w-40 xl:w-64 aspect-square bg-white group-hover:bg-black">
+    <Image src={src}
+      format="avif"
+      height={400}
+      alt={alt}
+      class="object-cover w-full h-full transition-opacity duration-300 group-hover:opacity-0"
+    />
+    <div set:html={desc} class="text-white absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black font-bold text-xl">
+      
+    </div>
+  </div>
   <div class="h-8 flex justify-center text-lg md:text-base lg:text-2xl font-semibold uppercase font-serif text-white mt-4 tracking-wide leading-none" 
   style="text-shadow: 3px 3px 1px #000;">
     {alt}
   </div>
-  <div class="absolute right-0 bottom-16 rotate-3 bg-red-100 text-black px-2 py-1 whitespace-nowrap lg:px-4 lg:py-2 text-sm lg:text-base rounded-sm uppercase font-semibold" 
+  <div class="absolute right-0 bottom-16 rotate-3 bg-red-100 text-black px-2 py-1 whitespace-nowrap lg:px-4 lg:py-2 text-sm lg:text-base rounded-sm uppercase font-semibold transition-opacity duration-300 group-hover:opacity-0" 
   style="filter: drop-shadow(0 2px 2px #000);">
     {time}
   </div>
-</div>
+</a>
