@@ -41,12 +41,10 @@ const roomType = [
 ];
 
 const roomNames = {
-  "Mane Events": "Mane Events",
   "Crystal Empire Theatre": "Cumberland IJK",
   "Broadhorse Theatre": "Cumberland EF",
   "Horsefeld Theatre": "Cumberland L",
-  "Graumare's Chineighs Theatre": "Cumberland GH",
-  "Autograph Room": "Autograph Room"
+  "Graumare's Chineighs Theatre": "Cumberland GH"
 };
 ---
 
@@ -73,7 +71,7 @@ const roomNames = {
         {day} @ {start}-{end} ({colspan * 15} minutes)
       </div>
       <div class="font-light text-xl leading-none mb-6 uppercase" style="font-family: 'Poppins';">
-        Room: { type } ({ type in roomNames ? roomNames[type] : null } )
+        Room: { type in roomNames ? type + ' (' + roomNames[type] + ')' : (type === 0 ?  'Mane Events' : type)}
       </div>
       <div class="my-8 leading-7 text-lg text-left w-[90%] xl:w-[75%] mx-auto"  style="font-family: 'Poppins';" set:html={description} />
       <div class="w-[95%] xl:w-[80%] mx-auto h-[3px] bg-white my-8"></div>
