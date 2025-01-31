@@ -361,6 +361,7 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
 <script>
 
   const placeRedline = function() {
+    // console.log('red')
     const table = document.getElementById('table');
     const line = document.getElementById("with-vertical-line");
     const roomCell = document.getElementsByClassName("agenda-room-cell")[0];
@@ -475,12 +476,12 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
   let timeout = false
 
   placeRedline()
-  setInterval(placeRedline, 60000);
-  // Update the line position every minute
+  setInterval(placeRedline, 10000);
+  // Update the line position every 10 seconds
   document.addEventListener("swup:enable", () => {
     window.swup.hooks.on("content:replace", () => {
       placeRedline()
-      setInterval(placeRedline, 60000);
+      setInterval(placeRedline, 10000);
     })
   });
 
