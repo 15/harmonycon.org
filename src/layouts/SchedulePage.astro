@@ -31,6 +31,7 @@ const optimizedScheduleBackground = await getImage({
 
 
 
+/// KEEP SYNCHRONIZED WITH BLOCK IN CLIENT CODE AT THE BOTTOM OF THE FILE
 const slots =  {
   'friday': {
     start: new Date(2025, 0, 31, 11, 0),
@@ -197,6 +198,8 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
     >
       <table
           class="table-fixed font-serif border-2 border-black w-full relative"
+          id="scheduler-table"
+          data-day={day}
       >
         <div id="with-vertical-line"></div>
         <tbody>
@@ -361,129 +364,110 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
 
 <script>
 
+  /// KEEP SYNCHRONIZED WITH BLOCK IN SERVER CODE AT THE TOP OF THE FILE
+  const slots =  {
+    'friday': {
+      start: new Date(2025, 0, 31, 11, 0),
+      end: new Date(2025, 1, 1, 2, 15),
+    },
+    'saturday': {
+      start: new Date(2025, 1, 1, 10, 0),
+      end: new Date(2025, 1, 2, 2, 15),
+    },
+    'sunday': {
+      start: new Date(2025, 1, 2, 10, 0),
+      end: new Date(2025, 1, 2, 17, 0),
+    },
+  }
+
+
+  const fridayBegin = new Date(slots.friday.start).getTime()
+  const fridayEnd = new Date(slots.friday.end).getTime()
+  const fridayDuration = fridayEnd - fridayBegin
+
+  const saturdayBegin = new Date(slots.saturday.start).getTime()
+  const saturdayEnd = new Date(slots.saturday.end).getTime()
+  const saturdayDuration = saturdayEnd - saturdayBegin
+
+  const sundayBegin = new Date(slots.sunday.start).getTime()
+  const sundayEnd = new Date(slots.sunday.end).getTime()
+  const sundayDuration = sundayEnd - sundayBegin
+
+  const isFriday = (ms) => ms >= fridayBegin && ms < fridayEnd;
+  const isSaturday = (ms) => ms >= saturdayBegin && ms < saturdayEnd;
+  const isSunday = (ms) => ms >= sundayBegin && ms < sundayEnd;
+
   const placeRedline = function() {
-    // console.log('red')
+
     const table = document.getElementById('table');
     const line = document.getElementById("with-vertical-line");
     const roomCell = document.getElementsByClassName("agenda-room-cell")[0];
+    const schedulerTable = document.getElementById('scheduler-table');
+    const day = schedulerTable.getAttribute('data-day');
 
-    if ( table && line && roomCell ) {
-      const isFriday = (ms) => {
-        const date = new Date(ms);
-        const day = date.getDay();
-        const hour = date.getHours();
-        const minutes = date.getMinutes();
-        
-        // If it's Friday and after 11am
-        if (day === 5 && (hour > 11 || (hour === 11 && minutes >= 0))) {
-          return true;
-        }
-        // If it's Saturday but before 2:15am
-        if (day === 6 && (hour < 2 || (hour === 2 && minutes <= 15))) {
-          return true;
-        }
-        return false;
-      }
-      const isSaturday = (ms) => {
-        const date = new Date(ms);
-        const day = date.getDay();
-        const hour = date.getHours();
-        const minutes = date.getMinutes();
-        
-        // If it's Saturday and after 10am
-        if (day === 6 && (hour > 10 || (hour === 10 && minutes >= 0))) {
-          return true;
-        }
-        // If it's Sunday but before 2:15am
-        if (day === 0 && (hour < 2 || (hour === 2 && minutes <= 15))) {
-          return true;
-        }
-        return false;
-      }
-      const isSunday = (ms) => {
-        const date = new Date(ms);
-        const day = date.getDay();
-        const hour = date.getHours();
-        const minutes = date.getMinutes();
-        
-        // If it's Sunday and between 10am and 5pm
-        return day === 0 && 
-          ((hour > 10 || (hour === 10 && minutes >= 0)) && 
-          (hour < 17 || (hour === 17 && minutes === 0)));
-      }
+    if (line) {
+      console.log('resetting the line')
+      line.style.left = '0';
+    }
 
+    let now = new Date();
+    let tt = now.getTime()
+
+    let roomCellOffset = roomCell.scrollWidth
+    let tableWidth = table.scrollWidth - roomCellOffset
+
+    const moveLine = (progression) => {
+      console.log('Move line', progression, tableWidth, roomCellOffset)
+      const y =  (progression * tableWidth) + roomCellOffset + 2
       if (line) {
+        console.log(`moving the line to : ${y}px`)
+        line.style.left = `${y}px`;
+      }
+    }
+
+    if (isFriday(tt) && day === 'friday') {
+      console.log(`placing redline for friday`)
+      moveLine((tt-fridayBegin)/(fridayDuration))
+    } else if (isSaturday(tt) && day === 'saturday') {
+      console.log(`placing redline for saturday`)
+      moveLine((tt-saturdayBegin)/(saturdayDuration))
+    } else if (isSunday(tt) && day === 'sunday') {
+      console.log(`placing redline for sunday`)
+      moveLine((tt-sundayBegin)/(sundayDuration))
+    } else {
+      if (line) {
+        console.log('resetting the line')
         line.style.left = '0';
-      }
-
-      let now = new Date();
-      let tt = now.getTime()
-
-      let roomCellOffset = roomCell.scrollWidth
-      let tableWidth = table.scrollWidth - roomCellOffset
-
-      const moveLine = (date) => {
-        const hour = date.getHours();
-        const minutes = date.getMinutes();
-        const timeInMinutes = hour * 60 + minutes;
-        
-        let progression = 0;
-        
-        // if (day === 'friday') {
-          // Friday 11:00 AM to Saturday 2:15 AM (15h15m total)
-          if (date.getDay() === 5) { // Friday
-            progression = (timeInMinutes - 660) / 915; // 660 = 11:00, 915 = 15.25 hours
-          } else if (date.getDay() === 6) { // Early Saturday
-            progression = (timeInMinutes + 780) / 915; // 780 = 13 hours (from Friday 11pm to midnight)
-          }
-        // }
-        // else if (day === 'saturday') {
-        //   // Saturday 10:00 AM to Sunday 2:15 AM (16h15m total)
-        //   if (date.getDay() === 6) { // Saturday
-        //     progression = (timeInMinutes - 600) / 975; // 600 = 10:00, 975 = 16.25 hours
-        //   } else if (date.getDay() === 0) { // Early Sunday
-        //     progression = (timeInMinutes + 840) / 975; // 840 = 14 hours (from Saturday 10pm to midnight)
-        //   }
-        // } else if (day === 'sunday') {
-        //   // Sunday 10:00 AM to 5:00 PM (7h total)
-        //   if (date.getDay() === 0) { // Sunday
-        //     progression = (timeInMinutes - 600) / 420; // 600 = 10:00, 420 = 7 hours
-        //   }
-        // }
-        
-        // Clamp progression between 0 and 1
-        progression = Math.max(0, Math.min(1, progression));
-        
-        const y = (progression * tableWidth) + roomCellOffset + 2;
-        if (line) {
-          line.style.left = `${y}px`;
-        }
-      }
-      
-      if (true) {
-        moveLine(now)
-      } else if (isSaturday(tt) && day === 'saturday') {
-        moveLine(now)
-      } else if (isSunday(tt) && day === 'sunday') {
-        moveLine(now)
-      } else {
-        if (line) {
-          line.style.left = '0';
-        }
       }
     }
   }
 
   let timeout = false
 
+  let staticTimer = false
+  const moveOnTimer = function() {
+    if (staticTimer === false) {
+      staticTimer = true
+      console.log('setup timer')
+      setInterval(function () {
+        console.log('move redline on timer')
+        placeRedline()
+      }, 10000)
+    }
+  }
+
   placeRedline()
-  setInterval(placeRedline, 10000);
   // Update the line position every 10 seconds
   document.addEventListener("swup:enable", () => {
-    window.swup.hooks.on("content:replace", () => {
-      placeRedline()
-      setInterval(placeRedline, 10000);
-    })
+    console.log('enable')
+    placeRedline()
+    moveOnTimer()
+  });
+
+  document.addEventListener('swup:content:replace', () => {
+    console.log('content:replace')
+    placeRedline()
+    moveOnTimer()
   });
 
   window.addEventListener("resize", function() {
