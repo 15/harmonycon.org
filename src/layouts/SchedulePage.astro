@@ -191,17 +191,21 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
   >
     <ScheduleHeader />
 
+    <div id="now" class="rounded-2xl border-black border-2 bg-pink-300 text-black p-2 mb-2">
+      See what's happening now !
+    </div>
+
     <div
         class="border-2 border-black rounded-sm md:mx-0 mx-4 mb-8 w-full bg-[#fcf1e0] overscroll-none overflow-y-hidden overflow-x-scroll text-black flex "
         style="filter: drop-shadow(0 5px 5px #000); scrollbar-color: #771c2a #151515; "
         id="table"
     >
+      <div id="with-vertical-line"></div>
       <table
-          class="table-fixed font-serif border-2 border-black w-full relative"
+          class="table-fixed font-serif border-2 border-black w-full"
           id="scheduler-table"
           data-day={day}
       >
-        <div id="with-vertical-line"></div>
         <tbody>
         <tr class="border-2 bg-black text-white border-black font-semibold text-sm md:text-l text-center">
           <th class="w-20 md:w-32 lg:w-44 z-50 bg-black border-black"></th>
@@ -363,6 +367,25 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
 </style>
 
 <script>
+  import { gsap } from "gsap";
+  import ScrollToPlugin from "gsap/ScrollToPlugin";
+
+
+  const moveNow = function () {
+    const nowButton = document.getElementById('now');
+    nowButton.addEventListener('click', () => {
+      const redline = document.getElementById('with-vertical-line');
+      redline.scrollIntoView({inline: "center"})
+    });
+  }
+
+  document.addEventListener("swup:enable", () => {
+    moveNow()
+  });
+  document.addEventListener('swup:content:replace', () => {
+    moveNow()
+  });
+
 
   /// KEEP SYNCHRONIZED WITH BLOCK IN SERVER CODE AT THE TOP OF THE FILE
   const slots =  {
@@ -379,7 +402,6 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
       end: new Date(2025, 1, 2, 17, 0),
     },
   }
-
 
   const fridayBegin = new Date(slots.friday.start).getTime()
   const fridayEnd = new Date(slots.friday.end).getTime()
@@ -475,12 +497,6 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
     timeout = setTimeout(placeRedline, 100)
   });
 
-</script>
-
-<script>
-  import { gsap } from "gsap";
-  import ScrollToPlugin from "gsap/ScrollToPlugin";
-
   gsap.registerPlugin(ScrollToPlugin);
 
   const scrollSideways = function () {
@@ -504,8 +520,9 @@ for (let [roomKey, roomArray] of Object.entries(events)) {
 
   scrollSideways();
   document.addEventListener("swup:enable", () => {
-   window.swup.hooks.on("content:replace", () => {
-      scrollSideways();
-    })
+    scrollSideways();
+  });
+  document.addEventListener('swup:content:replace', () => {
+    scrollSideways();
   });
 </script>
