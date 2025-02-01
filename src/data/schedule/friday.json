@@ -196,7 +196,7 @@
     {
         "room": "Mane Events",
         "isConcert": true,
-        "startDate": "2025-01-31T23:00:00",
+        "startDate": "2025-02-01T00:00:00",
         "day": "friday",
         "timeslots": 3,
         "host": "HarmonyCon",
@@ -206,7 +206,7 @@
     {
         "room": "Mane Events",
         "isConcert": true,
-        "startDate": "2025-01-31T23:45:00",
+        "startDate": "2025-02-01T00:45:00",
         "day": "friday",
         "timeslots": 4,
         "host": "HarmonyCon",
@@ -216,7 +216,7 @@
     {
         "room": "Mane Events",
         "isConcert": true,
-        "startDate": "2025-02-01T00:45:00",
+        "startDate": "2025-02-01T01:45:00",
         "day": "friday",
         "timeslots": 2,
         "host": "HarmonyCon",
