@@ -26,13 +26,12 @@ const optimizedIndexBackground = await getImage({
 <Layout title="HarmonyCon 2025">
   <div id="bg" class="overflow-x-hidden overflow-y-hidden">
     <div id="curtains">
-      <div id="curtain-1"></div>
-      <div id="curtain-2"></div>
+      <div id="curtain-1" class="z-[9999]"></div>
+      <div id="curtain-2" class="z-[9999]"></div>
+      <a href="https://event.pony.town/" target="_blank" style="text-shadow: 3px 3px 1px #000; visibility: hidden;" class="uppercase z-[9999] hover:scale-105 duration-300 whitespace-nowrap text-center absolute top-12 md:top-16 left-1/2 transform -translate-x-1/2 h-auto z-[100] font-serif text-yellow-400 text-xl md:text-5xl xl:text-6xl px-8 py-4 rounded-xl">
+        See you next year! 
+      </a>
     </div>
-    <a href="https://event.pony.town/" target="_blank" style="text-shadow: 3px 3px 1px #000; visibility: hidden;" class="hover:scale-105 duration-300 whitespace-nowrap text-center ponytown absolute top-12 md:top-16 left-1/2 transform -translate-x-1/2 h-auto z-[100] font-serif text-yellow-400 text-xl md:text-5xl xl:text-6xl px-8 py-4 rounded-xl">
-      HARMONYCON 2025 IS LIVE NOW!<br/><span class="text-xl md:text-4xl xl:text-5xl">Click here to join our Pony Town event!</span><br/>
-      <!-- <span class="text-base md:text-2xl xl:text-3xl"><span>Live attendee count: 1157 (as of 11:48 am)</span> -->
-    </a>
     <div class="mascots">
       <Image
         id="tune"
@@ -175,7 +174,7 @@ const optimizedIndexBackground = await getImage({
       position: absolute;
       height: 130vh;
       width: auto;
-      top: -170vh;
+      top: -50vh;
       left: 0;
       right: 0;
       margin-left: auto;
@@ -217,7 +216,7 @@ const optimizedIndexBackground = await getImage({
     ), ease-in-out;
       animation-delay: 1s, 1s;
       animation-iteration-count: 1, infinite;
-      animation-direction: normal, normal;
+      animation-direction: reverse, reverse;
       animation-fill-mode: forwards, forwards;
     }
 
@@ -227,7 +226,7 @@ const optimizedIndexBackground = await getImage({
       width: auto;
       left: 0;
       right: 0;
-      top: -170vh;
+      top: -50vh;
       margin-left: auto;
       margin-right: auto;
       padding-left: 16rem;
@@ -267,13 +266,13 @@ const optimizedIndexBackground = await getImage({
     ), ease-in-out;
       animation-delay: 1.2s, 1.2s;
       animation-iteration-count: 1, infinite;
-      animation-direction: normal, normal;
+      animation-direction: reverse, reverse;
       animation-fill-mode: forwards, forwards;
     }
 
     #logo {
       position: absolute;
-      visibility: hidden;
+      /* visibility: hidden; */
       left: 0;
       right: 0;
       height: 50vh;
@@ -286,11 +285,11 @@ const optimizedIndexBackground = await getImage({
         popup 1s ease 2.7s forwards,
         tease 4s ease 4s infinite forwards; */
       animation-name: popup, tease;
-      animation-duration: 1s, 4s;
+      animation-duration: 0.2s, 4s;
       animation-timing-function: ease, ease;
-      animation-delay: 2.7s, 4s;
+      animation-delay: 2s, 4s;
       animation-iteration-count: 1, infinite;
-      animation-direction: normal, normal;
+      animation-direction: reverse, normal;
       animation-fill-mode: forwards, forwards;
     }
 
@@ -414,7 +413,7 @@ const optimizedIndexBackground = await getImage({
     #tune {
       position: absolute;
       width: 90vw;
-      top: -150%;
+      top: -54%;
       left: -5%;
       /* animation:
         drop 2s var(--elastic) 1s forwards,
@@ -424,7 +423,7 @@ const optimizedIndexBackground = await getImage({
       animation-timing-function: var(--elastic), ease-in-out;
       animation-delay: 1s, 1s;
       animation-iteration-count: 1, infinite;
-      animation-direction: normal, normal;
+      animation-direction: reverse, reverse;
       animation-fill-mode: forwards, forwards;
     }
 
@@ -432,7 +431,7 @@ const optimizedIndexBackground = await getImage({
       position: absolute;
       width: 80vw;
       right: -10%;
-      top: -146%;
+      top: -54%;
       /* animation:
         drop2 2s var(--elastic) 1.2s forwards,
         swing2 7s ease-in-out 1.2s infinite forwards; */
@@ -441,13 +440,13 @@ const optimizedIndexBackground = await getImage({
       animation-timing-function: var(--elastic), ease-in-out;
       animation-delay: 1.2s, 1.2s;
       animation-iteration-count: 1, infinite;
-      animation-direction: normal, normal;
+      animation-direction: reverse, reverse;
       animation-fill-mode: forwards, forwards;
     }
 
     #logo {
       position: absolute;
-      visibility: hidden;
+      /* visibility: hidden; */
       left: 0;
       right: 0;
       width: 100vw;
@@ -463,7 +462,7 @@ const optimizedIndexBackground = await getImage({
       animation-timing-function: ease, ease;
       animation-delay: 2.7s, 4s;
       animation-iteration-count: 1, infinite;
-      animation-direction: normal, normal;
+      animation-direction: reverse, normal;
       animation-fill-mode: forwards, forwards;
     }
 
@@ -568,7 +567,7 @@ const optimizedIndexBackground = await getImage({
     #tune {
       position: absolute;
       width: 95%;
-      top: -128%;
+      top: -38%;
       left: -10%;
       /* animation:
         drop 2s var(--elastic) 1s forwards,
@@ -578,7 +577,7 @@ const optimizedIndexBackground = await getImage({
       animation-timing-function: var(--elastic), ease-in-out;
       animation-delay: 1s, 1s;
       animation-iteration-count: 1, infinite;
-      animation-direction: normal, normal;
+      animation-direction: reverse, reverse;
       animation-fill-mode: forwards, forwards;
     }
 
@@ -586,7 +585,7 @@ const optimizedIndexBackground = await getImage({
       position: absolute;
       width: 90%;
       right: -15%;
-      top: -124%;
+      top: -44%;
       /* animation:
         drop2 2s var(--elastic) 1.2s forwards,
         swing2 7s ease-in-out 1.2s infinite forwards; */
@@ -595,13 +594,13 @@ const optimizedIndexBackground = await getImage({
       animation-timing-function: var(--elastic), ease-in-out;
       animation-delay: 1.2s, 1.2s;
       animation-iteration-count: 1, infinite;
-      animation-direction: normal, normal;
+      animation-direction: reverse, reverse;
       animation-fill-mode: forwards, forwards;
     }
 
     #logo {
       position: absolute;
-      visibility: hidden;
+      /* visibility: hidden; */
       left: 0;
       right: 0;
       width: 100vw;
@@ -617,7 +616,7 @@ const optimizedIndexBackground = await getImage({
       animation-timing-function: ease, ease;
       animation-delay: 2.7s, 4s;
       animation-iteration-count: 1, infinite;
-      animation-direction: normal, normal;
+      animation-direction: reverse, normal;
       animation-fill-mode: forwards, forwards;
     }
 
@@ -750,10 +749,10 @@ const optimizedIndexBackground = await getImage({
     position: absolute;
     left: 0;
     top: 0;
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
     animation-name: slide-left;
     animation-duration: 1.2s;
-    animation-delay: 1s;
+    animation-delay: 2s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     background-image: var(--optimizedCurtains1);
@@ -764,10 +763,10 @@ const optimizedIndexBackground = await getImage({
     position: absolute;
     right: 0;
     top: 0;
-    /* transform: translateX(100%); */
+    transform: translateX(100%);
     animation-name: slide-right;
     animation-duration: 1.2s;
-    animation-delay: 1s;
+    animation-delay: 2s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     background-image: var(--optimizedCurtains1);
@@ -826,19 +825,9 @@ const optimizedIndexBackground = await getImage({
       opacity: 0;
       transform: translateY(50px);
     }
-    60% {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(-20px);
-    }
-    80% {
-      transform: translateY(10px);
-    }
-    90% {
-      transform: translateY(-5px);
-    }
     100% {
       visibility: visible;
+      opacity: 1;
       transform: translateY(0px);
     }
   }
@@ -909,20 +898,20 @@ const optimizedIndexBackground = await getImage({
   @keyframes slide-left {
     0%,
     40% {
-      transform: translateX(0%);
+      transform: translateX(-100%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(0%);
     }
   }
 
   @keyframes slide-right {
     0%,
     40% {
-      transform: translateX(0%);
+      transform: translateX(100%);
     }
     100% {
-      transform: translateX(100%);
+      transform: translateX(0%);
     }
   }
 
