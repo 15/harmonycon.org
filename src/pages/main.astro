@@ -36,13 +36,7 @@ const optimizedMainBackground = await getImage({
   <div id="bg" class="md:px-0 px-4 flex flex-col cursor-grab">
     <ul class="playbills text-black cursor-grab">
       <li class="xl:mb-8" style="filter: drop-shadow(0 5px 5px #000);">
-        <Playbill
-          src={img2}
-          href="/register"
-          idx={2}
-          active={true}
-          title="Register"
-        />
+        <Playbill src={img10} href="/schedule/friday" idx={8} active={true} title="Schedule" />
       </li>
       <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
         <Playbill
@@ -54,7 +48,13 @@ const optimizedMainBackground = await getImage({
         />
       </li>
       <li class="xl:mb-8" style="filter: drop-shadow(0 5px 5px #000);">
-        <Playbill src={img10} href="/schedule/friday" idx={8} active={true} title="Schedule" />
+        <Playbill
+          src={img2}
+          href="/register"
+          idx={2}
+          active={true}
+          title="Register"
+        />
       </li>
       <li class="xl:mt-40" style="filter: drop-shadow(0 5px 5px #000);">
         <Playbill special={true} src={img19} href="https://docs.google.com/forms/d/e/1FAIpQLSf3bq1NrvIJzASghVQUabq8yM1YV8MCzEeyAHvzTOfv1lMnVQ/viewform" idx={8} active={true} title="Talent Show" />
