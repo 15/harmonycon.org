@@ -27,6 +27,6 @@ export default defineConfig({
     // animateHistoryBrowsing: true,
   }), icon(), partytown(), sitemap()],
   redirects: {
-    '/schedule': '/schedule/friday',
+    '/schedule': '/schedule/saturday',
   }
 });
