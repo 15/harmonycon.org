@@ -48,7 +48,7 @@ const optimizedIndexBackground = await getImage({
         See you next year! 
       </a> -->
     </div>
-    <div id="card" class="opacity-0 font-yesteryear rounded gap-y-12 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 bg-white w-full md:w-[64rem] rotate-2 md:aspect-[1.608] md:px-0 px-4 z-[999999] flex flex-col items-center justify-center">
+    <div id="card" class="opacity-0 font-yesteryear rounded gap-y-12 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 bg-white w-[calc(100%-2rem)] md:w-[64rem] rotate-2 md:aspect-[1.608] md:px-0 px-4 z-[999999] flex flex-col items-center justify-center">
       <Image
         alt="HarmonyCon 2025 logo"
         format="avif"
@@ -56,35 +56,36 @@ const optimizedIndexBackground = await getImage({
         width={800}
         class="opacity-0 animate-[fadeInDown_0.5s_ease-out_5.2s_forwards] z-10 w-full sm:w-[24rem] pt-8"
       />
-      <div class="opacity-0 animate-[fadeInDown_0.5s_ease-out_5.25s_forwards] text-black font-sans font-semibold text-4xl sm:text-5xl md:text-7xl uppercase" style="text-shadow: 1px 1px 1px #000;">
+      <div class="opacity-0 animate-[fadeInDown_0.5s_ease-out_5.25s_forwards] whitespace-nowrap text-black font-sans font-semibold text-center text-4xl sm:text-5xl md:text-7xl uppercase" style="text-shadow: 1px 1px 1px #000;">
         See you next year!
       </div>
 
       
       <div class="opacity-0 animate-[fadeInDown_0.5s_ease-out_5.3s_forwards] flex flex-col gap-y-2 md:gap-y-6 my-2 md:my-8 text-yellow-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif uppercase" 
       style="text-shadow: 1px 1px 1px #000;">
-        <a  href="https://2025.harmonycon.org/" class="hover:underline underline-offset-4 mr-0 md:mr-24">
+        <a  href="https://2025.harmonycon.org/" class="whitespace-nowrap hover:underline underline-offset-4 mr-0 md:mr-24">
           ← Go to the 2025 website
         </a>
-        <a  href="https://forms.gle/T8dRG4BxT5DY5VCN8" class="hover:underline underline-offset-4 ml-24 md:ml-72">
+        <a  href="https://forms.gle/T8dRG4BxT5DY5VCN8" class="whitespace-nowrap hover:underline underline-offset-4 ml-24 md:ml-72">
           Post-con survey →
         </a>
       </div>
-
-
       <hr class="opacity-0 animate-[fadeInDown_0.5s_ease-out_5.35s_forwards] w-4/5 mx-auto border-t-2 border-black md:my-1" />
 
-      <div class="opacity-0 animate-[fadeInDown_0.5s_ease-out_5.4s_forwards] flex md:flex-row flex-col gap-x-0 gap-y-2 md:gap-y-12 md:gap-x-12 pb-8 md:pb-8">
+      <div class="text-black text-4xl md:text-6xl opacity-0 animate-[fadeInDown_0.5s_ease-out_5.4s_forwards] ">
+        &mdash; Thanks for coming!
+      </div>
+      <div class="opacity-0 animate-[fadeInDown_0.5s_ease-out_5.45s_forwards] flex md:flex-row flex-col gap-x-0 gap-y-2 md:gap-y-12 md:gap-x-12 pb-8 md:pb-8">
         <div class="flex gap-x-2 items-center"> 
           <Image
-            alt="HarmonyCon 2025 logo"
+            alt="Harmonic Tune cutie mark"
             format="avif"
             src={tune}
             height={100}
             class=" z-10 h-8 md:h-12 w-auto"
           />
           <Image
-            alt="HarmonyCon 2025 logo"
+            alt="Harmonic Tune signature"
             format="avif"
             src={tunesign}
             height={100}
@@ -93,14 +94,14 @@ const optimizedIndexBackground = await getImage({
         </div>
         <div class="flex gap-x-2 items-center"> 
           <Image
-            alt="HarmonyCon 2025 logo"
+            alt="Harmony Star cutie mark"
             format="avif"
             src={star}
             height={100}
             class=" z-10 h-8 md:h-12 w-auto"
           />
           <Image
-            alt="HarmonyCon 2025 logo"
+            alt="Harmony Star signature"
             format="avif"
             src={starsign}
             height={100}
@@ -527,9 +528,9 @@ const optimizedIndexBackground = await getImage({
         popup 1s ease 2.7s forwards,
         tease 4s ease 4s infinite forwards; */
       animation-name: popup, tease;
-      animation-duration: 1s, 4s;
+      animation-duration: 0.2s, 4s;
       animation-timing-function: ease, ease;
-      animation-delay: 2.7s, 4s;
+      animation-delay: 2s, 4s;
       animation-iteration-count: 1, infinite;
       animation-direction: reverse, normal;
       animation-fill-mode: forwards, forwards;
@@ -681,9 +682,9 @@ const optimizedIndexBackground = await getImage({
         popup 1s ease 2.7s forwards,
         tease 4s ease 4s infinite forwards; */
       animation-name: popup, tease;
-      animation-duration: 1s, 4s;
+      animation-duration: 0.2s, 4s;
       animation-timing-function: ease, ease;
-      animation-delay: 2.7s, 4s;
+      animation-delay: 2s, 4s;
       animation-iteration-count: 1, infinite;
       animation-direction: reverse, normal;
       animation-fill-mode: forwards, forwards;
