@@ -995,8 +995,8 @@ const optimizedIndexBackground = await getImage({
   }
 
   #card {
-    animation: fadeIn 1s ease-in forwards, popup2 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    animation-delay: 4.5s, 4.5s;
+    animation: fadeIn 1s ease-in forwards, popup2 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards, cardTease 4s ease 6s infinite forwards;
+    animation-delay: 4.5s, 4.5s, 6s;
 
     background-image: var(--optimizedPaper);
     background-repeat: repeat;
@@ -1047,6 +1047,28 @@ const optimizedIndexBackground = await getImage({
       visibility: visible;
       opacity: 1;
       transform: translate(-50%, -50%) rotate(2deg);
+    }
+  }
+
+  @keyframes cardTease {
+    0%,
+    70% {
+      transform: translate(-50%, -50%) rotate(2deg);
+    }
+    85% {
+      transform: translate(-50%, -50%) rotate(3deg) scale(1.01);
+    }
+    90% {
+      transform: translate(-50%, -50%) rotate(1.5deg) scale(1.01);
+    }
+    92.5% {
+      transform: translate(-50%, -50%) rotate(2.5deg) scale(1.01);
+    }
+    95% {
+      transform: translate(-50%, -50%) rotate(1.8deg) scale(1.01);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(2deg) scale(1);
     }
   }
 
