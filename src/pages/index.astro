@@ -4,9 +4,22 @@ import Layout from "../layouts/Layout.astro";
 import img1 from "../assets/2025/tune1.png";
 import img2 from "../assets/2025/star1.png";
 import img3 from "../assets/2025/logowithdates.png";
-import img4 from "../assets/2025/registration_ticket_v2.png";
-import img5 from "../assets/2025/enter_ticket_v2.png";
 import Footer from "../components/Footer.astro";
+
+import img4 from "../assets/2025/HarmonyCon 2025 Logo.png";
+
+
+import paper from "../assets/2025/bg/paper.webp";
+const optimizedPaper = await getImage({
+  src: paper,
+  format: "avif",
+  width: 1000,
+});
+
+import starsign from "../assets/2025/starsign.png";
+import tunesign from "../assets/2025/tunesign.png";
+import tune from "../assets/2025/harmonic_tune_cm2.png";
+import star from "../assets/2025/harmony_star_cm.png";
 
 import curtains1 from "../assets/2025/curtain_full.png";
 const optimizedCurtains1 = await getImage({
@@ -24,13 +37,77 @@ const optimizedIndexBackground = await getImage({
 ---
 
 <Layout title="HarmonyCon 2025">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
   <div id="bg" class="overflow-x-hidden overflow-y-hidden">
     <div id="curtains">
       <div id="curtain-1" class="z-[9999]"></div>
       <div id="curtain-2" class="z-[9999]"></div>
-      <a href="https://event.pony.town/" target="_blank" style="text-shadow: 3px 3px 1px #000; visibility: hidden;" class="uppercase z-[9999] hover:scale-105 duration-300 whitespace-nowrap text-center absolute top-12 md:top-16 left-1/2 transform -translate-x-1/2 h-auto z-[100] font-serif text-yellow-400 text-xl md:text-5xl xl:text-6xl px-8 py-4 rounded-xl">
+      <!-- <a href="https://event.pony.town/" target="_blank" style="text-shadow: 3px 3px 1px #000; visibility: hidden;" class="uppercase z-[9999] hover:scale-105 duration-300 whitespace-nowrap text-center absolute top-12 md:top-16 left-1/2 transform -translate-x-1/2 h-auto z-[100] font-serif text-yellow-400 text-xl md:text-5xl xl:text-6xl px-8 py-4 rounded-xl">
         See you next year! 
-      </a>
+      </a> -->
+    </div>
+    <div class="font-yesteryear rounded gap-y-12 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 bg-white w-[64rem] rotate-2 aspect-[1.608] z-[999999] flex flex-col items-center justify-center">
+      <Image
+        alt="HarmonyCon 2025 logo"
+        format="avif"
+        src={img4}
+        width={800}
+        class=" z-10 w-[24rem] pt-8"
+      />
+      <div class="text-black font-sans font-semibold text-7xl uppercase" style="text-shadow: 1px 1px 1px #000;">
+        See you next year!
+      </div>
+
+      
+      <div class="flex flex-col gap-y-6 my-8 text-yellow-600 text-5xl font-serif uppercase" 
+      style="text-shadow: 1px 1px 1px #000;">
+        <a target="_blank" href="https://2025.harmonycon.org/" class="hover:underline underline-offset-4 mr-24">
+          ← Go to the 2025 website
+        </a>
+        <a target="_blank" href="https://forms.gle/T8dRG4BxT5DY5VCN8" class="hover:underline underline-offset-4 ml-72">
+          Post-con survey →
+        </a>
+      </div>
+
+
+      <hr class="w-4/5 mx-auto border-t-2 border-black my-1" />
+
+      <div class="flex gap-x-12 pb-8">
+        <div class="flex gap-x-2 items-center"> 
+          <Image
+            alt="HarmonyCon 2025 logo"
+            format="avif"
+            src={tune}
+            height={100}
+            class=" z-10 h-12 w-auto"
+          />
+          <Image
+            alt="HarmonyCon 2025 logo"
+            format="avif"
+            src={tunesign}
+            height={100}
+            class="grayscale z-10 h-24 w-auto"
+          />
+        </div>
+        <div class="flex gap-x-2 items-center"> 
+          <Image
+            alt="HarmonyCon 2025 logo"
+            format="avif"
+            src={star}
+            height={100}
+            class=" z-10 h-12 w-auto"
+          />
+          <Image
+            alt="HarmonyCon 2025 logo"
+            format="avif"
+            src={starsign}
+            height={100}
+            class="grayscale z-10 h-24 w-auto"
+          />
+        </div>
+      </div>
     </div>
     <div class="mascots">
       <Image
@@ -59,7 +136,7 @@ const optimizedIndexBackground = await getImage({
       style="filter: drop-shadow(0 10px 10px #000);"
       class="z-10"
     />
-    <div id="buttons">
+    <!-- <div id="buttons">
       <a href="/register">
         <Image
           id="register"
@@ -79,7 +156,7 @@ const optimizedIndexBackground = await getImage({
           src={img5}
           width={200}
         />
-      </a>
+      </a> -->
     </div>
   </div>
 
@@ -106,8 +183,21 @@ const optimizedIndexBackground = await getImage({
   define:vars={{
     optimizedIndexBackground: `url(${optimizedIndexBackground.src})`,
     optimizedCurtains1: `url(${optimizedCurtains1.src})`,
+    optimizedPaper: `url(${optimizedPaper.src})`
   }}
 >
+  #paper {
+    background-image: var(--optimizedPaper);
+    background-repeat: repeat;
+    background-size: 60%;
+    background-position: center;
+    opacity: 1;
+  }
+
+  .font-yesteryear {
+      font-family: 'Yesteryear', cursive;
+    }
+
   :root {
     --elastic: linear(
       0,
@@ -752,7 +842,7 @@ const optimizedIndexBackground = await getImage({
     transform: translateX(-100%);
     animation-name: slide-left;
     animation-duration: 1.2s;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     background-image: var(--optimizedCurtains1);
@@ -766,7 +856,7 @@ const optimizedIndexBackground = await getImage({
     transform: translateX(100%);
     animation-name: slide-right;
     animation-duration: 1.2s;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     background-image: var(--optimizedCurtains1);
