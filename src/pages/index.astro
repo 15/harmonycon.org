@@ -54,27 +54,27 @@ const optimizedIndexBackground = await getImage({
         format="avif"
         src={img4}
         width={800}
-        class=" z-10 w-[24rem] pt-8"
+        class="opacity-0 animate-[fadeInDown_1.2s_ease-out_5.2s_forwards] z-10 w-[24rem] pt-8"
       />
-      <div class="text-black font-sans font-semibold text-7xl uppercase" style="text-shadow: 1px 1px 1px #000;">
+      <div class="opacity-0 animate-[fadeInDown_1.2s_ease-out_5.3s_forwards] text-black font-sans font-semibold text-7xl uppercase" style="text-shadow: 1px 1px 1px #000;">
         See you next year!
       </div>
 
       
-      <div class="flex flex-col gap-y-6 my-8 text-yellow-500 text-5xl font-serif uppercase" 
+      <div class="opacity-0 animate-[fadeInDown_1.2s_ease-out_5.4s_forwards] flex flex-col gap-y-6 my-8 text-yellow-500 text-5xl font-serif uppercase" 
       style="text-shadow: 1px 1px 1px #000;">
-        <a target="_blank" href="https://2025.harmonycon.org/" class="hover:underline underline-offset-4 mr-24">
+        <a  href="https://2025.harmonycon.org/" class="hover:underline underline-offset-4 mr-24">
           ← Go to the 2025 website
         </a>
-        <a target="_blank" href="https://forms.gle/T8dRG4BxT5DY5VCN8" class="hover:underline underline-offset-4 ml-72">
+        <a  href="https://forms.gle/T8dRG4BxT5DY5VCN8" class="hover:underline underline-offset-4 ml-72">
           Post-con survey →
         </a>
       </div>
 
 
-      <hr class="w-4/5 mx-auto border-t-2 border-black my-1" />
+      <hr class="opacity-0 animate-[fadeInDown_1.2s_ease-out_5.5s_forwards] w-4/5 mx-auto border-t-2 border-black my-1" />
 
-      <div class="flex gap-x-12 pb-8">
+      <div class="opacity-0 animate-[fadeInDown_1.2s_ease-out_5.6s_forwards] flex gap-x-12 pb-8">
         <div class="flex gap-x-2 items-center"> 
           <Image
             alt="HarmonyCon 2025 logo"
@@ -1087,6 +1087,17 @@ const optimizedIndexBackground = await getImage({
     100% {
       transform: translate(-50%, -50%) rotate(2deg);
       opacity: 1;
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 </style>
