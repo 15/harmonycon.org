@@ -245,7 +245,7 @@ const { pathname } = Astro.url;
     <div class="whitespace-nowrap uppercase attendees p-1 md:p-2 rounded-lg absolute text-base md:text-xl top-1 md:top-4 md:right-4 inset-x-0 md:inset-x-auto mx-2 md:mx-0 font-serif text-red-500 z-40 text-center md:text-left" style="text-shadow: 2px 2px 1px #000;">
       HC25 LIVE ATTENDEE COUNT: <span class="text-red-600 font-bold text-lg md:text-2xl">1,282</span>
     </div>
-    <main id="swup">
+    <main id="swup"> 
       {!["/"].includes(pathname) ? <Exit /> : null}
       <slot />
     </main>
