@@ -48,7 +48,7 @@ const optimizedIndexBackground = await getImage({
         See you next year! 
       </a> -->
     </div>
-    <div id="card" class="opacity-0 font-yesteryear rounded gap-y-6 md:gap-y-12 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 bg-white w-[calc(100%-2rem)] md:w-[64rem] rotate-2 md:aspect-[1.608] md:px-0 px-4 z-[999999] flex flex-col items-center justify-center">
+    <div id="card" class="opacity-0 font-yesteryear rounded gap-y-6 md:gap-y-12 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 bg-white w-[calc(100%-2rem)] md:w-[64rem] md:aspect-[1.608] md:px-0 px-4 z-[999999] flex flex-col items-center justify-center">
       <Image
         alt="HarmonyCon 2025 logo"
         format="avif"
@@ -56,7 +56,7 @@ const optimizedIndexBackground = await getImage({
         width={800}
         class="opacity-0 animate-[fadeInDown_0.5s_ease-out_5.2s_forwards] z-10 w-full sm:w-[24rem] pt-8"
       />
-      <div class="opacity-0 animate-[fadeInDown_0.5s_ease-out_5.25s_forwards] whitespace-nowrap text-black font-sans font-semibold text-center text-4xl sm:text-5xl md:text-7xl uppercase" style="text-shadow: 1px 1px 1px #000;">
+      <div class="opacity-0 animate-[fadeInDown_0.5s_ease-out_5.25s_forwards] whitespace-nowrap text-black font-sans font-semibold text-center text-3xl sm:text-5xl md:text-7xl uppercase" style="text-shadow: 1px 1px 1px #000;">
         See you next year!
       </div>
 
@@ -1031,45 +1031,45 @@ const optimizedIndexBackground = await getImage({
     0% {
       visibility: hidden;
       opacity: 0;
-      transform: translate(-50%, calc(-50% + 50px)) rotate(2deg);
+      transform: translate(-50%, calc(-50% + 50px)) rotate(0deg);
     }
     60% {
       visibility: visible;
       opacity: 1;
-      transform: translate(-50%, calc(-50% - 20px)) rotate(2deg);
+      transform: translate(-50%, calc(-50% - 20px)) rotate(0deg);
     }
     80% {
-      transform: translate(-50%, calc(-50% + 10px)) rotate(2deg);
+      transform: translate(-50%, calc(-50% + 10px)) rotate(0deg);
     }
     90% {
-      transform: translate(-50%, calc(-50% - 5px)) rotate(2deg);
+      transform: translate(-50%, calc(-50% - 5px)) rotate(0deg);
     }
     100% {
       visibility: visible;
       opacity: 1;
-      transform: translate(-50%, -50%) rotate(2deg);
+      transform: translate(-50%, -50%) rotate(0deg);
     }
   }
 
   @keyframes cardTease {
     0%,
     70% {
-      transform: translate(-50%, -50%) rotate(2deg);
+      transform: translate(-50%, -50%) rotate(0deg);
     }
     85% {
-      transform: translate(-50%, -50%) rotate(3deg) scale(1.01);
+      transform: translate(-50%, -50%) rotate(1deg) scale(1.01);
     }
     90% {
-      transform: translate(-50%, -50%) rotate(1.5deg) scale(1.01);
+      transform: translate(-50%, -50%) rotate(-0.5deg) scale(1.01);
     }
     92.5% {
-      transform: translate(-50%, -50%) rotate(2.5deg) scale(1.01);
+      transform: translate(-50%, -50%) rotate(0.5deg) scale(1.01);
     }
     95% {
-      transform: translate(-50%, -50%) rotate(1.8deg) scale(1.01);
+      transform: translate(-50%, -50%) rotate(-0.2deg) scale(1.01);
     }
     100% {
-      transform: translate(-50%, -50%) rotate(2deg) scale(1);
+      transform: translate(-50%, -50%) rotate(0deg) scale(1);
     }
   }
 
